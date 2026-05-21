@@ -35,8 +35,14 @@
         "value_on_form": "$5,000,001 - $25,000,000",
         "income_type_on_form": "Hotel-Related Revenue; Guaranteed payment",
         "income_amount_on_form": "$3,952,480 (Hotel-Related Revenue); $100,000 (Guaranteed payment)",
-        "supersedes_2018_relationships": ["cp_rel_0003", "cp_rel_0004"],
-        "registry_relationships": ["cp_rel_0006", "cp_rel_0007"],
+        "supersedes_2018_relationships": [
+          "cp_rel_0003",
+          "cp_rel_0004"
+        ],
+        "registry_relationships": [
+          "cp_rel_0006",
+          "cp_rel_0007"
+        ],
         "delta_vs_2018": "value range unchanged; Hotel-Related Revenue increased from $3,890,775 to $3,952,480; new Guaranteed payment income line ($100,000) appears for the first time"
       }
     ],
@@ -47,6 +53,55 @@
         "https://projects.propublica.org/trump-team-financial-disclosures/"
       ],
       "verification_status": "values transcribed from primary PDF text; secondary sources used for context only, never as the source of authority. Final eyeball-against-PDF by registry maintainer recommended before treating as authoritative."
+    },
+    "_excluded_categories": {
+      "_methodology": "Grouped exclusion summary per the \u00a73.0 registry inclusion test (docs/methodology.md, 'Registry inclusion test (278-sourced entities)'). Entities in these categories are disclosed on this filing but are not given individual cp_entity registry records, per the procurement-relevance test. Counts marked approximate were grouped by category during the Fork D \u00a73 inspection; residential-rental and instrument lines were not itemized one entity at a time. Recorded by Fork D \u00a74.3 step 6.",
+      "categories": [
+        {
+          "category": "residential_rental_property_llcs",
+          "approx_entries": 90,
+          "rationale": "Residential apartment/condo/single-family rental holding LLCs, including the East 12th Street and 269 West 87th condo-unit LLCs; do not typically appear as federal procurement counterparties."
+        },
+        {
+          "category": "pooled_investment_instruments",
+          "approx_entries": 72,
+          "rationale": "Mutual-fund, ETF, index-fund and money-market-fund unit holdings, including the Part 5 Trump Payroll Corp 401(k) fund lines; the holding is an instrument, not a direct interest in an underlying entity."
+        },
+        {
+          "category": "treasury_notes",
+          "approx_entries": 27,
+          "rationale": "US Treasury note holdings (Part 6 items 131-157); government debt instruments."
+        },
+        {
+          "category": "cash_bank_and_money_market_accounts",
+          "approx_entries": 17,
+          "rationale": "US bank accounts and money-market cash accounts (Part 6); not entities for procurement matching."
+        },
+        {
+          "category": "pension_book_royalty_and_residual_streams",
+          "approx_entries": 5,
+          "rationale": "Defined-benefit pension plan and book-advance / TV-residual royalty streams; royalty streams, not held entity stakes."
+        },
+        {
+          "category": "artwork",
+          "entries": 1,
+          "rationale": "Artwork holding (Part 6 item 27); not an entity."
+        },
+        {
+          "category": "foreign_operating_entities",
+          "entries": 7,
+          "entities": [
+            "DT Bali Golf Manager LLC",
+            "DT Bali Hotel Manager LLC",
+            "DT Bali Technical Services Manager LLC",
+            "DT Dubai II Golf Manager LLC",
+            "DT Lido Golf Manager LLC",
+            "DT Lido Hotel Manager LLC",
+            "DT Lido Technical Services Manager LLC"
+          ],
+          "rationale": "Foreign-operating entities whose business activities are conducted entirely outside US jurisdiction; excluded under the \u00a74.0.B amendment to the \u00a73.0 inclusion test (docs/methodology.md). These seven DT-prefixed Bali/Dubai/Lido hotel, golf, and technical-services manager LLCs cannot receive US federal civilian contracts and have no plausible USAspending/SAM.gov/GSA match."
+        }
+      ]
     }
   },
   "change_type": "annual_supersession",

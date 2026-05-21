@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0123",
+  "source_id": "cp_person_0001",
+  "target_id": "cp_entity_0008",
+  "relation_kind": "family_to_entity",
+  "interest_type": "spousal_imputed",
+  "value": {
+    "unit": "none",
+    "shape": "imputed",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": "cp_rel_0097"
+  },
+  "filing_source": "cp_filing_0002",
+  "observed_on": "2018-12-31",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Senior Adviser to the President",
+    "start_date": "2017-01-20",
+    "end_date": "2021-01-20"
+  },
+  "notes": "Jared Kushner's interest in IT Apparel II LLC imputed under 18 USC 208(a)(2) from his spouse Ivanka Trump. value.shape=imputed; value.imputation_source points at cp_rel_0097 (Ivanka Trump's principal edge), which carries the underlying disclosure. Disclosed in Part 5, item 1.4, of his 2019 Annual OGE Form 278e. Convention 3 spousal imputation. excluded_from_total under the pre-2025 comparative-set scope."
+}

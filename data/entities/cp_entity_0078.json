@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0078",
+  "canonical_name": "Hack Prospect JV, LLC",
+  "aliases": [
+    {
+      "name": "Hack Prospect JV, LLC",
+      "source_url": "https://www.citizensforethics.org/wp-content/uploads/legacy/2020/07/Kushner-Jared-2019-Annual-278e-OGE-Certified.pdf",
+      "source_filing_date": "2019-05-15",
+      "notes": "Part 6 item 4.10, 2019 filing."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0002",
+  "merged_into": null,
+  "notes": "Named joint venture; residential real estate in Hackensack, NJ. Disclosed on the 2019 filing only. Included as a named JV per Fork D \u00a74.1."
+}

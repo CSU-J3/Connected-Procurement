@@ -10,7 +10,7 @@
     }
   ],
   "external_ids": [],
-  "last_updated_from_filing": "cp_filing_0004",
+  "last_updated_from_filing": "cp_filing_0002",
   "merged_into": null,
   "notes": "Holding company (New York, NY) held within the Ivanka M. Trump Business Trust. Recorded as the registry counterparty for the Business Trust royalty-income line on Ivanka Trump's 2017 new-entrant 278 (cp_rel_0012) - the single 'Over $50,000,000' value disclosed on that filing and the forcing case for the `floor` value shape. The Ivanka M. Trump Business Trust itself is the intermediary holding structure and is not modeled as a separate cp_entity this pass (single-relationship modeling per the Fork B decision)."
 }

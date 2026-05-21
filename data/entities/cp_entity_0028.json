@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0028",
+  "canonical_name": "4T Holdings Two LLC",
+  "aliases": [
+    {
+      "name": "4T Holdings Two LLC",
+      "source_url": "https://s3.amazonaws.com/storage.citizensforethics.org/wp-content/uploads/2019/04/03211926/Jared-C-Kushner-2018-278.pdf",
+      "source_filing_date": "2018-05-15",
+      "notes": "Part 5 item 5.2, 2018 and 2019 filings."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0002",
+  "merged_into": null,
+  "notes": "Holding company for future interests in Scion and Szion manager entities, New York, NY. Held via TTTT Venture LLC."
+}

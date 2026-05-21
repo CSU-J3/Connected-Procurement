@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0037",
+  "canonical_name": "New Puck Corp.",
+  "aliases": [
+    {
+      "name": "New Puck Corp.",
+      "source_url": "https://s3.amazonaws.com/storage.citizensforethics.org/wp-content/uploads/2019/04/03211926/Jared-C-Kushner-2018-278.pdf",
+      "source_filing_date": "2018-05-15",
+      "notes": "Part 6 item 15, 2018 and 2019 filings."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0002",
+  "merged_into": null,
+  "notes": "Commercial real-estate operating corporation, New York, NY."
+}

@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0044",
+  "canonical_name": "Kushner Midwest Partners 1, LLC",
+  "aliases": [
+    {
+      "name": "Kushner Midwest Partners 1, LLC",
+      "source_url": "https://s3.amazonaws.com/storage.citizensforethics.org/wp-content/uploads/2019/04/03211926/Jared-C-Kushner-2018-278.pdf",
+      "source_filing_date": "2018-05-15",
+      "notes": "Part 6 items 14, 206-209, 227-231 (2018 filing); items 21, 22, 162, 163 (2019 filing)."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0002",
+  "merged_into": null,
+  "notes": "Named Kushner partnership/holding entity disclosed against multiple OH/PA/IN/NY properties. A 2017 endnote records its restructuring relative to Quail Ridge Acquisitions, LLC."
+}

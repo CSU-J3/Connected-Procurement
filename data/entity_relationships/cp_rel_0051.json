@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0051",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0016",
+  "relation_kind": "family_to_entity",
+  "interest_type": "trust_beneficial",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0001",
+  "observed_on": "2017-12-31",
+  "superseded_by": "cp_rel_0105",
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Adviser to the President",
+    "start_date": "2017-03-29",
+    "end_date": "2021-01-20"
+  },
+  "notes": "Ivanka Trump's beneficial interest in Ivanka Trump Marks LLC, disclosed in Part 5 (Spouse's Employment Assets & Income), item 1.9, of Jared Kushner's 2018 Annual OGE Form 278e. No value bracket is disclosed for this Part 5 line on the form; encoded value.shape=binary. This is the principal edge; the imputed edge to filer Jared Kushner is cp_rel_0078. excluded_from_total under the pre-2025 comparative-set scope."
+}

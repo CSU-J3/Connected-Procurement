@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0040",
+  "canonical_name": "Quadro Partners, Inc.",
+  "aliases": [
+    {
+      "name": "Quadro Partners, Inc.",
+      "source_url": "https://s3.amazonaws.com/storage.citizensforethics.org/wp-content/uploads/2019/04/03211926/Jared-C-Kushner-2018-278.pdf",
+      "source_filing_date": "2018-05-15",
+      "notes": "Part 6 item 18.3, 2018 filing ('Quadro Partners (d/b/a Cadre)')."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0002",
+  "merged_into": null,
+  "notes": "Operating company doing business as Cadre, a real-estate investment platform, New York, NY. Held under BFPS Ventures, LLC / JCK Cadre, LLC."
+}
