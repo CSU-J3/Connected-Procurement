@@ -80,6 +80,18 @@ When an OGE 278 records a value in an open-ended upper-bound category (e.g., "Ov
 
 First applied to the Business Trust royalty-income line on Ivanka Trump's 2017 new-entrant 278 (`cp_rel_0012`, `floor: 50000000`). The variant was added after two filings forced it: `cp_filing_0003` first surfaced the gap (five "Over $50,000,000" lines held back), and the Ivanka filing surfaced a sixth. The five `cp_filing_0003` lines are eligible for backfill under this shape; that backfill is deferred to a separate pass.
 
+### Encoding "value not readily ascertainable" 278 disclosures
+
+5 CFR 2634.301 permits filers to disclose a holding's existence on Form 278 without a value bracket when the value cannot reasonably be determined (closely-held LLC interests without recent valuation events, illiquid private-fund interests, in-progress restructurings, etc.). The registry encodes these disclosures using the existing `binary` value shape (`unit: none`, all numeric fields forbidden), which structurally captures "interest exists, value not stated."
+
+The form-text disclosure ("value not readily ascertainable") is recorded verbatim in the relationship's `notes` field so the audit trail preserves the filer-side disclosure language. The data-layer encoding (`binary`) preserves the substantive fact (interest exists) without inventing a value bracket that wasn't disclosed.
+
+Distinction from bracketed low-value disclosures: "None (or less than $1,001)" — common in Part 6 — is a disclosed bracketed value (the holding has value in the $0–$1,001 range). The registry encodes this as `range` with `low: 0, high: 1001`. "Value not readily ascertainable" is qualitatively different: no value bracket was disclosed at all. A bare "None" without the "(or less than $1,001)" qualifier is a third case (genuine zero / no holding) and is not given an arbitrary encoding; it is surfaced for review.
+
+This encoding pattern was formalized in Fork D after the §3 inspection surfaced dozens of Part 5 and Part 6 entries carrying the "value not readily ascertainable" disclosure language. The encoding applies retroactively to any earlier registry edges that should have used it but didn't.
+
+Locked: 2026-05-21.
+
 ### Convention 3: spousal imputation
 
 Where 18 USC 208(a)(2) imputes a spousal interest to a filer, the imputed interest is recorded as a separate `Relationship` with `interest_type: spousal_imputed`, `shape: imputed`, and `imputation_source` pointing at the `Relationship` ID of the principal interest on the spouse's side. Imputed edges:
@@ -177,10 +189,13 @@ Connected-entity registry inclusion for entities disclosed on OGE Form 278 filin
 - Personal-use property entities (vacation property, personal residences, family-use property holders)
 - Pooled investment instruments (mutual fund units, ETF units, index fund units, money-market fund units) — the holding is an instrument, not a direct interest in the underlying entities
 - Direct securities holdings in publicly-traded companies — evaluated case-by-case; default exclude for small passive holdings, default include for substantial holdings or any holding paired with a non-passive relationship element (board seat, employment, contract)
+- Foreign-operating entities whose business activities are conducted entirely outside US jurisdiction — these cannot receive US federal civilian contracts and have no plausible match against USAspending, SAM.gov, or GSA lease records. Default exclude. Foreign-operating status is determined by the filing's description (e.g., "hotel manager, Bali, Indonesia"; "golf manager, Dubai, UAE"). A US-organized, US-jurisdiction entity that operates internationally is not foreign-operating for this purpose; nor is a US-organized holding company whose downstream holdings are foreign-operating.
 
 Default exclusions are reversible. If an excluded entity subsequently appears in federal procurement data, it gets a registry entry retroactively with a methodology note explaining the reversal.
 
-Excluded entities are recorded in the corresponding filing record under a sibling `_excluded_categories` field as grouped counts with rationale, not as individual entity entries. Borderline cases default to inclusion with a flag for review.
+Excluded entities are recorded in the corresponding filing record under a sibling `_excluded_categories` field as grouped counts with rationale, not as individual entity entries. `_excluded_categories` is a key inside the filing record's `interest_disclosed` object, sibling to `_parse_provenance` — it is structured data within an existing free-form field and requires no schema change. Borderline cases default to inclusion with a flag for review.
+
+(Foreign-operating exclusion added 2026-05-21, Fork D §4.0.B.)
 
 This rule applies to all 278-sourced registry adds going forward. Records added before this rule was written (cp_filing_0001/0002 original capture, cp_filing_0003, cp_filing_0004) may not fully conform; reconciliation for cp_filing_0001/0002 happens through Fork D. cp_filing_0003 and cp_filing_0004 conformance is checked in their respective queued forks.
 
