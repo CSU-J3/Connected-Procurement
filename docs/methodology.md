@@ -10,6 +10,18 @@ This page documents the registry's load-bearing conventions and excluded scope d
 
 Operative consequence: a mirror URL is acceptable only when the underlying PDF carries the OGE certification chain on its face. A mirror of an uncertified copy is not acceptable. The certification chain lives in the document, not in the URL.
 
+### `primary_source_url` and publisher infrastructure migration
+
+`primary_source_url` records the publisher's current canonical URL for the document. The field's purpose is to give readers a working pointer to the document as currently served; it is not an archeological record of where the document was originally retrieved.
+
+When a publisher migrates infrastructure — for example, DocumentCloud's shift from `s3.documentcloud.org` to `assets.documentcloud.org` — the publisher's canonical URL changes. The authority chain is unchanged: same publisher, same document, same certification path. Only the URL through the publisher's infrastructure has shifted. `primary_source_url` follows the publisher to the new canonical URL.
+
+The retrieval archeology — the URL used at record-creation time, the method used, any hosts that failed during retrieval — belongs in `_parse_provenance.method`, not in `primary_source_url`.
+
+**Maintenance posture: reactive, not periodic.** URLs are verified opportunistically. When a record is touched for any reason and its `primary_source_url` is found to no longer resolve cleanly, the URL is updated to the publisher's current canonical path and the change recorded in `_parse_provenance.method`. No proactive re-verification of all URLs is performed on a schedule.
+
+Locked: 2026-05-20.
+
 ## Filing dates
 
 ### Convention 1: `source_filing_date`

@@ -1,6 +1,6 @@
 {
   "filing_id": "cp_filing_0004",
-  "primary_source_url": "https://s3.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
+  "primary_source_url": "https://assets.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
   "source_filing_date": "2017-06-12",
   "filer_id": "cp_person_0002",
   "filing_type": "OGE_Form_278e_New_Entrant",
@@ -47,7 +47,7 @@
       }
     ],
     "_parse_provenance": {
-      "method": "pdfminer.six high_level.extract_text on locally downloaded PDF; values eyeballed against extracted text by Claude Code on 2026-05-20. Retrieved via the assets.documentcloud.org host because the s3.documentcloud.org asset path returns HTTP 403 to automated requests (Cloudflare interstitial); both hosts serve the same DocumentCloud document id 4385351.",
+      "method": "pdfminer.six high_level.extract_text on locally downloaded PDF; values eyeballed against extracted text by Claude Code on 2026-05-20. Retrieved via the assets.documentcloud.org host because the s3.documentcloud.org asset path returns HTTP 403 to automated requests (Cloudflare interstitial); both hosts serve the same DocumentCloud document id 4385351. primary_source_url updated 2026-05-20 from s3.documentcloud.org to assets.documentcloud.org per the Fork C methodology lock (see docs/methodology.md, 'primary_source_url and publisher infrastructure migration'); same document, same DocumentCloud authority chain. Original s3 URL retained for historical record: https://s3.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
       "primary_source_authority": "OGE-certified new-entrant 278; OGE Director Apol certification 12/26/2017. DocumentCloud mirror used as primary_source_url because the OGE reading room does not host the standalone certified PDF — OGE-hosted material is the FOIA bundle linked below, which contains only review-window correspondence.",
       "oge_foia_bundle_url": "https://www.oge.gov/web/oge.nsf/Resources/Jared+Kushner+and+Ivanka+Trump+Records+through+August+16,+2017",
       "oge_foia_bundle_contents": "WilmerHale / White House Counsel / OGE staff correspondence Feb 2 - Aug 16, 2017. Does not contain the certified 278 final.",
