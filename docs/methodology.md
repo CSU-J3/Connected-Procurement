@@ -155,3 +155,33 @@ For the purpose of step 4 selection ("different filer, different family unit") a
 Rationale: convention 3 (spousal asymmetry) exists specifically to handle 18 USC 208(a)(2) spousal imputation. The household reading collapses convention 3 before it can be tested by treating any married pair of named family members as a single test surface. Distinct-named-family-member preserves the registry's ability to model spousal pairs as separate filers whose interests link via imputation, which is the question convention 3 has to decide.
 
 Locked: 2026-05-20. Subject to revision if a later filing surfaces a case the rationale doesn't cover.
+
+## Registry scope
+
+### Registry inclusion test (278-sourced entities)
+
+Connected-entity registry inclusion for entities disclosed on OGE Form 278 filings is governed by procurement-relevance, not by the breadth of the underlying financial-interest definition. Every Schedule A entry is a financial interest by definition; not every financial interest is meaningful for procurement matching against USAspending, SAM.gov, GSA lease records, or GAO/IG sources.
+
+**Default include:**
+
+- Operating companies (any business with employees, contracts, or revenue)
+- Commercial real estate holding entities, including single-property holders (federal lease counterparties can be single-property entities — the GSA Old Post Office lease counterparty is the textbook case)
+- Holding companies that sit above multiple operating or commercial entities
+- Fund managers and named investment vehicles where the family member has a direct stake in the manager or vehicle (not in pooled units)
+- Named ventures, partnerships, joint ventures
+- Hospitality, hotel, and service entities
+
+**Default exclude:**
+
+- Residential rental property holding LLCs (apartment buildings, single-family rentals) — these entities don't typically appear as federal procurement counterparties
+- Personal-use property entities (vacation property, personal residences, family-use property holders)
+- Pooled investment instruments (mutual fund units, ETF units, index fund units, money-market fund units) — the holding is an instrument, not a direct interest in the underlying entities
+- Direct securities holdings in publicly-traded companies — evaluated case-by-case; default exclude for small passive holdings, default include for substantial holdings or any holding paired with a non-passive relationship element (board seat, employment, contract)
+
+Default exclusions are reversible. If an excluded entity subsequently appears in federal procurement data, it gets a registry entry retroactively with a methodology note explaining the reversal.
+
+Excluded entities are recorded in the corresponding filing record under a sibling `_excluded_categories` field as grouped counts with rationale, not as individual entity entries. Borderline cases default to inclusion with a flag for review.
+
+This rule applies to all 278-sourced registry adds going forward. Records added before this rule was written (cp_filing_0001/0002 original capture, cp_filing_0003, cp_filing_0004) may not fully conform; reconciliation for cp_filing_0001/0002 happens through Fork D. cp_filing_0003 and cp_filing_0004 conformance is checked in their respective queued forks.
+
+Locked: 2026-05-21.
