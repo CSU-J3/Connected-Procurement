@@ -1,0 +1,68 @@
+{
+  "filing_id": "cp_filing_0004",
+  "primary_source_url": "https://s3.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
+  "source_filing_date": "2017-06-12",
+  "filer_id": "cp_person_0002",
+  "filing_type": "OGE_Form_278e_New_Entrant",
+  "interest_disclosed": {
+    "report_type": "New Entrant",
+    "date_of_appointment": "2017-03-29",
+    "filer_position": "Adviser to the President, White House",
+    "filer_signature_date": "2017-06-12",
+    "filer_signature_note": "Electronic signature on 06/12/2017; form face records 'Filer received a 45 day filing extension.'",
+    "agency_ethics_official_certification_date": "2017-07-21",
+    "agency_ethics_officials": [
+      "Passantino, Stefan (Certifying Official)",
+      "Schultz, James D (Ethics Official, other review conducted by)"
+    ],
+    "oge_certification_date": "2017-12-26",
+    "oge_certifier": "Apol, David",
+    "data_revisions_recorded_on_form": [
+      "2017-12-21",
+      "2017-12-11",
+      "2017-12-08",
+      "2017-11-30",
+      "2017-11-14",
+      "2017-11-03",
+      "2017-10-17",
+      "2017-10-04",
+      "2017-09-01",
+      "2017-07-20",
+      "2017-07-19",
+      "2017-07-18",
+      "2017-07-17"
+    ],
+    "convention_1_pattern": "Pattern (a): 13 same-PDF 'Data Revised' stamps spanning 2017-07-17 to 2017-12-21 within one OGE-certified document, one filer signature carried through to certification. No separately-filed amendment with a distinct filer signature. change_type is original, not amendment.",
+    "selected_entries_recorded_in_registry": [
+      {
+        "schedule": "Part 2 (Filer's Employment Assets & Income and Retirement Accounts)",
+        "item_number": 2,
+        "description_on_form": "Ivanka M. Trump Business Trust (IT Collection LLC, Holding Company in New York NY)) (royalty income for period March 9, 2017 - May 31, 2017)",
+        "value_on_form": "Over $50,000,000",
+        "income_type_on_form": "Rent or Royalties",
+        "income_amount_on_form": "$1,000,001 - $5,000,000",
+        "registry_relationship": "cp_rel_0012",
+        "intermediary_note": "The valued form line is the Ivanka M. Trump Business Trust holding. IT Collection LLC is the holding company named within that line and is recorded as the registry counterparty entity (cp_entity_0007). The Business Trust is the intermediary; per the Fork B single-relationship decision it is not modeled as a separate cp_entity this pass. The 'Over $50,000,000' value is the forcing case for the new value shape `floor` (see docs/methodology.md, 'Value shape: floor').",
+        "value_vs_income_note": "The registry stores the asset value bracket on the relationship's value object (shape=floor, floor=50000000) and the income-type/income-amount strings here in the filing payload. This matches the existing pattern (e.g. cp_rel_0009 income recorded in cp_filing_0003.interest_disclosed). The two brackets are not conflated: only the asset value is open-ended; the income amount ($1,000,001 - $5,000,000) is an ordinary bounded range."
+      }
+    ],
+    "_parse_provenance": {
+      "method": "pdfminer.six high_level.extract_text on locally downloaded PDF; values eyeballed against extracted text by Claude Code on 2026-05-20. Retrieved via the assets.documentcloud.org host because the s3.documentcloud.org asset path returns HTTP 403 to automated requests (Cloudflare interstitial); both hosts serve the same DocumentCloud document id 4385351.",
+      "primary_source_authority": "OGE-certified new-entrant 278; OGE Director Apol certification 12/26/2017. DocumentCloud mirror used as primary_source_url because the OGE reading room does not host the standalone certified PDF — OGE-hosted material is the FOIA bundle linked below, which contains only review-window correspondence.",
+      "oge_foia_bundle_url": "https://www.oge.gov/web/oge.nsf/Resources/Jared+Kushner+and+Ivanka+Trump+Records+through+August+16,+2017",
+      "oge_foia_bundle_contents": "WilmerHale / White House Counsel / OGE staff correspondence Feb 2 - Aug 16, 2017. Does not contain the certified 278 final.",
+      "secondary_sources_used_for_context_only": [],
+      "verification_status": "values transcribed from primary PDF text; final eyeball-against-PDF by registry maintainer recommended before treating as authoritative."
+    },
+    "_open_questions_surfaced": {
+      "convention_3_spousal_imputation_deferred": "Fork B decision C (spousal imputation, schema-level) was NOT applied this pass. The decision was written against an inaccurate model of the schema: it specs a new `derives_from_relationship_id` field and a `relationship_type` enum, but the registry already models imputed edges via Value.imputation_source + shape=imputed + interest_type=spousal_imputed (see cp_rel_0004, cp_rel_0007). It also misidentified cp_rel_0005/0006 as imputed-from-Jared edges; they are direct ownership edges. The Westminster spousal-imputed edge and the Ivanka OPO re-sourcing are held pending maintainer decision on whether to reuse the existing imputation_source mechanism or add the parallel field.",
+      "filer_already_in_registry": "The Fork B handoffs anticipated adding Ivanka as a new person record (persons 3 -> 4). She already exists as cp_person_0002, created when Jared Kushner's 2018/2019 annuals disclosed her in their spouse sections. cp_filing_0004.filer_id points at cp_person_0002; no new person record was created. Persons count is unchanged at 3.",
+      "cp_filing_0003_over_50m_backfill": "Five 'Over $50,000,000' lines were held back from cp_filing_0003 pending a value shape for open-ended upper bounds. The `floor` shape now exists; those five lines are eligible for backfill under a separate registry pass.",
+      "selective_capture_gap": "Ivanka's 2017 new-entrant 278 surfaces many entities in PROJECT.md scope that are not in the registry because cp_filing_0001/0002 captured only Westminster Management LLC and Ivanka OPO LLC selectively. Examples on this filing's spouse-side Part 6: Quadro Partners (d/b/a Cadre), BFPS Ventures LLC, JCK Cadre LLC, Kushner Credit Opportunity Fund LLC, 666 Fifth Management LLC. Not added this pass; flagged for a selective-capture audit / backfill pass."
+    }
+  },
+  "change_type": "original",
+  "replaces_filing_id": null,
+  "change_rationale": null,
+  "notes": "Ivanka M. Trump's 2017 New Entrant Public Financial Disclosure Report (OGE Form 278e), filer cp_person_0002. First filing in the registry by a filer outside the Kushner annual cluster and the first to be filed by Ivanka in her own name (her holdings previously appeared only in the spouse sections of Jared Kushner's annuals). All derived relationships are excluded_from_total under the pre-2025 PROJECT.md comparative-set scope. This pass records one Schedule A line: the Business Trust royalty-income line carrying the registry's first 'Over $50,000,000' value (cp_rel_0012). Convention 3 (spousal imputation) work is deferred; see interest_disclosed._open_questions_surfaced."
+}

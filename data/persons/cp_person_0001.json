@@ -1,0 +1,21 @@
+{
+  "person_id": "cp_person_0001",
+  "canonical_name": "Jared C. Kushner",
+  "aliases": [
+    {
+      "name": "Kushner, Jared C",
+      "source_url": "https://s3.amazonaws.com/storage.citizensforethics.org/wp-content/uploads/2019/04/03211926/Jared-C-Kushner-2018-278.pdf",
+      "source_filing_date": "2018-05-15",
+      "notes": "name as printed in OGE Form 278e Filer's Information block"
+    },
+    {
+      "name": "Jared Kushner",
+      "source_url": "https://www.oge.gov/Web/oge.nsf/0/1C6835BD9AC79384852585B6005A1BA7/$FILE/Revised%20Kushner%20Records.pdf",
+      "source_filing_date": "2017-01-20",
+      "notes": "name as used in WHCO Memo Re Certificate of Divestiture OGE-2017-002"
+    }
+  ],
+  "last_updated_from_filing": "cp_filing_0002",
+  "merged_into": null,
+  "notes": "Named family member per PROJECT.md (spouse of the President's child Ivanka Trump). Held Senate-confirmed-equivalent White House appointment as Assistant to the President and Senior Adviser to the President from 2017-01-20 to 2021-01-20."
+}

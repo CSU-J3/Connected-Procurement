@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0003",
+  "canonical_name": "Donald J. Trump Revocable Trust",
+  "aliases": [
+    {
+      "name": "The Donald J. Trump Revocable Trust",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "name as cited in items 122 and 123 of the 2021 Termination 278 ('via the entities disclosed on Exhibit A and direct ownership by The Donald J. Trump Revocable Trust')"
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Self-settled grantor trust dated April 7, 2014 holding Donald J. Trump's pre-presidency business interests during his 2017-2021 term. Modeled here as an intermediate cp_entity (resolves spec open question #2 in favor of intermediate-entity, which the spec already leaned toward) so the chain person -> trust -> underlying-entity is traversable for audit. Three of its many subsidiary holdings are recorded on this pass; selection rationale documented in cp_filing_0003.notes."
+}

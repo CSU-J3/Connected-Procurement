@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0007",
+  "canonical_name": "IT Collection LLC",
+  "aliases": [
+    {
+      "name": "IT Collection LLC",
+      "source_url": "https://s3.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
+      "source_filing_date": "2017-06-12",
+      "notes": "Named within the Part 2 item 2 description on Ivanka Trump's 2017 new-entrant OGE Form 278e: 'Ivanka M. Trump Business Trust (IT Collection LLC, Holding Company in New York NY))'."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Holding company (New York, NY) held within the Ivanka M. Trump Business Trust. Recorded as the registry counterparty for the Business Trust royalty-income line on Ivanka Trump's 2017 new-entrant 278 (cp_rel_0012) - the single 'Over $50,000,000' value disclosed on that filing and the forcing case for the `floor` value shape. The Ivanka M. Trump Business Trust itself is the intermediary holding structure and is not modeled as a separate cp_entity this pass (single-relationship modeling per the Fork B decision)."
+}

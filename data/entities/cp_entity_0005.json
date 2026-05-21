@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0005",
+  "canonical_name": "DJT Operations I LLC",
+  "aliases": [
+    {
+      "name": "DJT OPERATIONS I LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 017 of Part 2; description on form: 'Underlying Assets: aircraft; Location: New York, NY'"
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Trump Organization operating entity (aircraft holding) under the Donald J. Trump Revocable Trust. Selected for this pass as a representative DJT-prefixed operations entity to test the trust -> operating-subsidiary chain."
+}

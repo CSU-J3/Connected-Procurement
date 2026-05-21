@@ -1,0 +1,22 @@
+{
+  "relationship_id": "cp_rel_0011",
+  "source_id": "cp_entity_0003",
+  "target_id": "cp_entity_0006",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 25000001,
+    "high": 50000000,
+    "exact": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-20",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "The Donald J. Trump Revocable Trust's ownership of Trump International Golf Links - Doonbeg (Trump-branded golf course in County Clare, Ireland). Item 46 of Part 2. Income on form references attached schedule (recorded in cp_filing_0003.interest_disclosed)."
+}

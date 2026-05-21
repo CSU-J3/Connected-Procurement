@@ -1,0 +1,21 @@
+{
+  "person_id": "cp_person_0002",
+  "canonical_name": "Ivanka M. Trump",
+  "aliases": [
+    {
+      "name": "Ivanka Trump",
+      "source_url": "https://s3.amazonaws.com/storage.citizensforethics.org/wp-content/uploads/2019/04/03211926/Jared-C-Kushner-2018-278.pdf",
+      "source_filing_date": "2018-05-15",
+      "notes": "name as used in spouse-section disclosures on Jared Kushner OGE Form 278e"
+    },
+    {
+      "name": "Trump, Ivanka",
+      "source_url": "https://s3.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
+      "source_filing_date": "2017-06-12",
+      "notes": "name as printed in the OGE Form 278e Filer's Information block on her 2017 new-entrant report"
+    }
+  ],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Named family member per PROJECT.md (the President's child). Held Assistant to the President / Adviser to the President appointment from 2017-03-29 to 2021-01-20. First entered the registry via the spouse columns of Jared Kushner's OGE Form 278e annual reports (cp_filing_0001, cp_filing_0002); from cp_filing_0004 she is also the filer of her own 2017 new-entrant 278. The Fork B handoffs anticipated adding her as a new person record; she already existed as cp_person_0002, so cp_filing_0004 reuses this record rather than creating a duplicate."
+}

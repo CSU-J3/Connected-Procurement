@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0001",
+  "canonical_name": "Westminster Management, LLC",
+  "aliases": [
+    {
+      "name": "Westminster Management LLC",
+      "source_url": "https://s3.amazonaws.com/storage.citizensforethics.org/wp-content/uploads/2019/04/03211926/Jared-C-Kushner-2018-278.pdf",
+      "source_filing_date": "2018-05-15",
+      "notes": "Description on form: 'Management company; New York, NY'. Item 1 of Part 2 (Filer's Employment Assets & Income)."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0002",
+  "merged_into": null,
+  "notes": "Kushner Companies real estate management entity. Disclosed by Jared Kushner as a directly-held interest on his 2018 and 2019 Annual OGE 278e filings."
+}

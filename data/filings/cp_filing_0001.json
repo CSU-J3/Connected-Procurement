@@ -1,0 +1,59 @@
+{
+  "filing_id": "cp_filing_0001",
+  "primary_source_url": "https://s3.amazonaws.com/storage.citizensforethics.org/wp-content/uploads/2019/04/03211926/Jared-C-Kushner-2018-278.pdf",
+  "source_filing_date": "2018-05-15",
+  "filer_id": "cp_person_0001",
+  "filing_type": "OGE_Form_278e_Annual",
+  "interest_disclosed": {
+    "report_year": 2018,
+    "covers_calendar_year": 2017,
+    "filer_position": "Assistant to the President & Senior Adviser to the President, White House",
+    "filer_signature_date": "2018-05-15",
+    "agency_ethics_official_certification_date": "2018-10-26",
+    "agency_ethics_official": "Gast, Scott F",
+    "oge_certification_date": "2019-04-03",
+    "oge_certifier": "Apol, David",
+    "data_revisions_recorded_on_form": [
+      "2019-03-27",
+      "2019-03-19",
+      "2019-03-18",
+      "2019-03-14",
+      "2018-09-19"
+    ],
+    "selected_entries_recorded_in_registry": [
+      {
+        "schedule": "Part 2",
+        "item_number": 1,
+        "description_on_form": "Westminster Management, LLC (Management company; New York, NY)",
+        "value_on_form": "$1,000,001 - $5,000,000",
+        "income_type_on_form": "Distributions and Dividends",
+        "income_amount_on_form": "$1,500,000",
+        "registry_relationship": "cp_rel_0001"
+      },
+      {
+        "schedule": "Part 5 (Spouse's Employment Assets & Income)",
+        "item_number": 3,
+        "description_on_form": "Ivanka OPO LLC (Investment in Trump Old Post Office LLC; Washington, DC)",
+        "value_on_form": "$5,000,001 - $25,000,000",
+        "income_type_on_form": "Hotel-Related Revenue",
+        "income_amount_on_form": "$3,890,775",
+        "registry_relationships": ["cp_rel_0003", "cp_rel_0004"]
+      }
+    ],
+    "_parse_provenance": {
+      "method": "pdftotext -layout on locally downloaded PDF; values eyeballed against extracted text by Claude Code on 2026-05-03",
+      "primary_source_authority": "OGE-certified electronic Form 278e via Integrity.gov; PDF mirrored on CREW S3 (only access URL found in this pass; OGE reading-room standalone URL not located via web search)",
+      "secondary_sources_used_for_context_only": [
+        "https://www.washingtonpost.com/politics/kushner-failed-to-disclose-dozens-of-financial-holdings-new-document-shows/2017/07/21/1a11a566-6e35-11e7-96ab-5f38140b38cc_story.html",
+        "https://www.bloomberg.com/news/articles/2017-07-21/kushner-s-amended-financial-disclosure-shows-sprawling-assets-j5egyvpg",
+        "https://www.propublica.org/article/whoops-jared-kushner-made-even-more-mistakes-in-his-federal-filings",
+        "https://projects.propublica.org/trump-team-financial-disclosures/"
+      ],
+      "verification_status": "values transcribed from primary PDF text; secondary sources used for context only, never as the source of authority. Final eyeball-against-PDF by registry maintainer recommended before treating as authoritative."
+    }
+  },
+  "change_type": "original",
+  "replaces_filing_id": null,
+  "change_rationale": null,
+  "notes": "Kushner's 2018 Annual OGE Form 278e (covering CY 2017). All derived relationships are excluded_from_total under the pre-2025 PROJECT.md scope; included as comparative case set material exercising the imputation pattern (Ivanka OPO LLC -> Trump Old Post Office LLC, with spousal imputation to filer Kushner). Substituted for the originally-approved Kushner 2017 original 278 because that filing's Schedule A pages within the OGE FOIA bundle are scanned images that pdftotext and pdfminer.six both decline to extract. Same family unit, same filing type, imputation pattern preserved."
+}

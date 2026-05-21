@@ -1,0 +1,22 @@
+{
+  "relationship_id": "cp_rel_0009",
+  "source_id": "cp_entity_0003",
+  "target_id": "cp_entity_0004",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 25000001,
+    "high": 50000000,
+    "exact": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-20",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "The Donald J. Trump Revocable Trust's ownership of 845 UN Limited Partnership (Trump World Tower at 845 United Nations Plaza, New York, NY). Item 7 of Part 2. Income on form: rent $1,000,001 - $5,000,000 (recorded in cp_filing_0003.interest_disclosed)."
+}

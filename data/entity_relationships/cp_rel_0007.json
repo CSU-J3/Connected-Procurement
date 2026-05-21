@@ -1,0 +1,26 @@
+{
+  "relationship_id": "cp_rel_0007",
+  "source_id": "cp_person_0001",
+  "target_id": "cp_entity_0002",
+  "relation_kind": "family_to_entity",
+  "interest_type": "spousal_imputed",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "imputed",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "imputation_source": "cp_rel_0006"
+  },
+  "filing_source": "cp_filing_0002",
+  "observed_on": "2018-12-31",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Senior Adviser to the President",
+    "start_date": "2017-01-20",
+    "end_date": "2021-01-20"
+  },
+  "notes": "Jared Kushner's imputed interest in Ivanka OPO LLC under 18 USC 208(a)(2) as observed on the 2019 Annual filing. value.imputation_source points at cp_rel_0006 (the 2019-observation spouse-side edge). Supersedes cp_rel_0004."
+}

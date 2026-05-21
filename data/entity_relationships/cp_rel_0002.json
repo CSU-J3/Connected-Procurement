@@ -1,0 +1,19 @@
+{
+  "relationship_id": "cp_rel_0002",
+  "source_id": "cp_person_0001",
+  "target_id": "cp_person_0002",
+  "relation_kind": "spousal",
+  "interest_type": null,
+  "value": null,
+  "filing_source": "cp_filing_0001",
+  "observed_on": "2017-12-31",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Senior Adviser to the President",
+    "start_date": "2017-01-20",
+    "end_date": "2021-01-20"
+  },
+  "notes": "Marriage between Jared Kushner (filer) and Ivanka Trump (spouse). Sourced from Kushner's 2018 Annual 278e via the existence of a Spouse's Employment Assets section (Part 5) populated with Ivanka Trump's holdings. This edge is what triggers 18 USC 208(a)(2) imputation; the actual imputed financial-interest edges (e.g., cp_rel_0004) point at the underlying spouse-side financial-interest edges (e.g., cp_rel_0003) via value.imputation_source. Single edge sourced from filing 1 because the marriage is a continuing structural fact; the 2019 filing re-observes it but is not modeled as a separate spousal edge here."
+}

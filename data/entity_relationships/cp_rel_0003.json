@@ -1,0 +1,26 @@
+{
+  "relationship_id": "cp_rel_0003",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0002",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 5000001,
+    "high": 25000000,
+    "exact": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0001",
+  "observed_on": "2017-12-31",
+  "superseded_by": "cp_rel_0006",
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Adviser to the President",
+    "start_date": "2017-03-29",
+    "end_date": "2021-01-20"
+  },
+  "notes": "Ivanka Trump's underlying ownership interest in Ivanka OPO LLC (her vehicle for investment in Trump Old Post Office LLC, the GSA-leased Old Post Office Building lease holder). Disclosed on her spouse Jared Kushner's 2018 Annual 278e Part 5 item 3. This is the underlying-interest edge that cp_rel_0004 points at via value.imputation_source for the 208(a)(2) spousal imputation chain. Income ($3,890,775 Hotel-Related Revenue) recorded in the filing's interest_disclosed payload."
+}

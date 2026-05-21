@@ -1,0 +1,15 @@
+{
+  "person_id": "cp_person_0003",
+  "canonical_name": "Donald J. Trump",
+  "aliases": [
+    {
+      "name": "Trump, Donald J.",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "name as printed in OGE Form 278e Filer's Information block on 2021 Termination report"
+    }
+  ],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Not a named family member per PROJECT.md exhaustive list (the list covers family members of the administration, not the President himself). Included in this hand-population pass solely as the filer of cp_filing_0003 (2021 Termination 278) so the trust beneficial interest pattern can be schema-tested. All derived relationships are excluded_from_total."
+}

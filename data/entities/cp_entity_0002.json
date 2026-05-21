@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0002",
+  "canonical_name": "Ivanka OPO LLC",
+  "aliases": [
+    {
+      "name": "Ivanka OPO LLC",
+      "source_url": "https://s3.amazonaws.com/storage.citizensforethics.org/wp-content/uploads/2019/04/03211926/Jared-C-Kushner-2018-278.pdf",
+      "source_filing_date": "2018-05-15",
+      "notes": "Description on form: 'Investment in Trump Old Post Office LLC; Washington, DC'. Item 3 of Part 5 (Spouse's Employment Assets & Income) on 2018 filing; item 2 on 2019 filing."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0002",
+  "merged_into": null,
+  "notes": "Investment vehicle through which Ivanka Trump held an interest in Trump Old Post Office LLC (the leaseholder of the GSA-owned Old Post Office Building in Washington, DC). Trump Old Post Office LLC and the GSA lease are the subject of the GSA OIG report A170091/Q/4/P18004 (January 2019) referenced in PROJECT.md's comparative case set."
+}

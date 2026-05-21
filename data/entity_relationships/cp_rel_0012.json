@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0012",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0007",
+  "relation_kind": "family_to_entity",
+  "interest_type": "trust_beneficial",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "floor",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": 50000000,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Adviser to the President",
+    "start_date": "2017-03-29",
+    "end_date": "2021-01-20"
+  },
+  "notes": "Ivanka Trump's beneficial interest in IT Collection LLC, held through the Ivanka M. Trump Business Trust, as disclosed on Part 2 item 2 of her 2017 new-entrant OGE Form 278e. interest_type is trust_beneficial because IT Collection LLC is among the holdings of the Business Trust (PROJECT.md financial-interest category: beneficial interest in a trust). value.shape=floor with floor=50000000 records the form's 'Over $50,000,000' value tier; no ceiling is invented (see docs/methodology.md, 'Value shape: floor'). observed_on is the date of appointment (2017-03-29) per Convention 2. The royalty income on this line ('Rent or Royalties', $1,000,001 - $5,000,000, period March 9, 2017 - May 31, 2017) is recorded in cp_filing_0004.interest_disclosed, not on this relationship's value object. excluded_from_total under the pre-2025 comparative-set scope."
+}

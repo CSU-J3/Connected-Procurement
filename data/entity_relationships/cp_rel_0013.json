@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0013",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0001",
+  "relation_kind": "family_to_entity",
+  "interest_type": "spousal_imputed",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "imputed",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": "cp_rel_0001"
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Adviser to the President",
+    "start_date": "2017-03-29",
+    "end_date": "2021-01-20"
+  },
+  "notes": "Ivanka Trump's interest in Westminster Management, LLC imputed under 18 USC 208(a)(2). Westminster is Jared Kushner's direct holding; the principal interest is cp_rel_0001 (Jared -> Westminster ownership). Disclosed on Part 5 (Spouse's Employment Assets & Income), line 1 of Ivanka's 2017 new-entrant OGE Form 278e, bracket $1,000,001-$5,000,000, matching cp_rel_0001 (recoverable by traversal through value.imputation_source; not restated on this edge per Convention 3). Structural match to the existing imputed edges cp_rel_0004 and cp_rel_0007. Forward-point case: imputation_source cp_rel_0001 has observed_on 2017-12-31, later than this edge's observed_on 2017-03-29 - the registry holds no Jared->Westminster observation contemporaneous with Ivanka's new-entrant filing; cp_rel_0001 is the best-available principal. See the Convention 3 forward-point clause in docs/methodology.md. excluded_from_total under the pre-2025 comparative-set scope."
+}

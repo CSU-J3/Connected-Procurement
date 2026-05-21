@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+.env
+.DS_Store
+.pdf_cache/
+
+# Local Claude Code state (machine/session harness, not project content)
+.claude/settings.local.json
+
+# Transit handoff and instruction artifacts at repo root
+# Working-process trail. Canonical methodology in docs/methodology.md;
+# canonical project instructions in PROJECT.md.
+/connected-procurement-SKILL.md
+/connected-procurement-code-handoff.md
+/connected-procurement-handoff*.md
+/connected-procurement-project-instructions*.md
+/connected-procurement-registry-schema-spec.md
+/fork-b-handoff-ivanka-2017.md
+/fork-b-section-2-replacement.md
+/handoff-fork-*.md

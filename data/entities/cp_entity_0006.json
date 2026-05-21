@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0006",
+  "canonical_name": "Trump International Golf Links - Doonbeg",
+  "aliases": [
+    {
+      "name": "TRUMP INTERNATIONAL GOLF LINKS - DOONBEG",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 046 of Part 2 on the 2021 Termination 278"
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Trump-branded golf course in Doonbeg, County Clare, Ireland. Selected for this pass as a foreign property to test the trust -> non-US-subsidiary chain alongside two domestic picks (845 UN LP and DJT Operations I LLC)."
+}

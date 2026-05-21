@@ -1,0 +1,61 @@
+{
+  "filing_id": "cp_filing_0003",
+  "primary_source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+  "source_filing_date": "2021-01-20",
+  "filer_id": "cp_person_0003",
+  "filing_type": "OGE_Form_278e_Termination",
+  "interest_disclosed": {
+    "report_type": "Termination",
+    "date_of_appointment_or_termination": "2021-01-20",
+    "filer_position": "President of the United States of America",
+    "oge_certifier": "Emory Rounds",
+    "oge_certification_date": "2021-01-19",
+    "form_total_pages": 37,
+    "form_revision": "OGE Form 278e (March 2014)",
+    "trust_holding_selection_rationale": "Three holdings of The Donald J. Trump Revocable Trust selected deliberately to exercise the trust-as-intermediate-entity modeling pattern (resolves spec open question #2 in favor of intermediate-entity, which the spec already leaned toward) without becoming a transcription exercise. Selection criteria: (1) value-shape diversity (all three are bounded ranges; no Over-$50M open-ended ranges in the picks because the value object's shape enum does not currently support open-ended ranges, an open question this filing surfaced — see _open_questions_surfaced below); (2) asset-class diversity (NYC commercial real estate via 845 UN LP; Trump Organization operations via DJT Operations I LLC; foreign property via Trump International Golf Links Doonbeg); (3) high public visibility (Trump World Tower, Doonbeg golf course are both well-known). Trump National Doral, Trump International Golf Links Scotland, Trump Tower Commercial LLC, Trump International Hotels Management LLC, and Trump National Golf Club Los Angeles all disclose 'Over $50,000,000' on this filing and were excluded from this pass on the value-shape grounds above.",
+    "selected_entries_recorded_in_registry": [
+      {
+        "schedule": "Part 2",
+        "item_number": 7,
+        "description_on_form": "845 UN Limited Partnership; Underlying Assets: commercial real estate; Location: New York, NY",
+        "value_on_form": "$25,000,001 - $50,000,000",
+        "income_type_on_form": "rent",
+        "income_amount_on_form": "$1,000,001 - $5,000,000",
+        "registry_relationship": "cp_rel_0009"
+      },
+      {
+        "schedule": "Part 2",
+        "item_number": 17,
+        "description_on_form": "DJT OPERATIONS I LLC; Underlying Assets: aircraft; Location: New York, NY",
+        "value_on_form": "$5,000,001 - $25,000,000",
+        "income_type_on_form": "rent",
+        "income_amount_on_form": "$1,000,001 - $5,000,000",
+        "registry_relationship": "cp_rel_0010"
+      },
+      {
+        "schedule": "Part 2",
+        "item_number": 46,
+        "description_on_form": "TRUMP INTERNATIONAL GOLF LINKS - DOONBEG",
+        "value_on_form": "$25,000,001 - $50,000,000",
+        "income_type_on_form": "(see attached schedule)",
+        "income_amount_on_form": null,
+        "registry_relationship": "cp_rel_0011"
+      }
+    ],
+    "_parse_provenance": {
+      "method": "pdftotext -layout on locally downloaded PDF; values eyeballed against extracted text by Claude Code on 2026-05-03",
+      "primary_source_authority": "OGE-hosted PDF at extapps2.oge.gov PAS Index; Emory Rounds (OGE Director) digital signature embedded in document",
+      "secondary_sources_used_for_context_only": [
+        "https://projects.propublica.org/trump-team-financial-disclosures/appointees/trump-donald-j/"
+      ],
+      "verification_status": "values transcribed from primary PDF text; secondary sources used for context only, never as the source of authority. Final eyeball-against-PDF by registry maintainer recommended before treating as authoritative."
+    },
+    "_open_questions_surfaced": {
+      "open_ended_value_ranges": "OGE Form 278e Schedule A includes 'Over $50,000,000' as the top value tier. The current Value object shape enum (exact, range, binary, imputed) cannot represent an open-ended range cleanly: shape=range requires both low and high non-null with high >= low, and there is no shape=open_range option. This filing's three picks all sit within bounded ranges to avoid forcing the issue, but multiple disclosures on this same form ('Over $50M') would need to be excluded under the same logic. Recommend resolving empirically against this filing once a fourth pick or a future filing forces the value-shape decision."
+    }
+  },
+  "change_type": "original",
+  "replaces_filing_id": null,
+  "change_rationale": null,
+  "notes": "Donald J. Trump's 2021 Termination Public Financial Disclosure Report. Filed as of his term end on 2021-01-20. Used in this hand-population pass to exercise the trust beneficial interest pattern via The Donald J. Trump Revocable Trust as an intermediate cp_entity. All derived relationships are excluded_from_total under the pre-2025 PROJECT.md scope; Trump himself is not a named family member per PROJECT.md's exhaustive list (which covers family members of the administration, not the President himself), so this filing is included for schema-test purposes only, not as live-tracker data."
+}

@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0014",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0002",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 5000001,
+    "high": 25000000,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": "cp_rel_0003",
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Adviser to the President",
+    "start_date": "2017-03-29",
+    "end_date": "2021-01-20"
+  },
+  "notes": "Ivanka Trump's direct ownership interest in Ivanka OPO LLC (her vehicle for the investment in Trump Old Post Office LLC), disclosed on Part 2 (Filer's Employment Assets & Income), item 4 of her own 2017 new-entrant OGE Form 278e. This is the earliest registry observation of this direct interest; superseded by cp_rel_0003 (Ivanka -> Ivanka OPO LLC ownership, observed 2017-12-31, sourced from the Part 5 spouse section of Jared Kushner's 2018 annual). The supersession chain runs cp_rel_0014 (2017-03-29) -> cp_rel_0003 (2017-12-31) -> cp_rel_0006 (2018-12-31). Value bracket $5,000,001-$25,000,000 matches cp_rel_0003. Until this pass, Ivanka's OPO ownership was sourced only via Jared's filing; her own new-entrant 278 now confirms it as a direct disclosure. excluded_from_total under the pre-2025 comparative-set scope."
+}
