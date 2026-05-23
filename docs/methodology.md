@@ -92,6 +92,28 @@ This encoding pattern was formalized in Fork D after the §3 inspection surfaced
 
 Locked: 2026-05-21.
 
+### Contingent-rights meta-disclosures
+
+Some OGE Form 278 entries take the form of a meta-disclosure pointing at a class of contingent rights rather than naming a specific holding. The canonical pattern reads: "Contingent rights to ownership interests in entities ... entities listed in endnote." The disclosure exists to alert reviewers that the filer may receive future interests in named entities if specified conditions are met (revenue targets, IRR thresholds, etc.); the underlying entities are enumerated in the matching endnote.
+
+These meta-rows are captured via the underlying entities' direct edges where they appear elsewhere in the form, not as standalone meta-edges. No `family_to_entity` edge is written for the meta-row itself. The substantive disclosure — Jared has a contingent path to entity X — is recoverable through whatever edges entity X carries from other parts of the form.
+
+This rule keeps the registry's edge semantics clean: edges represent actual holdings, not conditional-future-holdings-that-may-materialize. The contingent-rights footnote text is preserved in the corresponding filing's `interest_disclosed` payload (or in the underlying entity's notes where the connection is otherwise unrecoverable) so the audit trail keeps the form-language.
+
+First applied in Fork E to cp_filing_0001 Part 6 item 18.6 and cp_filing_0002 Part 6 item 18.2.
+
+Locked: 2026-05-23.
+
+### Multi-to-one supersession resolution
+
+When per-row writes surface multi-to-one supersession matches via the (entity, parcel descriptor, form-block context) match key — typically where a single predecessor filing discloses the same parcel in both the EOY-value block and the period-max block — the period-max row carries the supersession link to the successor filing's row. The EOY-value-update row stands without successor. The EOY value remains recoverable from that row's `notes` field (form-block context); the substantively comparable disclosure is the period-max row.
+
+The rule applies the same way when a successor filing has its own EOY/period-max pair for the same parcel: the predecessor period-max row chains to the successor period-max row. Predecessor EOY rows stand without successor regardless of the successor structure.
+
+The pre-existing Fork E close has a corner case where a single predecessor filing carries *two* period-max rows for the same parcel (KMP1 items 208 and 230 cp_filing_0001), both pointing to the same successor row. That edge case isn't fully resolved by this convention as written; the Fork E implementation matched both predecessor period-max rows to the later successor row. A later fork may refine that behavior if a substantive analysis question depends on it.
+
+Locked: 2026-05-23.
+
 ### Convention 3: spousal imputation
 
 Where 18 USC 208(a)(2) imputes a spousal interest to a filer, the imputed interest is recorded as a separate `Relationship` with `interest_type: spousal_imputed`, `shape: imputed`, and `imputation_source` pointing at the `Relationship` ID of the principal interest on the spouse's side. Imputed edges:
@@ -106,6 +128,36 @@ The schema does not collapse imputed and principal edges into a single multi-sou
 **Forward-point case.** When an imputed edge's `observed_on` precedes the `observed_on` of its `imputation_source`, the imputation chain points forward in time. This reflects the sampling pattern of filings — when each filer happened to file relative to when the underlying interest was held — rather than a substantive inconsistency. The principal interest was held continuously across the gap; the registry simply lacks a contemporaneous principal observation. Imputed edges are not required to link to a principal whose `observed_on` is at or before the imputed `observed_on`; the chain links to the best-available principal observation regardless of temporal direction.
 
 Locked: 2026-05-20.
+
+## Inspection and transcription
+
+### Renderer
+
+PDF inspection for value-bracket transcription uses a rasterized page rendering at 200dpi minimum, viewed via the inspection tool. Any raster PDF tool meets the rule — `pdftocairo`, `pypdfium2`, `PyMuPDF`, etc. The substantive requirement is rasterized output at sufficient resolution to resolve column-collision on dense OGE-form tables, not the specific tool name.
+
+`pdftotext` and equivalent text-extraction tools are permitted only as a cross-check against the visual read, never as the sole source of value brackets or entity names. Fork D's experience with `pdftotext` mis-extracting roughly half the column-collision rows on Jared Kushner's 2018 Part 6 is the load-bearing reason for the rule. The form's dense tabular layout breaks text extractors that lose track of column boundaries; visual reads do not.
+
+When a row's value cell is ambiguous at 200dpi (column wrap, footnote glyph overlapping the bracket text, adjacent-cell bleed), re-render the row at 300dpi with row-band cropping for the spot-check. The 300dpi pass is reserved for individual ambiguities and for headline-claim verifications (see below), not used as a default for all transcription.
+
+First applied in Fork E (substituted `pypdfium2` for `pdftocairo` per pre-flight authorization; the substitution preserved methodology in substance since both produce 200dpi PNG output).
+
+Locked: 2026-05-23.
+
+### Headline-claim verification
+
+Confidence flagging on visual transcription catches structural anomalies — adjacent duplicates, ambiguous columns, unclear descriptors — but does not exhaustively verify entity names or value brackets on rows that pass without flag. For high-stakes claims (material supersession changes, top-bracket values, headline disclosure events called out in commit messages), do a targeted 300dpi re-render verification before the claim is written. Per-row writes land based on the original 200dpi transcription; the targeted verification is reserved for claims that become load-bearing in commit messages or in downstream research output.
+
+Fork E demonstrated the rule by example: three different headline-class claims (BFPS Ventures "material increase," WT 25 Columbia "appreciation," Times Square "duplicate disclosure") all surfaced as transcription errors when verified at 300dpi. The 300dpi pass takes minutes per row; a load-bearing commit-message claim built on an unverified row is hard to retract once published.
+
+Locked: 2026-05-23.
+
+### Surface count vs. write count
+
+Row counts surfaced in inspection forks' §3 reports are estimates, not precise figures. The per-row write convention can surface additional rows during writes where the initial transcription collapsed sub-parcel disclosures that the form actually splits. Final counts come from the post-write `validate` output, not the §3 surface table.
+
+Fork E surfaced 146 registered rows in its §3 report and wrote 169 edges. The delta came from per-row sub-parcel splits that the §3 table's aggregation by entity-or-by-trust did not separately number. The §3 surface is the inspection deliverable; the post-write registry counts are the authoritative answer.
+
+Locked: 2026-05-23.
 
 ## Named family member
 
