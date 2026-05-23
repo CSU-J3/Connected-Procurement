@@ -59,7 +59,8 @@ class RelationKind(str, Enum):
 class InterestType(str, Enum):
     OWNERSHIP = "ownership"
     EMPLOYMENT = "employment"
-    DEBT = "debt"
+    DEBT_INSTRUMENT_HELD = "debt_instrument_held"
+    DEBT_INSTRUMENT_OWED = "debt_instrument_owed"
     TRUST_BENEFICIAL = "trust_beneficial"
     SPOUSAL_IMPUTED = "spousal_imputed"
 

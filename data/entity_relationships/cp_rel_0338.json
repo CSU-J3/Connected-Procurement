@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0338",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0133",
+  "relation_kind": "family_to_entity",
+  "interest_type": "debt_instrument_owed",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 5000001,
+    "high": 25000000,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Adviser to the President",
+    "start_date": "2017-03-29",
+    "end_date": "2021-01-20"
+  },
+  "notes": "Ivanka Trump's liability owed to cp_entity_0133, disclosed in Part 8, item 3, of his/her 2017 New Entrant OGE Form 278e. Type: Unsecured line of credit. Amount bracket: $5,000,001 - $25,000,000. Year incurred: 2016. Rate: LIBOR+2.5%. Term: revolving. interest_type=debt_instrument_owed per Convention 5 (debt instrument direction); filer is the debtor, counterparty is the creditor. excluded_from_total under the pre-2025 comparative-set scope."
+}

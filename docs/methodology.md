@@ -114,6 +114,19 @@ The pre-existing Fork E close has a corner case where a single predecessor filin
 
 Locked: 2026-05-23.
 
+### Convention 5: debt instrument direction
+
+The schema distinguishes filer-as-creditor and filer-as-debtor debt instruments via two separate `interest_type` values:
+
+- `debt_instrument_held` — filer is the creditor; the entity is the obligor on the note. Used when the filer (or a wholly-owned LLC of the filer) holds a loan-receivable secured by the entity's assets or revenue. This is the historical `debt` enum semantic, renamed for clarity at the enum-value layer; the rename was zero-cost (no existing records used `interest_type: "debt"`) and landed bundled with Fork F's Part 8 write commit.
+- `debt_instrument_owed` — filer is the debtor; the entity is the creditor holding the note. Used for Part 8 (Liabilities) disclosures where the filer owes money to a bank, mortgage lender, or other counterparty.
+
+Both values use the same `family_to_entity` relation kind with the same `source=person, target=entity` endpoint orientation. The direction of the underlying debt is captured at the `interest_type` layer only; the edge endpoint orientation does not flip. This keeps the supersession-chain and validator semantics uniform across both directions.
+
+Counterparty entities under `debt_instrument_owed` (banks, mortgage lenders, etc.) are registered as `cp_entity_NNNN` records to satisfy the `target_id` reference requirement on the family_to_entity edge. The procurement-relevance test under "Registry inclusion test (278-sourced entities)" applies; operating-company banks land under default-include because they are themselves federal procurement counterparties (banking services contracts) and because the registry's purpose is to capture the universe of family-financial-counterparty entities regardless of which side of the obligation they sit on.
+
+Locked: 2026-05-23.
+
 ### Convention 3: spousal imputation
 
 Where 18 USC 208(a)(2) imputes a spousal interest to a filer, the imputed interest is recorded as a separate `Relationship` with `interest_type: spousal_imputed`, `shape: imputed`, and `imputation_source` pointing at the `Relationship` ID of the principal interest on the spouse's side. Imputed edges:
@@ -252,3 +265,25 @@ Excluded entities are recorded in the corresponding filing record under a siblin
 This rule applies to all 278-sourced registry adds going forward. Records added before this rule was written (cp_filing_0001/0002 original capture, cp_filing_0003, cp_filing_0004) may not fully conform; reconciliation for cp_filing_0001/0002 happens through Fork D. cp_filing_0003 and cp_filing_0004 conformance is checked in their respective queued forks.
 
 Locked: 2026-05-21.
+
+### Part 8 (Liabilities) exclusion buckets
+
+OGE Form 278e Part 8 carries regulatory exclusions at 5 CFR 2634.308(b)(2). Excluded liabilities are tracked in the filing record's `_excluded_categories.categories` array parallel to the Part 6 exclusion buckets that Fork D established. Each excluded row counts toward its bucket's `entries` or `approx_entries`; no `family_to_entity` edge is written for excluded liabilities.
+
+Four bucket types apply to Part 8:
+
+- **`personal_residence_mortgage`** — 5 CFR 2634.308(b)(2)(i). Mortgages on the filer's primary personal residence. Excluded from Part 8 disclosure by regulation, so excluded from registry edges as well. (Limitations apply for PAS filers; the regulatory cite is the same.)
+
+- **`vehicle_loan`** — 5 CFR 2634.308(b)(2)(ii). Loans secured by a personal motor vehicle, household furniture, or appliances, unless the loan exceeds the item's purchase price. Excluded from Part 8 disclosure by regulation.
+
+- **`credit_card_under_threshold`** — 5 CFR 2634.308(b)(2)(iii). Credit card and revolving charge account balances under $10,000 outstanding to a single creditor at the end of the reporting period. Excluded from Part 8 disclosure by regulation.
+
+- **`family_loan`** — 5 CFR 2634.308(b)(2)(iv). Loans from a spouse, parent, sibling, or child of the filer. Excluded from Part 8 disclosure by regulation.
+
+**Scope precision on `family_loan`:** The OGE exclusion is interpersonal only — a loan from a named-relative individual (a natural person) to the filer. A loan from a family-controlled entity (e.g., a Kushner family trust, Westminster Management, or any family-controlled LLC lending to Jared) does NOT fall under this bucket. Entity-to-filer debt relationships are written as normal `debt_instrument_owed` edges with the family-controlled entity registered as a `cp_entity_NNNN` record per Convention 5. The bucket exists to capture interpersonal lending only; entity intermediation breaks the exclusion regardless of who owns the lending entity.
+
+If Part 8 surfaces a row where the counterparty is borderline (e.g., a trust that is family-controlled but whose precise legal structure is not clear from the form), surface for review rather than auto-bucketing.
+
+Beyond the four regulatory buckets, Part 8 rows may surface where the counterparty is otherwise excluded under the §3.0 "Registry inclusion test (278-sourced entities)" — for example, a loan from an entity that fails the procurement-relevance test on its own merits. Those are a separate orthogonal screen; surface for review rather than silently bucketing under a regulatory-exclusion category that doesn't fit.
+
+Locked: 2026-05-23.

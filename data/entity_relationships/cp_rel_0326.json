@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0326",
+  "source_id": "cp_person_0001",
+  "target_id": "cp_entity_0137",
+  "relation_kind": "family_to_entity",
+  "interest_type": "debt_instrument_owed",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 5000001,
+    "high": 25000000,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0001",
+  "observed_on": "2017-12-31",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Senior Adviser to the President",
+    "start_date": "2017-01-20",
+    "end_date": "2021-01-20"
+  },
+  "notes": "Jared Kushner's liability owed to cp_entity_0137, disclosed in Part 8, item 10, of his/her 2018 Annual OGE Form 278e (covering CY 2017). Type: Unsecured line of credit. Amount bracket: $5,000,001 - $25,000,000. Year incurred: 2017. Rate: PRIME+0.5% (4%F). Term: revolving. interest_type=debt_instrument_owed per Convention 5 (debt instrument direction); filer is the debtor, counterparty is the creditor. excluded_from_total under the pre-2025 comparative-set scope."
+}

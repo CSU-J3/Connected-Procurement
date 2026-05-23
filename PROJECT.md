@@ -31,11 +31,14 @@ The list does not include: friends, business associates without a family tie, in
 
 - Ownership stake (any share, partnership interest, or membership interest)
 - Employment by the entity (including consulting and contractor relationships)
-- Debt instruments held by the named family member where the entity is the obligor
+- Debt instruments held by the named family member where the entity is the obligor (`interest_type: debt_instrument_held`)
+- Debt instruments owed by the named family member where the entity is the creditor (`interest_type: debt_instrument_owed`)
 - Beneficial interest in a trust where the entity is among the trust's holdings
 - Spousal interests imputed under 18 USC 208(a)(2)
 
-The tracker uses this definition verbatim. If a relationship doesn't fit one of these five categories, it doesn't count, even if it appears suspicious. Pin every record's `interest_type` field to one of these five values.
+The tracker uses this definition verbatim. If a relationship doesn't fit one of these six categories, it doesn't count, even if it appears suspicious. Pin every record's `interest_type` field to one of these six values.
+
+The two debt directions were split apart in Fork F §1 (2026-05-23) to cover both creditor-side and debtor-side disclosures explicitly. The single `debt` enum value used pre-amendment had zero records when the split landed; it was renamed to `debt_instrument_held` with no backwards-compatibility cost.
 
 **Connected entity** is any entity in which a named family member holds a financial interest as defined above, documented through OGE 278 filings, SEC filings, public corporate registrations, or court filings. News reporting alone does not establish a connection; news reporting points to a primary source that does.
 

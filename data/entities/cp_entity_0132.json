@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0132",
+  "canonical_name": "Deutsche Bank Trust Company Americas",
+  "aliases": [
+    {
+      "name": "Deutsche Bank Trust Company Americas",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Named as Part 8 counterparty on cp_filing_0003."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "U.S. operating bank subsidiary of Deutsche Bank AG (cp_entity_0131). Registered for entity-reference integrity and to anchor the deferred Trump-Part-8 rows on cp_filing_0003 (items 3, 4, 12, 13). Per Fork F §4 Decision Q1+Q3, all cp_filing_0003 Trump Part 8 rows defer to a future fork (combined cp_filing_0003 §3.0 conformance + Part 8 close). DBTCA is registered now so that fork has the entity ready; no Fork F edge points at DBTCA. Parent-subsidiary edge to Deutsche Bank AG was authorized but deferred — see cp_entity_0131 notes."
+}

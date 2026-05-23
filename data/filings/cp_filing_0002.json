@@ -100,6 +100,26 @@
             "DT Lido Technical Services Manager LLC"
           ],
           "rationale": "Foreign-operating entities whose business activities are conducted entirely outside US jurisdiction; excluded under the \u00a74.0.B amendment to the \u00a73.0 inclusion test (docs/methodology.md). These seven DT-prefixed Bali/Dubai/Lido hotel, golf, and technical-services manager LLCs cannot receive US federal civilian contracts and have no plausible USAspending/SAM.gov/GSA match."
+        },
+        {
+          "category": "personal_residence_mortgage",
+          "approx_entries": 0,
+          "rationale": "Mortgages on the filer's primary personal residence; excluded by 5 CFR 2634.308(b)(2)(i). No Part 8 rows on this filing fall into this bucket (per Fork F \u00a72 transcription)."
+        },
+        {
+          "category": "vehicle_loan",
+          "approx_entries": 0,
+          "rationale": "Loans secured by a personal motor vehicle, household furniture, or appliances (unless the loan exceeds the item's purchase price); excluded by 5 CFR 2634.308(b)(2)(ii). No Part 8 rows on this filing fall into this bucket (per Fork F \u00a72 transcription)."
+        },
+        {
+          "category": "credit_card_under_threshold",
+          "approx_entries": 0,
+          "rationale": "Credit card and revolving charge account balances under $10,000 outstanding to a single creditor at the end of the reporting period; excluded by 5 CFR 2634.308(b)(2)(iii). No Part 8 rows on this filing fall into this bucket (per Fork F \u00a72 transcription)."
+        },
+        {
+          "category": "family_loan",
+          "approx_entries": 0,
+          "rationale": "Interpersonal loans from a spouse, parent, sibling, or child of the filer (natural-person counterparty only); excluded by 5 CFR 2634.308(b)(2)(iv). Does NOT apply to entity-mediated debt (e.g., loans from a family-controlled trust or LLC), which are written as normal debt_instrument_owed edges per Convention 5. No Part 8 rows on this filing fall into this bucket (per Fork F \u00a72 transcription)."
         }
       ]
     }

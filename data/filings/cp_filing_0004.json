@@ -59,6 +59,31 @@
       "filer_already_in_registry": "The Fork B handoffs anticipated adding Ivanka as a new person record (persons 3 -> 4). She already exists as cp_person_0002, created when Jared Kushner's 2018/2019 annuals disclosed her in their spouse sections. cp_filing_0004.filer_id points at cp_person_0002; no new person record was created. Persons count is unchanged at 3.",
       "cp_filing_0003_over_50m_backfill": "Five 'Over $50,000,000' lines were held back from cp_filing_0003 pending a value shape for open-ended upper bounds. The `floor` shape now exists; those five lines are eligible for backfill under a separate registry pass.",
       "selective_capture_gap": "Ivanka's 2017 new-entrant 278 surfaces many entities in PROJECT.md scope that are not in the registry because cp_filing_0001/0002 captured only Westminster Management LLC and Ivanka OPO LLC selectively. Examples on this filing's spouse-side Part 6: Quadro Partners (d/b/a Cadre), BFPS Ventures LLC, JCK Cadre LLC, Kushner Credit Opportunity Fund LLC, 666 Fifth Management LLC. Not added this pass; flagged for a selective-capture audit / backfill pass."
+    },
+    "_excluded_categories": {
+      "categories": [
+        {
+          "category": "personal_residence_mortgage",
+          "approx_entries": 0,
+          "rationale": "Mortgages on the filer's primary personal residence; excluded by 5 CFR 2634.308(b)(2)(i). No Part 8 rows on this filing fall into this bucket (per Fork F \u00a72 transcription)."
+        },
+        {
+          "category": "vehicle_loan",
+          "approx_entries": 0,
+          "rationale": "Loans secured by a personal motor vehicle, household furniture, or appliances (unless the loan exceeds the item's purchase price); excluded by 5 CFR 2634.308(b)(2)(ii). No Part 8 rows on this filing fall into this bucket (per Fork F \u00a72 transcription)."
+        },
+        {
+          "category": "credit_card_under_threshold",
+          "approx_entries": 0,
+          "rationale": "Credit card and revolving charge account balances under $10,000 outstanding to a single creditor at the end of the reporting period; excluded by 5 CFR 2634.308(b)(2)(iii). No Part 8 rows on this filing fall into this bucket (per Fork F \u00a72 transcription)."
+        },
+        {
+          "category": "family_loan",
+          "approx_entries": 0,
+          "rationale": "Interpersonal loans from a spouse, parent, sibling, or child of the filer (natural-person counterparty only); excluded by 5 CFR 2634.308(b)(2)(iv). Does NOT apply to entity-mediated debt (e.g., loans from a family-controlled trust or LLC), which are written as normal debt_instrument_owed edges per Convention 5. No Part 8 rows on this filing fall into this bucket (per Fork F \u00a72 transcription)."
+        }
+      ],
+      "_methodology": "Grouped exclusion summary per the \u00a73.0 registry inclusion test (docs/methodology.md, 'Registry inclusion test (278-sourced entities)') and Part 8 regulatory exclusion buckets per 5 CFR 2634.308(b)(2) (docs/methodology.md, 'Part 8 (Liabilities) exclusion buckets')."
     }
   },
   "change_type": "original",

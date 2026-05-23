@@ -52,6 +52,31 @@
     },
     "_open_questions_surfaced": {
       "open_ended_value_ranges": "OGE Form 278e Schedule A includes 'Over $50,000,000' as the top value tier. The current Value object shape enum (exact, range, binary, imputed) cannot represent an open-ended range cleanly: shape=range requires both low and high non-null with high >= low, and there is no shape=open_range option. This filing's three picks all sit within bounded ranges to avoid forcing the issue, but multiple disclosures on this same form ('Over $50M') would need to be excluded under the same logic. Recommend resolving empirically against this filing once a fourth pick or a future filing forces the value-shape decision."
+    },
+    "_excluded_categories": {
+      "categories": [
+        {
+          "category": "personal_residence_mortgage",
+          "approx_entries": 0,
+          "rationale": "Mortgages on the filer's primary personal residence; excluded by 5 CFR 2634.308(b)(2)(i). No Part 8 rows on this filing fall into this bucket (per Fork F \u00a72 transcription)."
+        },
+        {
+          "category": "vehicle_loan",
+          "approx_entries": 0,
+          "rationale": "Loans secured by a personal motor vehicle, household furniture, or appliances (unless the loan exceeds the item's purchase price); excluded by 5 CFR 2634.308(b)(2)(ii). No Part 8 rows on this filing fall into this bucket (per Fork F \u00a72 transcription)."
+        },
+        {
+          "category": "credit_card_under_threshold",
+          "approx_entries": 0,
+          "rationale": "Credit card and revolving charge account balances under $10,000 outstanding to a single creditor at the end of the reporting period; excluded by 5 CFR 2634.308(b)(2)(iii). No Part 8 rows on this filing fall into this bucket (per Fork F \u00a72 transcription)."
+        },
+        {
+          "category": "family_loan",
+          "approx_entries": 0,
+          "rationale": "Interpersonal loans from a spouse, parent, sibling, or child of the filer (natural-person counterparty only); excluded by 5 CFR 2634.308(b)(2)(iv). Does NOT apply to entity-mediated debt (e.g., loans from a family-controlled trust or LLC), which are written as normal debt_instrument_owed edges per Convention 5. No Part 8 rows on this filing fall into this bucket (per Fork F \u00a72 transcription)."
+        }
+      ],
+      "_methodology": "Grouped exclusion summary per the \u00a73.0 registry inclusion test (docs/methodology.md, 'Registry inclusion test (278-sourced entities)') and Part 8 regulatory exclusion buckets per 5 CFR 2634.308(b)(2) (docs/methodology.md, 'Part 8 (Liabilities) exclusion buckets')."
     }
   },
   "change_type": "original",

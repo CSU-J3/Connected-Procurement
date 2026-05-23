@@ -1,0 +1,28 @@
+{
+  "entity_id": "cp_entity_0137",
+  "canonical_name": "Signature Bank",
+  "aliases": [
+    {
+      "name": "Signature Bank",
+      "source_url": "https://s3.amazonaws.com/storage.citizensforethics.org/wp-content/uploads/2019/04/03211926/Jared-C-Kushner-2018-278.pdf",
+      "source_filing_date": "2018-05-15",
+      "notes": "Named as Part 8 counterparty on cp_filing_0001."
+    },
+    {
+      "name": "Signature Bank",
+      "source_url": "https://www.citizensforethics.org/wp-content/uploads/legacy/2020/07/Kushner-Jared-2019-Annual-278e-OGE-Certified.pdf",
+      "source_filing_date": "2019-05-15",
+      "notes": "Named as Part 8 counterparty on cp_filing_0002."
+    },
+    {
+      "name": "Signature Bank",
+      "source_url": "https://assets.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
+      "source_filing_date": "2017-06-12",
+      "notes": "Named as Part 8 counterparty on cp_filing_0004."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "NY state-chartered bank (standalone entity, not a subsidiary of a separate holding company). Counterparty on Jared 2018 (items 7, 10), Jared 2019 (item 5), and Ivanka NE (items 7, 10). Note: Signature Bank collapsed in March 2023 in the SVB-era bank failures; closed by NYDFS, deposits transferred to Flagstar Bank. The canonical name reflects the entity at the time of disclosure."
+}

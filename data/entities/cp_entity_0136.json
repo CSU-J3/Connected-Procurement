@@ -1,0 +1,28 @@
+{
+  "entity_id": "cp_entity_0136",
+  "canonical_name": "Citigroup, Inc.",
+  "aliases": [
+    {
+      "name": "Citi Group",
+      "source_url": "https://s3.amazonaws.com/storage.citizensforethics.org/wp-content/uploads/2019/04/03211926/Jared-C-Kushner-2018-278.pdf",
+      "source_filing_date": "2018-05-15",
+      "notes": "Named as Part 8 counterparty on cp_filing_0001."
+    },
+    {
+      "name": "Citi Group",
+      "source_url": "https://www.citizensforethics.org/wp-content/uploads/legacy/2020/07/Kushner-Jared-2019-Annual-278e-OGE-Certified.pdf",
+      "source_filing_date": "2019-05-15",
+      "notes": "Named as Part 8 counterparty on cp_filing_0002."
+    },
+    {
+      "name": "Citi Group",
+      "source_url": "https://assets.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
+      "source_filing_date": "2017-06-12",
+      "notes": "Named as Part 8 counterparty on cp_filing_0004."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Parent holding company. Form-text 'Citi Group' (two words) is non-standard spacing; resolves to Citigroup, Inc. per Fork F §4 Decision Q5. Note: the lender of record on a U.S. mortgage or line of credit is typically Citibank, N.A. (the operating bank subsidiary), not the holding company; per Q5 the default to parent stands unless form context specifies otherwise. Counterparty on Jared 2018 (item 6), Jared 2019 (item 4), and Ivanka NE (item 6)."
+}
