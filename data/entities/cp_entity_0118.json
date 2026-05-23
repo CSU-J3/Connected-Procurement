@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0118",
+  "canonical_name": "KF-Customers BC, LLC",
+  "aliases": [
+    {
+      "name": "KF-Customers BC, LLC",
+      "source_url": "https://s3.amazonaws.com/storage.citizensforethics.org/wp-content/uploads/2019/04/03211926/Jared-C-Kushner-2018-278.pdf",
+      "source_filing_date": "2018-05-15",
+      "notes": "Part 6 item 2.23, 2018 filing."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0001",
+  "merged_into": null,
+  "notes": "Kushner-side LLC wrapper holding shares of Customers Bancorp Inc. (Wyomissing, PA). Registered for inventory completeness; no family_to_entity edge — the LLC's only apparent purpose is the equity-holding wrapper, so the form line falls under _excluded_categories.direct_public_equity_holdings per the §4 decision. Surfaced as Fork D §3.1 inventory miss during Fork E Part 6 transcription."
+}

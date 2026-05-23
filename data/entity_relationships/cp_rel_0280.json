@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0280",
+  "source_id": "cp_person_0001",
+  "target_id": "cp_entity_0115",
+  "relation_kind": "family_to_entity",
+  "interest_type": "trust_beneficial",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 500001,
+    "high": 1000000,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0002",
+  "observed_on": "2018-12-31",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Senior Adviser to the President",
+    "start_date": "2017-01-20",
+    "end_date": "2021-01-20"
+  },
+  "notes": "Jared Kushner's interest in Undeveloped Real Estate in Atlantic City, NJ held through cp_entity_0115, disclosed in Part 6, item 3.7, of his 2019 Annual OGE Form 278e (covering CY 2018). Held via Trust #3; interest_type=trust_beneficial. Income type: (none). Income amount: None (or less than $201). Bracket up vs. 2018 (was $250,001 - $500,000) excluded_from_total under the pre-2025 comparative-set scope."
+}

@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0206",
+  "source_id": "cp_person_0001",
+  "target_id": "cp_entity_0076",
+  "relation_kind": "family_to_entity",
+  "interest_type": "trust_beneficial",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 1001,
+    "high": 15000,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0001",
+  "observed_on": "2017-12-31",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Senior Adviser to the President",
+    "start_date": "2017-01-20",
+    "end_date": "2021-01-20"
+  },
+  "notes": "Jared Kushner's interest in Commercial Real Estate in Millburn, NJ held through cp_entity_0076, disclosed in Part 6, item 5.25, of his 2018 Annual OGE Form 278e (covering CY 2017). Held via Trust #5; interest_type=trust_beneficial. Income type: (none). Income amount: None (or less than $201). excluded_from_total under the pre-2025 comparative-set scope."
+}

@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0307",
+  "source_id": "cp_person_0001",
+  "target_id": "cp_entity_0042",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 5000001,
+    "high": 25000000,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0002",
+  "observed_on": "2018-12-31",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Senior Adviser to the President",
+    "start_date": "2017-01-20",
+    "end_date": "2021-01-20"
+  },
+  "notes": "Jared Kushner's interest in Holding Company; New York, NY held through cp_entity_0042, disclosed in Part 6, item 18, of his 2019 Annual OGE Form 278e (covering CY 2018). Held directly (not through trust); interest_type=ownership. Income type: Capital Gains / Rent or Royalties / Interest. Income amount: $1,000,001 - $5,000,000. BFPS Ventures verified at 300dpi per §4 amendment 2 (.pdf_cache/render/crops/BFPS_cp_filing_0002_p018_item18.png): value bracket is $5,000,001 - $25,000,000, unchanged from cp_filing_0001 — the original §3.1 claim of $25,000,001 - $50,000,000 was a 200dpi transcription error. excluded_from_total under the pre-2025 comparative-set scope."
+}

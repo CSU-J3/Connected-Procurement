@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0238",
+  "source_id": "cp_person_0001",
+  "target_id": "cp_entity_0043",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 25000001,
+    "high": 50000000,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0001",
+  "observed_on": "2017-12-31",
+  "superseded_by": "cp_rel_0312",
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Senior Adviser to the President",
+    "start_date": "2017-01-20",
+    "end_date": "2021-01-20"
+  },
+  "notes": "Jared Kushner's interest in Holding Company for Quadro Partners, Inc. (d/b/a Cadre); Real Estate Investment Platform in New York, NY held through cp_entity_0043, disclosed in Part 6, item 213, of his 2018 Annual OGE Form 278e (covering CY 2017). Held directly (not through trust); interest_type=ownership. Income type: (none). Income amount: None (or less than $201). Largest single-value position on filing excluded_from_total under the pre-2025 comparative-set scope."
+}

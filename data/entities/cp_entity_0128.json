@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0128",
+  "canonical_name": "KCOF-215 Moore, LLC",
+  "aliases": [
+    {
+      "name": "KCOF-215 MOORE, LLC",
+      "source_url": "https://s3.amazonaws.com/storage.citizensforethics.org/wp-content/uploads/2019/04/03211926/Jared-C-Kushner-2018-278.pdf",
+      "source_filing_date": "2018-05-15",
+      "notes": "Part 6 item 4.33, 2018 filing."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0001",
+  "merged_into": null,
+  "notes": "Kushner-side LLC holding a loan-receivable note secured by a Heritage Equities Brooklyn property. Per §4 decisions, the proposed lender_promote_series exclusion category was rejected: this is an operating vehicle, not a transparent debt-instrument wrapper. Surfaced as Fork D §3.1 inventory miss during Fork E Part 6 transcription."
+}

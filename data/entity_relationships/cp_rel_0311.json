@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0311",
+  "source_id": "cp_person_0001",
+  "target_id": "cp_entity_0102",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 50001,
+    "high": 100000,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0002",
+  "observed_on": "2018-12-31",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Senior Adviser to the President",
+    "start_date": "2017-01-20",
+    "end_date": "2021-01-20"
+  },
+  "notes": "Jared Kushner's interest in Commercial Real Estate, 175 Pearl Street, Brooklyn, NY held through cp_entity_0102, disclosed in Part 6, item 24, of his 2019 Annual OGE Form 278e (covering CY 2018). Held directly (not through trust); interest_type=ownership. Income type: Rent or Royalties. Income amount: $201 - $1,000. Phase A LOW-5 300dpi verification correction: items 23 and 24 are distinct sub-parcels with distinct brackets (not duplicates as 200dpi read suggested). Item 24 is the 175 Pearl Street sub-parcel; value $50,001 - $100,000 (NOT $5M-$25M as originally transcribed). excluded_from_total under the pre-2025 comparative-set scope."
+}

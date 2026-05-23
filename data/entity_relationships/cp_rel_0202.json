@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0202",
+  "source_id": "cp_person_0001",
+  "target_id": "cp_entity_0073",
+  "relation_kind": "family_to_entity",
+  "interest_type": "trust_beneficial",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 50001,
+    "high": 100000,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0001",
+  "observed_on": "2017-12-31",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Senior Adviser to the President",
+    "start_date": "2017-01-20",
+    "end_date": "2021-01-20"
+  },
+  "notes": "Jared Kushner's interest in Industrial Real Estate in Edison, NJ held through cp_entity_0073, disclosed in Part 6, item 5.9, of his 2018 Annual OGE Form 278e (covering CY 2017). Held via Trust #5; interest_type=trust_beneficial. Income type: (none). Income amount: None (or less than $201). excluded_from_total under the pre-2025 comparative-set scope."
+}
