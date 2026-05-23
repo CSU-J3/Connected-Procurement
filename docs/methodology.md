@@ -127,6 +127,14 @@ Counterparty entities under `debt_instrument_owed` (banks, mortgage lenders, etc
 
 Locked: 2026-05-23.
 
+### Convention 6: external-source entity_to_entity relationships
+
+Entity_to_entity subsidiary edges and similar relational structures require a filing-disclosed source per Convention 4. External corporate-structure knowledge — bank parent/subsidiary trees, publicly-known holding relationships, named-but-undisclosed corporate ownership — is captured in entity `notes` and defers to a future fork that adds an external-source registry edge mechanism. Do not invent value brackets or stretch `binary` shapes to accommodate non-filing-disclosed relationships.
+
+The Fork F DBAG ↔ DBTCA case is the canonical example: Deutsche Bank AG (cp_entity_0131) is the German parent of Deutsche Bank Trust Company Americas (cp_entity_0132). The parent-subsidiary relationship is public corporate structure (SEC 10-K, Delaware corporate registrations) but is not disclosed by any of the four OGE filings currently in the registry. Both entities were registered to anchor the Part 8 edges that target them, but the subsidiary edge between them was deferred per this convention; the relationship is captured in each entity's notes pending an external-source edge mechanism.
+
+Locked: 2026-05-23.
+
 ### Convention 3: spousal imputation
 
 Where 18 USC 208(a)(2) imputes a spousal interest to a filer, the imputed interest is recorded as a separate `Relationship` with `interest_type: spousal_imputed`, `shape: imputed`, and `imputation_source` pointing at the `Relationship` ID of the principal interest on the spouse's side. Imputed edges:
