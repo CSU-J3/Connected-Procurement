@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0158",
+  "canonical_name": "MBWT LLC",
+  "aliases": [
+    {
+      "name": "MBWT LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 8 of Part 6 p020 direct-Trump disclosures. Form descriptor: 'MBWT LLC; Underlying assets are not reportable'. EIF=No. Value not disclosed (underlying assets not reportable). The 'not reportable' designation per OGE 278e conventions usually indicates assets below the de minimis threshold or qualifying for a specific reporting exemption."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Trump-direct operating LLC with non-reportable underlying assets. Registered in Fork G per amendment Decision D.4 (entity registered; family_to_entity ownership edge deferred to Fork I full Part 6 backfill). No edges in this fork. Entity-name etymology unclear from form text."
+}

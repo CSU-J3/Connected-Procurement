@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0151",
+  "canonical_name": "Trump Old Post Office LLC",
+  "aliases": [
+    {
+      "name": "TRUMP OLD POST OFFICE LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 095 of Part 2 Exhibit A. Form descriptor: 'Underlying Assets: hotel; Location: Washington, DC'. Same entity referenced as borrower on Part 8 item 13 (Deutsche Bank Trust Company Americas loan, Over $50M)."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Hotel operating LLC for the Trump International Hotel at the Old Post Office building (1100 Pennsylvania Avenue NW, Washington, DC), held via The Donald J. Trump Revocable Trust (cp_entity_0003). Subject of the GSA Old Post Office lease and the GSA OIG Report A170091/Q/4/P18004 (January 2019) referenced in PROJECT.md comparative case set. Cross-references the Ivanka OPO LLC chain on cp_filing_0001 / cp_filing_0004 (Ivanka's investment in this entity via Ivanka OPO LLC). Registered in Fork G as part of the Fork H prep set and the Over-$50M backfill (cp_rel_0355). The brand has been disposed since 2022 (sale to CGI Merchant Group, rebranded Waldorf Astoria) but preserve as observed_on the cp_filing_0003 date."
+}

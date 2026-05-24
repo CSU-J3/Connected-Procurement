@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0141",
+  "canonical_name": "Trump Tower Commercial LLC",
+  "aliases": [
+    {
+      "name": "TRUMP TOWER COMMERCIAL LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 108 of Part 2 (Filer's Employment Assets and Income), Exhibit A. Form descriptor: 'Underlying Assets: commercial real estate; Location: New York, NY'. Same entity referenced as borrower on Part 8 item 1 (Ladder Capital Finance LLC mortgage)."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Commercial real estate operating LLC holding the commercial component of Trump Tower (725 Fifth Avenue, New York, NY). Held via The Donald J. Trump Revocable Trust (cp_entity_0003). Registered in Fork G as part of (a) the Fork H prep set for Part 8 entity_to_entity debt edges and (b) the Over-$50M backfill (cp_rel_0349). Exhibit B p9 references TRUMP TOWER COMMERCIAL LLC at 99.00% Member / 1.00% Managing Member ownership structure."
+}

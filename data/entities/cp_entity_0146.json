@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0146",
+  "canonical_name": "Trump National Golf Club Colts Neck LLC",
+  "aliases": [
+    {
+      "name": "TRUMP NATIONAL GOLF CLUB - COLTS NECK",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 092 of Part 2 Exhibit A. Form descriptor: 'Underlying Assets: golf club; Location: Colts Neck, NJ'. Part 2 form text omits LLC suffix; Part 8 item 7 form text reads 'Trump National Golf Club Colts Neck LLC' (with LLC); canonical preserves the most-complete naming."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Golf club operating LLC in Colts Neck, NJ. Held via The Donald J. Trump Revocable Trust (cp_entity_0003). Registered in Fork G as part of the Fork H prep set (Amboy Bank mortgage borrower) and the Over-$50M backfill (cp_rel_0353)."
+}

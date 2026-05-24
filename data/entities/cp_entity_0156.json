@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0156",
+  "canonical_name": "The Fred C. Trump December 16, 1976 Trust",
+  "aliases": [
+    {
+      "name": "The Fred C. Trump December 16, 1976 Trust- F/B/O Donald J. Trump",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Section header on Part 6 p020 of cp_filing_0003. Discloses one holding: a JP Morgan Chase Savings Account at $1,000,001 - $5,000,000 (Interest $1,001 - $2,500). Canonical drops the 'F/B/O Donald J. Trump' beneficiary suffix as that's annotation, not part of the trust's legal name."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Trust established December 16, 1976 by Fred C. Trump (Donald J. Trump's father) for the benefit of Donald J. Trump. Distinct from The Donald J. Trump Revocable Trust (cp_entity_0003), which is Donald's self-settled grantor trust dated April 7, 2014. The 1976 Trust is a third-party-settled (testamentary or inter vivos) trust where Donald is the named beneficiary. Discloses a single JP Morgan Chase Savings Account holding on cp_filing_0003 Part 6. Registered in Fork G per amendment Decision D.3 (Path A: formally named trust). Beneficial-interest edge from Trump in cp_rel_0359."
+}

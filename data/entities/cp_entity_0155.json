@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0155",
+  "canonical_name": "Trump National Golf Club - Los Angeles",
+  "aliases": [
+    {
+      "name": "TRUMP NATIONAL GOLF CLUB - LOS ANGELES",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 116 of Part 2 Exhibit A. Form descriptor: 'Underlying Assets: golf course and unsold lots; Location: Los Angeles, CA'. Transcription verified at 300dpi after a row-blend was suspected at 200dpi (the adjacent item 119 Wollman Rink Operations LLC carries the NYC Department of Parks & Recreation lease descriptor; the LA row was incorrectly blended with that descriptor in the initial 200dpi read)."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Trump-branded golf course in Rancho Palos Verdes (form-listed as 'Los Angeles, CA'). Includes unsold residential lots associated with the course development. Held via The Donald J. Trump Revocable Trust (cp_entity_0003). Registered in Fork G as one of the original 5 Over-$50M named entities; ownership edge cp_rel_0358."
+}

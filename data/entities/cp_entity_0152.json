@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0152",
+  "canonical_name": "1125 South Ocean LLC",
+  "aliases": [
+    {
+      "name": "1125 South Ocean LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 208 of Part 2 Exhibit A. Form descriptor: 'Underlying Assets: residential real estate and bank account; Location: Palm Beach, FL'. Same entity referenced as borrower on Part 8 item 14 (Professional Bank mortgage, $5M-$25M). Part 2 value bracket $25,000,001 - $50,000,000 (not Over $50M)."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Residential real estate operating LLC at 1125 South Ocean Blvd, Palm Beach, FL. Held via The Donald J. Trump Revocable Trust (cp_entity_0003). Exhibit B p79 places it in an ownership chain via Westminster Hotel Manager Member Corp / Propco 2019 LLC. Registered in Fork G for Fork H Part 8 prep only; no Over-$50M backfill (value bracket below threshold)."
+}

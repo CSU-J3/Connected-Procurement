@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0145",
+  "canonical_name": "Trump Plaza LLC",
+  "aliases": [
+    {
+      "name": "TRUMP PLAZA LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 100 of Part 2 Exhibit A. Form descriptor: 'Underlying Assets: residential & commercial real estate; Location: New York, NY'. Same entity referenced as borrower on Part 8 item 6 (Ladder Capital Finance LLC mortgage)."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Residential & commercial real estate operating LLC holding Trump Plaza, 167 East 61st Street, New York, NY (distinct from the demolished Atlantic City Trump Plaza casino). Held via The Donald J. Trump Revocable Trust (cp_entity_0003) \u2014 Exhibit B p69 shows '1% Trump Plaza Member Inc. Managing Member / 99% The Donald J. Trump Revocable Trust Member'. Part 2 value bracket $25,000,001 - $50,000,000 (not Over $50M); no Over-$50M backfill edge. Registered in Fork G for Fork H Part 8 prep only."
+}

@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0144",
+  "canonical_name": "Trump Park Avenue LLC",
+  "aliases": [
+    {
+      "name": "TRUMP PARK AVENUE LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 099 of Part 2 Exhibit A. Form descriptor: 'Underlying Assets: residential & commercial real estate; Location: New York, NY'. Same entity referenced as borrower on Part 8 item 5 (Investors Savings Bank mortgage)."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Residential & commercial real estate operating LLC holding Trump Park Avenue (502 Park Avenue, New York, NY). Held via The Donald J. Trump Revocable Trust (cp_entity_0003). Registered in Fork G as part of the Fork H prep set and the Over-$50M backfill (cp_rel_0352)."
+}

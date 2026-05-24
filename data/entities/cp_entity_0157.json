@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0157",
+  "canonical_name": "WMTMF LLC",
+  "aliases": [
+    {
+      "name": "WMTMF LLC (US BANK CASH ACCOUNT)",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 7 of Part 6 p020 direct-Trump disclosures. Form descriptor in description column: 'WMTMF LLC (US BANK CASH ACCOUNT)'. Value bracket $15,001 - $50,000."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Trump-direct operating LLC whose underlying asset is a US Bank cash account. Registered in Fork G per amendment Decision D.4 (entity registered; family_to_entity ownership edge deferred to Fork I full Part 6 backfill). No edges in this fork. The LLC's purpose is presumably a cash-holding vehicle (entity name etymology unclear from form text \u2014 possibly Westchester / White-related acronym based on Trump-cluster naming patterns)."
+}

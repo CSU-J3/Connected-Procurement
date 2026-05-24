@@ -295,3 +295,13 @@ If Part 8 surfaces a row where the counterparty is borderline (e.g., a trust tha
 Beyond the four regulatory buckets, Part 8 rows may surface where the counterparty is otherwise excluded under the §3.0 "Registry inclusion test (278-sourced entities)" — for example, a loan from an entity that fails the procurement-relevance test on its own merits. Those are a separate orthogonal screen; surface for review rather than silently bucketing under a regulatory-exclusion category that doesn't fit.
 
 Locked: 2026-05-23.
+
+### `direct_commodity_or_precious_metal_holdings` exclusion bucket
+
+Direct holdings of commodities, precious metals, or physical assets that aren't entity ownership. Disclosed on filing per OGE reporting requirements but don't generate `family_to_entity` edges because no entity is referenced — the asset is the commodity itself, not equity in a producing or holding company. Examples: direct gold investment, physical silver bullion, oil futures held individually rather than via an investment vehicle.
+
+If the disclosure is for a commodity-themed investment vehicle (commodity ETF, precious-metals mutual fund), use `pooled_investment_instruments` instead. This bucket is for direct physical or unit commodity holdings only.
+
+First populated by Fork G (cp_filing_0003 Part 6 p020 "INVESTMENT IN GOLD" line, $100,001 - $250,000 bracket).
+
+Locked: 2026-05-23.

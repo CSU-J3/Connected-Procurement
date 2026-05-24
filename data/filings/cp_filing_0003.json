@@ -12,7 +12,8 @@
     "oge_certification_date": "2021-01-19",
     "form_total_pages": 37,
     "form_revision": "OGE Form 278e (March 2014)",
-    "trust_holding_selection_rationale": "Three holdings of The Donald J. Trump Revocable Trust selected deliberately to exercise the trust-as-intermediate-entity modeling pattern (resolves spec open question #2 in favor of intermediate-entity, which the spec already leaned toward) without becoming a transcription exercise. Selection criteria: (1) value-shape diversity (all three are bounded ranges; no Over-$50M open-ended ranges in the picks because the value object's shape enum does not currently support open-ended ranges, an open question this filing surfaced — see _open_questions_surfaced below); (2) asset-class diversity (NYC commercial real estate via 845 UN LP; Trump Organization operations via DJT Operations I LLC; foreign property via Trump International Golf Links Doonbeg); (3) high public visibility (Trump World Tower, Doonbeg golf course are both well-known). Trump National Doral, Trump International Golf Links Scotland, Trump Tower Commercial LLC, Trump International Hotels Management LLC, and Trump National Golf Club Los Angeles all disclose 'Over $50,000,000' on this filing and were excluded from this pass on the value-shape grounds above.",
+    "trust_holding_selection_rationale": "Three holdings of The Donald J. Trump Revocable Trust selected deliberately to exercise the trust-as-intermediate-entity modeling pattern (resolves spec open question #2 in favor of intermediate-entity, which the spec already leaned toward) without becoming a transcription exercise. Selection criteria: (1) value-shape diversity (all three are bounded ranges; no Over-$50M open-ended ranges in the picks because the value object's shape enum did not at the time support open-ended ranges, an open question this filing surfaced); (2) asset-class diversity (NYC commercial real estate via 845 UN LP; Trump Organization operations via DJT Operations I LLC; foreign property via Trump International Golf Links Doonbeg); (3) high public visibility (Trump World Tower, Doonbeg golf course are both well-known). Trump National Doral, Trump International Golf Links Scotland, Trump Tower Commercial LLC, Trump International Hotels Management LLC, and Trump National Golf Club Los Angeles were the 5 Over-$50M entities originally named in the eight-step roadmap as held-back; subsequent Fork G inspection (2026-05-23) found the actual Over-$50M Part 2 Exhibit A count is 22, of which Fork G wrote 10 (the original 5 + 5 overlapping with the Fork H prep Part 8 borrowing-entity set: 40 Wall Street LLC, Trump National Golf Club Colts Neck LLC, Trump National Golf Club Washington DC LLC, Trump Old Post Office LLC, Trump Park Avenue LLC). The remaining 12 Over-$50M rows defer to Fork I alongside the full Part 2 Exhibit A operating-entity backfill.",
+    "form_layout_notes": "cp_filing_0003 uses the older OGE Form 278e (March 2014) layout, distinct from cp_filing_0001 / cp_filing_0002 (newer 278e). Differences relevant to future forks: (a) Part 2 is split across 'Exhibit A' (operating-entity disclosures, pp.3-16) and 'Exhibit B' (structural / ownership schedule referenced by Reference # column, pp.38-79); (b) Part 6 spans pp.20-26 with p.20 carrying Trump-direct bank accounts, an INVESTMENT IN GOLD line, two operating LLCs (WMTMF LLC, MBWT LLC), a 'JP MORGAN CLEARING CORP - BROKERAGE ACCOUNT - HOLDINGS' sub-section with one Global Fiber Technologies entry, a 'The Fred C. Trump December 16, 1976 Trust- F/B/O Donald J. Trump' sub-section with one JP Morgan Chase Savings Account, and a 'The Donald J Trump Revocable Trust' sub-section with four bank accounts; pp.21-26 host three J.P. Morgan-managed Family Trust shells ('Family Trust 1*', 'Family Trust 2*', 'Family Trust 3*') containing ~103 pooled investment / treasury / cash items collectively; (c) Part 3 (Filer's Employment Agreements) at p17 discloses 2 pension-plan participations (Screen Actors Guild-Producers and AFTRA Retirement Fund); Part 4 (Filer's Sources of Compensation) at p18 is N/A; Part 5 (Spouse's Employment) at p19 discloses 6 Melania entities (defer to a future spousal-imputation fork); Part 8 (Liabilities) at p36 with 14 rows already transcribed by Fork F. The Family Trust shells are NOT formally named on the form (only 'Family Trust 1*' etc.); per Fork G amendment Decision D.3 Path B they are not registered as cp_entity records, only counted via the pooled_investment_instruments / treasury_notes / cash_bank_and_money_market_accounts exclusion buckets. The footer asterisk note reads: '* J.P. Morgan is the sole Trustee. Donald J. Trump retains an income interest only in the Family Trusts and has no investment decision authority.' Trust 2 header row discloses trust-level income as 'Interest, Dividends, Capital Gains: $15,001 - $50,000' (income aggregation at the trust shell rather than per-holding).",
     "selected_entries_recorded_in_registry": [
       {
         "schedule": "Part 2",
@@ -40,10 +41,109 @@
         "income_type_on_form": "(see attached schedule)",
         "income_amount_on_form": null,
         "registry_relationship": "cp_rel_0011"
+      },
+      {
+        "schedule": "Part 2",
+        "item_number": 108,
+        "description_on_form": "TRUMP TOWER COMMERCIAL LLC; Underlying Assets: commercial real estate; Location: New York, NY",
+        "value_on_form": "Over $50,000,000",
+        "income_type_on_form": "rent",
+        "income_amount_on_form": "Over $5,000,000",
+        "registry_relationship": "cp_rel_0349"
+      },
+      {
+        "schedule": "Part 2",
+        "item_number": 2,
+        "description_on_form": "40 Wall Street LLC; Underlying Assets: commercial real estate; Location: New York, NY",
+        "value_on_form": "Over $50,000,000",
+        "income_type_on_form": "rent",
+        "income_amount_on_form": "Over $5,000,000",
+        "registry_relationship": "cp_rel_0350"
+      },
+      {
+        "schedule": "Part 2",
+        "item_number": 64,
+        "description_on_form": "TRUMP NATIONAL DORAL; Underlying Assets: golf courses & resort; Location: Miami, FL",
+        "value_on_form": "Over $50,000,000",
+        "income_type_on_form": "golf resort related revenues",
+        "income_amount_on_form": "$44,191,512",
+        "registry_relationship": "cp_rel_0351"
+      },
+      {
+        "schedule": "Part 2",
+        "item_number": 99,
+        "description_on_form": "TRUMP PARK AVENUE LLC; Underlying Assets: residential & commercial real estate; Location: New York, NY",
+        "value_on_form": "Over $50,000,000",
+        "income_type_on_form": "rent",
+        "income_amount_on_form": "$1,000,001 - $5,000,000",
+        "registry_relationship": "cp_rel_0352"
+      },
+      {
+        "schedule": "Part 2",
+        "item_number": 92,
+        "description_on_form": "TRUMP NATIONAL GOLF CLUB - COLTS NECK; Underlying Assets: golf club; Location: Colts Neck, NJ",
+        "value_on_form": "Over $50,000,000",
+        "income_type_on_form": "golf related revenue",
+        "income_amount_on_form": "$6,203,627",
+        "registry_relationship": "cp_rel_0353"
+      },
+      {
+        "schedule": "Part 2",
+        "item_number": 94,
+        "description_on_form": "TRUMP NATIONAL GOLF CLUB - WASHINGTON DC; Underlying Assets: golf club; Location: Potomac Falls, VA",
+        "value_on_form": "Over $50,000,000",
+        "income_type_on_form": "golf related revenue",
+        "income_amount_on_form": "$14,201,177",
+        "registry_relationship": "cp_rel_0354"
+      },
+      {
+        "schedule": "Part 2",
+        "item_number": 95,
+        "description_on_form": "TRUMP OLD POST OFFICE LLC; Underlying Assets: hotel; Location: Washington, DC",
+        "value_on_form": "Over $50,000,000",
+        "income_type_on_form": "hotel related revenue",
+        "income_amount_on_form": "$15,122,304",
+        "registry_relationship": "cp_rel_0355"
+      },
+      {
+        "schedule": "Part 2",
+        "item_number": 69,
+        "description_on_form": "TRUMP INTERNATIONAL GOLF LINKS - SCOTLAND; Underlying Assets: golf course; Location: Aberdeen, Scotland",
+        "value_on_form": "Over $50,000,000",
+        "income_type_on_form": "golf related revenue",
+        "income_amount_on_form": "$1,434,426",
+        "registry_relationship": "cp_rel_0356"
+      },
+      {
+        "schedule": "Part 2",
+        "item_number": 72,
+        "description_on_form": "TRUMP INTERNATIONAL HOTELS MANAGEMENT LLC; Underlying Assets: management company; Location: New York, NY",
+        "value_on_form": "Over $50,000,000",
+        "income_type_on_form": "management fees",
+        "income_amount_on_form": "$581,530",
+        "registry_relationship": "cp_rel_0357"
+      },
+      {
+        "schedule": "Part 2",
+        "item_number": 116,
+        "description_on_form": "TRUMP NATIONAL GOLF CLUB - LOS ANGELES; Underlying Assets: golf course and unsold lots; Location: Los Angeles, CA",
+        "value_on_form": "Over $50,000,000",
+        "income_type_on_form": "golf related revenue",
+        "income_amount_on_form": "$8,588,711",
+        "registry_relationship": "cp_rel_0358"
+      },
+      {
+        "schedule": "Part 6 (sub-section: The Fred C. Trump December 16, 1976 Trust- F/B/O Donald J. Trump)",
+        "item_number": 1,
+        "description_on_form": "JP MORGAN CHASE - SAVINGS ACCOUNT (sole disclosed holding of The Fred C. Trump December 16, 1976 Trust)",
+        "value_on_form": "$1,000,001 - $5,000,000",
+        "income_type_on_form": "Interest",
+        "income_amount_on_form": "$1,001 - $2,500",
+        "registry_relationship": "cp_rel_0359"
       }
     ],
     "_parse_provenance": {
-      "method": "pdftotext -layout on locally downloaded PDF; values eyeballed against extracted text by Claude Code on 2026-05-03",
+      "method": "pdftotext -layout on locally downloaded PDF; values eyeballed against extracted text by Claude Code on 2026-05-03. Fork G (2026-05-23) re-rendered Parts 2/3/4/5/6 visually via pypdfium2 at 200dpi (with 300dpi targeted re-renders for row-blend disambiguation on p010 and form-text confirmation on p020 and p021) and added 11 new edges; text-extracted Over $50M row search across the full filing to revise the original 5-row Over-$50M count to 22 total.",
       "primary_source_authority": "OGE-hosted PDF at extapps2.oge.gov PAS Index; Emory Rounds (OGE Director) digital signature embedded in document",
       "secondary_sources_used_for_context_only": [
         "https://projects.propublica.org/trump-team-financial-disclosures/appointees/trump-donald-j/"
@@ -51,36 +151,86 @@
       "verification_status": "values transcribed from primary PDF text; secondary sources used for context only, never as the source of authority. Final eyeball-against-PDF by registry maintainer recommended before treating as authoritative."
     },
     "_open_questions_surfaced": {
-      "open_ended_value_ranges": "OGE Form 278e Schedule A includes 'Over $50,000,000' as the top value tier. The current Value object shape enum (exact, range, binary, imputed) cannot represent an open-ended range cleanly: shape=range requires both low and high non-null with high >= low, and there is no shape=open_range option. This filing's three picks all sit within bounded ranges to avoid forcing the issue, but multiple disclosures on this same form ('Over $50M') would need to be excluded under the same logic. Recommend resolving empirically against this filing once a fourth pick or a future filing forces the value-shape decision."
+      "open_ended_value_ranges": "OGE Form 278e Schedule A includes 'Over $50,000,000' as the top value tier. The current Value object shape enum (exact, range, binary, imputed, floor) added the floor shape after this filing first surfaced the issue; Fork G uses shape=floor / floor=50000000 for the 10 Over-$50M edges written. The remaining 12 Over-$50M Part 2 Exhibit A rows defer to Fork I."
     },
     "_excluded_categories": {
+      "_methodology": "Grouped exclusion summary per the §3.0 registry inclusion test (docs/methodology.md, 'Registry inclusion test (278-sourced entities)') and Part 8 regulatory exclusion buckets per 5 CFR 2634.308(b)(2) (docs/methodology.md, 'Part 8 (Liabilities) exclusion buckets'). All 13 Fork D / Fork F taxonomy buckets present plus the new direct_commodity_or_precious_metal_holdings bucket added by Fork G (methodology entry bundled into the Fork G commit). Counts marked approximate were grouped during the Fork G inspection; Family Trust pooled-instrument rows were counted at the trust-aggregate level rather than itemized one entity at a time. Recorded by Fork G §4.",
       "categories": [
+        {
+          "category": "pooled_investment_instruments",
+          "approx_entries": 95,
+          "rationale": "ETFs, mutual funds, and index funds held inside the three J.P. Morgan-managed Family Trusts (Family Trust 1*, 2*, 3*) on Part 6 pp.21-26. J.P. Morgan is sole Trustee; Trump has income interest only and no investment decision authority. The holdings are pooled instruments wrapping diversified equity/bond exposures; the holding is an instrument, not a direct interest in an operating entity. Trust-level income is aggregated at the trust shell (Family Trust 2* header discloses $15,001 - $50,000 in Interest, Dividends, Capital Gains at the trust level rather than per-holding)."
+        },
+        {
+          "category": "treasury_notes",
+          "approx_entries": 6,
+          "rationale": "US Treasury bond / treasury bond ETF holdings (iShares 3-7 Year Treasury BND, iShares 7-12 Year Treasury BND series) across the three Family Trusts. Government debt instruments."
+        },
+        {
+          "category": "cash_bank_and_money_market_accounts",
+          "approx_entries": 11,
+          "rationale": "US bank checking, savings, and money-market accounts disclosed on Part 6 p020 (Trump-direct: JP Morgan Chase, Capital One, Signature Bank, Bank United NA, First Republic Bank = 5 direct entries; WMTMF LLC wrapping a US Bank cash account = 1; DJT Revocable Trust sub-section: Capital One, Professional Bank, Signature Bank, Bank United = 4 trust-held entries) plus the Family Trust 3 US Bank Cash Account on p025 = 1. Not entities for procurement matching."
+        },
+        {
+          "category": "pension_book_royalty_and_residual_streams",
+          "approx_entries": 2,
+          "rationale": "Pension plan participations disclosed on Part 3 (Filer's Employment Agreements and Arrangements) p017: (1) Screen Actors Guild - Producers Pension Plan for Motion Picture Actors, began 1992, Burbank CA; (2) American Federation of Television and Radio Artists Retirement Fund, began 1989, New York NY. Pension streams from prior film/TV producer career, not held entity stakes."
+        },
+        {
+          "category": "direct_commodity_or_precious_metal_holdings",
+          "approx_entries": 1,
+          "rationale": "INVESTMENT IN GOLD line on Part 6 p020 item 6, value bracket $100,001 - $250,000, no income. Direct gold holding (not a commodity-themed investment vehicle wrapper). New bucket added by Fork G §4 per the amendment Decision D.2 methodology addition."
+        },
+        {
+          "category": "direct_public_equity_holdings",
+          "approx_entries": 1,
+          "rationale": "One direct publicly-traded equity holding disclosed on Part 6 p020 via the 'JP MORGAN CLEARING CORP - BROKERAGE ACCOUNT - HOLDINGS' sub-section: Global Fiber Technologies (f/k/a EcoTEK 360, INC. and f/k/a GLOBAL FASHION TECHNOLOGIES), value bracket 'None (or less than $1,001)' with 'None (or less than $201)' income. Trump-direct small passive public-equity holding per the Fork D taxonomy definition."
+        },
+        {
+          "category": "residential_rental_property_llcs",
+          "approx_entries": 0,
+          "rationale": "Trump's residential-asset entities (Trump Park Avenue LLC, 1125 South Ocean LLC, Seven Springs LLC, Trump Tower Triplex) are disclosed on Part 2 as operating entities (not as the holding-LLC-per-unit pattern that drives Jared's 95-entity residential bucket on cp_filing_0001). They get individual cp_entity registrations rather than aggregated bucket treatment."
+        },
+        {
+          "category": "municipal_and_corporate_bonds",
+          "approx_entries": 0,
+          "rationale": "The 'JPM SHRT INT MUNI BND-CL I' line in Family Trust 1 is an ETF / fund wrapper around munis, not a direct muni-bond holding — captured under pooled_investment_instruments. No standalone direct muni/corp bond lines surface on this filing."
+        },
+        {
+          "category": "artwork",
+          "approx_entries": 0,
+          "rationale": "No artwork holdings disclosed on this filing."
+        },
+        {
+          "category": "foreign_operating_entities",
+          "approx_entries": 0,
+          "rationale": "Per Fork G §3 amendment §2.7 anomaly #3 ruling: foreign operating entities (Trump-branded foreign golf courses, hotels, etc.) default-include the same way domestic operating entities do, with no separate exclusion or bucket treatment; jurisdiction is a property of the entity, not a reason to bucket it differently. The Trump foreign clubs disclosed on this filing (Trump International Golf Links - Scotland, Trump International Golf Links - Doonbeg, Trump Turnberry, etc.) defer to Fork I full Part 2 Exhibit A backfill alongside the domestic operating entities; none feed this bucket. The Jared-filings foreign_operating_entities bucket (7 DT-* manager LLCs) was a narrower fit; that taxonomy entry stays available but no cp_filing_0003 row uses it."
+        },
         {
           "category": "personal_residence_mortgage",
           "approx_entries": 0,
-          "rationale": "Mortgages on the filer's primary personal residence; excluded by 5 CFR 2634.308(b)(2)(i). No Part 8 rows on this filing fall into this bucket (per Fork F \u00a72 transcription)."
+          "rationale": "Mortgages on the filer's primary personal residence; excluded by 5 CFR 2634.308(b)(2)(i). No Part 8 rows on this filing fall into this bucket (per Fork F §2 transcription)."
         },
         {
           "category": "vehicle_loan",
           "approx_entries": 0,
-          "rationale": "Loans secured by a personal motor vehicle, household furniture, or appliances (unless the loan exceeds the item's purchase price); excluded by 5 CFR 2634.308(b)(2)(ii). No Part 8 rows on this filing fall into this bucket (per Fork F \u00a72 transcription)."
+          "rationale": "Loans secured by a personal motor vehicle, household furniture, or appliances (unless the loan exceeds the item's purchase price); excluded by 5 CFR 2634.308(b)(2)(ii). No Part 8 rows on this filing fall into this bucket (per Fork F §2 transcription)."
         },
         {
           "category": "credit_card_under_threshold",
           "approx_entries": 0,
-          "rationale": "Credit card and revolving charge account balances under $10,000 outstanding to a single creditor at the end of the reporting period; excluded by 5 CFR 2634.308(b)(2)(iii). No Part 8 rows on this filing fall into this bucket (per Fork F \u00a72 transcription)."
+          "rationale": "Credit card and revolving charge account balances under $10,000 outstanding to a single creditor at the end of the reporting period; excluded by 5 CFR 2634.308(b)(2)(iii). No Part 8 rows on this filing fall into this bucket (per Fork F §2 transcription)."
         },
         {
           "category": "family_loan",
           "approx_entries": 0,
-          "rationale": "Interpersonal loans from a spouse, parent, sibling, or child of the filer (natural-person counterparty only); excluded by 5 CFR 2634.308(b)(2)(iv). Does NOT apply to entity-mediated debt (e.g., loans from a family-controlled trust or LLC), which are written as normal debt_instrument_owed edges per Convention 5. No Part 8 rows on this filing fall into this bucket (per Fork F \u00a72 transcription)."
+          "rationale": "Interpersonal loans from a spouse, parent, sibling, or child of the filer (natural-person counterparty only); excluded by 5 CFR 2634.308(b)(2)(iv). Does NOT apply to entity-mediated debt (e.g., loans from a family-controlled trust or LLC), which are written as normal debt_instrument_owed edges per Convention 5. No Part 8 rows on this filing fall into this bucket (per Fork F §2 transcription)."
         }
-      ],
-      "_methodology": "Grouped exclusion summary per the \u00a73.0 registry inclusion test (docs/methodology.md, 'Registry inclusion test (278-sourced entities)') and Part 8 regulatory exclusion buckets per 5 CFR 2634.308(b)(2) (docs/methodology.md, 'Part 8 (Liabilities) exclusion buckets')."
+      ]
     }
   },
   "change_type": "original",
   "replaces_filing_id": null,
   "change_rationale": null,
-  "notes": "Donald J. Trump's 2021 Termination Public Financial Disclosure Report. Filed as of his term end on 2021-01-20. Used in this hand-population pass to exercise the trust beneficial interest pattern via The Donald J. Trump Revocable Trust as an intermediate cp_entity. All derived relationships are excluded_from_total under the pre-2025 PROJECT.md scope; Trump himself is not a named family member per PROJECT.md's exhaustive list (which covers family members of the administration, not the President himself), so this filing is included for schema-test purposes only, not as live-tracker data."
+  "notes": "Donald J. Trump's 2021 Termination Public Financial Disclosure Report. Filed as of his term end on 2021-01-20. Used in this hand-population pass to exercise the trust beneficial interest pattern via The Donald J. Trump Revocable Trust as an intermediate cp_entity. All derived relationships are excluded_from_total under the pre-2025 PROJECT.md scope; Trump himself is not a named family member per PROJECT.md's exhaustive list (which covers family members of the administration, not the President himself), so this filing is included for schema-test purposes only, not as live-tracker data. Fork G (2026-05-23) extended the registry coverage of this filing: registered 18 new cp_entity records (12 Fork H Part 8 prep borrowing entities + 3 Over-$50M-only Part 2 entities + The Fred C. Trump December 16, 1976 Trust + 2 Trump-direct Part 6 operating LLCs WMTMF/MBWT), wrote 11 new edges (10 Over-$50M family_to_entity-via-trust-intermediate ownership edges + 1 family_to_entity trust_beneficial edge for the 1976 Trust), and populated _excluded_categories with 14 buckets per Fork D pattern. cp_filing_0003 Part 8 (14 rows) remains deferred to Fork H, which adds the entity_to_entity debt edge schema and writes the deferred rows using the entities registered here. Part 2 Exhibit A full backfill (~80-90 operating entities including 12 remaining Over-$50M rows) plus the 4 Trump-direct Part 6 LLCs without edges (WMTMF, MBWT, and implicit follow-up for the DJT Revocable Trust cash accounts) defer to Fork I. Part 5 (Melania) 6 spouse-imputed entities defer to a future fork (Fork J)."
 }

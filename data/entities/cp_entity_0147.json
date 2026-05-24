@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0147",
+  "canonical_name": "Trump National Golf Club Washington DC LLC",
+  "aliases": [
+    {
+      "name": "TRUMP NATIONAL GOLF CLUB - WASHINGTON DC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 094 of Part 2 Exhibit A. Form descriptor: 'Underlying Assets: golf club; Location: Potomac Falls, VA'. Part 2 form text omits LLC suffix; Part 8 item 8 form text reads 'Trump National Golf Club Washington DC LLC'; canonical follows most-complete."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Golf club operating LLC at the Trump National Golf Club in Sterling/Potomac Falls, VA (the location is in northern Virginia despite the 'Washington DC' branding). Held via The Donald J. Trump Revocable Trust (cp_entity_0003). Registered in Fork G as part of the Fork H prep set (Chevy Chase Trust Holdings successor-to-Bondy-Way mortgage borrower) and the Over-$50M backfill (cp_rel_0354)."
+}

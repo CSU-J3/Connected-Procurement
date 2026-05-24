@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0150",
+  "canonical_name": "TIHT Chicago",
+  "aliases": [
+    {
+      "name": "TIHT Chicago",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Part 8 items 11 and 12 form text reads 'TIHT Chicago' (no LLC suffix). The entity is NOT disclosed on Part 2 standalone \u2014 the Chicago Trump International Hotel Tower assets are referenced on Exhibit B (p38, p53) via member-corp structure (TIHT Chicago Member Acquisition LLC). Canonical follows form text most-complete; no LLC suffix appears on the form."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Trump International Hotel Tower Chicago operating entity (401 N Wabash Ave, Chicago, IL). Held via The Donald J. Trump Revocable Trust (cp_entity_0003) per Exhibit B disclosures. Two Part 8 debt edges reference this entity as borrower: item 11 (Chicago Unit Acquisition LLC springing loan, Over $50M) and item 12 (Deutsche Bank Trust Company Americas term loan, $25M-$50M). The Chicago Unit Acquisition LLC lender on item 11 requires substantive determination on Trump-controlled-vs-arm's-length per Fork H scope. Registered in Fork G for Fork H Part 8 prep only; not disclosed standalone on Part 2 so no Over-$50M backfill edge."
+}

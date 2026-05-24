@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0148",
+  "canonical_name": "Seven Springs LLC",
+  "aliases": [
+    {
+      "name": "Seven Springs LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 037 of Part 2 Exhibit A. Form descriptor: 'Underlying Assets: real estate; Location: Mt. Kisco, NY'. Part 8 item 9 form text reads 'Seven Springs' (no LLC suffix); Part 2 reads 'Seven Springs LLC'; canonical follows most-complete naming. Part 2 value bracket $25,000,001 - $50,000,000 (not Over $50M)."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Real estate operating LLC holding the Seven Springs estate in Mount Kisco, NY (a 213-acre estate property). Held via The Donald J. Trump Revocable Trust (cp_entity_0003) \u2014 Exhibit B p39 references '99.9% DJT Holdings LLC Member / 0.1% Briarcliff Properties, Inc. Member'. Registered in Fork G for Fork H Part 8 prep (Bryn Mawr Trust successor-to-Royal-Bank-America mortgage borrower). No Over-$50M ownership edge (value bracket below threshold)."
+}

@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0153",
+  "canonical_name": "Trump International Golf Links - Scotland",
+  "aliases": [
+    {
+      "name": "TRUMP INTERNATIONAL GOLF LINKS - SCOTLAND",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 069 of Part 2 Exhibit A. Form descriptor: 'Underlying Assets: golf course; Location: Aberdeen, Scotland'."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Trump-branded golf course at Menie Estate near Aberdeen, Scotland. Foreign-operating entity (per Fork G \u00a73 amendment \u00a72.7 anomaly #3 ruling: foreign operating entities default-include the same way domestic operating entities do; no separate bucket treatment). Held via The Donald J. Trump Revocable Trust (cp_entity_0003). Distinct from cp_entity_0006 Trump International Golf Links - Doonbeg (Ireland). Registered in Fork G as one of the original 5 Over-$50M named entities; ownership edge cp_rel_0356."
+}

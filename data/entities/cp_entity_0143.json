@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0143",
+  "canonical_name": "Trump National Doral",
+  "aliases": [
+    {
+      "name": "TRUMP NATIONAL DORAL",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 064 of Part 2 Exhibit A. Form descriptor: 'Underlying Assets: golf courses & resort; Location: Miami, FL'. Same entity referenced as borrower on Part 8 items 3 and 4 (Deutsche Bank Trust Company Americas mortgages). Form text omits LLC suffix; canonical preserves form-most-complete naming."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Trump-branded golf club and resort in Doral, FL (formerly Doral Resort & Spa). Held via The Donald J. Trump Revocable Trust (cp_entity_0003). Registered in Fork G as part of the Fork H prep set and the Over-$50M backfill (cp_rel_0351). Public records identify the underlying legal entity as 'Trump Endeavor 12 LLC' but the form discloses only 'Trump National Doral' \u2014 canonical follows the form."
+}

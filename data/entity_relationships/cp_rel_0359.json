@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0359",
+  "source_id": "cp_person_0003",
+  "target_id": "cp_entity_0156",
+  "relation_kind": "family_to_entity",
+  "interest_type": "trust_beneficial",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 1000001,
+    "high": 5000000,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-20",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Donald J. Trump as named beneficiary of The Fred C. Trump December 16, 1976 Trust (established by Trump's father Fred C. Trump in 1976, F/B/O Donald J. Trump). value.shape=range because the form discloses a single dollar bracket ($1,000,001-$5,000,000) for the trust's sole disclosed holding (a JP Morgan Chase Savings Account; Interest $1,001-$2,500). Differs from cp_rel_0008 (Trump -> Donald J. Trump Revocable Trust, shape=binary) because the 1976 Trust has a single discrete disclosed value rather than a cascade of subsidiary holdings. Disclosed on Part 6 p020 of cp_filing_0003 as a sub-section header ('The Fred C. Trump December 16, 1976 Trust- F/B/O Donald J. Trump') with one indented holding row. qualifying_role is null because Trump is not a named family member per PROJECT.md scope (the list covers family members of the administration, not the President himself)."
+}
