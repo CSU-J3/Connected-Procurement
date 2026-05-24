@@ -341,3 +341,19 @@ Forward point: if a later filing discloses a direct interest in a previously-int
 Forward bundle from Fork H §4 (DJT Holdings LLC / Seven Springs pattern). Lands before Fork I-a Part 2 Exhibit A inspection so the rule is in force on first encounter.
 
 Locked: 2026-05-24.
+
+### Income disclosure encoding
+
+A Schedule A row on a 278 typically discloses both an ownership/interest value bracket and one or more income components (royalties, management fees, dividends, rent, etc.) for the same entity. The registry encodes these asymmetrically:
+
+1. The relationship's `value` field carries the ownership/interest disclosure only — the bracket or exact figure reported in the asset-value column of Schedule A.
+2. Income components are captured in the relationship's `notes` field as prose, with the income type and the disclosed amount (bracket or exact) recorded verbatim from the form. Multiple income components on one row are captured as a single notes entry, not as separate edges.
+3. No `interest_type` value for income streams. The five-category `interest_type` enum models the *position* the filer holds in the entity (`ownership`, `employment`, `debt_instrument_held`, `debt_instrument_owed`, `trust_beneficial`, `spousal_imputed`), not the income flowing from that position. Income is a property of the position, captured in notes.
+
+Pattern established by Fork G (cp_rel_0349, cp_rel_0351 — Trump-side Over-$50M edges with golf-resort-revenue and rent-income components captured in notes) and applied by Fork I-a end-to-end across 84 Part 2 Exhibit A edges, including the multi-component case at item 071 (Trump International Hotel Hawaii LLC: royalties + management fees captured in a single edge's notes).
+
+Forward point: if a future use case requires income to be queryable as structured data (e.g., procurement-beat analysis correlating income type with contract awards), design a separate `income_disclosure` field on the relationship model rather than overloading `interest_type` or `value`. One use case isn't enough; defer until a second case surfaces.
+
+Forward bundle from Fork I-a close (commit 243b449). Lands before Fork I-b cp_filing_0004 Part 6 inspection so the rule is in force on Ivanka-side income components.
+
+Locked: 2026-05-24.
