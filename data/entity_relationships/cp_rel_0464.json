@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0464",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0250",
+  "relation_kind": "family_to_entity",
+  "interest_type": "trust_beneficial",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Trustee of Ivanka Trump Revocable Trust per cp_filing_0004 Part 1 item 294 (also grantor/beneficiary of this revocable trust)",
+    "start_date": "2010-08-01",
+    "end_date": null
+  },
+  "notes": "Ivanka Trump's beneficial interest in Ivanka Trump Revocable Trust (cp_entity_0250). Disclosed at cp_filing_0004 Part 1 item 294 (filer's position: Trustee 8/2010 to present). Trust-level value not disclosed on form (item 294 is a Part 1 position-held line, not a Part 2/6 value disclosure); encoded as shape=binary / unit=none per the locked Fork D NRA convention. Multi-role: filer is both Trustee (per Part 1 item 294, role active at appointment date) and grantor/beneficiary of the revocable trust. Primary interest_type=trust_beneficial captures the procurement-beat-relevant beneficial-interest disclosure; the simultaneous trustee role is captured in the entity notes pending methodology amendment when a second multi-role case surfaces. Chain-depth relationship to anonymized Trust #1 through Trust #7 labels in Part 6 deferred to Fork I-c endnote inspection (pp.66-94)."
+}

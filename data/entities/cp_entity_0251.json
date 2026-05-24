@@ -1,0 +1,9 @@
+{
+  "entity_id": "cp_entity_0251",
+  "canonical_name": "Ivanka M. Trump Business Trust",
+  "aliases": [],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Trump-family-branded business trust holding Ivanka's IT-prefix lifestyle/licensing operating LLCs (IT Collection LLC, Ivanka Trump Marks LLC, IT Operations LLC, and the IT Apparel/Baby/Eyewear/Fashion Jewelry/Fragrance/Handbags/Home Marks/Promotions LLCs plus their Pass-thru managing-member corporations). Disclosed at cp_filing_0004 Part 2 item 2 with aggregate value 'Over $50,000,000' (encoded as floor=50000000) and Rent or Royalties income $1,000,001 - $5,000,000 for the period March 9, 2017 - May 31, 2017 (the post-restructuring period after the IT-prefix entities moved into the trust). Holdings disclosed as sub-items 2.1 through 2.23 plus item 2 (IT Collection LLC parent). The pre-restructuring period (Jan 1, 2016 - Mar 8, 2017) is captured in cp_filing_0004 Part 2 items 1 and 1.1 (IT OPERATIONS LLC direct, royalty income Over $5M, non-royalty income $142,453) which predate the trust transfer."
+}

@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0256",
+  "canonical_name": "Trust #4 (Ivanka 2017 disclosure)",
+  "aliases": [
+    {
+      "name": "Trust #4",
+      "source_url": "https://assets.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
+      "source_filing_date": "2017-06-12",
+      "notes": "Form-disclosed name on cp_filing_0004; canonical entity name anchored to disclosure label per the locked trust-intermediate convention."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Anonymized trust label disclosed at cp_filing_0004 Part 6 as parent of sub-items 4.1 through 4.43 — the largest of the seven anonymized trusts. Heavy on residential real estate unit-holding LLCs (184 KENT ASSOCIATES type and 200 EAST 62ND unit LLCs) plus commercial RE and KF funds. Many sub-items expected to land in `residential_rental_property_llcs` exclusion bucket per the §3.0 inclusion test. Trust-level value not disclosed on form. Sub-items in Fork I-c."
+}

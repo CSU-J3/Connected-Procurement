@@ -1,0 +1,9 @@
+{
+  "entity_id": "cp_entity_0281",
+  "canonical_name": "4T Holdings One LLC",
+  "aliases": [],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Holding company for future interests in Trump hotel manager entities. Disclosed at cp_filing_0004 Part 2 item 8.1 as a sub-item of TTTT Venture LLC (cp_entity_0280). Form descriptor: 'Holding company for future interests in Trump hotel manager entities; New York, NY'. Form note 'future interests' indicates the entity holds contingent rights; the DT Bali/Dubai II/Lido manager LLCs in items 8.4-8.10 are the operative Trump hotel manager entities to which the future interest attaches. Sub-item value N/A; subsidiary edge from TTTT Venture LLC uses binary+unit:none."
+}

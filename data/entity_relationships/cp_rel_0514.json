@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0514",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0035",
+  "relation_kind": "family_to_entity",
+  "interest_type": "spousal_imputed",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "imputed",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": "cp_rel_0231"
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Ivanka Trump's interest in Observer Media, LLC (cp_entity_0035) imputed under 18 USC 208(a)(2). Observer Media is Jared Kushner's direct holding; the principal interest is cp_rel_0231 (Jared → Observer Media ownership, observed_on 2017-12-31, from cp_filing_0001 Part 6 item 203). Disclosed on cp_filing_0004 Part 5 item 2 (Spouse's Employment Assets & Income) with form-text 'Observer Media, LLC (New York Observer & Commercial Observer; New York, NY)', value None (or less than $1,001), Newspaper-Related Revenue income None (or less than $1,001). Convention 3 forward-point case: this imputed edge's observed_on (2017-03-29) precedes the imputation_source's observed_on (2017-12-31) — the registry holds no Jared→Observer Media observation contemporaneous with Ivanka's new-entrant filing; cp_rel_0231 is the best-available principal. See the Convention 3 forward-point clause in docs/methodology.md. Gap closure surfaced by Fork I-b §1.1 conformance pass; written per §4.4 ruling."
+}

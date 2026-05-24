@@ -63,6 +63,7 @@ class InterestType(str, Enum):
     DEBT_INSTRUMENT_HELD = "debt_instrument_held"
     DEBT_INSTRUMENT_OWED = "debt_instrument_owed"
     TRUST_BENEFICIAL = "trust_beneficial"
+    TRUST_TRUSTEE = "trust_trustee"
     SPOUSAL_IMPUTED = "spousal_imputed"
 
 

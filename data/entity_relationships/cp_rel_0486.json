@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0486",
+  "source_id": "cp_entity_0251",
+  "target_id": "cp_entity_0272",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Ivanka M. Trump Business Trust's holding of IT Fashion Jewelry Member Corp. cp_filing_0004 Part 2 item 2.12 — sub-item disclosure (pass-thru corp). Sub-item value reported N/A on form; aggregate value rolled up to parent Business Trust line item 2 (Over $50M). Encoded as shape=binary / unit=none per the §4-A2.3 ruling for trust-sub-item holdings without per-holding value disclosure. Edge structure follows the generalized trust-intermediate convention (methodology.md 'Trust-intermediate convention'): subsidiary chain from trust to holding. Ivanka's beneficial interest in the trust itself is covered by cp_rel_0465."
+}

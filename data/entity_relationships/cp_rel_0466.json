@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0466",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0252",
+  "relation_kind": "family_to_entity",
+  "interest_type": "trust_trustee",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Trustee of GCM Trust per cp_filing_0004 Part 1 item 291",
+    "start_date": "2014-04-01",
+    "end_date": "2016-12-31"
+  },
+  "notes": "Ivanka Trump's former Trustee role at GCM Trust (cp_entity_0252). Disclosed at cp_filing_0004 Part 2 item 12 with Trustee Fees income of $50,000 earned during the reporting period (income captured in notes per locked income-disclosure encoding). Trust-level value not disclosed on form (item 12 VALUE: N/A); encoded as shape=binary / unit=none. Trustee role ended 12/2016 per Part 1 item 291 (Ivanka resigned before her 2017-03-29 appointment date); qualifying_role.end_date captures the temporal precision per §4-A2.5 ruling. The disclosure exists in Part 2 because the $50,000 trustee fees were earned during the reporting period (Jan 1, 2016 - May 31, 2017), even though the role itself was not current at the observed_on date. interest_type=trust_trustee per the new enum value added in Fork I-b (see methodology.md '`trust_trustee` interest type'). No subsidiary edges from GCM Trust on this filing (item 12 does not itemize trust holdings; the form discloses the trust at the trust level only)."
+}

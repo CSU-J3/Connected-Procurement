@@ -312,18 +312,28 @@ Row counts surfaced during the eight-step methodology roadmap or similar pre-ins
 
 Locked: 2026-05-23.
 
-### cp_filing_0003 trust-intermediate convention
+### Trust-intermediate convention
 
-cp_filing_0003 (Trump) relationships to operating entities are mediated through trust vehicles per the convention established in Fork B:
+When a 278 filing discloses holdings via one or more trust intermediates — whether the trust is legally named (e.g., DJT Revocable Trust) or anonymized by the form using a disclosure label (e.g., "Trust #1") — the registry encodes the disclosure structure rather than collapsing it into direct `family_to_entity` edges.
 
-- Trump (`cp_person_0003`) → DJT Revocable Trust (`cp_entity_0003`) via `family_to_entity` / `trust_beneficial` (`cp_rel_0008`)
-- DJT Revocable Trust → operating entity via `entity_to_entity_subsidiary` with the relevant ownership type
+Apply when: the form's Schedule A, Part 6, or analogous structure groups holdings under a trust header, OR when the filer's interest in an entity is disclosed as held through a named trust.
 
-Plus, additional formally-named Trump trusts (e.g., the Fred C. Trump December 16, 1976 Trust registered in Fork G) get their own `family_to_entity` / `trust_beneficial` edges from Trump, and operating entities they hold get `entity_to_entity_subsidiary` edges from those trusts.
+Encoding:
 
-Direct `family_to_entity` edges from `cp_person_0003` to operating entities are the wrong shape for cp_filing_0003. Handoffs that specify edge structure on this filing must use "entity_to_entity from [trust name]" phrasing rather than "family_to_entity from Trump." Surface-and-pause is mandatory if a handoff specifies the wrong shape — the existing convention takes precedence over the handoff's literal wording.
+1. Register the trust as a `cp_entity_NNNN` record. Name: the trust's legal name if disclosed (e.g., "Donald J. Trump Revocable Trust"), or the form's disclosure label anchored to the filing (e.g., "Trust #1 (Ivanka 2017 disclosure)") if anonymized.
+2. Write a `family_to_entity` edge from the filer's `cp_person_NNNN` to the trust with `interest_type: trust_beneficial`. Value bracket per the trust-level disclosure if the form reports one; `binary + unit: none` with form text in notes if the trust value is reported as not readily ascertainable or not disclosed at the trust-header level.
+3. Write `entity_to_entity_subsidiary` edges from the trust to each in-scope holding within it. Holdings are registered as their own `cp_entity_NNNN` records, with value brackets per the holding-level disclosure on the form.
+4. Do **not** write direct `family_to_entity` edges from the filer to holdings within the trust. The chain `filer → trust → holding` is structurally complete via the family edge at the trust level plus the subsidiary chain.
+5. The exception is `spousal_imputed` edges. Convention 3 imputation reaches the holdings themselves, not the trust, because 18 USC 208(a)(2) imputes the underlying interest. Write spousal-imputed edges to the holdings directly when Convention 3 applies, with notes capturing the trust intermediate ("Held via Trust #N").
+6. Reuse: if a registered trust already exists, write additional subsidiary edges from it for newly-surfaced holdings; do not create a duplicate trust record. The cp_filing_0003 Donald J. Trump Revocable Trust (cp_entity_0003) is the canonical example.
 
-Locked: 2026-05-23.
+Forward point: the convention assumes one level of trust intermediation. If a filing surfaces multi-level trust chains (Trust A holds Trust B holds operating entity), surface as a §3 question; the encoding for nested trusts gets designed when the case appears.
+
+Surface-and-pause is mandatory if a handoff specifies direct `family_to_entity` edges to holdings under a trust — the existing convention takes precedence over the handoff's literal wording.
+
+Originally locked for cp_filing_0003 only on 2026-05-23 (Fork B/G context). Generalized to filing-agnostic 2026-05-24 (Fork I-b context, motivated by Ivanka's 7 anonymized "Trust #N" disclosures on cp_filing_0004).
+
+Locked: 2026-05-24.
 
 ### Internally-disclosed intermediate entities
 
@@ -355,5 +365,33 @@ Pattern established by Fork G (cp_rel_0349, cp_rel_0351 — Trump-side Over-$50M
 Forward point: if a future use case requires income to be queryable as structured data (e.g., procurement-beat analysis correlating income type with contract awards), design a separate `income_disclosure` field on the relationship model rather than overloading `interest_type` or `value`. One use case isn't enough; defer until a second case surfaces.
 
 Forward bundle from Fork I-a close (commit 243b449). Lands before Fork I-b cp_filing_0004 Part 6 inspection so the rule is in force on Ivanka-side income components.
+
+The `interest_type` enum is itself extended as new fiduciary structures appear. The Fork I-b extension added `trust_trustee` for fiduciary-role-without-beneficial-interest disclosures; that entry follows below.
+
+Locked: 2026-05-24.
+
+### `trust_trustee` interest type
+
+The `trust_trustee` value on the `InterestType` enum captures filer-as-trustee fiduciary roles. The filer holds fiduciary control over the trust without beneficial interest in it. Structurally distinct from `trust_beneficial`: the trustee has authority over trust assets but is not entitled to the trust's economic benefits.
+
+Procurement-beat relevance: the control-without-ownership pattern can still create conflict-of-interest exposure under 18 USC 208 even though no direct financial interest is asserted. Trustees with discretionary authority over trust investments and divestments can direct assets toward or away from federal counterparties; the role is reportable on the 278 even where no beneficial interest is held.
+
+Encoding: standard `family_to_entity` edge with `interest_type: trust_trustee`. Value field carries the trust's disclosed value bracket per the form (the trust's value is reportable even though the filer doesn't beneficially hold it). When the form discloses no trust-level value, use `binary + unit: none` with form text in notes. The `qualifying_role` field captures the trustee tenure (start_date, optional end_date) — particularly important on new-entrant filings where a trustee role may have ended before the appointment date (the disclosure exists due to in-period income, but the role isn't current at `observed_on`).
+
+First applied in Fork I-b on cp_filing_0004 Part 2 item 12 (Ivanka as former Trustee of GCM Trust; role ended 12/2016, $50,000 trustee fees disclosed for the reporting period; `qualifying_role.end_date = "2016-12-31"` captures the temporal precision).
+
+Multi-role forward point: a structured "filer is both trustee and beneficiary" encoding is a methodology amendment candidate when a second case surfaces. The first known case (Ivanka Trump Revocable Trust on cp_filing_0004, where Ivanka is both grantor/beneficiary and trustee) uses `trust_beneficial` as the primary `interest_type` with the trustee role captured in notes; until a second case appears, this notes-based encoding is the convention.
+
+Locked: 2026-05-24.
+
+## Process
+
+### Locked methodology authority over handoff text
+
+When a handoff document conflicts with a locked methodology entry, locked schema enum, or established Fork precedent, the locked source takes precedence. Handoff text that conflicts must be surfaced as a §3 blocker rather than applied silently. The maintainer issues an amendment correcting the handoff; writes proceed only after the amendment lands.
+
+Pattern observed across Forks I-a and I-b: four handoff drifts caught and surfaced (the `primary_source_url` host attribution, the trust-intermediate edge shape under cp_filing_0003, the `observed_on` date for new-entrant filings, and the `trust_beneficial` vs `beneficial_trust_interest` naming). Zero registry corruption resulted; the surface-and-pause discipline plus this rule did the load-bearing work.
+
+Forward point: maintainers drafting handoffs reconstruct from chat summaries and prior handoffs; locked methodology is the authoritative source and the only reliable target for "what's actually in force." Handoff drafts that need to apply a locked rule should quote the locked text rather than paraphrase. Code's role is to verify against locked methodology before any write; surfacing a §3 blocker is the correct response to any conflict.
 
 Locked: 2026-05-24.

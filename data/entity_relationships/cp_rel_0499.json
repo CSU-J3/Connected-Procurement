@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0499",
+  "source_id": "cp_entity_0280",
+  "target_id": "cp_entity_0281",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "TTTT Venture LLC's holding of 4T Holdings One LLC (Holding company for future interests in Trump hotel manager entities). cp_filing_0004 Part 2 item 8.1. Sub-item value reported N/A on form; aggregate value rolled up to parent TTTT Venture LLC line item 8 (also N/A, with $100,000 Royalties and Licensing income). Encoded as shape=binary / unit=none. Ivanka's ownership of TTTT Venture LLC itself is covered by cp_rel_0498."
+}

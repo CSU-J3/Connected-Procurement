@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0465",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0251",
+  "relation_kind": "family_to_entity",
+  "interest_type": "trust_beneficial",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "floor",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": 50000000,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Ivanka Trump's beneficial interest in Ivanka M. Trump Business Trust (cp_entity_0251). Disclosed at cp_filing_0004 Part 2 item 2 with aggregate value 'Over $50,000,000' (encoded as shape=floor / floor=50000000 per the methodology.md 'Value shape: floor' convention) and Rent or Royalties income $1,000,001 - $5,000,000 for the period March 9, 2017 - May 31, 2017. Item 2.24 discloses non-royalty income $18,888 for the same entity / same period (captured here in notes per locked income-disclosure encoding; one edge per entity). Edge structure follows the generalized trust-intermediate convention (methodology.md 'Trust-intermediate convention'): family edge at the trust level + subsidiary chain trust → holdings. Holdings registered as subsidiary edges from this trust to IT Collection LLC (cp_entity_0007), Ivanka Trump Marks LLC (cp_entity_0016), Ivanka Trump Marks Jewelry LLC (cp_entity_0018), Ivanka Trump Marks II LLC (cp_entity_0017), IT Operations LLC (cp_entity_0021), plus the 8 newly registered IT-prefix licensing LLCs (cp_entity_0260-0267) and 11 Pass-thru managing-member corps (cp_entity_0268-0278). Pre-existing direct family edge cp_rel_0012 (Ivanka → IT Collection LLC, Fork B-era encoding before the trust-intermediate convention was generalized) stands unchanged; both encodings coexist. A future retrofit fork could mark cp_rel_0012 as superseded by this edge once the cleanup decision is made."
+}

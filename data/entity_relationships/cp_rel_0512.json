@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0512",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0033",
+  "relation_kind": "family_to_entity",
+  "interest_type": "employment",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Ivanka Trump's employment-and-severance interest at Trump Payroll Corp (cp_entity_0033). Disclosed at cp_filing_0004 Part 2 item 3 with Salary and Severance income $2,537,738 (captured here in notes per locked income-disclosure encoding). Value N/A on form (item 3 is an employment-relationship disclosure, not an asset value disclosure); encoded as shape=binary / unit=none. interest_type=employment captures the salary/severance relationship. Pre-existing cp_rel_0068 (Ivanka → cp_entity_0033 from cp_filing_0001 obs 2017-12-31, written by Fork D for Jared's spouse-side disclosure) covers the later observation; this Fork I-b edge is the earlier (2017-03-29 appointment date) observation directly from Ivanka's new-entrant filing."
+}

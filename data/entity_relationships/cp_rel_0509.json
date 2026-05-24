@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0509",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0291",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Ivanka Trump's ownership of IT WWW PUB LLC (cp_entity_0291). Disclosed at cp_filing_0004 Part 2 item 9 (Book Contract with Penguin Random House LLC). Value N/A on form; encoded as shape=binary / unit=none. Form-disclosed companion item 9.1 ('Women Who Work' book title, Advance $787,500) is the underlying book contract whose income flows through this LLC — the $787,500 advance is captured here in notes per locked income-disclosure encoding. The bare book title at item 9.1 itself is counted under pension_book_royalty_and_residual_streams exclusion bucket (no separate entity registration). Pattern parallel to Trump Books LLC (cp_entity_0195) on cp_filing_0003 Part 2 Exhibit A item 057."
+}

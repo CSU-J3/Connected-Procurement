@@ -1,0 +1,9 @@
+{
+  "entity_id": "cp_entity_0252",
+  "canonical_name": "GCM Trust",
+  "aliases": [],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Trust on which Ivanka Trump served as Trustee from 4/2014 to 12/2016 per cp_filing_0004 Part 1 item 291. Disclosed on Part 2 item 12 with Trustee Fees income of $50,000 earned during the reporting period. Trustee role ended 12/2016, three months before Ivanka's 03/29/2017 appointment date; the trustee edge (cp_rel_NNNN) carries qualifying_role.end_date='2016-12-31' to capture temporal precision per §4-A2.5 ruling. Trust value not disclosed on form (item 12 VALUE: N/A); entity registered to anchor the trustee-role disclosure for procurement-beat relevance under the §3.0 inclusion test."
+}

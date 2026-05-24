@@ -1,0 +1,9 @@
+{
+  "entity_id": "cp_entity_0250",
+  "canonical_name": "Ivanka Trump Revocable Trust",
+  "aliases": [],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Revocable trust where filer Ivanka Trump (cp_person_0002) is both grantor/beneficiary and trustee. Disclosed at cp_filing_0004 Part 1 item 294 (Trustee role 8/2010 to present, active at appointment date 2017-03-29) and as the implicit umbrella under which Part 6 'Trust #1' through 'Trust #7' anonymized labels likely sit (subject to Fork I-c endnote inspection of pp.66-94 to confirm chain depth). Multi-role encoding: primary interest_type is trust_beneficial; trustee role captured here in entity notes pending methodology amendment when a second multi-role case surfaces."
+}

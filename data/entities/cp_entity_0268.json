@@ -1,0 +1,9 @@
+{
+  "entity_id": "cp_entity_0268",
+  "canonical_name": "IT Operations Managing Member Corp",
+  "aliases": [],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Pass-thru managing-member corporation for IT Operations LLC (cp_entity_0021). Disclosed at cp_filing_0004 Part 2 item 2.4 as a holding under Ivanka M. Trump Business Trust (cp_entity_0251). Form descriptor: 'Pass-Thru Company for IT Operations LLC; New York, NY'. Pass-thru-Corp-to-LLC linkage captured in this notes field per Fork I-a precedent (no structured edge written between Pass-thru Corp and its underlying LLC; both are independent subsidiaries of the Business Trust at the registry level). Sub-item value N/A on form."
+}

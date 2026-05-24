@@ -1,0 +1,9 @@
+{
+  "entity_id": "cp_entity_0283",
+  "canonical_name": "DT Tower Gurgaon LLC",
+  "aliases": [],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Trump-side licensee operating LLC for the Trump Tower Gurgaon branding deal in India. Disclosed at cp_filing_0004 Part 2 item 8.3 as a sub-item of TTTT Venture LLC. Form descriptor: 'license deal in India; New York, NY'. Sub-item value N/A; subsidiary edge from TTTT Venture LLC uses binary+unit:none. Convention 6 defers external (DT Tower Gurgaon LLC → Indian counterparty) edges."
+}

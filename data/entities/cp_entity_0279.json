@@ -1,0 +1,9 @@
+{
+  "entity_id": "cp_entity_0279",
+  "canonical_name": "TTT Consulting LLC",
+  "aliases": [],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Operating LLC providing consulting, licensing, and management services for real estate projects. Disclosed at cp_filing_0004 Part 2 items 6 (Consulting Fees income $913,847) and 7 (Royalties and Licensing income $14,374) — two income components on the same entity, captured in the family edge's notes per locked income-disclosure encoding (one edge per entity). Form descriptor: 'Consulting, licensing, and management services for real estate projects; New York, NY'. Value N/A on both rows; family edge from Ivanka uses binary+unit:none. Ivanka served as Member, Manager from 12/2005 to 1/2017 per Part 1 item 293; role ended ~3 months before appointment date but disclosure exists due to in-period income."
+}

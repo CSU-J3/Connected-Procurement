@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0477",
+  "source_id": "cp_entity_0251",
+  "target_id": "cp_entity_0021",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Ivanka M. Trump Business Trust's holding of IT Operations LLC (Management Company). cp_filing_0004 Part 2 item 2.3 — sub-item disclosure; the pre-trust-transfer period (Jan 1, 2016 - Mar 8, 2017) is separately disclosed at items 1 (royalty income Over $5M) and 1.1 (non-royalty income $142,453) as direct ownership before the entity moved into the trust. Sub-item value reported N/A on form; aggregate value rolled up to parent Business Trust line item 2 (Over $50M). Encoded as shape=binary / unit=none per the §4-A2.3 ruling for trust-sub-item holdings without per-holding value disclosure. Edge structure follows the generalized trust-intermediate convention (methodology.md 'Trust-intermediate convention'): subsidiary chain from trust to holding. Ivanka's beneficial interest in the trust itself is covered by cp_rel_0465."
+}

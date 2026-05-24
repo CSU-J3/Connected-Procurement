@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0469",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0255",
+  "relation_kind": "family_to_entity",
+  "interest_type": "trust_beneficial",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Ivanka Trump's beneficial interest in Trust #3 (Ivanka 2017 disclosure) (cp_entity_0255). Disclosed at cp_filing_0004 Part 6 item 3 as a trust-header row anonymized by the form (form-text 'Trust #3'). Trust-level value not disclosed on form (header row shows EIF: No, blank value/income type/income amount); trust holdings are disclosed separately at sub-items 3.1 onward and land in Fork I-c. Encoded as shape=binary / unit=none per §4-A2.2 ruling. Chain-depth relationship to Ivanka Trump Revocable Trust (cp_entity_0250) deferred to Fork I-c endnote inspection (pp.66-94 may show this anonymized trust as a child of the Revocable Trust, in which case Fork I-c amends the structure to insert the Revocable Trust between Ivanka and this trust)."
+}

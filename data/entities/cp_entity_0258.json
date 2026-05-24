@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0258",
+  "canonical_name": "Trust #6 (Ivanka 2017 disclosure)",
+  "aliases": [
+    {
+      "name": "Trust #6",
+      "source_url": "https://assets.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
+      "source_filing_date": "2017-06-12",
+      "notes": "Form-disclosed name on cp_filing_0004; canonical entity name anchored to disclosure label per the locked trust-intermediate convention."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Anonymized trust label disclosed at cp_filing_0004 Part 6 as parent of sub-items 6.1 through 6.7 (200 EAST 62ND and 212 5TH residential unit-holding LLCs — likely the per-unit residential real estate cluster). Trust-level value not disclosed on form. Sub-items in Fork I-c."
+}

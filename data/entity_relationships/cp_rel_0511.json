@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0511",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0279",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Member, Manager of TTT Consulting LLC per cp_filing_0004 Part 1 item 293",
+    "start_date": "2005-12-01",
+    "end_date": "2017-01-31"
+  },
+  "notes": "Ivanka Trump's ownership of TTT Consulting LLC (cp_entity_0279). Disclosed at cp_filing_0004 Part 2 items 6 and 7 — two income components on the same entity: item 6 Consulting Fees income $913,847; item 7 Royalties and Licensing income $14,374. Both income components captured here in notes per locked income-disclosure encoding (one edge per entity). Value N/A on both form rows; encoded as shape=binary / unit=none. Ivanka served as Member, Manager from 12/2005 to 1/2017 per Part 1 item 293 (role ended ~3 months before her appointment date 2017-03-29; disclosure exists due to in-period income earned during the reporting period). qualifying_role captures the temporal precision."
+}

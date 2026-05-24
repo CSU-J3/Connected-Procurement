@@ -1,0 +1,9 @@
+{
+  "entity_id": "cp_entity_0292",
+  "canonical_name": "WWW Operations LLC",
+  "aliases": [],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Ivanka-side operating LLC holding the URL associated with the 'Women Who Work' brand. Disclosed at cp_filing_0004 Part 2 item 10. Form descriptor: 'holds URL associated with Women Who Work; value not readily ascertainable'. Family edge from Ivanka uses binary+unit:none with NRA form-text in notes per the locked Fork D NRA encoding pattern."
+}

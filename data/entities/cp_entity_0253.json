@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0253",
+  "canonical_name": "Trust #1 (Ivanka 2017 disclosure)",
+  "aliases": [
+    {
+      "name": "Trust #1",
+      "source_url": "https://assets.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
+      "source_filing_date": "2017-06-12",
+      "notes": "Form-disclosed name on cp_filing_0004; canonical entity name anchored to disclosure label per the locked trust-intermediate convention."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Anonymized trust label disclosed at cp_filing_0004 Part 6 as the parent grouping for sub-items 1.1 through 1.9 (Kushner-family commercial real estate LPs and one Israel Bonds disclosure). Trust-level value not disclosed on form (header row shows EIF: No, blank value); per §4-A2.2 the family edge from Ivanka uses binary+unit:none. Sub-item holdings registered separately in Fork I-c. Chain-depth question (whether this anonymized trust sits under Ivanka Trump Revocable Trust cp_entity_0250) deferred to Fork I-c endnote inspection."
+}
