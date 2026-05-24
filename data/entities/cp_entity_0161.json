@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0161",
+  "canonical_name": "Ladder Capital Finance I LLC",
+  "aliases": [
+    {
+      "name": "Ladder Capital Finance I LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Form text on Part 8 item 2 of cp_filing_0003."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Sibling vehicle to Ladder Capital Finance LLC (cp_entity_0160); distinct legal entity per form text (Roman numeral I suffix). Lender on Trump Part 8 item 2 (40 Wall Street LLC loan, Over $50M, 3.665%). Likely a SPV or note-issuance vehicle within the Ladder Capital Corp structure; preserved as a separate cp_entity per the form-most-complete-naming convention."
+}

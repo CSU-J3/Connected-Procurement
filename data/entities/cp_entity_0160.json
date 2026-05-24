@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0160",
+  "canonical_name": "Ladder Capital Finance LLC",
+  "aliases": [
+    {
+      "name": "Ladder Capital Finance LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Form text on Part 8 items 1, 6, 10 of cp_filing_0003. Same creditor entity on three Trump debt rows."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "NYC-based commercial real estate mortgage lender; subsidiary of Ladder Capital Corp (NYSE: LADR). Lender on three Trump cp_filing_0003 Part 8 rows: item 1 (Trump Tower Commercial LLC mortgage, Over $50M, 4.200%), item 6 (Trump Plaza LLC mortgage, $5M-$25M, 3.850%), item 10 (TIHT Commercial LLC mortgage, $5M-$25M, 4.050%). Distinct from Ladder Capital Finance I LLC (Roman numeral I suffix, see cp_entity_0161)."
+}

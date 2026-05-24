@@ -40,6 +40,8 @@ The tracker uses this definition verbatim. If a relationship doesn't fit one of 
 
 The two debt directions were split apart in Fork F §1 (2026-05-23) to cover both creditor-side and debtor-side disclosures explicitly. The single `debt` enum value used pre-amendment had zero records when the split landed; it was renamed to `debt_instrument_held` with no backwards-compatibility cost.
 
+The entity-to-entity debt edge type (`relation_kind: entity_to_entity_debt`, with direction encoded in `interest_type: debt_instrument_owed` or `debt_instrument_held`) was added in Fork H (2026-05-23) to cover Trump's cp_filing_0003 Part 8 disclosures where the borrowing entity is a Trump-controlled trust-held LLC and the creditor is a third party. Direction semantics match the existing `family_to_entity` debt edges from Fork F. A single `entity_to_entity_debt` RelationKind covers both directions via the existing InterestType split; no per-direction RelationKind enum entries were added. The schema change is one line in `RelationKind` plus two validator helper set additions (`_FINANCIAL_RELATION_KINDS` and `_ENTITY_TO_ENTITY_KINDS`); existing validators cover the new kind without rule changes.
+
 **Connected entity** is any entity in which a named family member holds a financial interest as defined above, documented through OGE 278 filings, SEC filings, public corporate registrations, or court filings. News reporting alone does not establish a connection; news reporting points to a primary source that does.
 
 ## Empirical foundation

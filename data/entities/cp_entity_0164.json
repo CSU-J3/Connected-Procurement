@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0164",
+  "canonical_name": "The Bryn Mawr Trust Company",
+  "aliases": [
+    {
+      "name": "THE BRYN MAWR TRUST COMPANY (Pennsylvania banking corporation, as successor by merger to Royal Bank America, formerly Royal Bank of Pennsylvania)",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Form text on Part 8 item 9 of cp_filing_0003. Form preserves a two-step historical-corporate-form annotation (Royal Bank of Pennsylvania -> Royal Bank America -> The Bryn Mawr Trust Company); annotation preserved verbatim per source-fidelity convention."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Pennsylvania banking corporation. Lender on Trump Part 8 item 9 (Seven Springs LLC mortgage, $5M-$25M, 4.500%, matures 2029). The original 2000 lender was Royal Bank of Pennsylvania, which became Royal Bank America, which was acquired by The Bryn Mawr Trust Company via merger. The Bryn Mawr Trust Company subsequently merged into WSFS Financial Corporation in 2021 (post the cp_filing_0003 observed_on date; not reflected on the form). All three legacy names preserved in alias for audit traceability."
+}

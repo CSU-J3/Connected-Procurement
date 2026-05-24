@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0374",
+  "source_id": "cp_entity_0003",
+  "target_id": "cp_entity_0145",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 25000001,
+    "high": 50000000,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-20",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "The Donald J. Trump Revocable Trust's ownership of Trump Plaza LLC (residential & commercial real estate operating LLC (Trump Plaza, 167 East 61st St, NYC)). Edge structure follows the cp_filing_0003 trust-as-intermediate-entity convention established by Fork B (see methodology.md 'cp_filing_0003 trust-intermediate convention'). Exhibit B p69: '99% The Donald J. Trump Revocable Trust Member / 1% TRUMP PLAZA MEMBER INC. Managing Member' \u2014 explicit DJT Revocable Trust attribution. Part 2 item 100 form value bracket $25,000,001 - $50,000,000."
+}

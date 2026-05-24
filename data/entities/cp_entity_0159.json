@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0159",
+  "canonical_name": "Chicago Unit Acquisition LLC",
+  "aliases": [
+    {
+      "name": "Chicago Unit Acquisition LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Form text on Part 8 item 11 of cp_filing_0003. Disclosed as the creditor on a 'springing loan' against TIHT Chicago at 'Over $50,000,000 / Prime + 5%' (no specific maturity)."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Trump-controlled lender entity created in 2012 during the Fortress / Deutsche Bank TIHT Chicago workout. Per Trump Organization chief legal officer Alan Garten (on-record), the entity is owned by Trump and the underlying loan was 'an internal loan' Trump 'lent... to the entity that he owns.' The springing loan's existence was disputed by the court-appointed monitor in NY AG v. Trump (2023-2024) and the matter was referred to FBI/DOJ by CREW. Sources: see Fork H \u00a72 determination document for the full citation chain. Trust attribution defaults to The Donald J. Trump Revocable Trust per the Fork H \u00a73 decision; no clearer public record places CUA under a different Trump trust."
+}

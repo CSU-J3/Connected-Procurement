@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0379",
+  "source_id": "cp_entity_0003",
+  "target_id": "cp_entity_0159",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-20",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "The Donald J. Trump Revocable Trust's ownership of Chicago Unit Acquisition LLC (Trump-controlled affiliate vehicle (per Fork H \u00a72 determination)). Edge structure follows the cp_filing_0003 trust-as-intermediate-entity convention established by Fork B (see methodology.md 'cp_filing_0003 trust-intermediate convention'). Trump-controlled lender entity per the Fork H \u00a72 substantive determination (Alan Garten on-record description; 2012 origin in Fortress/DBTCA TIHT Chicago workout). value.shape=binary because the entity is not disclosed with a discrete dollar value on the form (CUA appears only as the creditor on Part 8 item 11, not as a Part 2 disclosed asset). Trust attribution defaults to DJT Revocable Trust per Fork H \u00a73 decision; no clearer public record places CUA under a different Trump trust. See Chicago Unit Acquisition LLC entity notes (cp_entity_0159) for the substantive evidence chain."
+}

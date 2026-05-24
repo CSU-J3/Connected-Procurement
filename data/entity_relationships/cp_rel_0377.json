@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0377",
+  "source_id": "cp_entity_0003",
+  "target_id": "cp_entity_0150",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "floor",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": 50000000,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-20",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "The Donald J. Trump Revocable Trust's ownership of TIHT Chicago (Trump International Hotel Tower Chicago operating entity). Edge structure follows the cp_filing_0003 trust-as-intermediate-entity convention established by Fork B (see methodology.md 'cp_filing_0003 trust-intermediate convention'). TIHT Chicago is not separately disclosed on Part 2 (only referenced on Exhibit B p38 / p53 via TIHT CHICAGO MEMBER ACQUISITION LLC and TRUMP CHICAGO RETAIL LLC under the 401 N Wabash Venture LLC chain). 401 N Wabash Venture LLC IS a Part 2 disclosure (item 004, Over $50M); the TIHT Chicago operating entity is held via that chain. Per the cp_filing_0003 trust-intermediate convention, ownership edge defaults to DJT Revocable Trust top-of-chain. Value shape=floor / floor=50000000 inherits from the parent 401 N Wabash Venture LLC disclosure (Over $50M)."
+}

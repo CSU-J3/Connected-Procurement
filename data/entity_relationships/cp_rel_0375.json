@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0375",
+  "source_id": "cp_entity_0003",
+  "target_id": "cp_entity_0148",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 25000001,
+    "high": 50000000,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-20",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "The Donald J. Trump Revocable Trust's ownership of Seven Springs LLC (real estate operating LLC (Seven Springs estate, Mt. Kisco, NY)). Edge structure follows the cp_filing_0003 trust-as-intermediate-entity convention established by Fork B (see methodology.md 'cp_filing_0003 trust-intermediate convention'). Exhibit B p39 shows '99.9% DJT HOLDINGS LLC Member / 0.1% BRIARCLIFF PROPERTIES, INC. Member' \u2014 held via DJT Holdings LLC intermediate, which is itself under the DJT Revocable Trust per the broader Exhibit B ownership chain. DJT Holdings LLC is not registered in the registry (defers to Fork I); this edge captures the trust attribution at the top of the chain. Part 2 item 037 form value bracket $25,000,001 - $50,000,000."
+}

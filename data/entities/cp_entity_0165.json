@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0165",
+  "canonical_name": "Professional Bank",
+  "aliases": [
+    {
+      "name": "Professional Bank",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Form text on Part 8 item 14 of cp_filing_0003."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "South Florida community bank (Professional Bank, a subsidiary of Professional Holding Corp, headquartered in Coral Gables, FL). Lender on Trump Part 8 item 14 (1125 South Ocean LLC mortgage, $5M-$25M, 4.500%, matures 2048)."
+}

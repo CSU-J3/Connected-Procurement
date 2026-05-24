@@ -50,6 +50,7 @@ class RelationKind(str, Enum):
     FAMILY_TO_ENTITY = "family_to_entity"
     ENTITY_TO_ENTITY_PARENT = "entity_to_entity_parent"
     ENTITY_TO_ENTITY_SUBSIDIARY = "entity_to_entity_subsidiary"
+    ENTITY_TO_ENTITY_DEBT = "entity_to_entity_debt"
     SPOUSAL = "spousal"
     FAMILY_BLOOD = "family_blood"
     FAMILY_MARRIAGE = "family_marriage"
@@ -78,6 +79,7 @@ _FINANCIAL_RELATION_KINDS = {
     RelationKind.FAMILY_TO_ENTITY,
     RelationKind.ENTITY_TO_ENTITY_PARENT,
     RelationKind.ENTITY_TO_ENTITY_SUBSIDIARY,
+    RelationKind.ENTITY_TO_ENTITY_DEBT,
 }
 
 _PERSON_TO_PERSON_KINDS = {
@@ -90,6 +92,7 @@ _PERSON_TO_PERSON_KINDS = {
 _ENTITY_TO_ENTITY_KINDS = {
     RelationKind.ENTITY_TO_ENTITY_PARENT,
     RelationKind.ENTITY_TO_ENTITY_SUBSIDIARY,
+    RelationKind.ENTITY_TO_ENTITY_DEBT,
 }
 
 

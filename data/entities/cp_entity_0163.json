@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0163",
+  "canonical_name": "Chevy Chase Trust Holdings, Inc.",
+  "aliases": [
+    {
+      "name": "Chevy Chase Trust Holdings, Inc. (as successor in interest to Bondy Way Development Corporation)",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Form text on Part 8 item 8 of cp_filing_0003. Form preserves historical-corporate-form annotation in the creditor name; that annotation is preserved here verbatim per the registry's source-fidelity convention."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Lender on Trump Part 8 item 8 (Trump National Golf Club Washington DC LLC mortgage, $5M-$25M, 5.500%, matures 2029). The original 2009 lender was Bondy Way Development Corporation; Chevy Chase Trust Holdings, Inc. succeeded to the position by some corporate-succession event (merger, acquisition, or assignment) not disclosed on the form. Both names preserved in alias for audit traceability."
+}

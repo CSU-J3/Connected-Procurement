@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0162",
+  "canonical_name": "Amboy Bank",
+  "aliases": [
+    {
+      "name": "Amboy Bank",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Form text on Part 8 item 7 of cp_filing_0003."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "NJ community bank (Amboy Bank, a subsidiary of Amboy Bancorporation, headquartered in Old Bridge, NJ). Lender on Trump Part 8 item 7 (Trump National Golf Club Colts Neck LLC mortgage, $5M-$25M, 5.250%, matures 2028)."
+}
