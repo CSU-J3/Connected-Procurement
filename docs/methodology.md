@@ -324,3 +324,20 @@ Plus, additional formally-named Trump trusts (e.g., the Fred C. Trump December 1
 Direct `family_to_entity` edges from `cp_person_0003` to operating entities are the wrong shape for cp_filing_0003. Handoffs that specify edge structure on this filing must use "entity_to_entity from [trust name]" phrasing rather than "family_to_entity from Trump." Surface-and-pause is mandatory if a handoff specifies the wrong shape — the existing convention takes precedence over the handoff's literal wording.
 
 Locked: 2026-05-23.
+
+### Internally-disclosed intermediate entities
+
+A 278 filing's Schedule A organization chart commonly references intermediate holding entities (e.g., DJT Holdings LLC, Seven Springs LLC) that sit between the filer and a registered operating entity but are not themselves financial-interest line items. These entities are *internally disclosed* — their existence is established by the filing's own structure — but they do not generate a `family_to_entity` edge because no direct family-member interest is asserted at the intermediate level.
+
+Registration policy for internally-disclosed intermediates:
+
+1. Register the entity as `cp_entity_NNNN` when it appears as a parent in a subsidiary chain leading to a registered operating entity. Source the entity name and any aliases from the filing itself; `primary_source_url` matches the filing's URL with `_parse_provenance.primary_source_authority` noting "internal disclosure via Schedule A organization chart, no direct interest line."
+2. Write the `entity_to_entity_subsidiary` edge connecting the intermediate to its operating child(ren) with `observed_on` matching the filing's signature date.
+3. Do **not** write a `family_to_entity` edge at the intermediate level. The chain `filer → intermediate → operating` is *implicit* via the subsidiary edge plus whatever family-to-intermediate-parent edge exists upstream; writing a direct edge would assert a financial interest the filing does not disclose.
+4. The intermediate sits in the same "registered but not connected" intermediate state as Fork D's subsidiary entities — entity record exists, no family edge — but the reason is different (internal-disclosure-only vs. value-defer). Surface the distinction in the close commit message of any fork creating these.
+
+Forward point: if a later filing discloses a direct interest in a previously-internal intermediate (a new `family_to_entity` edge at the intermediate level), supersession applies — the prior internal-only registration stands and the new direct edge attaches with its own `observed_on` and value bracket.
+
+Forward bundle from Fork H §4 (DJT Holdings LLC / Seven Springs pattern). Lands before Fork I-a Part 2 Exhibit A inspection so the rule is in force on first encounter.
+
+Locked: 2026-05-24.
