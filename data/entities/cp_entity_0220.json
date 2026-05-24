@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0220",
+  "canonical_name": "1290 Avenue of the Americas, a Tenancy-in-Common",
+  "aliases": [
+    {
+      "name": "1290 AVENUE OF THE AMERICAS, A TENANCY-IN-COMMON",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 121 of Part 2 (Filer's Employment Assets and Income), Exhibit A. Form descriptor: 'Underlying Assets: commercial real estate; Location: New York, NY'."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Real property held via tenancy-in-common at 1290 Avenue of the Americas, Manhattan. Trump holds ~30% undivided interest; Vornado holds the majority. **Tenancy-in-common is real-property co-ownership of undivided fractional interests, structurally distinct from LLC membership** — captured as a cp_entity record per §4.5 ruling because the form treats it as a named position with Exhibit B Ref# 479; no new RelationKind designed (one-instance deferral). External counterparty (Vornado) not registered; Convention 6 defers. Disclosed as Part 2 Exhibit A item 121 on cp_filing_0003 (Trump 2021 termination 278). Held via The Donald J. Trump Revocable Trust (cp_entity_0003) per the locked cp_filing_0003 trust-intermediate convention; subsidiary edge registered in Fork I-a."
+}

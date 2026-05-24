@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0238",
+  "canonical_name": "DT Endeavor I LLC",
+  "aliases": [
+    {
+      "name": "DT ENDEAVOR I LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 183 of Part 2 (Filer's Employment Assets and Income), Exhibit A. Form descriptor: 'Underlying Assets: aircraft; Location: Palm Beach, FL'."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Trump aircraft holding LLC (Palm Beach FL). Likely the Trump 757 (DT Endeavor) operating entity. Disclosed as Part 2 Exhibit A item 183 on cp_filing_0003 (Trump 2021 termination 278). Held via The Donald J. Trump Revocable Trust (cp_entity_0003) per the locked cp_filing_0003 trust-intermediate convention; subsidiary edge registered in Fork I-a."
+}

@@ -1,0 +1,9 @@
+{
+  "entity_id": "cp_entity_0175",
+  "canonical_name": "Fifty-Seventh Street Associates LLC",
+  "aliases": [],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Commercial real estate operating LLC for the 6 East 57th Street property (Niketown building, Manhattan). Disclosed as Part 2 Exhibit A item 26 on cp_filing_0003 (Trump 2021 termination 278). Held via The Donald J. Trump Revocable Trust (cp_entity_0003) per the locked cp_filing_0003 trust-intermediate convention; subsidiary edge registered in Fork I-a."
+}

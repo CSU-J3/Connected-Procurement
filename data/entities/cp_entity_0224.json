@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0224",
+  "canonical_name": "DT Venture I LLC",
+  "aliases": [
+    {
+      "name": "N/K/A DT VENTURE I LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 125 of Part 2 (Filer's Employment Assets and Income), Exhibit A. Form descriptor: 'Underlying Assets: residential real estate; Location: Palm Beach, FL'."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Trump Palm Beach residential real estate holding LLC. Form-row prefixes the name with 'N/K/A' (Now Known As) indicating a recent rename; the prior name is not disclosed on the form row and may appear in Exhibit B at Ref# 093. Canonical name is the current (post-rename) form. If a prior-name entity is identified during the Exhibit B inspection fork or a later filing, merge per the standard alias/merges discipline. Disclosed as Part 2 Exhibit A item 125 on cp_filing_0003 (Trump 2021 termination 278). Held via The Donald J. Trump Revocable Trust (cp_entity_0003) per the locked cp_filing_0003 trust-intermediate convention; subsidiary edge registered in Fork I-a."
+}

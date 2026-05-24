@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0438",
+  "source_id": "cp_entity_0003",
+  "target_id": "cp_entity_0224",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 5000001,
+    "high": 25000000,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-20",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "The Donald J. Trump Revocable Trust's ownership of DT Venture I LLC. Item 125 of Part 2 (Filer's Employment Assets and Income) Exhibit A on cp_filing_0003. Form descriptor: 'Underlying Assets: residential real estate; Location: Palm Beach, FL'. Exhibit B Reference # 093. Value disclosed as bracket $5,000,001 - $25,000,000; recorded with shape=range. Income on form: rent / $100,001 - $1,000,000 (cross-reference only; primary record lives in cp_filing_0003.interest_disclosed). Edge structure follows the cp_filing_0003 trust-as-intermediate-entity convention (methodology.md 'cp_filing_0003 trust-intermediate convention'). Trump's beneficial interest in the trust itself is covered by cp_rel_0008."
+}

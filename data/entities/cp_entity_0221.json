@@ -1,0 +1,9 @@
+{
+  "entity_id": "cp_entity_0221",
+  "canonical_name": "Starrett City Associates, L.P.",
+  "aliases": [],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Brooklyn residential real estate limited partnership. Trump held a 4% LP interest via The Donald J. Trump Revocable Trust per the form-row description. Underlying real estate was sold during the reporting period; only residual distributions remain. Form's Exhibit A Reference # column shows a multi-Ref# chain (018, 141, 154, 446) indicating four intermediate Exhibit B entities sit between the trust and this LP; the intermediate chain is captured here in notes and structurally encoded only when the Exhibit B inspection fork runs. Disclosed as Part 2 Exhibit A item 122 on cp_filing_0003 (Trump 2021 termination 278). Held via The Donald J. Trump Revocable Trust (cp_entity_0003) per the locked cp_filing_0003 trust-intermediate convention; subsidiary edge registered in Fork I-a."
+}

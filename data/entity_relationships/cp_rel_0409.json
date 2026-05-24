@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0409",
+  "source_id": "cp_entity_0003",
+  "target_id": "cp_entity_0195",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-20",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "The Donald J. Trump Revocable Trust's ownership of Trump Books LLC. Item 57 of Part 2 (Filer's Employment Assets and Income) Exhibit A on cp_filing_0003. Form descriptor: 'Underlying Assets: book deal with Plata Publishing LLC; Location: New York, NY (book published 2011)'. Exhibit B Reference # 243. Value encoded as shape=binary / unit=none per the locked NRA convention (methodology.md \"Encoding 'value not readily ascertainable' 278 disclosures\"). Form text on the row: \"Value reported reflects bank account holding only. Additional Underlying Asset: book deal with Plata Publishing LLC (THE MIDAS TOUCH, published 2011) - value not readily ascertainable.\" The bank-account-only disclosure carries the bracket None (or less than $1,001); the underlying business value is the operative interest and is NRA. One edge per underlying business per Fork I-a §4-A.2 / §4.1 (the bank account is custodial, not a separate interest). Income on form: royalties / $2,501 - $5,000 (cross-reference only; primary record lives in cp_filing_0003.interest_disclosed). Edge structure follows the cp_filing_0003 trust-as-intermediate-entity convention (methodology.md 'cp_filing_0003 trust-intermediate convention'). Trump's beneficial interest in the trust itself is covered by cp_rel_0008."
+}

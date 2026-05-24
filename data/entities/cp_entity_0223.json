@@ -1,0 +1,9 @@
+{
+  "entity_id": "cp_entity_0223",
+  "canonical_name": "Trump Tower Triplex",
+  "aliases": [],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Trump's personal residence (penthouse triplex) at Trump Tower, 725 Fifth Avenue, Manhattan. Disclosed as a Part 2 Exhibit A operating-entity line (Over $50,000,000) with no Exhibit B Reference # — direct ownership. Per cp_filing_0003 _excluded_categories.residential_rental_property_llcs rationale, Trump residential-asset entities are registered as individual cp_entity records (override of the §3.0 inclusion test's default-exclude for residential). Disclosed as Part 2 Exhibit A item 124 on cp_filing_0003 (Trump 2021 termination 278). Held via The Donald J. Trump Revocable Trust (cp_entity_0003) per the locked cp_filing_0003 trust-intermediate convention; subsidiary edge registered in Fork I-a."
+}

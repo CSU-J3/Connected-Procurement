@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0201",
+  "canonical_name": "Trump International Hotel Hawaii LLC",
+  "aliases": [
+    {
+      "name": "TRUMP INTERNATIONAL HOTEL HAWAII LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Item 71 of Part 2 (Filer's Employment Assets and Income), Exhibit A. Form descriptor: 'Underlying Assets: management and license agreements with IRONGATE AZREP BW LLC; Location: Waikiki, HI'."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Trump-side licensee LLC for the Trump International Hotel Waikiki tower (Honolulu, HI). Two income components disclosed on the same form row (royalties + management fees); both captured in the edge notes per Fork G precedent of one-edge-per-row with income in notes (the schema has no income-stream interest_type; surfaced as a deviation from §4-A.3 Row 2's two-edge instruction). IRONGATE AZREP BW LLC is the external counterparty; Convention 6 defers the external entity edge. Disclosed as Part 2 Exhibit A item 71 on cp_filing_0003 (Trump 2021 termination 278). Held via The Donald J. Trump Revocable Trust (cp_entity_0003) per the locked cp_filing_0003 trust-intermediate convention; subsidiary edge registered in Fork I-a."
+}

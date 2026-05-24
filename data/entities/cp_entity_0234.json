@@ -1,0 +1,9 @@
+{
+  "entity_id": "cp_entity_0234",
+  "canonical_name": "Trump Management Inc.",
+  "aliases": [],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Trump-side property management entity. Manhasset, NY. Disclosed as Part 2 Exhibit A item 144 on cp_filing_0003 (Trump 2021 termination 278). Held via The Donald J. Trump Revocable Trust (cp_entity_0003) per the locked cp_filing_0003 trust-intermediate convention; subsidiary edge registered in Fork I-a."
+}

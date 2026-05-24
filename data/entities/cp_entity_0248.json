@@ -1,0 +1,9 @@
+{
+  "entity_id": "cp_entity_0248",
+  "canonical_name": "Propco 2019 LLC",
+  "aliases": [],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Pass-thru entity for the St. Martin (French West Indies) holdings. Companion to Excel Venture I LLC (cp_entity_0174). Disclosed as Part 2 Exhibit A item 211 on cp_filing_0003 (Trump 2021 termination 278). Held via The Donald J. Trump Revocable Trust (cp_entity_0003) per the locked cp_filing_0003 trust-intermediate convention; subsidiary edge registered in Fork I-a."
+}

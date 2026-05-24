@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0434",
+  "source_id": "cp_entity_0003",
+  "target_id": "cp_entity_0220",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "floor",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": 50000000,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-20",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "The Donald J. Trump Revocable Trust's ownership of 1290 Avenue of the Americas, a Tenancy-in-Common. Item 121 of Part 2 (Filer's Employment Assets and Income) Exhibit A on cp_filing_0003. Form descriptor: 'Underlying Assets: commercial real estate; Location: New York, NY'. Exhibit B Reference # 479. Value disclosed as 'Over $50,000,000'; recorded with shape=floor / floor=50000000 per the methodology.md 'Value shape: floor' convention. Income on form: rent / Over $5,000,000 (cross-reference only; primary record lives in cp_filing_0003.interest_disclosed). Edge structure follows the cp_filing_0003 trust-as-intermediate-entity convention (methodology.md 'cp_filing_0003 trust-intermediate convention'). Trump's beneficial interest in the trust itself is covered by cp_rel_0008."
+}
