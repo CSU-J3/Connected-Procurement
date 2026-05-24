@@ -305,3 +305,22 @@ If the disclosure is for a commodity-themed investment vehicle (commodity ETF, p
 First populated by Fork G (cp_filing_0003 Part 6 p020 "INVESTMENT IN GOLD" line, $100,001 - $250,000 bracket).
 
 Locked: 2026-05-23.
+
+### Roadmap-stage row counts as estimates
+
+Row counts surfaced during the eight-step methodology roadmap or similar pre-inspection planning stages are estimates, not authoritative figures. Inspection forks may revise the count upward when deeper form-reading surfaces previously-uncounted rows. The Fork G discovery of 22 Over-$50M rows on cp_filing_0003 (versus the roadmap's 5) illustrates the pattern. Roadmap status should be updated to "partial close — remaining rows in subsequent fork's scope" rather than treating the original count as a complete inventory. The methodological purpose of the roadmap item (e.g., exercising the `floor` value shape) is satisfied by writing any non-trivial subset of the surfaced rows; the remaining rows defer to the next fork that owns the broader scope.
+
+Locked: 2026-05-23.
+
+### cp_filing_0003 trust-intermediate convention
+
+cp_filing_0003 (Trump) relationships to operating entities are mediated through trust vehicles per the convention established in Fork B:
+
+- Trump (`cp_person_0003`) → DJT Revocable Trust (`cp_entity_0003`) via `family_to_entity` / `trust_beneficial` (`cp_rel_0008`)
+- DJT Revocable Trust → operating entity via `entity_to_entity_subsidiary` with the relevant ownership type
+
+Plus, additional formally-named Trump trusts (e.g., the Fred C. Trump December 16, 1976 Trust registered in Fork G) get their own `family_to_entity` / `trust_beneficial` edges from Trump, and operating entities they hold get `entity_to_entity_subsidiary` edges from those trusts.
+
+Direct `family_to_entity` edges from `cp_person_0003` to operating entities are the wrong shape for cp_filing_0003. Handoffs that specify edge structure on this filing must use "entity_to_entity from [trust name]" phrasing rather than "family_to_entity from Trump." Surface-and-pause is mandatory if a handoff specifies the wrong shape — the existing convention takes precedence over the handoff's literal wording.
+
+Locked: 2026-05-23.
