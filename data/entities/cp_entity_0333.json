@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0333",
+  "canonical_name": "Trump Village Construction Corp.",
+  "aliases": [
+    {
+      "name": "Trump Village Construction Corp.",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Form-disclosed name on cp_filing_0003 Part 2 Exhibit A (ownership-structure schedule), *(1) intermediate-holdco entry."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Trust-side intermediate holdco disclosed at cp_filing_0003 Part 2 Exhibit A *(1) Ref# 446. Owned by 25% The Donald J. Trump Revocable Trust (cp_entity_0003) and 75% Trump Family Members (non-filer rollup). Holds 1.84% (Partner) of Starrett City Associates, L.P. (cp_entity_0221) and 1.84% (Member) of Spring Creek Plaza LLC (cp_entity_0222). Registered in Fork K per \u00a74.1 chain resolution."
+}

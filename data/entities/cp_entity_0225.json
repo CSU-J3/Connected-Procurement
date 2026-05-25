@@ -3,14 +3,14 @@
   "canonical_name": "DTW Venture LLC",
   "aliases": [
     {
-      "name": "N/K/A DTW VENTURE LLC",
+      "name": "DTW VENTURE LLC",
       "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
       "source_filing_date": "2021-01-20",
-      "notes": "Item 126 of Part 2 (Filer's Employment Assets and Income), Exhibit A. Form descriptor: 'Underlying Assets: residential real estate; Location: Palm Beach, FL'."
+      "notes": "Form-disclosed name on cp_filing_0003 Part 2 Schedule A item 126, prefixed on the row with 'N/K/A' (Now Known As) indicating a rename to the canonical form. Alias prefix cleaned up in Fork K (2026-05-25) per §4.2; the form-row 'N/K/A' notation is metadata indicating the rename, not part of the name itself. Form descriptor: 'Underlying Assets: residential real estate; Location: Palm Beach, FL'. Prior (pre-rename) name is not disclosed on this form."
     }
   ],
   "external_ids": [],
   "last_updated_from_filing": "cp_filing_0003",
   "merged_into": null,
-  "notes": "Trump Palm Beach residential real estate holding LLC. Form-row prefixes the name with 'N/K/A' (Now Known As) indicating a recent rename; the prior name is not disclosed on the form row and may appear in Exhibit B at Ref# 093 (shared with item 125). Canonical name is the current (post-rename) form. Disclosed as Part 2 Exhibit A item 126 on cp_filing_0003 (Trump 2021 termination 278). Held via The Donald J. Trump Revocable Trust (cp_entity_0003) per the locked cp_filing_0003 trust-intermediate convention; subsidiary edge registered in Fork I-a."
+  "notes": "Trump Palm Beach residential real estate holding LLC. Form-row at Schedule A item 126 prefixes the name with 'N/K/A' (Now Known As) indicating a rename; the prior (pre-rename) name is not disclosed on this form (verified during Fork K §1.2 inspection — neither Schedule A row text, Exhibit A ownership-structure schedule at Ref# 093, nor endnotes disclose the old name). Canonical name is the current (post-rename) form: DTW Venture LLC. Disclosed as Part 2 Schedule A item 126 on cp_filing_0003 (Trump 2021 termination 278); cross-references Exhibit A *(1) Ref# 093 (owned 100% by DJT Holdings LLC, cp_entity_0169). Held via The Donald J. Trump Revocable Trust (cp_entity_0003) per the locked trust-intermediate convention; subsidiary edge registered in Fork I-a. Fork K (2026-05-25) cleaned up the alias array per §4.2 — stripped the 'N/K/A ' prefix from the alias entry and promoted the rename metadata into alias notes (per-alias source_url provenance confirmed supported by schema; Fork C alias source_url policy partially advanced by this cleanup). Schema gap: no `entity_to_entity_successor` analog exists for explicit entity-succession encoding; deferred per the locked 'one case isn't enough' pattern."
 }

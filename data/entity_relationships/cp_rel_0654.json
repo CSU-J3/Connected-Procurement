@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0654",
+  "source_id": "cp_entity_0332",
+  "target_id": "cp_entity_0222",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-15",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Shore Haven Apt#1, Inc. (cp_entity_0332) holds 1.72% (Member) of Spring Creek Plaza LLC (cp_entity_0222), disclosed at cp_filing_0003 Part 2 Exhibit A *(1) Ref# 154. Value encoded as binary + unit:none with ownership percentage in notes per the locked ownership-percentage encoding convention. Parallel disclosure to the direct trust\u2192LP edge cp_rel_0436 (Schedule A item 123 4% limited partnership interest, 'value not readily ascertainable'); chain aggregate 5.89% across all 4 Ref# entities. Trust's effective share via this Ref# is 25% \u00d7 1.72%. Both direct 4% and chain 5.89% preserved per \u00a74.1 Option A."
+}

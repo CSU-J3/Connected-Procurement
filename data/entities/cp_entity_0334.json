@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0334",
+  "canonical_name": "Bedford Hills Corp.",
+  "aliases": [
+    {
+      "name": "Bedford Hills Corp.",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Form-disclosed name on cp_filing_0003 Part 2 Exhibit A (ownership-structure schedule), *(1) intermediate-holdco entry."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Trust-side intermediate holdco disclosed at cp_filing_0003 Part 2 Exhibit A *(1) Ref# 21. Owned by 25% DJT Holdings LLC (cp_entity_0169) and 75% Trump Family Members (non-filer rollup; no registry edges per locked ownership-percentage convention). Holds 0.10% (Member) of Seven Springs LLC (cp_entity_0148); the remaining 99.9% of Seven Springs is held by DJT Holdings LLC (existing Fork G/I-a chain coverage via cp_rel_0375). Registered in Fork K per \u00a74-A amendment closing the genuine Fork H \u00a74 Seven Springs co-owner carryover. (Fork H \u00a74 originally grouped Bedford Hills with BRIARCLIFF PROPERTIES INC as Seven Springs co-owners \u2014 that grouping was a transcription error caught by surface-and-pause during Fork K write; BRIARCLIFF is in a separate chain and defers to Fork L.)"
+}
