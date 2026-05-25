@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0299",
+  "canonical_name": "SKYLINE KUSHNER, LLC",
+  "aliases": [
+    {
+      "name": "SKYLINE KUSHNER, LLC",
+      "source_url": "https://assets.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
+      "source_filing_date": "2017-06-12",
+      "notes": "Form-disclosed name on cp_filing_0004 Part 6."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Residential real estate, Hasbrouck Heights & Lodi, NJ Disclosed at cp_filing_0004 Part 6 item 3.15 as a holding under Trust #3 (cp_entity_0255). Registered in Fork I-c per \u00a74 Table B."
+}

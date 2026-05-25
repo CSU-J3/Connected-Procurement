@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0312",
+  "canonical_name": "OC PARTNERS, LLC",
+  "aliases": [
+    {
+      "name": "OC PARTNERS, LLC",
+      "source_url": "https://assets.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
+      "source_filing_date": "2017-06-12",
+      "notes": "Form-disclosed name on cp_filing_0004 Part 6."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Cash-management LLC, New York, NY. Form descriptor: 'Cash; New York, NY'. \u00a74.6 pre-write verification on 2026-05-25 confirmed the entity name is OC PARTNERS, LLC with 'Cash' being the form's activity descriptor (matching the standard '(Activity; Location)' pattern), not part of the entity name. Endnote 4.36 reads 'This asset has been divested' \u2014 asset divested subsequent to filing; disclosed for in-period income only. Disclosed at cp_filing_0004 Part 6 item 4.36 as a holding under Trust #4 (cp_entity_0256). Registered in Fork I-c per \u00a74 Table B."
+}

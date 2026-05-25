@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0329",
+  "canonical_name": "FabFitFun",
+  "aliases": [
+    {
+      "name": "FabFitFun",
+      "source_url": "https://assets.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
+      "source_filing_date": "2017-06-12",
+      "notes": "Form-disclosed name on cp_filing_0004 Part 6."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Beauty and wellness subscription service. Direct investment in a private operating company (not pooled). Sub-item under BFPS VENTURES, LLC. Disclosed at cp_filing_0004 Part 6 item 19.8 as a standalone holding (Ivanka's direct ownership outside any Trust #N grouping). Registered in Fork I-c per \u00a74 Table B."
+}

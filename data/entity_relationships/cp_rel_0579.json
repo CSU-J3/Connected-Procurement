@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0579",
+  "source_id": "cp_entity_0254",
+  "target_id": "cp_entity_0294",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 250001.0,
+    "high": 500000.0,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Trust #2 (cp_entity_0254) holding of WESTMINSTER LINDEN, LLC (cp_entity_0294), disclosed at cp_filing_0004 Part 6 item 2.16. New entity registered in Fork I-c. Form value bracket: $250,001 - $500,000. Income components per the locked income-disclosure encoding (form text): WESTMINSTER LINDEN, LLC (Residential Real N/A $250,001 - Rent or $15,001 - Estate in Brooklyn, NY) $500,000 Royalties $50,000"
+}

@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0303",
+  "canonical_name": "184 KENT ASSOCIATES, LLC",
+  "aliases": [
+    {
+      "name": "184 KENT ASSOCIATES, LLC",
+      "source_url": "https://assets.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
+      "source_filing_date": "2017-06-12",
+      "notes": "Form-disclosed name on cp_filing_0004 Part 6."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Residential real estate, Brooklyn, NY. Endnote 4.1 details a multi-layer holding chain down to 184 KENT OWNER LLC; sub-entities are not registered separately per the locked \u00a73.0 inclusion test (operating-LLC top of chain only). Disclosed at cp_filing_0004 Part 6 item 4.1 as a holding under Trust #4 (cp_entity_0256). Registered in Fork I-c per \u00a74 Table B."
+}

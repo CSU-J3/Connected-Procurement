@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0563",
+  "source_id": "cp_entity_0256",
+  "target_id": "cp_entity_0125",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 15001.0,
+    "high": 50000.0,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Trust #4 (cp_entity_0256) holding of cp_entity_0125, disclosed at cp_filing_0004 Part 6 item 4.29. Form value bracket: $15,001 - $50,000. Income components per the locked income-disclosure encoding (form text): KF-WIP CO. INVESTORS I, LLC (Industrial Real N/A $15,001 - Rent or $50,001 - Estate in Middletown, PA) $50,000 Royalties $100,000"
+}

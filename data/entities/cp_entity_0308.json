@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0308",
+  "canonical_name": "KF WESTWOOD PARTNER, LLC",
+  "aliases": [
+    {
+      "name": "KF WESTWOOD PARTNER, LLC",
+      "source_url": "https://assets.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
+      "source_filing_date": "2017-06-12",
+      "notes": "Form-disclosed name on cp_filing_0004 Part 6."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Residential real estate, Westwood & River Vale, NJ. Also disclosed as standalone Part 6 item 126; per \u00a74.4 ruling write both Trust #4 subsidiary edge and a parallel family_to_entity edge. Disclosed at cp_filing_0004 Part 6 item 4.19 as a holding under Trust #4 (cp_entity_0256). Registered in Fork I-c per \u00a74 Table B."
+}

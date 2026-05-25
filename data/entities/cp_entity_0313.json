@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0313",
+  "canonical_name": "29 Second Avenue Realty, LLC",
+  "aliases": [
+    {
+      "name": "29 Second Avenue Realty, LLC",
+      "source_url": "https://assets.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
+      "source_filing_date": "2017-06-12",
+      "notes": "Form-disclosed name on cp_filing_0004 Part 6."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Residential real estate, New York, NY Disclosed at cp_filing_0004 Part 6 item 4.41 as a holding under Trust #4 (cp_entity_0256). Registered in Fork I-c per \u00a74 Table B."
+}

@@ -326,14 +326,15 @@ Encoding:
 4. Do **not** write direct `family_to_entity` edges from the filer to holdings within the trust. The chain `filer → trust → holding` is structurally complete via the family edge at the trust level plus the subsidiary chain.
 5. The exception is `spousal_imputed` edges. Convention 3 imputation reaches the holdings themselves, not the trust, because 18 USC 208(a)(2) imputes the underlying interest. Write spousal-imputed edges to the holdings directly when Convention 3 applies, with notes capturing the trust intermediate ("Held via Trust #N").
 6. Reuse: if a registered trust already exists, write additional subsidiary edges from it for newly-surfaced holdings; do not create a duplicate trust record. The cp_filing_0003 Donald J. Trump Revocable Trust (cp_entity_0003) is the canonical example.
+7. **Nesting clarification:** a filing's structural grouping of holdings under a trust header is not, by itself, evidence of a parent-trust nesting relationship between named trusts and labeled-trust headers in the same filing. Multi-level encoding requires positive endnote or Schedule A disclosure (e.g., "Trust #N is held by [Named Trust]" or equivalent reverse-direction language). Without positive disclosure, parallel-trust encoding is the default — each trust header registers as its own entity and stands as a parallel disclosure, not as a nested sub-trust under any other named trust in the filing. The cp_filing_0004 Trust #1–#7 anonymized labels are the canonical example: form structure groups holdings under each Trust #N header, but the endnotes (pp.66-94) contain no parent-trust language, so each is encoded as a parallel independent disclosure.
 
-Forward point: the convention assumes one level of trust intermediation. If a filing surfaces multi-level trust chains (Trust A holds Trust B holds operating entity), surface as a §3 question; the encoding for nested trusts gets designed when the case appears.
+Forward point: the convention assumes one level of trust intermediation. If a filing surfaces multi-level trust chains (Trust A holds Trust B holds operating entity) *with positive endnote or Schedule A disclosure of the nesting*, surface as a §3 question; the encoding for nested trusts gets designed when the case appears.
 
 Surface-and-pause is mandatory if a handoff specifies direct `family_to_entity` edges to holdings under a trust — the existing convention takes precedence over the handoff's literal wording.
 
-Originally locked for cp_filing_0003 only on 2026-05-23 (Fork B/G context). Generalized to filing-agnostic 2026-05-24 (Fork I-b context, motivated by Ivanka's 7 anonymized "Trust #N" disclosures on cp_filing_0004).
+Originally locked for cp_filing_0003 only on 2026-05-23 (Fork B/G context). Generalized to filing-agnostic 2026-05-24 (Fork I-b context, motivated by Ivanka's 7 anonymized "Trust #N" disclosures on cp_filing_0004). Nesting-clarification bullet added 2026-05-25 (Fork I-c context, after endnote inspection on pp.66-94 produced zero descriptions of Trust #1–#7 and the §4.1 ruling defaulted to parallel-trust encoding).
 
-Locked: 2026-05-24.
+Locked: 2026-05-25.
 
 ### Internally-disclosed intermediate entities
 

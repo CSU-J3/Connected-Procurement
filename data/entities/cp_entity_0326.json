@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0326",
+  "canonical_name": "K MARYLAND ASSOCIATES, LLC",
+  "aliases": [
+    {
+      "name": "K MARYLAND ASSOCIATES, LLC",
+      "source_url": "https://assets.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
+      "source_filing_date": "2017-06-12",
+      "notes": "Form-disclosed name on cp_filing_0004 Part 6."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Residential real estate, Baltimore & Prince George's County, MD. Also disclosed as standalone item 79 with different value bracket; per \u00a74.4 ruling write both edges. Endnote 13 details a multi-layer chain down to KUSHNER MARYLAND PARTNERS LLC and underlying property-level LLCs. Disclosed at cp_filing_0004 Part 6 item 13 as a standalone holding (Ivanka's direct ownership outside any Trust #N grouping). Registered in Fork I-c per \u00a74 Table B."
+}

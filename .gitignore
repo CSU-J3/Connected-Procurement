@@ -11,6 +11,11 @@ venv/
 # Local Claude Code state (machine/session harness, not project content)
 .claude/settings.local.json
 
+# Per-fork build scaffolding (one-shot scripts used to generate registry writes
+# for a single fork; the canonical artifact is the resulting JSON in data/,
+# not the script that produced it)
+scripts/
+
 # Transit handoff and instruction artifacts at repo root
 # Working-process trail. Canonical methodology in docs/methodology.md;
 # canonical project instructions in PROJECT.md.

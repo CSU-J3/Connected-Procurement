@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0627",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0059",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 1000001.0,
+    "high": 5000000.0,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Ivanka Trump's direct ownership of cp_entity_0059, disclosed at cp_filing_0004 Part 6 item 25 (standalone \u2014 not held via any Trust #N). Form value bracket: $1,000,001 - $5,000,000. Income components per the locked income-disclosure encoding (form text): JK Thrive IV LLC (interest in venture capital See Endnote No None (or less Capital Gains $1,000,001 - fund; New York, NY) than $1,001) $5,000,000"
+}

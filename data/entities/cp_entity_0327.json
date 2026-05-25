@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0327",
+  "canonical_name": "Kushner Village 2 Member LLC",
+  "aliases": [
+    {
+      "name": "Kushner Village 2 Member LLC",
+      "source_url": "https://assets.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
+      "source_filing_date": "2017-06-12",
+      "notes": "Form-disclosed name on cp_filing_0004 Part 6."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Rental apartments, New York, NY. Sub-item under BFPS VENTURES, LLC (cp_entity_0042, standalone item 19). Disclosed at cp_filing_0004 Part 6 item 19.4 as a standalone holding (Ivanka's direct ownership outside any Trust #N grouping). Registered in Fork I-c per \u00a74 Table B."
+}

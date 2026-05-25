@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0631",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0096",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 1001.0,
+    "high": 15000.0,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Ivanka Trump's direct ownership of cp_entity_0096, disclosed at cp_filing_0004 Part 6 item 124 (standalone \u2014 not held via any Trust #N). Form value bracket: $1,001 - $15,000. Income components per the locked income-disclosure encoding (form text): 80 ML, LLC (Commercial real estate in New See Endnote N/A $1,001 - $15,000 Rent or $201 - $1,000 York, NY) Royalties"
+}

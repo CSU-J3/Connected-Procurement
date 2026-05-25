@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0643",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0308",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Ivanka Trump's direct ownership of KF WESTWOOD PARTNER, LLC (cp_entity_0308), disclosed at cp_filing_0004 Part 6 item 126 (standalone direct-ownership disclosure of an entity also held via Trust #N per item 4.19). Per \u00a74.4 ruling, both edges are written (Trust #N subsidiary edge + this family_to_entity edge) to preserve the form's row distinction. Value reported on form as 'None (or less than $1,001)' or unparseable; encoded via binary fallback. Form text: KF WESTWOOD PARTNER, LLC (Residential See Endnote N/A None (or less Rent or $1,001 - $2,500 real estate in Westwood & River Vale, NJ) than $1,001) Royalties"
+}

@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0644",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0328",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Ivanka Trump's direct ownership of 2 Rector Kushner Member LLC (cp_entity_0328), disclosed at cp_filing_0004 Part 6 item 158 (second standalone disclosure of an entity first registered from standalone item 19.5). Per the form-fidelity principle (same lineage as \u00a74.4), both standalone family_to_entity edges are written to preserve the form's row distinction; the two rows may carry different value brackets reflecting separate underlying disclosures. Value reported on form as 'None (or less than $1,001)' or unparseable; encoded via binary fallback. Form text: 2 Rector Kushner Member LLC (Commercial See Endnote N/A None (or less Capital Gains Over $5,000,000 Real Estate in New York, NY) than $1,001)"
+}

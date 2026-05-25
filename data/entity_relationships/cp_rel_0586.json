@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0586",
+  "source_id": "cp_entity_0255",
+  "target_id": "cp_entity_0301",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Trust #3 (cp_entity_0255) holding of CRANBURY BUILDING ASSOCIATES, LLC (cp_entity_0301), disclosed at cp_filing_0004 Part 6 item 3.21. New entity registered in Fork I-c. Value reported on form as 'None (or less than $1,001)' or unparseable; encoded via binary fallback per the locked NRA/no-value convention. Income components per the locked income-disclosure encoding (form text): CRANBURY BUILDING ASSOCIATES, LLC See Endnote N/A None (or less Gross income $75,000 (Undeveloped real estate in Cranbury, NJ) than $1,001) from sale of land"
+}

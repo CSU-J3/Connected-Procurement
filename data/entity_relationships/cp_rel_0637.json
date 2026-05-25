@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0637",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0326",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 500001.0,
+    "high": 1000000.0,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Ivanka Trump's direct ownership of K MARYLAND ASSOCIATES, LLC (cp_entity_0326), disclosed at cp_filing_0004 Part 6 item 13 (standalone). New entity registered in Fork I-c. Form value bracket: $500,001 - $1,000,000. Form text: K MARYLAND ASSOCIATES, LLC (Residential See Endnote N/A $500,001 - Rent or $100,001 - Real Estate in Baltimore & Prince George's $1,000,000 Royalties $1,000,000 County, MD)"
+}

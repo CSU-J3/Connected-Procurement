@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0298",
+  "canonical_name": "B MONMOUTH MALL, LLC",
+  "aliases": [
+    {
+      "name": "B MONMOUTH MALL, LLC",
+      "source_url": "https://assets.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
+      "source_filing_date": "2017-06-12",
+      "notes": "Form-disclosed name on cp_filing_0004 Part 6."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0004",
+  "merged_into": null,
+  "notes": "Commercial real estate, Eatontown, NJ Disclosed at cp_filing_0004 Part 6 item 3.12 as a holding under Trust #3 (cp_entity_0255). Registered in Fork I-c per \u00a74 Table B."
+}

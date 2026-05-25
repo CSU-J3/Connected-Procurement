@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0630",
+  "source_id": "cp_person_0002",
+  "target_id": "cp_entity_0127",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 100001.0,
+    "high": 250000.0,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Ivanka Trump's direct ownership of cp_entity_0127, disclosed at cp_filing_0004 Part 6 item 81 (standalone \u2014 not held via any Trust #N). Form value bracket: $100,001 - $250,000. Income components per the locked income-disclosure encoding (form text): Flatbush 340 Lender LLC (Loan Receivable See Endnote N/A $100,001 - Interest $15,001 - from 9 Dekalb Owner LLC; Brooklyn, NY) $250,000 $50,000 # DESCRIPTION EIF VALUE INCOME TYPE INCOME"
+}

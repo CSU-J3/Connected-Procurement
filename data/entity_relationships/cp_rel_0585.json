@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0585",
+  "source_id": "cp_entity_0255",
+  "target_id": "cp_entity_0300",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 50001.0,
+    "high": 100000.0,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Trust #3 (cp_entity_0255) holding of MERRITT ASSOCIATES, LLC (cp_entity_0300), disclosed at cp_filing_0004 Part 6 item 3.20. New entity registered in Fork I-c. Form value bracket: $50,001 - $100,000. Income components per the locked income-disclosure encoding (form text): MERRITT ASSOCIATES, LLC (Residential Real N/A $50,001 - Rent or $5,001 - $15,000 Estate in Dumont, NJ) $100,000 Royalties # DESCRIPTION EIF VALUE INCOME TYPE INCOME"
+}

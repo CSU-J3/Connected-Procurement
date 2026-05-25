@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0608",
+  "source_id": "cp_entity_0257",
+  "target_id": "cp_entity_0323",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 500001.0,
+    "high": 1000000.0,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0004",
+  "observed_on": "2017-03-29",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Trust #5 (cp_entity_0257) holding of RIVER EDGE APARTMENTS (cp_entity_0323), disclosed at cp_filing_0004 Part 6 item 5.19. New entity registered in Fork I-c. Form value bracket: $500,001 - $1,000,000. Income components per the locked income-disclosure encoding (form text): RIVER EDGE APARTMENTS (Residential Real N/A $500,001 - Rent or $100,001 - Estate in Ewing, NJ) $1,000,000 Royalties $1,000,000"
+}
