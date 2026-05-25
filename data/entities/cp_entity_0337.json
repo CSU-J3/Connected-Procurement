@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0337",
+  "canonical_name": "MELANIA MARKS ACCESSORIES MEMBER CORP",
+  "aliases": [
+    {
+      "name": "MELANIA MARKS ACCESSORIES MEMBER CORP",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Form-disclosed name on cp_filing_0003 Part 5 (Spouse's Employment Assets and Income)."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Pass-thru managing-member corporation for cp_entity_0336 MELANIA MARKS ACCESSORIES LLC. Disclosed at cp_filing_0003 Part 5 item 3 with form descriptor '(pass-thru company for MELANIA MARKS ACCESSORIES LLC); Location: New York, NY; Value not readily ascertainable'. Subsidiary edge from this corp to the operating LLC follows the Fork I-b IT-prefix Managing Member Corp encoding precedent."
+}

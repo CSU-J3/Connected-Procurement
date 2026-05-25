@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0659",
+  "source_id": "cp_person_0004",
+  "target_id": "cp_entity_0335",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 0.0,
+    "high": 1001.0,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-15",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Melania Trump's ownership of Melania LLC (cp_entity_0335). Disclosed at cp_filing_0003 Part 5 item 1. Form descriptor: 'Underlying Assets: inactive; Location: New York, NY'. Form value bracket: None (or less than $1,001) \u2014 encoded as shape=range / low=0 / high=1001 per the standard OGE 278 bracket encoding. Income: None (or less than $201) per the form, no income type column. The LLC is in inactive status as of the 2021 termination filing. cp_person_0004 Melania Trump is a non-filer registered in Fork J per the locked non-filer named family member registration convention; this edge sits inside cp_filing_0003 (Trump's filing) via Part 5 spouse-side disclosure. Trump's parallel spousal_imputed edge per Convention 3 is cp_rel_0660."
+}

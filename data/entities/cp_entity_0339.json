@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0339",
+  "canonical_name": "721 33H Holdings LLC",
+  "aliases": [
+    {
+      "name": "721 33H Holdings LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Form-disclosed name on cp_filing_0003 Part 5 (Spouse's Employment Assets and Income)."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Pass-thru holding LLC for cp_entity_0338 721 33H LLC. Disclosed at cp_filing_0003 Part 5 item 5 with form descriptor '(pass-thru company for 721 33H LLC); Location: New York, NY; Value not readily ascertainable'. Holding-LLC variant of the pass-thru pattern (structurally identical to Fork I-b's Managing Member Corp encoding \u2014 parent holding entity owns child operating LLC)."
+}

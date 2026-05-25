@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0668",
+  "source_id": "cp_person_0004",
+  "target_id": "cp_entity_0339",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-15",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Melania Trump's ownership of 721 33H Holdings LLC (cp_entity_0339). Disclosed at cp_filing_0003 Part 5 item 5 as the pass-thru holding LLC for cp_entity_0338 721 33H LLC. Form descriptor: '(pass-thru company for 721 33H LLC); Location: New York, NY; Value not readily ascertainable'. Value encoded as shape=binary / unit=none per the locked NRA convention. Income: None (or less than $201). Holding-LLC variant of the pass-thru pattern; structurally identical encoding to the MEMBER CORP case (parent holding owns child operating LLC). Trump's parallel spousal_imputed edge is cp_rel_0669."
+}

@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0335",
+  "canonical_name": "Melania LLC",
+  "aliases": [
+    {
+      "name": "Melania LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Form-disclosed name on cp_filing_0003 Part 5 (Spouse's Employment Assets and Income)."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Melania Trump's personal holding LLC, New York, NY. Disclosed at cp_filing_0003 Part 5 item 1 with form descriptor 'Underlying Assets: inactive' \u2014 the LLC is in inactive status as of the 2021 termination filing. Value bracket 'None (or less than $1,001)'; income None (or less than $201). Held by cp_person_0004 Melania Trump (registered in Fork J as the first non-filer cp_person per the locked non-filer named family member registration convention)."
+}

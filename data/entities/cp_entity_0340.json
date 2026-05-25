@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0340",
+  "canonical_name": "Getty Images Inc.",
+  "aliases": [
+    {
+      "name": "Getty Images Inc.",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Form-disclosed name on cp_filing_0003 Part 5 (Spouse's Employment Assets and Income)."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Photo-licensing counterparty disclosed at cp_filing_0003 Part 5 item 6 as the source of Melania Trump's 'Use of photographic images' royalty stream ($2,501 - $5,000 Royalties for the reporting period). Getty Images Inc. is a publicly-known stock-photo licensing company, New York, NY. Registered in Fork J per \u00a74.3 ruling as the structural anchor for the licensing relationship \u2014 Melania has no Melania-side LLC wrapper around the Getty deal (distinct from the Fork I-b Penguin Random House case where the IT WWW PUB LLC was the wrapper); the counterparty itself is the relevant disclosure surface. interest_type on the Melania family edge is 'license_counterparty' per the new enum value added in Fork J (methodology.md license_counterparty entry)."
+}

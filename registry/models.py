@@ -65,6 +65,7 @@ class InterestType(str, Enum):
     TRUST_BENEFICIAL = "trust_beneficial"
     TRUST_TRUSTEE = "trust_trustee"
     SPOUSAL_IMPUTED = "spousal_imputed"
+    LICENSE_COUNTERPARTY = "license_counterparty"
 
 
 class ExternalIdType(str, Enum):

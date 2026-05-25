@@ -1,0 +1,8 @@
+{
+  "person_id": "cp_person_0004",
+  "canonical_name": "Melania Trump",
+  "aliases": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "First Lady of the United States (2017-01-20 to 2021-01-20). Named family member under PROJECT.md scope as spouse of cp_person_0003 Donald J. Trump. Non-filer — no cp_filing_NNNN exists with this person as filer_id. Registered in Fork J (2026-05-25) per the locked non-filer named family member registration convention (docs/methodology.md). Provenance for this registration attaches via filing_source on her 6 family_to_entity edges (all sourced to cp_filing_0003 Part 5 spouse-side disclosures) and via imputation_source pointers on Trump's 6 spousal_imputed edges that chain back through her family edges. All Fork J relationships sit inside cp_filing_0003 (Trump's 2021 termination 278); there is no Melania filing in the registry."
+}

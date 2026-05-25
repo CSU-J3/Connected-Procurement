@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0670",
+  "source_id": "cp_entity_0339",
+  "target_id": "cp_entity_0338",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-15",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "721 33H Holdings LLC (cp_entity_0339) is the pass-thru holding LLC for 721 33H LLC (cp_entity_0338). Holding-LLC variant of the pass-thru pattern (structurally identical to the IT-prefix Managing Member Corp encoding from Fork I-b \u2014 parent holding entity owns child operating LLC). Subsidiary edge value=binary + unit=none per the locked convention. Disclosed at cp_filing_0003 Part 5 items 4 + 5 (operating LLC + holding LLC pair)."
+}

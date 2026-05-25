@@ -148,7 +148,9 @@ The schema does not collapse imputed and principal edges into a single multi-sou
 
 **Forward-point case.** When an imputed edge's `observed_on` precedes the `observed_on` of its `imputation_source`, the imputation chain points forward in time. This reflects the sampling pattern of filings — when each filer happened to file relative to when the underlying interest was held — rather than a substantive inconsistency. The principal interest was held continuously across the gap; the registry simply lacks a contemporaneous principal observation. Imputed edges are not required to link to a principal whose `observed_on` is at or before the imputed `observed_on`; the chain links to the best-available principal observation regardless of temporal direction.
 
-Locked: 2026-05-20.
+**One-direction application for non-filer family members.** Convention 3 imputation is triggered by the form's disclosure of a spouse's interest, not by the existence of a reciprocal filing. When the spouse is a non-filer (no `cp_filing_NNNN` exists for them as filer), Convention 3 runs in one direction only: the principal filer's spousal_imputed edges land per the form's disclosure (sourced from the spouse's family_to_entity edges, which themselves live inside the principal filer's filing via Part 5 spouse-side disclosure). No reverse-direction imputation from the principal filer's interests to the non-filer spouse, because no form-disclosed observation point exists to anchor reverse imputation. Pattern observed: Trump→Melania on cp_filing_0003 Part 5 (Fork J). Distinct from the bidirectional Jared↔Ivanka case where both are filers and imputation runs both ways via their respective filings (Fork B precedent). Forward point: if downstream analytics require structured tracking of bidirectional-vs-one-direction imputation pairs, design a separate field on the relationship model. One use case isn't enough; defer until a second one-direction pair forces structural change.
+
+Locked: 2026-05-25.
 
 ## Inspection and transcription
 
@@ -230,6 +232,23 @@ If the rule itself is later judged too narrow, that is a versioned definitional 
 - Charles Kushner nomination: Congress.gov, "PN24-4 - Nomination of Charles Kushner for Department of State, 119th Congress (2025-2026)," `https://www.congress.gov/nomination/119th-congress/24/4`. Confirmed 51-45 on May 19, 2025; sworn in July 11, 2025.
 - Massad Boulos senior advisor announcement: White House statement of November 30, 2024, archived at The American Presidency Project, `https://www.presidency.ucsb.edu/documents/statement-president-elect-donald-j-trump-announcing-the-appointment-massad-boulos-senior`.
 - Massad Boulos Senior Advisor for Africa role: U.S. Department of State, Office of the Spokesperson, "Announcement of Massad Boulos as Senior Advisor for Africa," April 1, 2025, `https://www.state.gov/announcement-of-massad-boulos-as-senior-advisor-for-africa`.
+
+### Non-filer named family member registration
+
+Named family members under PROJECT.md scope receive `cp_person_NNNN` registration regardless of filer status. The record shape is identical for filer and non-filer cases — the `Person` model in the schema doesn't require a `cp_filing_NNNN` linkage on the person record itself. The distinction lives implicitly in whether a `cp_filing_NNNN` exists with the person as `filer_id`; persons without an entry in `filings.json` filer_id are non-filers.
+
+Provenance for a non-filer registration attaches via:
+
+- `filing_source` on the person's `family_to_entity` edges (sourced to the principal filer's filing where the spouse-side disclosure appears — typically the OGE 278 Part 5 spouse schedule).
+- `imputation_source` pointers on `spousal_imputed` edges originating from the principal filer's filing. The Convention 3 chain links the principal filer's imputed edge to the non-filer spouse's family edge; the chain itself is the audit trail for the non-filer's existence in the registry.
+
+The non-filer status is queryable from existing data without a structured flag: cross-reference `data/persons/*.json` against `filings.json` filer_id values; persons without a filing as filer are non-filers.
+
+First applied in Fork J (2026-05-25) on cp_person_0004 Melania Trump, sourced from cp_filing_0003 Part 5. Trump (cp_person_0003) is the principal filer; Melania's 6 family_to_entity edges all carry `filing_source: cp_filing_0003`; Trump's 6 spousal_imputed edges chain via `imputation_source` to the Melania family edges.
+
+Forward point: if structured tracking of filer vs non-filer status becomes operationally useful (e.g., for procurement-beat queries that distinguish first-party from imputed-only disclosures, or for audits of which family members lack direct filing observation), design a separate `is_filer` or `non_filer_person` boolean on the cp_person model rather than overloading any existing field. One use case isn't enough; defer until a second non-filer family member surfaces.
+
+Locked: 2026-05-25.
 
 ## Comparative set selection
 
@@ -385,6 +404,26 @@ First applied in Fork I-b on cp_filing_0004 Part 2 item 12 (Ivanka as former Tru
 Multi-role forward point: a structured "filer is both trustee and beneficiary" encoding is a methodology amendment candidate when a second case surfaces. The first known case (Ivanka Trump Revocable Trust on cp_filing_0004, where Ivanka is both grantor/beneficiary and trustee) uses `trust_beneficial` as the primary `interest_type` with the trustee role captured in notes; until a second case appears, this notes-based encoding is the convention.
 
 Locked: 2026-05-24.
+
+### `license_counterparty` interest type
+
+The `license_counterparty` value on the `InterestType` enum captures contractual licensing positions where the filer (or filer's family member via Convention 3) generates royalty or licensing-fee income from a counterparty entity, without holding ownership, employment, debt, or trust position in that entity. Structurally distinct from the other enum values:
+
+- Not `ownership`: no equity stake in the counterparty.
+- Not `employment`: no employer-employee relationship.
+- Not `debt_instrument_held`/`debt_instrument_owed`: no creditor-debtor relationship.
+- Not `trust_beneficial`/`trust_trustee`: no trust position.
+- Not `spousal_imputed`: the disclosure originates as the filer's (or family member's) own direct contractual position, not as an imputation from another principal.
+
+Procurement-beat relevance: the counterparty to a family member's licensing income stream may be a federal contractor whose relationship to the family creates conflict-of-interest exposure under 18 USC 208 even though no direct financial interest is held in the counterparty.
+
+Encoding: standard `family_to_entity` edge with `interest_type: license_counterparty`. Value field per the form's disclosure on the counterparty entity (often "value not readily ascertainable" → `binary + unit: none` per the locked NRA convention). Royalty income disclosed on the form is captured in the edge's `notes` field verbatim per the locked income-disclosure encoding pattern; no separate edge or structured income field.
+
+First applied in Fork J on cp_filing_0003 Part 5 item 6 (Melania Trump's photographic-image licensing royalty stream from Getty Images Inc., $2,501-$5,000 Royalties for the reporting period). The Trump→Getty Images spousal_imputed edge under Convention 3 carries `interest_type: spousal_imputed` per the locked spousal-imputation pattern; only the principal (Melania) edge carries `interest_type: license_counterparty`.
+
+Forward point: if a second counterparty pattern surfaces that's structurally distinct from licensing (e.g., service contracts, supply contracts), consider broadening to a `contractual_counterparty` super-type rather than proliferating narrow enum values. One license case isn't enough to design the broader hierarchy; defer until a second case forces the question.
+
+Locked: 2026-05-25.
 
 ## Process
 

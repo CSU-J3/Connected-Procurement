@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0671",
+  "source_id": "cp_person_0004",
+  "target_id": "cp_entity_0340",
+  "relation_kind": "family_to_entity",
+  "interest_type": "license_counterparty",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-15",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Melania Trump's licensing-counterparty position with Getty Images Inc. (cp_entity_0340). Disclosed at cp_filing_0003 Part 5 item 6 as a 'Use of photographic images' royalty arrangement; Location: New York, NY; Value not readily ascertainable; Royalties $2,501 - $5,000 for the reporting period. Value encoded as shape=binary / unit=none per the locked NRA convention; royalty income captured in this note verbatim per the locked income-disclosure encoding pattern (no separate edge or structured income field). interest_type='license_counterparty' per the new enum value added in Fork J (methodology.md license_counterparty entry) \u2014 Melania's position is a contractual licensing position (no ownership, employment, debt, trust, or imputation), distinct from the other enum values. Getty Images is a publicly-known stock-photo licensing company; no Melania-side LLC wrapper around the Getty deal (distinct from the Fork I-b Penguin Random House case where IT WWW PUB LLC was the wrapper). Trump's parallel spousal_imputed edge per Convention 3 is cp_rel_0672 (spousal_imputed remains the interest_type on Trump's edge per the locked spousal-imputation pattern; only the principal's edge carries license_counterparty)."
+}

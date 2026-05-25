@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0666",
+  "source_id": "cp_person_0004",
+  "target_id": "cp_entity_0338",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 1000001.0,
+    "high": 5000000.0,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-15",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Melania Trump's ownership of 721 33H LLC (cp_entity_0338). Disclosed at cp_filing_0003 Part 5 item 4. Form descriptor: 'Underlying Assets: residential real estate; Location: New York, NY'. Form value bracket: $1,000,001 - $5,000,000. Income: None (or less than $201). Pass-thru holding LLC is cp_entity_0339 721 33H Holdings LLC; subsidiary edge from Holdings to this LLC is cp_rel_0670. Trump's parallel spousal_imputed edge is cp_rel_0667."
+}

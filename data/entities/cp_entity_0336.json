@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0336",
+  "canonical_name": "MELANIA MARKS ACCESSORIES LLC",
+  "aliases": [
+    {
+      "name": "MELANIA MARKS ACCESSORIES LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Form-disclosed name on cp_filing_0003 Part 5 (Spouse's Employment Assets and Income)."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Melania Trump's licensing operating LLC for accessories products, New York, NY. Disclosed at cp_filing_0003 Part 5 item 2 with form descriptor 'Underlying Assets: licensing agreement; Licensee(s): MZ BERGER & COMPANY LLC' (the named licensee is the counterparty in Melania's licensing deal, captured in this entity's notes per the Fork I-b precedent for licensing-deal LLCs \u2014 no separate registration for the licensee). Value not readily ascertainable per the form; encoded as binary + unit:none on the family edge per the locked NRA convention. Managing member is cp_entity_0337 MELANIA MARKS ACCESSORIES MEMBER CORP (pass-thru pattern per Fork I-b precedent)."
+}
