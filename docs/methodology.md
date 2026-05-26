@@ -436,3 +436,16 @@ Pattern observed across Forks I-a and I-b: four handoff drifts caught and surfac
 Forward point: maintainers drafting handoffs reconstruct from chat summaries and prior handoffs; locked methodology is the authoritative source and the only reliable target for "what's actually in force." Handoff drafts that need to apply a locked rule should quote the locked text rather than paraphrase. Code's role is to verify against locked methodology before any write; surfacing a §3 blocker is the correct response to any conflict.
 
 Locked: 2026-05-24.
+
+### Steady-state surface-and-pause expectation
+
+The locked-methodology-authority process note from the Fork I-b close codified surface-and-pause as exception-handling for handoff drift cases. Fork J was the first fork since the I-a series to clear pre-write inspection without an amendment cycle, demonstrating the intended steady-state: handoffs anchored verbatim to locked methodology produce no drift, and Code's pre-write read finds nothing to surface.
+
+Surface-and-pause remains mandatory when:
+- A handoff specifies edge structure that conflicts with locked convention (cp_filing_0003 trust-intermediate convention takes precedence over literal handoff wording per Fork H §0.5)
+- New interest_type, relation_kind, or value_shape categories appear in the source filing without a locked enum mapping
+- Filing-internal annotations or conventions appear that the methodology page hasn't yet addressed (e.g., the *(N) annotation system on cp_filing_0003 Exhibit A; resolved in Fork L)
+
+Surface-and-pause is exception-handling, not routine procedure. A clean pre-write read is the expected outcome on a well-formed handoff.
+
+Locked: 2026-05-26.
