@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0707",
+  "source_id": "cp_entity_0003",
+  "target_id": "cp_entity_0360",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-15",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "The Donald J. Trump Revocable Trust's beneficial interest in FLORIDA PROPERTIES MANAGEMENT LC (cp_entity_0360), disclosed at cp_filing_0003 Part 2 Exhibit A item 103, *(2) annotation (back office support functions). Blanket trust attribution per the Exhibit A *(N) annotation key's closing sentence: 'All of the interests listed below in this exhibit, which were formerly held by Donald J. Trump, directly or indirectly, are now held by The Donald J. Trump Revocable Trust' (PDF p.38). Value encoded as binary + unit:none per the locked trust-intermediate convention (value-absence is the *(N) structural characteristic). Immediate-parent disclosure may name a different intermediate (DJT Holdings LLC, DJT Holdings Managing Member LLC, or similar) \u2014 additional chain edges from those intermediates are written separately where the intermediate is registered."
+}

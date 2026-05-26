@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0685",
+  "source_id": "cp_entity_0349",
+  "target_id": "cp_entity_0348",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-15",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "BRIARCLIFF PROPERTIES, INC. (cp_entity_0349) holds 0.1% (Member) of Trump Briarcliff Manor Development LLC (cp_entity_0348), disclosed at cp_filing_0003 Part 2 Exhibit A item 22 'Owned by:' disclosure. Reciprocal disclosure at item 24 'Has ownership interest in:' reads 'BRIAR HALL DEVELOPMENT LLC 0.10% Member (N/K/A TRUMP BRIARCLIFF MANOR DEVELOPMENT LLC)' \u2014 same edge from the opposite-direction view; prior name in target's alias array. Per \u00a74.5 ownership-percentage encoding (Fork K). Source ID was corrected post-write: initial script hardcoded cp_entity_0335 based on a misread of Fork K's actual entity allocations (Fork K commit message said 6 entities cp_entity_0330-0335 but only 5 entities were written cp_entity_0330-0334; cp_entity_0335 belongs to Melania LLC from Fork J). BRIARCLIFF PROPERTIES INC was net-new for Fork L and got cp_entity_0349."
+}

@@ -1,0 +1,22 @@
+{
+  "entity_id": "cp_entity_0348",
+  "canonical_name": "TRUMP BRIARCLIFF MANOR DEVELOPMENT LLC",
+  "aliases": [
+    {
+      "name": "TRUMP BRIARCLIFF MANOR DEVELOPMENT LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Form-disclosed name on cp_filing_0003 Part 2 Exhibit A item 22, *(2) annotation (back office support functions)."
+    },
+    {
+      "name": "Briar Hall Development LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Prior name as disclosed at cp_filing_0003 Part 2 Exhibit A item 24's 'Has ownership interest in:' line with parenthetical n/k/a notation indicating rename to current canonical name. Item 22 (current name) and item 24's reference are the same 0.1% holding by BRIARCLIFF PROPERTIES INC; the inline n/k/a confirms single legal entity."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Back-office support entity in the Trump National Golf Club - Westchester property holding structure (Briarcliff Manor, NY). Form-disclosed at cp_filing_0003 Part 2 Exhibit A item 22, *(2) annotation (back office support functions). Held 0.1% by BRIARCLIFF PROPERTIES, INC. (cp_entity_0349) and 99.9% by DJT HOLDINGS LLC (cp_entity_0169) per item 22's disclosed parents. The 0.1% BRIARCLIFF PROPERTIES holding is the same disclosure reflected reciprocally at item 24 ('BRIARCLIFF PROPERTIES INC has ownership interest in: BRIAR HALL DEVELOPMENT LLC 0.10% (N/K/A TRUMP BRIARCLIFF MANOR DEVELOPMENT LLC)'). Single legal entity per the inline n/k/a notation; prior name 'Briar Hall Development LLC' captured as alias per Fork L \u00a72 Option A ruling and the locked inline n/k/a methodology entry. Per the cp_filing_0003 Exhibit A *(N) annotation key (PDF p.38): all interests in this exhibit are held by The Donald J. Trump Revocable Trust (cp_entity_0003), either directly or via the disclosed intermediates."
+}

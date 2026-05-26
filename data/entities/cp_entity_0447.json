@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0447",
+  "canonical_name": "EID VENTURE II LLC",
+  "aliases": [
+    {
+      "name": "EID VENTURE II LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Form-disclosed name on cp_filing_0003 Part 2 Exhibit A item 521, *(2) annotation (back office support functions)."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Internally-disclosed intermediate entity per cp_filing_0003 Part 2 Exhibit A item 521, *(2) annotation (back office support functions). Disclosed parents (registered): The Donald J. Trump Revocable Trust (cp_entity_0003). Held ultimately via The Donald J. Trump Revocable Trust (cp_entity_0003) per the blanket attribution at the *(N) key's closing sentence (PDF p.38: 'All of the interests listed below in this exhibit, which were formerly held by Donald J. Trump, directly or indirectly, are now held by The Donald J. Trump Revocable Trust'). Registered in Fork L per the locked *(N) annotation methodology entry. Verbatim disclosed structure (from layout text):\n521 EID VENTURE II LLC *(2)\n\n             Owned by :                   % Ownership           Name                                           Role\n                                          1                     EID VENTURE II MEMBER CORP                     Managing Member\n                                          99                    The Donald J. Trump Revocable Trust            Member\n"
+}

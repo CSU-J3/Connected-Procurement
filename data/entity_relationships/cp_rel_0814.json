@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0814",
+  "source_id": "cp_entity_0170",
+  "target_id": "cp_entity_0419",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-15",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "DJT HOLDINGS MANAGING MEMBER LLC (cp_entity_0170)'s ownership of TRUMP NATIONAL GOLF CLUB COLTS NECK MEMBER CORP (cp_entity_0419), disclosed at cp_filing_0003 Part 2 Exhibit A item 400 'Owned by:' section. Per the \u00a74.2 multi-parent extension to the trust-intermediate convention: immediate-parent disclosure captured at the subsidiary-edge level. Trust attribution flows upstream through existing cp_entity_0003 \u2192 cp_entity_0170 chain. Value encoded as binary + unit:none per the locked ownership-percentage encoding (percentage not parsed structurally; disclosed structure captured verbatim in target entity's notes)."
+}
