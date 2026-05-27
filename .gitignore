@@ -25,3 +25,5 @@ scripts/
 /connected-procurement-project-instructions*.md
 /connected-procurement-registry-schema-spec.md
 /fork-b-section-2-replacement.md
+!web/scripts/
+!web/scripts/**
