@@ -22,6 +22,20 @@ The retrieval archeology — the URL used at record-creation time, the method us
 
 Locked: 2026-05-20.
 
+### source_url normalization
+
+Alias `source_url` and `primary_source_url` fields reference publisher-canonical hosting URLs (e.g., `assets.documentcloud.org` for DocumentCloud-hosted records, `www.citizensforethics.org/wp-content/uploads/legacy/...` for CREW-hosted records, OGE PAS Index URLs for OGE-hosted 278 filings). Internal or temporary URLs (`s3.amazonaws.com/...`, `s3.documentcloud.org/...`, OGE Notes-DB `oge.gov/Web/oge.nsf/...`) get normalized to publisher-canonical at the next applicable fork.
+
+Repo-relative paths (`assets/<filename>`, etc.) are not used; the registry references external authoritative sources directly so the certification-chain attribution stays anchored to the publisher's infrastructure rather than to a repo copy that lacks the signed-certification context.
+
+HTTP-verify the proposed canonical URL before write. If the verify fails, surface and pause rather than fall back to the internal/temporary URL — a failed verify means either the publisher has migrated infrastructure again (research needed) or the document is no longer hosted by that publisher (different publisher-canonical needed).
+
+For records where the modern canonical is uncertain without out-of-band research (e.g., OGE WHCO memos hosted under legacy Notes-DB paths whose modern OGE Resources page navigation hasn't been done), keep the existing URL and add an annotation in the record's `notes` flagging the deferral. Don't write a guess. Queue the normalization for a future fork with bandwidth for the publisher-site navigation.
+
+First applied at Fork M (2026-05-26). First batch normalization at Fork M: 135 records (131 cp_entity records + 3 alias-array entries on cp_entity_0007 / cp_person_0001 / cp_person_0002 + cp_filing_0001 `primary_source_url`), normalizing the Fork B bulk-write footprint from `s3.amazonaws.com/storage.citizensforethics.org/...` to the CREW canonical at `www.citizensforethics.org/wp-content/uploads/legacy/...`, and the two DocumentCloud references from `s3.documentcloud.org/...` to `assets.documentcloud.org/...`. cp_person_0001's WHCO memo URL deferred per the OGE-canonical-uncertain clause above; queued for the live-collection phase's OGE intake work.
+
+Locked: 2026-05-26 (Fork M).
+
 ### Inline n/k/a (now known as) disclosure pattern
 
 When an OGE 278 row, footnote, or Exhibit A "Has ownership interest in:" cell discloses an entity under its prior name with an inline "(n/k/a CURRENT NAME)" notation, the registry encodes one `cp_entity` record using the current name as canonical, with the prior name in the `aliases` array carrying per-alias `source_url` and a `notes` field quoting the inline n/k/a notation verbatim. No `entity_to_entity_successor` edge — the rename is captured in the alias structure, not as a relationship between entities.
@@ -41,7 +55,14 @@ Forward point: if a future case surfaces both the prior-name and current-name en
 4. Create a `Merge` record (`cp_merge_NNNN`) documenting the merge with `loser_id` = prior-name entity, `winner_id` = current-name entity, `rationale` quoting the inline n/k/a notation, `source_urls` referencing the filings disclosing both names, `merged_on` = the fork's commit date, `merged_by` = the fork name.
 5. Keep the prior-name entity record in the registry — do not delete. Active-record count for that entity drops by 1, but the record persists for audit trail. Validate against the `merged_into` chain to skip the record when iterating active entities.
 
-First case: cp_entity_0327 (Kushner Village 2 Member LLC) merged into cp_entity_0326 (K MARYLAND ASSOCIATES, LLC) per Fork B Retrofit Part B (c). The rename was surfaced via Jared's 2018/2019 filings' inline n/k/a note ("This entity was previously named Kushner Village 2 Member LLC") that wasn't visible on Ivanka's 2017 NE filing where the two were originally registered as separate items.
+The encoding has two schema anchors that apply jointly:
+
+- **`merged_into` on the cp_entity record** (loser-side per-record supersession pointer; per step 3 above). Captures the rename at the record level so any code iterating cp_entity records can resolve a stale ID forward to the current canonical entity.
+- **`cp_merge_NNNN` record in `data/merges/`** (per step 4 above). Captures the merge event itself with rationale, source URLs, merge date, and acting fork — the audit-trail anchor that explains why the merge happened, not just that it did.
+
+Both fields are required when applying the encoding. The cp_entity-level `merged_into` is the structural fast-path for record-resolution; the cp_merge record is the audit-trail anchor. Skipping either leaves an unresolvable gap (a stale cp_entity reference without `merged_into` is unresolvable in code; a merge without a cp_merge record is unauditable in review).
+
+First case: cp_entity_0327 (Kushner Village 2 Member LLC) merged into cp_entity_0326 (K MARYLAND ASSOCIATES, LLC) per Fork B Retrofit Part B (c). The rename was surfaced via Jared's 2018/2019 filings' inline n/k/a note ("This entity was previously named Kushner Village 2 Member LLC") that wasn't visible on Ivanka's 2017 NE filing where the two were originally registered as separate items. Merge record cp_merge_0001 anchors the event; cp_entity_0327's `merged_into` points at cp_entity_0326.
 
 Forward point: methodology generalization candidate when a second prior-name-has-existing-record case forces it. Filing-specific to cp_filing_0001 / cp_filing_0002 until then.
 

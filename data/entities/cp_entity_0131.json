@@ -4,7 +4,7 @@
   "aliases": [
     {
       "name": "Deutsche Bank",
-      "source_url": "https://s3.amazonaws.com/storage.citizensforethics.org/wp-content/uploads/2019/04/03211926/Jared-C-Kushner-2018-278.pdf",
+      "source_url": "https://www.citizensforethics.org/wp-content/uploads/legacy/2019/04/Jared-C-Kushner-2018-278.pdf",
       "source_filing_date": "2018-05-15",
       "notes": "Named as Part 8 counterparty on cp_filing_0001."
     },
@@ -24,5 +24,5 @@
   "external_ids": [],
   "last_updated_from_filing": "cp_filing_0004",
   "merged_into": null,
-  "notes": "German parent bank (Deutsche Bank Aktiengesellschaft). Form-text on Jared and Ivanka filings says 'Deutsche Bank' — per Fork F §4 Decision Q4, that text resolves to the parent (Deutsche Bank AG) rather than the U.S. subsidiary DBTCA (cp_entity_0132). The parent vs. subsidiary distinction is preserved; each row's edge targets the entity whose form-name matches that row's transcription. A subsidiary edge from Deutsche Bank AG to DBTCA was authorized in §4 Decision Q4 but deferred for Fork F: the filings don't disclose the value bracket of the parent-subsidiary stake (DBAG owns DBTCA via external corporate structure, not via any OGE 278 disclosure), so the edge can't be cleanly written under the existing Convention 4 pattern. Captured in notes pending a fork that adds external-source registry edges."
+  "notes": "German parent bank (Deutsche Bank Aktiengesellschaft). Form-text on Jared and Ivanka filings says 'Deutsche Bank' \u2014 per Fork F \u00a74 Decision Q4, that text resolves to the parent (Deutsche Bank AG) rather than the U.S. subsidiary DBTCA (cp_entity_0132). The parent vs. subsidiary distinction is preserved; each row's edge targets the entity whose form-name matches that row's transcription. A subsidiary edge from Deutsche Bank AG to DBTCA was authorized in \u00a74 Decision Q4 but deferred for Fork F: the filings don't disclose the value bracket of the parent-subsidiary stake (DBAG owns DBTCA via external corporate structure, not via any OGE 278 disclosure), so the edge can't be cleanly written under the existing Convention 4 pattern. Captured in notes pending a fork that adds external-source registry edges."
 }

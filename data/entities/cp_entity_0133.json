@@ -4,7 +4,7 @@
   "aliases": [
     {
       "name": "Bank of America",
-      "source_url": "https://s3.amazonaws.com/storage.citizensforethics.org/wp-content/uploads/2019/04/03211926/Jared-C-Kushner-2018-278.pdf",
+      "source_url": "https://www.citizensforethics.org/wp-content/uploads/legacy/2019/04/Jared-C-Kushner-2018-278.pdf",
       "source_filing_date": "2018-05-15",
       "notes": "Named as Part 8 counterparty on cp_filing_0001."
     },
@@ -24,5 +24,5 @@
   "external_ids": [],
   "last_updated_from_filing": "cp_filing_0004",
   "merged_into": null,
-  "notes": "U.S. operating bank subsidiary of Bank of America Corporation. Form-text 'Bank of America' resolves to the operating subsidiary per Fork F §4 Decision Q5 default (operating subsidiary preferred when canonical-name choice is ambiguous between parent and subsidiary, since the operating subsidiary is the lender of record on U.S.-side disclosures). Counterparty on Jared 2018 (items 3, 11, 12), Jared 2019 (item 7), and Ivanka NE (items 3, 11)."
+  "notes": "U.S. operating bank subsidiary of Bank of America Corporation. Form-text 'Bank of America' resolves to the operating subsidiary per Fork F \u00a74 Decision Q5 default (operating subsidiary preferred when canonical-name choice is ambiguous between parent and subsidiary, since the operating subsidiary is the lender of record on U.S.-side disclosures). Counterparty on Jared 2018 (items 3, 11, 12), Jared 2019 (item 7), and Ivanka NE (items 3, 11)."
 }

@@ -4,7 +4,7 @@
   "aliases": [
     {
       "name": "CK LIVINGSTON ESPLANADE, LLC",
-      "source_url": "https://s3.amazonaws.com/storage.citizensforethics.org/wp-content/uploads/2019/04/03211926/Jared-C-Kushner-2018-278.pdf",
+      "source_url": "https://www.citizensforethics.org/wp-content/uploads/legacy/2019/04/Jared-C-Kushner-2018-278.pdf",
       "source_filing_date": "2018-05-15",
       "notes": "Part 6 item 3.20, 2018 filing."
     }
@@ -12,5 +12,5 @@
   "external_ids": [],
   "last_updated_from_filing": "cp_filing_0001",
   "merged_into": null,
-  "notes": "Westminster Hotel entity, Livingston, NJ. Westminster-cluster entity, parallel to cp_entity_0001 Westminster Management, LLC and cp_entity_0034 Westminster Title Associates, LLC. Form descriptor reads 'Westminster Hotel; Livingston, NJ'. Surfaced as Fork D §3.1 inventory miss during Fork E Part 6 transcription."
+  "notes": "Westminster Hotel entity, Livingston, NJ. Westminster-cluster entity, parallel to cp_entity_0001 Westminster Management, LLC and cp_entity_0034 Westminster Title Associates, LLC. Form descriptor reads 'Westminster Hotel; Livingston, NJ'. Surfaced as Fork D \u00a73.1 inventory miss during Fork E Part 6 transcription."
 }
