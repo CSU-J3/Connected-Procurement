@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0455",
+  "canonical_name": "Hudson Waterfront I Corporation",
+  "aliases": [
+    {
+      "name": "HUDSON WATERFRONT I CORPORATION",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/6E78B163F816EF6A852586630075291D/$FILE/Trump,%20Donald%20J.%202021Termination%20278.pdf",
+      "source_filing_date": "2021-01-20",
+      "notes": "Form-disclosed name on cp_filing_0003 Part 2 Exhibit A \u2014 referenced as 1% Partner of Hudson Waterfront Associates I, LP (cp_entity_0363) on item 110 'Owned by:' section."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0003",
+  "merged_into": null,
+  "notes": "Trust-side intermediate corporation disclosed at cp_filing_0003 Part 2 Exhibit A item 110 'Owned by:' section as 1% Partner of Hudson Waterfront Associates I, LP (cp_entity_0363). Does not have its own *(N) Exhibit A entry \u2014 surfaces only as a parent-name reference in cp_entity_0363's notes. Registered in Fork B Retrofit \u00a73 per the locked 'Internally-disclosed intermediate entities' methodology (a parent in a subsidiary chain leading to a registered operating entity gets cp_entity_NNNN registration). Held ultimately via The Donald J. Trump Revocable Trust (cp_entity_0003) per the blanket attribution at the cp_filing_0003 Exhibit A *(N) key's closing sentence. The remaining 99% Partner share is held by parties not surfaced in the \u00a73 inspection."
+}

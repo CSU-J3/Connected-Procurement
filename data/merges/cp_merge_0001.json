@@ -1,0 +1,13 @@
+{
+  "merge_id": "cp_merge_0001",
+  "loser_id": "cp_entity_0327",
+  "winner_id": "cp_entity_0326",
+  "rationale": "Inline n/k/a disclosure on cp_filing_0001 Part 6 item 13 endnote and cp_filing_0002 Part 6 items 13 and 167 endnote: 'This entity was previously named Kushner Village 2 Member LLC.' Same legal entity disclosed under prior name (Kushner Village 2 Member LLC) on cp_filing_0004 (Ivanka 2017 NE) Part 6 item 19.4 and current name (K MARYLAND ASSOCIATES, LLC) on cp_filing_0004 Part 6 item 13 + cp_filing_0001/0002 Part 6. Fork I-c registered them as separate cp_entity records before the rename was surfaced via Jared's filings; Fork B Retrofit \u00a74.4 ruling applies the inline n/k/a methodology extension's supersede-and-keep encoding.",
+  "source_urls": [
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/C36C13F3D6C9D5B0852582EF005AAEF8/$FILE/Kushner,%20Jared%20C.%202018Annual%20278.pdf",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/8D4F22C9B14F66E18525853A0066AD37/$FILE/Kushner,%20Jared%20C.%202019Annual%20278.pdf",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/5F31DD9F2CDBB2EC852581C20074CFAB/$FILE/Trump,%20Ivanka%20M.%202017NewEntrant%20278.pdf"
+  ],
+  "merged_on": "2026-05-26",
+  "merged_by": "fork-b-retrofit-part-b-c"
+}

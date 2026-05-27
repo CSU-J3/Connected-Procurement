@@ -7,10 +7,16 @@
       "source_url": "https://assets.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
       "source_filing_date": "2017-06-12",
       "notes": "Form-disclosed name on cp_filing_0004 Part 6."
+    },
+    {
+      "name": "Kushner Village 2 Member LLC",
+      "source_url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/C36C13F3D6C9D5B0852582EF005AAEF8/$FILE/Kushner,%20Jared%20C.%202018Annual%20278.pdf",
+      "source_filing_date": "2018-05-15",
+      "notes": "Prior name disclosed at cp_filing_0001 Part 6 item 13 and cp_filing_0002 Part 6 items 13 and 167 endnote: 'This entity was previously named Kushner Village 2 Member LLC.' Originally registered as a separate cp_entity_0327 in Fork I-c (before the rename was surfaced on Jared's filings); merged into this record per Fork B Retrofit \u00a74.4 inline n/k/a methodology extension (supersede-and-keep encoding). See Merge record cp_merge_0001."
     }
   ],
   "external_ids": [],
   "last_updated_from_filing": "cp_filing_0004",
   "merged_into": null,
-  "notes": "Residential real estate, Baltimore & Prince George's County, MD. Also disclosed as standalone item 79 with different value bracket; per \u00a74.4 ruling write both edges. Endnote 13 details a multi-layer chain down to KUSHNER MARYLAND PARTNERS LLC and underlying property-level LLCs. Disclosed at cp_filing_0004 Part 6 item 13 as a standalone holding (Ivanka's direct ownership outside any Trust #N grouping). Registered in Fork I-c per \u00a74 Table B."
+  "notes": "Residential real estate, Baltimore & Prince George's County, MD. Also disclosed as standalone item 79 with different value bracket; per \u00a74.4 ruling write both edges. Endnote 13 details a multi-layer chain down to KUSHNER MARYLAND PARTNERS LLC and underlying property-level LLCs. Disclosed at cp_filing_0004 Part 6 item 13 as a standalone holding (Ivanka's direct ownership outside any Trust #N grouping). Registered in Fork I-c per \u00a74 Table B. Fork B Retrofit (2026-05-26): merged with cp_entity_0327 (Kushner Village 2 Member LLC) per the inline n/k/a methodology extension. Jared's cp_filing_0001/0002 filings disclose the rename inline ('This entity was previously named Kushner Village 2 Member LLC'); the two records represent one legal entity. Edge cp_rel_0638 re-pointed from cp_entity_0327; alias added to this record; cp_entity_0327 marked merged_into=cp_entity_0326. Merge record cp_merge_0001 captures the formal merge metadata."
 }

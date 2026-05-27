@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0910",
+  "source_id": "cp_person_0001",
+  "target_id": "cp_entity_0326",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0002",
+  "observed_on": "2018-12-31",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Senior Advisor to the President",
+    "start_date": "2017-01-20",
+    "end_date": "2020-11-30"
+  },
+  "notes": "Jared Kushner's direct ownership of K MARYLAND ASSOCIATES, LLC. Disclosed at cp_filing_0002 Part 6 item 13. Value 'See Endnote'; encoded binary per the deferred-to-endnote pattern. Income: $1,000,001 - $5,000,000 (Rent or Royalties), plus separate column $100,001 - $1,000,000 (per cp_filing_0002 layout). Inline n/k/a note 'This entity was previously named Kushner Village 2 Member LLC' \u2014 alias on cp_entity_0326. Supersedes cp_rel_0909 (the 2017-12-31 observation from cp_filing_0001). Written in Fork B Retrofit Part B (a)."
+}

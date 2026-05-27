@@ -33,7 +33,19 @@ Pattern observed:
 
 Forward point: if a future case surfaces both the prior-name and current-name entities as separately-numbered standing entities on the same filing (i.e., the form discloses them as distinct registrations rather than via inline n/k/a, suggesting succession rather than rename), the registry would need an `entity_to_entity_successor` analog to capture the relationship structurally. Defer until that case appears. The two cases under this entry are both inline n/k/a renames; neither requires structured succession encoding.
 
-Locked: 2026-05-26.
+**Extension — prior-name has existing cp_entity record (supersede-and-keep encoding).** Where an inline n/k/a disposition references a prior name that already has a registered `cp_entity` record from earlier project work (typically because the prior-name and current-name entities were registered as separate records by different forks before the rename was surfaced), supersede-and-keep encoding applies:
+
+1. Re-point all edges referencing the prior-name entity to the current-name entity (update `source_id` / `target_id` on every existing relationship pointing at the prior cp_entity_NNNN).
+2. Add the prior name to the current-name entity's `aliases` array with per-alias `source_url` and a notes field quoting the inline n/k/a notation verbatim.
+3. Set `merged_into` on the prior-name entity record pointing at the current-name entity (uses the existing schema field; same mechanism as a proper entity merge).
+4. Create a `Merge` record (`cp_merge_NNNN`) documenting the merge with `loser_id` = prior-name entity, `winner_id` = current-name entity, `rationale` quoting the inline n/k/a notation, `source_urls` referencing the filings disclosing both names, `merged_on` = the fork's commit date, `merged_by` = the fork name.
+5. Keep the prior-name entity record in the registry — do not delete. Active-record count for that entity drops by 1, but the record persists for audit trail. Validate against the `merged_into` chain to skip the record when iterating active entities.
+
+First case: cp_entity_0327 (Kushner Village 2 Member LLC) merged into cp_entity_0326 (K MARYLAND ASSOCIATES, LLC) per Fork B Retrofit Part B (c). The rename was surfaced via Jared's 2018/2019 filings' inline n/k/a note ("This entity was previously named Kushner Village 2 Member LLC") that wasn't visible on Ivanka's 2017 NE filing where the two were originally registered as separate items.
+
+Forward point: methodology generalization candidate when a second prior-name-has-existing-record case forces it. Filing-specific to cp_filing_0001 / cp_filing_0002 until then.
+
+Locked: 2026-05-26 (Fork L initial entry). Extension added 2026-05-26 (Fork B Retrofit).
 
 ## Filing dates
 

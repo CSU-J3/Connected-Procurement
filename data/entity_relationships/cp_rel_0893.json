@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0893",
+  "source_id": "cp_person_0001",
+  "target_id": "cp_entity_0251",
+  "relation_kind": "family_to_entity",
+  "interest_type": "spousal_imputed",
+  "value": {
+    "unit": "none",
+    "shape": "imputed",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": "cp_rel_0892"
+  },
+  "filing_source": "cp_filing_0002",
+  "observed_on": "2018-12-31",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Senior Advisor to the President",
+    "start_date": "2017-01-20",
+    "end_date": "2020-11-30"
+  },
+  "notes": "Jared Kushner's interest in the Ivanka M. Trump Business Trust imputed under 18 USC 208(a)(2). Convention 3 spousal imputation. Principal interest is cp_rel_0892 (Ivanka \u2192 Business Trust, family, trust_beneficial). Disclosed at cp_filing_0002 Part 5 (Spouse's Employment Assets & Income) item 1 (trust-header block grouping IT-brand LLCs). Convention 3 forward point applied \u2014 imputation_source observed_on (2018-12-31) matches this edge's observed_on. The 15 underlying IT-brand LLC subsidiary holdings are reachable via the Business Trust \u2192 operating LLC chain edges (cp_rel_NNNN-NNNN) written in this same Fork B Retrofit Part A close. The legacy direct Jared spousal_imputed claim on those operating LLCs (which was implicit via the superseded Ivanka direct edges cp_rel_0096-0110) is now captured at the trust level per \u00a74.1 'Convention 3 explicit encoding'. The 15 cp_rel_0096-0110 records are superseded by THIS edge per \u00a74.1 ruling (semantically closest: same source filing, convention-shifted relation_kind reflecting trust-mediated structure)."
+}

@@ -1,7 +1,7 @@
 {
   "relationship_id": "cp_rel_0638",
   "source_id": "cp_person_0002",
-  "target_id": "cp_entity_0327",
+  "target_id": "cp_entity_0326",
   "relation_kind": "family_to_entity",
   "interest_type": "ownership",
   "value": {
@@ -19,5 +19,5 @@
   "excluded_from_total": true,
   "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
   "qualifying_role": null,
-  "notes": "Ivanka Trump's direct ownership of Kushner Village 2 Member LLC (cp_entity_0327), disclosed at cp_filing_0004 Part 6 item 19.4 (standalone). New entity registered in Fork I-c. Value reported on form as 'None (or less than $1,001)' or unparseable; encoded via binary fallback. Form text: Kushner Village 2 Member LLC (Rental See Endnote N/A None (or less Capital Gains $100,001 - Apartments in New York, NY) than $1,001) Rent or $1,000,000 Royalties # DESCRIPTION EIF VALUE INCOME TYPE INCOME"
+  "notes": "Ivanka Trump's direct ownership of Kushner Village 2 Member LLC (cp_entity_0327), disclosed at cp_filing_0004 Part 6 item 19.4 (standalone). New entity registered in Fork I-c. Value reported on form as 'None (or less than $1,001)' or unparseable; encoded via binary fallback. Form text: Kushner Village 2 Member LLC (Rental See Endnote N/A None (or less Capital Gains $100,001 - Apartments in New York, NY) than $1,001) Rent or $1,000,000 Royalties # DESCRIPTION EIF VALUE INCOME TYPE INCOME Edge re-pointed in Fork B Retrofit \u00a75 (Part B (c)) from cp_entity_0327 (Kushner Village 2 Member LLC) to cp_entity_0326 (K MARYLAND ASSOCIATES, LLC) per the locked inline n/k/a methodology extension. The cp_filing_0001/0002 inline note 'This entity was previously named Kushner Village 2 Member LLC' surfaced the rename; cp_entity_0327 was registered as a separate entity by Fork I-c before the rename was surfaced. Per the supersede-and-keep encoding: edges re-point to the current-name entity; cp_entity_0327 record preserved with merged_into pointer; Merge record cp_merge_0001 captures the merge metadata."
 }

@@ -1,0 +1,27 @@
+{
+  "relationship_id": "cp_rel_0909",
+  "source_id": "cp_person_0001",
+  "target_id": "cp_entity_0326",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0001",
+  "observed_on": "2017-12-31",
+  "superseded_by": "cp_rel_0910",
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": {
+    "role": "Senior Advisor to the President",
+    "start_date": "2017-01-20",
+    "end_date": "2020-11-30"
+  },
+  "notes": "Jared Kushner's direct ownership of K MARYLAND ASSOCIATES, LLC (Residential Real Estate in Baltimore and Prince George's County, MD). Disclosed at cp_filing_0001 Part 6 item 13. The form's VALUE column reads 'See Endnote'; encoded value.shape=binary per the deferred-to-endnote encoding (similar to NRA pattern; endnote inspection deferred). Income: $1,000,001 - $5,000,000 (Rent or Royalties) per locked income-disclosure encoding pattern. Jared filings note inline 'This entity was previously named Kushner Village 2 Member LLC' \u2014 captured as alias on cp_entity_0326 per Fork B Retrofit \u00a74.4 inline n/k/a methodology extension. Closes the Fork I-c \u00a74.3 deferral that originally framed this as Convention 3 imputation; the actual disclosure is Part 6 direct ownership (Jared's own holding section), not Part 5 spouse-side, per \u00a74.2 disclosure-location correction. Written in Fork B Retrofit Part B (a)."
+}

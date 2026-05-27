@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0894",
+  "source_id": "cp_entity_0251",
+  "target_id": "cp_entity_0007",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0002",
+  "observed_on": "2018-12-31",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "Ivanka M. Trump Business Trust's holding of IT Collection LLC (cp_entity_0007), as disclosed at cp_filing_0002 Part 5 (Spouse's Employment Assets & Income), item 1. Sub-item under Part 5 item 1 trust-header. The form's VALUE column reads 'value not readily ascertainable'; encoded value.shape=binary per the locked NRA convention. Written in Fork B Retrofit Part A \u00a74.1 Pattern 1 supersession; the legacy direct Ivanka \u2192 IT Collection LLC edge (cp_rel_0096) is superseded by the parallel Jared spousal_imputed \u2192 Business Trust edge (cp_rel_0893) per \u00a74.1 ruling. Parallel disclosure: cp_filing_0004 Part 2 sub-item carries the 2017-03-29 observation via Fork I-b chain edges (e.g., cp_rel_0474 for IT Collection LLC)."
+}

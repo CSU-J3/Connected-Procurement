@@ -1,0 +1,23 @@
+{
+  "relationship_id": "cp_rel_0916",
+  "source_id": "cp_entity_0455",
+  "target_id": "cp_entity_0363",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": null
+  },
+  "filing_source": "cp_filing_0003",
+  "observed_on": "2021-01-15",
+  "superseded_by": null,
+  "excluded_from_total": true,
+  "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
+  "qualifying_role": null,
+  "notes": "HUDSON WATERFRONT I CORPORATION (cp_entity_0455)'s ownership of Hudson Waterfront Associates I, LP (cp_entity_0363), disclosed at cp_filing_0003 Part 2 Exhibit A 'Owned by:' section. Long-tail intermediate edge added in Fork B Retrofit \u00a73 (Part C) closing the Fork L form-fidelity gap (Fork L's multi-parent detection script matched only the 3 most frequent intermediate names; this less-frequent parent's edge was not written at Fork L close-time). Value encoded as binary + unit:none per the locked ownership-percentage encoding (Fork K). Exact percentage live verbatim in target entity's notes."
+}

@@ -11,6 +11,6 @@
   ],
   "external_ids": [],
   "last_updated_from_filing": "cp_filing_0004",
-  "merged_into": null,
-  "notes": "Rental apartments, New York, NY. Sub-item under BFPS VENTURES, LLC (cp_entity_0042, standalone item 19). Disclosed at cp_filing_0004 Part 6 item 19.4 as a standalone holding (Ivanka's direct ownership outside any Trust #N grouping). Registered in Fork I-c per \u00a74 Table B."
+  "merged_into": "cp_entity_0326",
+  "notes": "Rental apartments, New York, NY. Sub-item under BFPS VENTURES, LLC (cp_entity_0042, standalone item 19). Disclosed at cp_filing_0004 Part 6 item 19.4 as a standalone holding (Ivanka's direct ownership outside any Trust #N grouping). Registered in Fork I-c per \u00a74 Table B. Fork B Retrofit (2026-05-26): merged into cp_entity_0326 (K MARYLAND ASSOCIATES, LLC) per the inline n/k/a methodology extension. Jared's cp_filing_0001/0002 inline note 'This entity was previously named Kushner Village 2 Member LLC' surfaced that this is the same legal entity under a prior name. Per supersede-and-keep encoding: this record preserved for audit trail; edges re-pointed to cp_entity_0326; alias 'Kushner Village 2 Member LLC' added to cp_entity_0326. Merge record cp_merge_0001 captures formal merge metadata."
 }

@@ -15,7 +15,7 @@
   },
   "filing_source": "cp_filing_0002",
   "observed_on": "2018-12-31",
-  "superseded_by": null,
+  "superseded_by": "cp_rel_0893",
   "excluded_from_total": true,
   "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
   "qualifying_role": {
