@@ -173,4 +173,4 @@ Public accountability project. Use it, fork it, build on it.
 ## Related work
 
 - [Follow-the-Moneys](https://github.com/CSU-J3/Follow-the-Moneys): post-conflict reconstruction financial governance, anchored by the Board of Peace
-- Foreign sovereign money tracker: planned third companion project, scope statement not yet drafted
+- [Sovereign-Connections](https://github.com/CSU-J3/Sovereign-Connections) — foreign sovereign and sovereign-adjacent money flowing to family-member-connected businesses. Live: https://sovereign-connections.vercel.app
