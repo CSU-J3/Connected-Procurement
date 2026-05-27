@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fafaf9;
+  --foreground: #18181b;
+  --muted: #71717a;
+  --rule: #d4d4d8;
+  --rule-strong: #71717a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --muted: #a1a1aa;
+    --rule: #27272a;
+    --rule-strong: #a1a1aa;
+  }
+}
+
+* {
+  border-radius: 0 !important;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-mono);
+  font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+a {
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.prose-sans {
+  font-family: var(--font-sans);
+}
+
+/* methodology prose */
+.methodology h1, .methodology h2, .methodology h3, .methodology h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  scroll-margin-top: 4rem;
+}
+.methodology h1 { font-size: 1.5rem; }
+.methodology h2 { font-size: 1.25rem; border-top: 1px solid var(--rule); padding-top: 1.5rem; }
+.methodology h3 { font-size: 1rem; }
+.methodology h4 { font-size: 0.95rem; color: var(--muted); }
+.methodology p { font-family: var(--font-sans); margin: 0.75rem 0; }
+.methodology ul, .methodology ol { font-family: var(--font-sans); margin: 0.75rem 0; padding-left: 1.5rem; }
+.methodology li { margin: 0.25rem 0; }
+.methodology code { font-family: var(--font-mono); font-size: 0.85em; background: var(--rule); padding: 0.05rem 0.3rem; }
+.methodology pre { font-family: var(--font-mono); background: var(--rule); padding: 0.75rem; overflow-x: auto; font-size: 0.85rem; margin: 1rem 0; }
+.methodology pre code { background: transparent; padding: 0; }
+.methodology blockquote { border-left: 2px solid var(--rule-strong); padding-left: 1rem; margin: 1rem 0; color: var(--muted); font-family: var(--font-sans); }
+.methodology table { border-collapse: collapse; margin: 1rem 0; font-family: var(--font-sans); font-size: 0.9rem; }
+.methodology th, .methodology td { border: 1px solid var(--rule); padding: 0.35rem 0.6rem; text-align: left; }
+.methodology th { background: var(--rule); }
+.methodology hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+.methodology a { color: inherit; text-decoration: underline; }
