@@ -1,7 +1,7 @@
 """Connected Procurement registry models per the schema spec."""
 from __future__ import annotations
 
-from datetime import date
+from datetime import date, datetime
 from enum import Enum
 from typing import Annotated, Any
 
@@ -22,6 +22,7 @@ CpRelationshipId = Annotated[str, StringConstraints(pattern=r"^cp_rel_\d{4,}$")]
 CpMergeId = Annotated[str, StringConstraints(pattern=r"^cp_merge_\d{4,}$")]
 CpEntityOrPersonId = Annotated[str, StringConstraints(pattern=r"^cp_(entity|person)_\d{4,}$")]
 CpFilingOrRelId = Annotated[str, StringConstraints(pattern=r"^cp_(filing|rel)_\d{4,}$")]
+CpWatchlistId = Annotated[str, StringConstraints(pattern=r"^cp_watch_\d{4,}$")]
 
 
 class Unit(str, Enum):
@@ -75,6 +76,17 @@ class ExternalIdType(str, Enum):
     STATE_CORP_REG = "state_corp_reg"
     DUNS_LEGACY = "duns_legacy"
     OTHER = "other"
+
+
+class PollMode(str, Enum):
+    POLL_DIRECT = "poll_direct"
+    IMPUTE_VIA_PART5 = "impute_via_part5"
+
+
+class WatchlistStatus(str, Enum):
+    HISTORICAL_ANCHOR = "historical_anchor"
+    ACTIVE = "active"
+    REMOVED = "removed"
 
 
 _FINANCIAL_RELATION_KINDS = {
@@ -228,6 +240,10 @@ class Filing(_Base):
     change_type: ChangeType = ChangeType.ORIGINAL
     replaces_filing_id: CpFilingId | None = None
     change_rationale: str | None = None
+    # ISO 8601 UTC datetime when this record entered the registry under live-collection.
+    # Distinct from observed_on (a date: the disclosure's analytical as-of). Nullable:
+    # pre-2025 comparative records predate live ingestion and carry null (no backfill).
+    ingestion_timestamp: datetime | None = None
     notes: str | None = None
 
     @field_validator("primary_source_url", "filing_type")
@@ -331,6 +347,10 @@ class Relationship(_Base):
     excluded_from_total: bool = False
     exclusion_reason: str | None = None
     qualifying_role: QualifyingRole | None = None
+    # ISO 8601 UTC datetime when this record entered the registry under live-collection.
+    # Distinct from observed_on (a date: the disclosure's analytical as-of). Nullable:
+    # pre-2025 comparative records predate live ingestion and carry null (no backfill).
+    ingestion_timestamp: datetime | None = None
     notes: str | None = None
 
     @model_validator(mode="after")
@@ -433,4 +453,59 @@ class Merge(_Base):
             )
         if self.loser_id == self.winner_id:
             raise ValueError("loser_id and winner_id must differ")
+        return self
+
+
+class Watchlist(_Base):
+    watchlist_id: CpWatchlistId
+    person_id: CpPersonId
+    inclusion_basis: str
+    active_278_obligation: bool
+    poll_mode: PollMode
+    status: WatchlistStatus
+    position: str | None = None
+    source_urls: list[str] = Field(default_factory=list)
+    added_on: date
+    removed_on: date | None = None
+    removal_reason: str | None = None
+    notes: str | None = None
+
+    @field_validator("inclusion_basis")
+    @classmethod
+    def _nonempty(cls, v: str) -> str:
+        if not v.strip():
+            raise ValueError("inclusion_basis must be non-empty")
+        return v
+
+    @field_validator("source_urls")
+    @classmethod
+    def _source_urls_entries_nonempty(cls, v: list[str]) -> list[str]:
+        for url in v:
+            if not url.strip():
+                raise ValueError("source_urls entries must be non-empty")
+        return v
+
+    @model_validator(mode="after")
+    def _check_poll_mode_coupling(self) -> Watchlist:
+        is_direct = self.poll_mode == PollMode.POLL_DIRECT
+        if self.active_278_obligation != is_direct:
+            raise ValueError(
+                "active_278_obligation must be true if and only if poll_mode=poll_direct"
+            )
+        return self
+
+    @model_validator(mode="after")
+    def _check_status_rules(self) -> Watchlist:
+        if self.status == WatchlistStatus.ACTIVE and not self.source_urls:
+            raise ValueError("status=active requires non-empty source_urls")
+        if self.status == WatchlistStatus.REMOVED:
+            if self.removed_on is None:
+                raise ValueError("status=removed requires removed_on")
+            if not self.removal_reason or not self.removal_reason.strip():
+                raise ValueError("status=removed requires non-empty removal_reason")
+        else:
+            if self.removed_on is not None or self.removal_reason is not None:
+                raise ValueError(
+                    "removed_on/removal_reason are only allowed when status=removed"
+                )
         return self

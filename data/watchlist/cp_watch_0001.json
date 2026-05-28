@@ -1,0 +1,14 @@
+{
+  "watchlist_id": "cp_watch_0001",
+  "person_id": "cp_person_0001",
+  "inclusion_basis": "Category 2 (spouse of the President's child, Ivanka Trump) per the README named-family-member list; cp_person_0001",
+  "active_278_obligation": false,
+  "poll_mode": "impute_via_part5",
+  "status": "historical_anchor",
+  "position": null,
+  "source_urls": [],
+  "added_on": "2026-05-28",
+  "removed_on": null,
+  "removal_reason": null,
+  "notes": "Seed anchor from the comparative set. Historical 278 filer (2018/2019 annual reports, cp_filing_0001/cp_filing_0002), not a current-administration obligated filer; impute via Part 5 under Convention 3 until an independent current obligation is established through event-driven watchlist expansion."
+}

@@ -1,0 +1,14 @@
+{
+  "watchlist_id": "cp_watch_0003",
+  "person_id": "cp_person_0003",
+  "inclusion_basis": "Filer-of-record for the comparative set; not a named family member per the README exhaustive list (see cp_person_0003 notes)",
+  "active_278_obligation": false,
+  "poll_mode": "impute_via_part5",
+  "status": "historical_anchor",
+  "position": null,
+  "source_urls": [],
+  "added_on": "2026-05-28",
+  "removed_on": null,
+  "removal_reason": null,
+  "notes": "Seed anchor from the comparative set. Carried for detection-scope explicitness, not as a named-family-member assertion: cp_person_0003 is the filer of the 2021 termination 278 (cp_filing_0003) used to pressure-test the trust-beneficial pattern. Historical filer, not a current-administration obligated filer in the registry's frame; impute via Part 5 under Convention 3 until an independent current obligation is established through event-driven watchlist expansion."
+}

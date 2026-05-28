@@ -527,3 +527,31 @@ Surface-and-pause remains mandatory when:
 Surface-and-pause is exception-handling, not routine procedure. A clean pre-write read is the expected outcome on a well-formed handoff.
 
 Locked: 2026-05-26.
+
+## Live collection
+
+### Live-record handling of `excluded_from_total`
+
+`excluded_from_total` is a per-relationship boolean (default `false`), coupled by the validator with `exclusion_reason`: a `true` flag requires a non-empty reason, and a `false` flag forbids one. The comparative-set edges all carry `excluded_from_total: true` with `exclusion_reason: "pre-2025; comparative case set per PROJECT.md scope"`, which keeps the hand-populated pre-2025 records out of headline totals.
+
+Live-collection records (post-2025 filings ingested under the live phase) omit both fields. The flag defaults to `false`, no `exclusion_reason` is written, and the edge counts toward headline totals automatically. This is a usage convention only: no field is added to the model and no validator rule changes, because the field and its coupling already exist (confirmed in the Session 1 planning artifact).
+
+The boundary is the pre-2025 / post-2025 line. Comparative-set edges (pre-2025, all sourced to cp_filing_0001 through cp_filing_0004) stay excluded; live edges (post-2025, ingested once detection surfaces a filing) count. The totals logic reads the flag, so the audit trail for what counts is the flag value plus this dated boundary. Comparative records are not retro-touched; the convention governs records written from the live phase forward.
+
+Locked: 2026-05-28 (Live-Collection Session 2). Staged in the Session 1 planning artifact (docs/handoffs/2026-05-28-session-01.md, schema delta 1).
+
+### Watchlist
+
+The watchlist is the registry's detection-scope list: the named family members monitored under live-collection, recorded as a validated `data/watchlist/` table (one `cp_watch_NNNN` JSON record per member, the same per-record pattern as the other tables). It is registry state, validated like every other table, so detection-critical scope is auditable rather than living in an unvalidated config file.
+
+**Inclusion rule (Decision 2, option A).** Watchlist membership is the README named-family-member definition (exhaustive, authoritative) intersected with an active independent OGE 278 obligation. It is not "everyone plausibly connected." The four comparative anchors are the seed members: Jared C. Kushner (cp_person_0001, Category 2), Ivanka M. Trump (cp_person_0002, Category 1), Donald J. Trump (cp_person_0003, carried as filer-of-record for the comparative set, not as a named family member per his record), and Melania Trump (cp_person_0004). Massad Boulos and Charles Kushner stay excluded per the dated in-laws-of-in-laws determination in the "Named family member" section above; that determination is not reopened here.
+
+**Poll-mode rule (Decision 3).** Each member carries a `poll_mode`: `poll_direct` when the member holds an independent OGE 278 filing obligation (a separate filer in their own right), and `impute_via_part5` otherwise, where the member's holdings surface through an obligated filer's Part 5 disclosure under Convention 3. The validator couples `poll_mode` with `active_278_obligation`: `active_278_obligation: true` if and only if `poll_mode: poll_direct`.
+
+No current watchlist member meets the poll-direct test. The four anchors are pre-2025 comparative filers, not current-administration obligated filers, so all four carry `active_278_obligation: false`, `poll_mode: impute_via_part5`, and `status: historical_anchor`. The first poll-direct target enters through event-driven watchlist expansion when a named family member becomes independently obligated, established by a sourced appointment or nomination, not by assertion.
+
+**Record shape.** `watchlist_id` (cp_watch_NNNN), `person_id` (validated to resolve to a persons record), `inclusion_basis` (a citation string anchored to the README category or, where no clean category applies, to the locked basis), `active_278_obligation`, `poll_mode`, `status` (`historical_anchor`, `active`, or `removed`), optional `position`, `source_urls` (required non-empty for `active` members, optional for historical anchors whose provenance is already in the comparative set), `added_on`, optional `removed_on` and `removal_reason` (required together when `status: removed`), and optional `notes`.
+
+**Melania's inclusion basis.** Melania's `inclusion_basis` cites her locked registration rather than a category number: the exhaustive named-family list has no "spouse of the President" category, and her membership rests on the locked non-filer named-family registration (Fork J). That tension between the registered membership and the list as written is logged as a future versioned definitional question (add a spouse-of-the-President category, or document the First Lady as a registered exception with rationale) and is not resolved here.
+
+Locked: 2026-05-28 (Live-Collection Session 2). Staged in the Session 1 planning artifact (schema delta 3).

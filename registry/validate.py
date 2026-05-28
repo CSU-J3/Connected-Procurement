@@ -15,6 +15,7 @@ from registry.models import (
     Merge,
     Person,
     Relationship,
+    Watchlist,
 )
 
 
@@ -27,6 +28,7 @@ TABLES: dict[str, tuple[str, str, type[BaseModel]]] = {
     "persons": ("person", "person_id", Person),
     "entity_relationships": ("rel", "relationship_id", Relationship),
     "merges": ("merge", "merge_id", Merge),
+    "watchlist": ("watch", "watchlist_id", Watchlist),
 }
 
 
@@ -88,6 +90,7 @@ def _check_references(records: dict[str, dict[str, BaseModel]], errors: _ErrorCo
     persons = records["persons"]
     rels = records["entity_relationships"]
     merges = records["merges"]
+    watchlist = records["watchlist"]
 
     for fid, f in filings.items():
         if f.replaces_filing_id and f.replaces_filing_id not in filings:
@@ -143,6 +146,10 @@ def _check_references(records: dict[str, dict[str, BaseModel]], errors: _ErrorCo
         for endpoint, val in (("loser_id", m.loser_id), ("winner_id", m.winner_id)):
             if val not in table:
                 errors.add(f"merges/{mid}: {endpoint}={val} not in {table_name}")
+
+    for wid, w in watchlist.items():
+        if w.person_id not in persons:
+            errors.add(f"watchlist/{wid}: person_id={w.person_id} not in persons")
 
 
 def _detect_cycles(

@@ -1,0 +1,14 @@
+{
+  "watchlist_id": "cp_watch_0004",
+  "person_id": "cp_person_0004",
+  "inclusion_basis": "Spouse of the President (cp_person_0003); registered as a named family member via the locked non-filer named-family registration (Fork J, methodology.md)",
+  "active_278_obligation": false,
+  "poll_mode": "impute_via_part5",
+  "status": "historical_anchor",
+  "position": null,
+  "source_urls": [],
+  "added_on": "2026-05-28",
+  "removed_on": null,
+  "removal_reason": null,
+  "notes": "Seed anchor from the comparative set. Non-filer (no cp_filing_NNNN carries cp_person_0004 as filer_id); her holdings surface through cp_filing_0003 Part 5 spouse-side disclosures under Convention 3, so poll_mode is impute_via_part5 with no independent obligation. The exhaustive named-family list has no 'spouse of the President' category; her membership rests on the locked Fork J non-filer registration. That definitional gap is queued as a future versioned amendment and is not resolved here."
+}

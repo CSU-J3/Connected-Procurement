@@ -43,11 +43,12 @@ function partSortKey(label) {
 async function main() {
   await mkdir(outDir, { recursive: true });
 
-  const [filings, entities, persons, merges, rawRels] = await Promise.all([
+  const [filings, entities, persons, merges, watchlist, rawRels] = await Promise.all([
     loadDir('data/filings'),
     loadDir('data/entities'),
     loadDir('data/persons'),
     loadDir('data/merges'),
+    loadDir('data/watchlist'),
     loadDir('data/entity_relationships'),
   ]);
 
@@ -77,6 +78,7 @@ async function main() {
     writeFile(path.join(outDir, 'persons.json'), JSON.stringify(persons, null, 2)),
     writeFile(path.join(outDir, 'relationships.json'), JSON.stringify(relationships, null, 2)),
     writeFile(path.join(outDir, 'merges.json'), JSON.stringify(merges, null, 2)),
+    writeFile(path.join(outDir, 'watchlist.json'), JSON.stringify(watchlist, null, 2)),
     copyFile(path.join(repoRoot, 'docs', 'methodology.md'), path.join(outDir, 'methodology.md')),
     writeFile(path.join(outDir, 'synced-at.json'), JSON.stringify({ synced_at: syncedAt }, null, 2)),
   ]);
@@ -90,6 +92,7 @@ async function main() {
   console.log(`  ${persons.length} persons        -> web/data/persons.json`);
   console.log(`  ${relationships.length} relationships -> web/data/relationships.json`);
   console.log(`  ${merges.length} merges         -> web/data/merges.json`);
+  console.log(`  ${watchlist.length} watchlist      -> web/data/watchlist.json`);
   console.log(`  methodology.md copied`);
   console.log(`  synced-at: ${syncedAt}`);
 
