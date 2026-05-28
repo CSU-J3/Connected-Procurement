@@ -1,23 +1,23 @@
 # Connected Procurement Tracker
 
-![status](https://img.shields.io/badge/status-pre--launch-orange) ![data collection](https://img.shields.io/badge/data%20collection-not%20yet%20active-lightgrey) ![scope](https://img.shields.io/badge/scope-federal%20civilian%20only-blue)
+![status](https://img.shields.io/badge/status-comparative--set--complete-green) ![registry](https://img.shields.io/badge/registry-4%20filings%20%2F%20456%20entities%20%2F%20930%20edges-blue) ![scope](https://img.shields.io/badge/scope-federal%20civilian%20only-blue)
 
 A research tracker monitoring federal civilian contract awards and GSA lease arrangements where the recipient entity has a documented financial interest held by a named family member of the current administration. The beat is mechanism-focused: where do existing federal procurement oversight mechanisms (FAR, agency IGs, GSA contracting review, GAO bid protests, OGE disclosures, the Procurement Integrity Act) catch or fail to catch this class of transaction.
 
-This repo currently contains only the project scope and methodology. Data collection is not yet active. Companion project to [Follow-the-Moneys](https://github.com/CSU-J3/Follow-the-Moneys), which tracks Board of Peace post-conflict reconstruction flows on a different beat.
+This repo contains the project scope, a locked methodology, a hand-populated comparative-set registry (pre-2025 OGE 278 filings, used to pressure-test schema decisions), and a public dashboard. Automated data collection is not yet active; the live-collection phase is in planning. Companion project to [Follow-the-Moneys](https://github.com/CSU-J3/Follow-the-Moneys), which tracks Board of Peace post-conflict reconstruction flows on a different beat.
 
 ## Status
 
-| Item                          | State                                  |
-| ----------------------------- | -------------------------------------- |
-| Scope statement               | Documented (this README)               |
-| Defined terms                 | Documented (see below)                 |
-| Primary source list           | Documented (see below)                 |
-| Collector code                | Not built                              |
-| Data file (`data.json`)       | Not present                            |
-| Public dashboard              | Not deployed                           |
-| Methodology page              | Not yet written                        |
-| First record collected        | None                                   |
+| Item                          | State                                              |
+| ----------------------------- | -------------------------------------------------- |
+| Scope statement               | Documented (this README)                           |
+| Defined terms                 | Documented (see below)                             |
+| Primary source list           | Documented (see below)                             |
+| Methodology page              | Locked (`docs/methodology.md`)                     |
+| Comparative-set registry      | Hand-populated (4 filings / 456 entities / 930 edges, all pre-2025, excluded from totals) |
+| Public dashboard              | Live (see below)                                   |
+| Collector code                | Not built (live-collection phase in planning)      |
+| First live record collected   | None (pre-live-collection)                         |
 
 The repo exists at this stage to document the scope publicly before any data collection begins. The project instructions are versioned alongside the code so any future scope change is auditable.
 
@@ -136,6 +136,8 @@ Borrowed from Follow-the-Moneys after its methodology hardening pass:
 
 ## Architecture (planned, not yet built)
 
+> Note: this sketch predates the shipped layout. Actual structure is `registry/` (Python) + `web/` (Next.js on Vercel), reconciled in the live-collection session-1 planning artifact. The collector tree below is still aspirational.
+
 Anticipated structure when development begins:
 
 ```
@@ -169,6 +171,10 @@ The collectors run on the cadence their sources support. There is no global "eve
 Public accountability project. Use it, fork it, build on it.
 
 — CJ / [das_DEMARC:/](https://dasdemarc.substack.com/)
+
+## Dashboard
+
+Live at [connected-procurement.vercel.app](https://connected-procurement.vercel.app). Per-entity and per-filing reverse lookup over the comparative-set registry, each edge provenanced to its primary-source filing line.
 
 ## Related work
 
