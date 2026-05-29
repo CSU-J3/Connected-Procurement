@@ -4,7 +4,7 @@
 
 A research tracker monitoring federal civilian contract awards and GSA lease arrangements where the recipient entity has a documented financial interest held by a named family member of the current administration. The beat is mechanism-focused: where do existing federal procurement oversight mechanisms (FAR, agency IGs, GSA contracting review, GAO bid protests, OGE disclosures, the Procurement Integrity Act) catch or fail to catch this class of transaction.
 
-This repo contains the project scope, a locked methodology, a hand-populated comparative-set registry (pre-2025 OGE 278 filings, used to pressure-test schema decisions), and a public dashboard. Automated data collection is not yet active; the live-collection phase is in planning. Companion project to [Follow-the-Moneys](https://github.com/CSU-J3/Follow-the-Moneys), which tracks Board of Peace post-conflict reconstruction flows on a different beat.
+This repo contains the project scope, a locked methodology, a hand-populated comparative-set registry (pre-2025 OGE 278 filings, used to pressure-test schema decisions), a public dashboard, and the live-collection detection collectors. The collectors are built but not yet scheduled, and no live record has been collected; the live-collection phase is underway. Companion project to [Follow-the-Moneys](https://github.com/CSU-J3/Follow-the-Moneys), which tracks Board of Peace post-conflict reconstruction flows on a different beat.
 
 ## Status
 
@@ -16,7 +16,7 @@ This repo contains the project scope, a locked methodology, a hand-populated com
 | Methodology page              | Locked (`docs/methodology.md`)                     |
 | Comparative-set registry      | Hand-populated (4 filings / 456 entities / 930 edges, all pre-2025, excluded from totals) |
 | Public dashboard              | Live (see below)                                   |
-| Collector code                | Not built (live-collection phase in planning)      |
+| Collector code                | Built, not yet scheduled (manual runs; live-counting input empty) |
 | First live record collected   | None (pre-live-collection)                         |
 
 The repo exists at this stage to document the scope publicly before any data collection begins. The project instructions are versioned alongside the code so any future scope change is auditable.
@@ -134,37 +134,57 @@ Borrowed from Follow-the-Moneys after its methodology hardening pass:
 - Defined terms are fixed. Changes are versioned and dated.
 - Errors get corrected publicly with a changelog entry, not silent edits.
 
-## Architecture (planned, not yet built)
+## Architecture
 
-> Note: this sketch predates the shipped layout. Actual structure is `registry/` (Python) + `web/` (Next.js on Vercel), reconciled in the live-collection session-1 planning artifact. The collector tree below is still aspirational.
-
-Anticipated structure when development begins:
+The registry is Python-writes / TypeScript-reads: Python writes one JSON file per record
+under `data/`; `web/scripts/sync-data.mjs` bundles those into `web/data/*.json`; the
+Next.js app (on Vercel) reads the bundle. Detection collectors read the registry and live
+federal sources and write **pending** detection output to `collectors/state/`, which is
+deliberately outside `data/` so `registry.validate` never loads it.
 
 ```
 connected-procurement/
-├── README.md                          # this file
-├── PROJECT.md                         # full project instructions for Claude Projects
+├── README.md                  # this file
+├── PROJECT.md                 # full project instructions
+├── requirements.txt
+├── registry/
+│   ├── models.py              # pydantic record schema (the locked record shape)
+│   └── validate.py            # per-record loader + cross-record checks
+├── data/                      # one JSON file per record; validated by registry.validate
+│   ├── filings/  entities/  persons/  entity_relationships/  merges/  watchlist/
+├── collectors/                # Python detection collectors (see collectors/README.md)
+│   ├── shapes.py  state.py  match.py  httpio.py
+│   ├── usaspending.py  gsa_lease.py  sam.py     # weekly procurement match
+│   ├── oge_278.py                               # daily filer detection (OGE 278 + CREW)
+│   └── state/                 # committed detection workspace, outside data/, not validated
+│       ├── queue/             # candidate-<date>-<hash>.json (daily filer candidates)
+│       ├── procurement-matches/   # cp_match_NNNN.json (weekly match candidates)
+│       ├── gsa-cache/         # cached bulk source file (gitignored; re-downloadable)
+│       ├── oge-278-seen.json  crew-seen.json    # last-seen diffs
 ├── docs/
-│   ├── index.html                     # public dashboard
-│   ├── methodology.html               # methodology page
-│   └── data.json                      # tracker output
-├── data/
-│   ├── records.json                   # canonical records
-│   ├── candidates.json                # pending review
-│   └── connected_entities.json        # entity registry with sourced ties
-├── collectors/
-│   ├── usaspending_collector.py
-│   ├── sam_collector.py
-│   ├── gsa_lease_collector.py
-│   ├── oge_278_collector.py
-│   ├── ig_report_collector.py
-│   ├── gao_protest_collector.py
-│   └── pacer_collector.py
+│   ├── methodology.md         # locked conventions + excluded-scope log
+│   └── handoffs/              # fork-era archive + dated session files
+├── web/                       # Next.js on Vercel
+│   ├── scripts/sync-data.mjs  # bundles data/ -> web/data/*.json, copies methodology
+│   ├── lib/  app/  components/
+│   └── data/                  # bundled read-side JSON (build artifact)
 └── .github/workflows/
-    └── collect-and-deploy.yml
+    └── validate.yml           # runs python -m registry.validate on push/PR
 ```
 
-The collectors run on the cadence their sources support. There is no global "every 6 hours" cadence; that's a Follow-the-Moneys pattern that doesn't apply to federal record sources.
+Detection has three cadences, none on a global timer (the honest-cadence principle: the
+tracker updates when its sources update). Daily filer detection (`oge_278`) polls
+poll-direct watchlist members for new or amended 278 filings. Weekly procurement match
+(`usaspending`, `gsa_lease`, `sam`) crosses in-scope registry entities against federal
+award and lease data. Event-driven watchlist expansion is a session, not a script. There
+is no global "every 6 hours" cadence; that's a Follow-the-Moneys pattern that doesn't
+apply to federal record sources.
+
+A collector writes only to `collectors/state/` and never to `data/`; detection surfaces a
+candidate, and a human-gated ingest session decides whether it enters the registry. The
+`ig_report`, `gao_protest`, and `pacer` collectors are noted future expansion, not built.
+There is no scheduled collection workflow yet: `validate.yml` is the only workflow, and a
+`collect-and-deploy.yml` is a future-session concern once the collectors run on a cadence.
 
 ## License
 
