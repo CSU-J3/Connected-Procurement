@@ -16,6 +16,12 @@ venv/
 # not the script that produced it)
 scripts/
 
+# Cached bulk source files pulled by collectors (re-downloadable build artifacts,
+# not detection output). The detection output under collectors/state/ (the candidate
+# queue, match records, and last-seen diffs) IS committed and auditable.
+collectors/state/gsa-cache/*
+!collectors/state/gsa-cache/.gitkeep
+
 # Transit handoff and instruction artifacts at repo root
 # Working-process trail. Canonical methodology in docs/methodology.md;
 # canonical project instructions in PROJECT.md.
