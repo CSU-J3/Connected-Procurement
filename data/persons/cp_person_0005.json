@@ -1,15 +1,8 @@
 {
   "person_id": "cp_person_0005",
   "canonical_name": "Charles Kushner",
-  "aliases": [
-    {
-      "name": "Chanan Kushner",
-      "source_url": "https://www.legistorm.com/person/bio/524213/Chanan_Kushner.html",
-      "source_filing_date": "2025-05-19",
-      "notes": "Legal/birth first name (given at birth as Chanan; the name he uses professionally is Charles). Documented in the LegiStorm officeholder bio, whose section header reads 'Chanan Kushner (Charles)'; source_filing_date anchored to the 2025-05-19 Senate confirmation the bio records. LegiStorm is the canonical host of its own bio, so the URL is publisher-canonical (not on the locked normalization rule's internal/temporary list). Primary-source capture of the full legal name as printed on his nominee OGE 278 is queued for the OGE intake session."
-    }
-  ],
+  "aliases": [],
   "last_updated_from_filing": null,
   "merged_into": null,
-  "notes": "Named family member per the README list Category 5 (relative of the President by marriage holding a Senate-confirmed federal position), as applied by the methodology amendment 2026-05-29 (Charles Kushner Category 5 supersedes the 2026-05-20 in-laws-of-in-laws exclusion). Father of Jared Kushner (cp_person_0001); co-father-in-law of the President. Confirmed by the Senate as Ambassador Extraordinary and Plenipotentiary to the French Republic and concurrently to the Principality of Monaco on 2025-05-19, 51-45 (Senate Roll Call Vote 261, 119th Congress; nomination PN24-4); sworn in 2025-07-11. Confirmation primary-sourced to the Senate roll-call vote and Congress.gov PN24-4. Registered as the person only this session: no family_to_entity edges or family-tree edges written, and no 278 holdings ingested. His ambassadorial OGE 278 is surfaced as a pending detection candidate by the session-03 Step 3 OGE run and ingested in a later human-gated session."
+  "notes": "Named family member per the README list Category 5 (relative of the President by marriage holding a Senate-confirmed federal position), as applied by the methodology amendment 2026-05-29 (Charles Kushner Category 5 supersedes the 2026-05-20 in-laws-of-in-laws exclusion). Father of Jared Kushner (cp_person_0001); co-father-in-law of the President. Confirmed by the Senate as Ambassador Extraordinary and Plenipotentiary to the French Republic and concurrently to the Principality of Monaco on 2025-05-19, 51-45 (Senate Roll Call Vote 261, 119th Congress; nomination PN24-4); sworn in 2025-07-11. Confirmation primary-sourced to the Senate roll-call vote and Congress.gov PN24-4. Registered as the person only this session: no family_to_entity edges or family-tree edges written, and no 278 holdings ingested. His ambassadorial OGE 278 is surfaced as a pending detection candidate by the session-03 Step 3 OGE run and ingested in a later human-gated session. Aliases deferred: his legal/birth first name 'Chanan' is documented in a LegiStorm officeholder bio but not in any filing in hand; per the locked alias source_filing_date rule (methodology, 2026-05-29) the alias waits for a filing source (expected: the nominee 278) rather than borrowing a non-filing date."
 }
