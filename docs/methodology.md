@@ -36,6 +36,16 @@ First applied at Fork M (2026-05-26). First batch normalization at Fork M: 135 r
 
 Locked: 2026-05-26 (Fork M).
 
+### Alias `source_filing_date`: aliases wait for a filing source
+
+The `Alias` model requires a `source_filing_date`. That requirement encodes a provenance rule: registry aliases come from filings (or dated source documents), and the date is the as-of date of the document that prints the name variant. When a name variant is known only from a non-filing source (a third-party officeholder bio, an aggregator, an encyclopedia) and no filing carrying that variant is in hand, the alias is deferred, not written with a borrowed or invented date.
+
+Back-filling `source_filing_date` with an unrelated date (e.g., a confirmation date) asserts a filing provenance that does not exist: a future session reading the field would reasonably infer that a filing of that date carries the name, which would be false. This mirrors the locked source_url "don't write a guess" discipline above. Defer the alias until a filing sources it, then write it with the filing as the real source and the filing's real date. Same information, correct provenance.
+
+First applied 2026-05-29 (Live-Collection Session 3). Charles Kushner's legal/birth first name "Chanan" is documented in a LegiStorm officeholder bio but in no filing in hand. The alias was deferred rather than written with the 2025-05-19 confirmation date as a stand-in `source_filing_date`; cp_person_0005 registers canonical-name-only. His nominee OGE 278 (surfaced as a pending candidate by the Session 3 Step 3 OGE run) is the expected filing source: if it prints "Chanan" as his legal first name, the alias is written then with the 278 as its source.
+
+Locked: 2026-05-29.
+
 ### Inline n/k/a (now known as) disclosure pattern
 
 When an OGE 278 row, footnote, or Exhibit A "Has ownership interest in:" cell discloses an entity under its prior name with an inline "(n/k/a CURRENT NAME)" notation, the registry encodes one `cp_entity` record using the current name as canonical, with the prior name in the `aliases` array carrying per-alias `source_url` and a `notes` field quoting the inline n/k/a notation verbatim. No `entity_to_entity_successor` edge — the rename is captured in the alias structure, not as a relationship between entities.
