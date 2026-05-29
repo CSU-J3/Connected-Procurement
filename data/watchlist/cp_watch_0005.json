@@ -1,0 +1,17 @@
+{
+  "watchlist_id": "cp_watch_0005",
+  "person_id": "cp_person_0005",
+  "inclusion_basis": "Category 5 (relative of the President by marriage holding a Senate-confirmed federal position) per the README named-family-member list, as applied by the methodology amendment 2026-05-29 (Charles Kushner Category 5 supersedes the 2026-05-20 exclusion); cp_person_0005",
+  "active_278_obligation": true,
+  "poll_mode": "poll_direct",
+  "status": "active",
+  "position": "U.S. Ambassador to France and Monaco",
+  "source_urls": [
+    "https://www.congress.gov/nomination/119th-congress/24/4",
+    "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00261.htm"
+  ],
+  "added_on": "2026-05-29",
+  "removed_on": null,
+  "removal_reason": null,
+  "notes": "First poll-direct watchlist member and first non-historical-anchor entry. Entered through event-driven watchlist expansion on the 2026-05-29 methodology amendment (Charles Kushner Category 5). First record to exercise the true / poll_direct side of the validator's active_278_obligation iff poll_mode coupling. The independent OGE 278 obligation arises from the Senate-confirmed (PAS) ambassadorship under the Ethics in Government Act, separate from any family tie. No family_to_entity edges or 278 holdings ingested this session; the session-03 Step 3 OGE poll surfaces his 278 as a pending candidate for a later human-gated ingest."
+}
