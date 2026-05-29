@@ -1,0 +1,40 @@
+{
+  "flag_id": "oge-nav-2026-05-29",
+  "logged_at": "2026-05-29T23:42:50Z",
+  "run": "First live OGE poll-direct run (session-03 Step 3). First time the daily OGE/CREW collector had a non-empty poll-direct set.",
+  "poll_direct_members": [
+    {
+      "watchlist_id": "cp_watch_0005",
+      "filer_person_id": "cp_person_0005",
+      "name": "Charles Kushner"
+    }
+  ],
+  "candidates_surfaced": 0,
+  "guessed_urls_written": false,
+  "oge_document_pointer": {
+    "status": "unresolved_flagged",
+    "automated_path": "collectors.oge_278.search_oge_filer queried the PAS Index with RestrictToCategory=<full filer name> and got no flat $FILE href; it logged its built-in FLAG and returned empty.",
+    "root_cause": "The /201/Presiden.nsf PAS Index Domino view is categorized by SURNAME INITIAL ([A]-[Z]), not by full filer name. RestrictToCategory='Charles Kushner' matches no category, so the automated full-name query can never hit. (Collector refinement needed; not changed this step, since the document is not reachable headlessly yet.)",
+    "manual_navigation": [
+      "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index?OpenView -- reachable; categorized A-Z view, no full-text index, no flat document links in the listing.",
+      "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index?OpenView&RestrictToCategory=K -- complete [K] category retrieved (~11.7KB). Contains ONLY 'Derek T. Kan' (2020 termination). Zero 'Kushner'. Documents there open via Domino ?OpenForm UNID links (e.g. /201/Presiden.nsf/<UNID>?OpenForm); the certified PDF is reached via a $FILE attachment after opening the form, matching the scaffolding-confirmed shape .../PAS+Index/<UNID>/$FILE/<name> final278.pdf.",
+      "Conclusion: Charles Kushner's 278 is NOT present in the /201/Presiden.nsf posted PAS Index."
+    ],
+    "authoritative_current_source": {
+      "url": "https://www.oge.gov/web/OGE.nsf/Officials%20Individual%20Disclosures%20Search%20Collection?OpenForm",
+      "description": "Modern OGE 'Officials' Individual Disclosures Search Collection' (reports back to 2015; search fields Date/Type/Name/Title/Agency/Level).",
+      "blocker": "JavaScript/AJAX single-page app. The results endpoint is not present in static HTML and cannot be constructed or driven headlessly via urllib without reverse-engineering the in-page script or capturing the request via browser network inspection. Access may also route through the OGE Form 201 request flow (https://extapps2.oge.gov/201/Presiden.nsf/201+Request?OpenForm)."
+    },
+    "retention_nuance": "Per the OGE quickstart, NOMINEE 278e copies are destroyed one year after the nominee ceases to be under consideration. Kushner was confirmed 2025-05-19 (one-year mark 2025-05-19, ~10 days before this run on 2026-05-29). His INCUMBENT ambassador 278e is retained 6 years, so a 278e should still exist; flagged for awareness.",
+    "disposition": "Flat document link NOT obtained after a genuine attempt. No URL guessed (per the flag-don't-guess rule and the carried-forward OGE-navigation discipline). Next step for a future session: capture the modern search collection's AJAX results endpoint via browser network inspection (or submit an OGE Form 201 request), then finalize search_oge_filer to use surname-initial categories within /201 and/or target the modern search-collection endpoint."
+  },
+  "crew_dataset_url": {
+    "status": "unresolved_flagged_characterized",
+    "finding": "CREW (citizensforethics.org) publishes per-report articles/analyses with individually-linked PDFs (e.g. /reports-investigations/crew-reports/donald-trumps-2025-financial-disclosure/), NOT a structured bulk financial-disclosure dataset or bulk download feed. No canonical CREW bulk dataset exists to wire.",
+    "disposition": "CREW_DATASET_URL stays None; the CREW redundancy path skips with a flag, as the scaffolding designed. OGE is the authority regardless. No URL guessed. The 'CREW bulk diff' redundancy source, as conceived in the scaffolding, does not exist in bulk form; a future session should either retarget CREW's per-report article index or drop the CREW redundancy path."
+  },
+  "carried_forward": {
+    "cp_person_0001_whco_memo_url": "NOT resolved this run. This navigation exercised the OGE PAS financial-disclosure system (278 reports), not the WHCO Certificate-of-Divestiture memo path (OGE-2017-002). The WHCO memo canonical-URL item continues to ride per the locked source_url normalization deferral."
+  },
+  "notes": "Acceptable honest outcome per the session-03 handoff Step 3: a logged flag with partial paths in lieu of a candidate, OGE-navigation precisely characterized, CREW URL characterized. No registry write this step; no guessed URLs."
+}
