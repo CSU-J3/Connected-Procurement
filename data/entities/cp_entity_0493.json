@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0493",
+  "canonical_name": "Carmel Trust",
+  "aliases": [
+    {
+      "name": "Carmel Trust",
+      "source_url": "OGE Form 278e Nominee Report (Kushner, Charles), filer-signed 2025-01-25, OGE-certified 2025-04-15; OGE Form 201 fulfillment received 2026-05-30, retained locally at .pdf_cache/kushner_nominee_278.pdf; no stable public OGE URL (nominee 278e copy past 1-year retention-destruction per 5 CFR 2634; not in OGE PAS Index /201/Presiden.nsf per session-03 navigation flag).",
+      "source_filing_date": "2025-01-25",
+      "notes": "Part 1 (Filer's Positions) Trustee role; Reno, Nevada."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0005",
+  "merged_into": null,
+  "notes": "Nevada trust (Reno, NV) for which Charles Kushner served as Trustee 1/2017-12/2024 (role ended pre-appointment). Disclosed on cp_filing_0005 Part 1 #52 and Part 2 #2 (Trustee Fees $25,000). Not an Appendix A resignation/divestiture entity; captured for provenance. Edge soft-flagged excluded_from_total=true (ended pre-appointment)."
+}

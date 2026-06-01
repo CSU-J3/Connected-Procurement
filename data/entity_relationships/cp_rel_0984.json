@@ -1,0 +1,22 @@
+{
+  "relationship_id": "cp_rel_0984",
+  "source_id": "cp_person_0005",
+  "target_id": "cp_entity_0494",
+  "relation_kind": "family_to_entity",
+  "interest_type": "trust_trustee",
+  "value": {
+    "unit": "none",
+    "shape": "binary"
+  },
+  "filing_source": "cp_filing_0005",
+  "observed_on": "2025-01-25",
+  "excluded_from_total": true,
+  "exclusion_reason": "Trustee role ended 12/2024 (pre-appointment); not a retained Appendix A interest; captured for provenance per soft-flag discipline.",
+  "ingestion_timestamp": "2026-06-01T19:42:26Z",
+  "notes": "Charles Kushner served as Trustee of Nara Trust (Reno, NV). Disclosed on cp_filing_0005 Part 1 (trustee role 1/2017-12/2024) and Part 2 item 3 (Trustee Fees $25,000). No trust-level value disclosed -> binary per the trust_trustee convention; trustee fee captured here. Role ended pre-appointment. observed_on provisionally set to the filer-signature date (2025-01-25) pending the Convention 2 nominee determination (no Date of Appointment on a nominee report); see cp_filing_0005 interest_disclosed._open_questions_surfaced.",
+  "qualifying_role": {
+    "role": "Trustee",
+    "start_date": "2017-01-01",
+    "end_date": "2024-12-31"
+  }
+}
