@@ -11,6 +11,6 @@
   ],
   "external_ids": [],
   "last_updated_from_filing": "cp_filing_0004",
-  "merged_into": null,
-  "notes": "Commercial real estate, Florham Park, NJ Disclosed at cp_filing_0004 Part 6 item 3.4 as a holding under Trust #3 (cp_entity_0255). Registered in Fork I-c per \u00a74 Table B."
+  "merged_into": "cp_entity_0086",
+  "notes": "Commercial real estate, Florham Park, NJ Disclosed at cp_filing_0004 Part 6 item 3.4 as a holding under Trust #3 (cp_entity_0255). Registered in Fork I-c per §4 Table B. MERGED into cp_entity_0086 per cp_merge_0002 (Session 06 Fork 1); duplicate registration."
 }

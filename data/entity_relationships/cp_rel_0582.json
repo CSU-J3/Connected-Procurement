@@ -1,7 +1,7 @@
 {
   "relationship_id": "cp_rel_0582",
   "source_id": "cp_entity_0255",
-  "target_id": "cp_entity_0297",
+  "target_id": "cp_entity_0086",
   "relation_kind": "entity_to_entity_subsidiary",
   "interest_type": "ownership",
   "value": {
@@ -19,5 +19,5 @@
   "excluded_from_total": true,
   "exclusion_reason": "pre-2025; comparative case set per PROJECT.md scope",
   "qualifying_role": null,
-  "notes": "Trust #3 (cp_entity_0255) holding of COLUMBIA CORPORATE CENTER DEVELOPMENT ASSOCIATES, LLC (cp_entity_0297), disclosed at cp_filing_0004 Part 6 item 3.4. New entity registered in Fork I-c. Form value bracket: $1,000,001 - $5,000,000. Income components per the locked income-disclosure encoding (form text): COLUMBIA CORPORATE CENTER N/A $1,000,001 - Rent or $1,000,001 - DEVELOPMENT ASSOCIATES, LLC $5,000,000 Royalties $5,000,000 (Commercial Real Estate in Florham Park, NJ)"
+  "notes": "Trust #3 (cp_entity_0255) holding of COLUMBIA CORPORATE CENTER DEVELOPMENT ASSOCIATES, LLC (cp_entity_0297), disclosed at cp_filing_0004 Part 6 item 3.4. New entity registered in Fork I-c. Form value bracket: $1,000,001 - $5,000,000. Income components per the locked income-disclosure encoding (form text): COLUMBIA CORPORATE CENTER N/A $1,000,001 - Rent or $1,000,001 - DEVELOPMENT ASSOCIATES, LLC $5,000,000 Royalties $5,000,000 (Commercial Real Estate in Florham Park, NJ) [Session 06 Fork 1: target repointed cp_entity_0297 -> cp_entity_0086 per merge cp_merge_0002.]"
 }

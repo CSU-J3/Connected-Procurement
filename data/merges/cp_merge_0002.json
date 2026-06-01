@@ -1,0 +1,12 @@
+{
+  "merge_id": "cp_merge_0002",
+  "loser_id": "cp_entity_0297",
+  "winner_id": "cp_entity_0086",
+  "rationale": "cp_entity_0086 'Columbia Corporate Center Development Associates, LLC' (Fork B, from Jared Kushner 278s) and cp_entity_0297 'COLUMBIA CORPORATE CENTER DEVELOPMENT ASSOCIATES, LLC' (Fork I-c, cp_filing_0004 Part 6 item 3.4 Trust #3 holding) are the same legal entity registered twice under case variants. Pre-existing registry duplicate, surfaced by the Session 06 Charles Kushner Appendix A dedup (Part 1 #11). Winner cp_entity_0086 (cleaner canonical casing, lower id, carries the Jared-side beneficial edges). cp_rel_0582 (cp_entity_0255 Trust #3 -> loser) repointed to winner.",
+  "source_urls": [
+    "OGE Form 278e Nominee Report (Kushner, Charles), filer-signed 2025-01-25, OGE-certified 2025-04-15; OGE Form 201 fulfillment received 2026-05-30, retained locally at .pdf_cache/kushner_nominee_278.pdf; no stable public OGE URL (nominee 278e copy past 1-year retention-destruction per 5 CFR 2634; not in OGE PAS Index /201/Presiden.nsf per session-03 navigation flag).",
+    "https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/5F31DD9F2CDBB2EC852581C20074CFAB/$FILE/Trump,%20Ivanka%20M.%202017NewEntrant%20278.pdf"
+  ],
+  "merged_on": "2026-06-01",
+  "merged_by": "session-06-fork-1"
+}
