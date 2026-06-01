@@ -1,0 +1,72 @@
+{
+  "filing_id": "cp_filing_0005",
+  "primary_source_url": "OGE Form 278e Nominee Report (Kushner, Charles), filer-signed 2025-01-25, OGE-certified 2025-04-15; OGE Form 201 fulfillment received 2026-05-30, retained locally at .pdf_cache/kushner_nominee_278.pdf; no stable public OGE URL (nominee 278e copy past 1-year retention-destruction per 5 CFR 2634; not in OGE PAS Index /201/Presiden.nsf per session-03 navigation flag).",
+  "source_filing_date": "2025-01-25",
+  "filer_id": "cp_person_0005",
+  "filing_type": "OGE_Form_278e_Nominee",
+  "interest_disclosed": {
+    "report_type": "Nominee Report",
+    "filer_position": "Ambassador to France & Monaco, Department of State (nominee)",
+    "filer_signature_date": "2025-01-25",
+    "agency_ethics_official_certification_date": "2025-04-15",
+    "agency_ethics_official": "Kimball, Emily J",
+    "oge_certification_date": "2025-04-15",
+    "oge_certifier": "Jaffe, Seth",
+    "reviewing_official_comment": "(2025-04-11, Walter, Marguerite): The entity reported on the line in Part 5 and Part 6 is the entity in which the filer or his spouse has an ownership interest. It also is the parent entity for the ownership structure reported in the endnote. The entity/entities that are at the bottom of the organizational structure directly hold the real estate that is reported along with the parent company.",
+    "scope_note": "Session 06 Fork 1 ingests the determinable layer only: the Part 1 Filer's Positions list (52 Appendix A retained entities + Carmel/Nara trustee roles) and the Part 2/5 filer/spouse values for Westminster Management. The Part 6 structured-entity layer (~400 line-items, pp 44-97) with its 167 endnote org-charts / 995 structure-node IDs (pp 99-132) is the in-scope real-estate asset layer and is staged to Forks 2+, one section at a time, like the Trump 2021 termination 278.",
+    "selected_entries_recorded_in_registry": [
+      {
+        "schedule": "Part 1 (Filer's Positions)",
+        "items": "1-51 + 54",
+        "description_on_form": "52 Appendix A retained real-estate/management entities (resigned positions, financial interest retained)",
+        "registry_relationships": "cp_rel_0931..cp_rel_0982 (family_to_entity/ownership, soft-flagged)"
+      },
+      {
+        "schedule": "Part 2 item 1 (filer) / Part 5 item 1 (spouse)",
+        "item_number": 1,
+        "description_on_form": "Westminster Management, LLC (Real Estate Property Management and Development, Florham Park, NJ)",
+        "value_on_form": "$5,000,001 - $25,000,000",
+        "income_type_on_form": "Guaranteed Payment (filer $50,000; spouse Distributions/Guaranteed Payment $1,500,000)",
+        "registry_relationship": "cp_rel for cp_entity_0001 (filer ownership; spouse/Convention 3 deferred to Fork S)"
+      },
+      {
+        "schedule": "Part 1 #52-53 / Part 2 items 2-3",
+        "item_number": "52-53",
+        "description_on_form": "Carmel Trust + Nara Trust (Reno, NV); Trustee role 1/2017-12/2024; Trustee Fees $25,000 each",
+        "registry_relationships": "cp_rel_0983, cp_rel_0984 (trust_trustee, ended pre-appointment, soft-flagged)"
+      }
+    ],
+    "_open_questions_surfaced": [
+      {
+        "id": "convention_2_nominee",
+        "status": "open",
+        "question": "Convention 2 (observed_on) has no case for a nominee report. The form's Date of Appointment is blank (the filing predates confirmation/appointment); the new-entrant rule anchors on the appointment / 208-trigger date, which does not exist on the form. observed_on on all cp_filing_0005 edges is PROVISIONALLY set to the filer-signature date 2025-01-25, documented here rather than assigned silently. Candidate resolutions for a later determination: filer-signature date (2025-01-25), Senate confirmation (2025-05-19, PN24-4), or swearing-in (2025-07-11). Don't-pre-resolve governs; the convention is extended when the maintainer rules."
+      },
+      {
+        "id": "convention_3_spousal",
+        "status": "open",
+        "question": "Live 18 USC 208(a)(2) spousal-imputation cases: Westminster Management, LLC (spouse retains equity, Part 5, $5M-$25M) and Westminster Pillar Management, LLC (Part 6 item 107, $5M-$25M, Management Fees $100,001-$250,000; spouse equity + fees per Ethics Agreement Section 4). Westminster Pillar is in the filing (Part 6, not Part 1). Spousal/imputed-edge modeling is deferred to Fork S, not folded into the bulk ingest."
+      },
+      {
+        "id": "appendix_b_divested",
+        "status": "logged_not_ingested",
+        "question": "Ethics Agreement Appendix B (~150 publicly-traded securities + foreign equities) plus the SPDR S&P Biotech ETF and Millennium USA LP (Section 3), and the Part 6 public-equity block (pp 18-43), are DIVESTED within 90 days of confirmation per the Ethics Agreement (2025-04-14) and Certification (2025-08-22). Out of scope (no federal-procurement nexus) and divested; excluded from entity ingest. List retained in the source documents (.pdf_cache). Logged here, not flooded into the registry as soft-flagged entities."
+      },
+      {
+        "id": "form_278t_discrepancy",
+        "status": "open",
+        "question": "Certification Section 3b indicates no 278-T was filed for the divestitures, yet a 278-T dated 09/26/2025 was requested/expected. Hold the tension; the 278-T gets its own ingest when it arrives and the discrepancy is a determination then."
+      }
+    ],
+    "_parse_provenance": {
+      "method": "Part 1 transcribed from 200dpi pypdfium2 renders (renderer rule) of nominee 278 pp 3-6; Part 2/5 values from 200dpi render of p 7; pdftotext -layout used only as cross-check (Part 6 value columns collide badly in text extraction). Document obtained via OGE Form 201 email fulfillment, retained locally at .pdf_cache/kushner_nominee_278.pdf; Ethics Agreement and Certification likewise (.pdf_cache/kushner_ethics_agreement.pdf, kushner_ea_certification.pdf). Built by Claude Code Session 06 Fork 1, 2026-06-01.",
+      "primary_source_authority": "OGE-certified electronic Form 278e via Integrity.gov: filer electronic signature Kushner, Charles 2025-01-25; agency ethics certifying official Kimball, Emily J 2025-04-15; OGE certifying official Jaffe, Seth 2025-04-15. Certification chain present on the document face. No stable public OGE URL (see primary_source_url).",
+      "verification_status": "Part 1 entity names and the single Fork-1 value (Westminster Management $5M-$25M) verified at 200dpi. Part 6 structured-entity values are NOT transcribed in Fork 1 (deferred to Forks 2+)."
+    }
+  },
+  "change_type": "original",
+  "replaces_filing_id": null,
+  "change_rationale": null,
+  "ingestion_timestamp": "2026-06-01T19:42:26Z",
+  "notes": "Charles Kushner nominee OGE Form 278e (Ambassador to France & Monaco), filer-signed 2025-01-25, OGE-certified 2025-04-15. First live-collected filing ingested under the live-collection phase. Fork 1 (determinable layer) only; Part 6 structured-entity layer staged to Forks 2+; Convention 2 and Convention 3 surfaced not resolved. All Appendix A edges soft-flagged excluded_from_total=true pending GSA-lease nexus (capture-then-annotate scope decision, Session 06)."
+}
