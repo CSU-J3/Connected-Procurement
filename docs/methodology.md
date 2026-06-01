@@ -113,10 +113,21 @@ The `observed_on` value on a relationship is the as-of date for the disclosure's
 - **Termination 278**: filer's exit date from the position.
 - **New-entrant 278**: filer's date of appointment / commencement of position. This is the 18 USC 208 trigger date and the moment the disclosure exists to document against. The form's value brackets reflect filing-date holdings, which on new-entrants postdates the appointment by weeks to months. This gap is a property of new-entrant form mechanics, not an `observed_on` problem; the gap is documented here so consumers of the registry understand that new-entrant value brackets and `observed_on` do not necessarily share an as-of date.
 - **Amendment**: inherits the `observed_on` of the filing it amends. The amendment's filer-signature date goes in `source_filing_date`; `observed_on` does not change.
+- **Nominee report**: filer-signature date (extension dated 2026-06-01; rationale below).
 
 The new-entrant rule was tested on the Ivanka Trump 2017 new-entrant 278 (`cp_filing_0004`): date of appointment 03/29/2017 sets `observed_on` on the filing's derived relationships, while the form's value brackets are end-of-reporting-period figures (the reporting period runs into late May 2017; filer signature 06/12/2017 under a 45-day extension). Picking filer-signature date would have placed the analytical anchor after the events the filing exists to document (the 03/09/2017 trust restructuring, the 03/29/2017 appointment); appointment date is the only candidate that aligns analytically.
 
 Locked: 2026-05-20.
+
+**Extension (2026-06-01): nominee report → `observed_on` = filer-signature date.** A nominee report has no reporting-period or appointment anchor; the form's Date of Appointment is blank because appointment has not occurred. The filer-signature date is the only point at which the document certifies the disclosed holdings were accurate, so it serves as the as-of date.
+
+`observed_on` is the point-in-time the disclosure describes (when the holdings were true), not a procedural milestone in the filer's appointment. That rules out the confirmation date and the swearing-in date: those are events in the filer's timeline, not statements about when the financial snapshot was accurate. The nominee snapshot can become actively false after the filing (e.g., after the 90-day divestiture window the disclosed portfolio has been sold), so `observed_on` cannot be a later milestone on which the data the field stamps was already wrong. Annual reports anchor to the prior year-end and termination reports to the termination date by convention; a nominee report has neither, leaving the signature date as the sole certified as-of point.
+
+Implication, not a conflict: a later incumbent annual 278 from the same filer carries its own (prior-year-end) `observed_on`. The two filings will show different as-of dates for overlapping entities, correctly — the nominee report is the pre-divestiture snapshot, the annual is post-divestiture. Different `observed_on` is how the registry distinguishes the two points in time; it is not a supersession or a conflict.
+
+Determined 2026-06-01 against the Charles Kushner nominee 278 (`cp_filing_0005`, `observed_on` 2025-01-25), confirming the provisional Fork 1 value as ruled.
+
+Locked: 2026-06-01.
 
 ## Relationship modeling
 
