@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0458",
+  "canonical_name": "715 Park Avenue Corp",
+  "aliases": [
+    {
+      "name": "715 Park Avenue Corp",
+      "source_url": "OGE Form 278e Nominee Report (Kushner, Charles), filer-signed 2025-01-25, OGE-certified 2025-04-15; OGE Form 201 fulfillment received 2026-05-30, retained locally at .pdf_cache/kushner_nominee_278.pdf; no stable public OGE URL (nominee 278e copy past 1-year retention-destruction per 5 CFR 2634; not in OGE PAS Index /201/Presiden.nsf per session-03 navigation flag).",
+      "source_filing_date": "2025-01-25",
+      "notes": "Part 1 (Filer's Positions Held Outside United States Government); position: President."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0005",
+  "merged_into": null,
+  "notes": "Kushner Companies real-estate / management entity. Disclosed by Charles Kushner on his nominee OGE Form 278e (cp_filing_0005) Part 1 (Filer's Positions) as President; resigned upon confirmation per Ethics Agreement Section 2 / Appendix A (2025-04-14), financial interest retained. Soft-flagged: the filer-held relationship edge carries excluded_from_total=true pending GSA-lease nexus."
+}

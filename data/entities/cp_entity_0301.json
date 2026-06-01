@@ -7,10 +7,16 @@
       "source_url": "https://assets.documentcloud.org/documents/4385351/Trump-Ivanka-New-Entrant-OGE-Certified.pdf",
       "source_filing_date": "2017-06-12",
       "notes": "Form-disclosed name on cp_filing_0004 Part 6."
+    },
+    {
+      "name": "Cranbury Building Associates, LLC",
+      "source_url": "OGE Form 278e Nominee Report (Kushner, Charles), filer-signed 2025-01-25, OGE-certified 2025-04-15; OGE Form 201 fulfillment received 2026-05-30, retained locally at .pdf_cache/kushner_nominee_278.pdf; no stable public OGE URL (nominee 278e copy past 1-year retention-destruction per 5 CFR 2634; not in OGE PAS Index /201/Presiden.nsf per session-03 navigation flag).",
+      "source_filing_date": "2025-01-25",
+      "notes": "Name variant as printed on cp_filing_0005 (Charles Kushner nominee 278) Part 1; position: Managing Member."
     }
   ],
   "external_ids": [],
-  "last_updated_from_filing": "cp_filing_0004",
+  "last_updated_from_filing": "cp_filing_0005",
   "merged_into": null,
-  "notes": "Undeveloped real estate, Cranbury, NJ Disclosed at cp_filing_0004 Part 6 item 3.21 as a holding under Trust #3 (cp_entity_0255). Registered in Fork I-c per \u00a74 Table B."
+  "notes": "Undeveloped real estate, Cranbury, NJ Disclosed at cp_filing_0004 Part 6 item 3.21 as a holding under Trust #3 (cp_entity_0255). Registered in Fork I-c per §4 Table B. Also disclosed by Charles Kushner on cp_filing_0005 (nominee 278) Part 1 as Managing Member; retained-interest edge soft-flagged pending GSA nexus."
 }
