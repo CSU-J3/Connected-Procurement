@@ -39,8 +39,8 @@
     "_open_questions_surfaced": [
       {
         "id": "convention_2_nominee",
-        "status": "open",
-        "question": "Convention 2 (observed_on) has no case for a nominee report. The form's Date of Appointment is blank (the filing predates confirmation/appointment); the new-entrant rule anchors on the appointment / 208-trigger date, which does not exist on the form. observed_on on all cp_filing_0005 edges is PROVISIONALLY set to the filer-signature date 2025-01-25, documented here rather than assigned silently. Candidate resolutions for a later determination: filer-signature date (2025-01-25), Senate confirmation (2025-05-19, PN24-4), or swearing-in (2025-07-11). Don't-pre-resolve governs; the convention is extended when the maintainer rules."
+        "status": "resolved",
+        "question": "Convention 2 (observed_on) had no case for a nominee report (the form's Date of Appointment is blank). RULED 2026-06-01 (methodology, Convention 2 extension): a nominee report's observed_on = the filer-signature date, the only point at which the document certifies the holdings were accurate. observed_on on all cp_filing_0005 edges = 2025-01-25 is ruled, not provisional. Confirmation (2025-05-19) and swearing-in (2025-07-11) are milestones in the filer's timeline, not as-of statements, and the post-divestiture window would make the snapshot false by then. A later incumbent annual will carry its own prior-year-end observed_on; different as-of dates for overlapping entities is correct, not a supersession."
       },
       {
         "id": "convention_3_spousal",
