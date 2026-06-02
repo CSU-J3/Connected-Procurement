@@ -60,7 +60,7 @@
       {
         "id": "fork2_trust1",
         "status": "partial",
-        "question": "Fork 2 / Trust 1 ingested (trust-intermediate model): Trust 1 + 30 in-scope holdings + filer->trust trust_beneficial; 56 residential grouped; 480.27 deferred. Pier Village III Hotel JV recurs (480.36/480.40); Cop Investors (480.44/480.86) and US Cop Realty (480.45/480.89) recur - one edge each, recurrence noted. Trusts 2-16 + Trust #19 remain (Fork 2 continuation / Fork 3); deeper endnote tiers Fork 5; Convention 3 Fork S."
+        "question": "Fork 2 / Trust 1 ingested (trust-intermediate model): Trust 1 + 30 in-scope holdings + filer->trust trust_beneficial; 56 residential grouped; 480.27 deferred (illegible; tracked in _deferred_unreadable, not _excluded_categories). Pier Village III Hotel JV recurs (480.36/480.40); Cop Investors (480.44/480.86) and US Cop Realty (480.45/480.89) recur - one edge each, recurrence noted. Trusts 2-16 + Trust #19 remain (Fork 2 continuation / Fork 3); deeper endnote tiers Fork 5; Convention 3 Fork S."
       }
     ],
     "_parse_provenance": {
@@ -75,14 +75,19 @@
           "category": "residential_rental_holdings_trust_1",
           "approx_entries": 56,
           "rationale": "Trust 1 (Part 6 item 480) residential-rental leaf holdings among its 91 sub-items 480.1-480.91; default-exclude per section 3.0 (residential rental LLCs are not federal-procurement counterparties). Grouped, not individually registered. A few are already-registered Appendix A entities (e.g. Landings Apartments cp_entity_0080) whose Part 1 position edges stand; their Trust 1 residential ownership is in this grouped count, not individually edged."
-        },
-        {
-          "category": "trust_1_deferred_unreadable",
-          "entries": 1,
-          "rationale": "Trust 1 sub-item 480.27 ('Monmouth Mall', undeveloped) renders too sparsely to transcribe its value reliably even at 300dpi; deferred for re-inspection rather than guessed (methodology renderer/ambiguity rule). In-scope; to be registered when the value is locked."
         }
       ]
-    }
+    },
+    "_deferred_unreadable": [
+      {
+        "sub_item": "480.27",
+        "name": "Monmouth Mall",
+        "trust": "Trust 1 (cp_entity_0495)",
+        "re_type": "Undeveloped (in scope per section 3.0)",
+        "status": "deferred_illegible",
+        "reason": "Part 6 Trust 1 sub-item 480.27 renders too sparsely to transcribe its value reliably even at 300dpi. This is an in-scope holding deferred ONLY for illegibility, not a deliberate scope-exclusion (distinct from the residential rental holdings grouped in _excluded_categories). To be registered as a Trust 1 -> holding subsidiary edge when a cleaner render or an alternate source supplies the value. Revisit item; do not treat as a permanent exclusion."
+      }
+    ]
   },
   "change_type": "original",
   "replaces_filing_id": null,
