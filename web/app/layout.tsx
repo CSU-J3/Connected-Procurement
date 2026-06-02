@@ -43,6 +43,11 @@ export default async function RootLayout({
           entities={entities.length}
           persons={persons.length}
           edges={relationships.length}
+          phase={
+            filings.some((f) => f.ingestion_timestamp)
+              ? 'live collection'
+              : 'pre-collection'
+          }
         />
         <main className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-6">
           {children}

@@ -125,6 +125,9 @@ export interface Filing {
   change_type: ChangeType;
   replaces_filing_id: FilingId | null;
   change_rationale: string | null;
+  // ISO 8601 UTC datetime when this filing entered the registry under live-collection.
+  // Null/absent for pre-2025 comparative records. Presence marks the live-collection phase.
+  ingestion_timestamp?: string | null;
   notes: string;
 }
 
