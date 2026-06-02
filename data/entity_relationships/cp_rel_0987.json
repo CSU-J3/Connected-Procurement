@@ -1,0 +1,19 @@
+{
+  "relationship_id": "cp_rel_0987",
+  "source_id": "cp_entity_0495",
+  "target_id": "cp_entity_0496",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 500001,
+    "high": 1000000
+  },
+  "filing_source": "cp_filing_0005",
+  "observed_on": "2025-01-25",
+  "excluded_from_total": true,
+  "exclusion_reason": "Retained interest via Trust 1 per Charles Kushner nominee 278 Part 6; federal-procurement nexus not yet established; pending GSA-lease match. Captured (not gated) per the Session 06 capture-then-annotate scope decision.",
+  "ingestion_timestamp": "2026-06-02T00:32:22Z",
+  "notes": "Trust 1 -> holding. Sub-item 480.20; Commercial and Residential Real Estate in Long Branch, NJ. observed_on = filer-signature date (2025-01-25) per the Convention 2 nominee-report ruling (methodology, 2026-06-01)."
+}
