@@ -56,12 +56,32 @@
         "id": "form_278t_discrepancy",
         "status": "open",
         "question": "Certification Section 3b indicates no 278-T was filed for the divestitures, yet a 278-T dated 09/26/2025 was requested/expected. Hold the tension; the 278-T gets its own ingest when it arrives and the discrepancy is a determination then."
+      },
+      {
+        "id": "fork2_trust1",
+        "status": "partial",
+        "question": "Fork 2 / Trust 1 ingested (trust-intermediate model): Trust 1 + 30 in-scope holdings + filer->trust trust_beneficial; 56 residential grouped; 480.27 deferred. Pier Village III Hotel JV recurs (480.36/480.40); Cop Investors (480.44/480.86) and US Cop Realty (480.45/480.89) recur - one edge each, recurrence noted. Trusts 2-16 + Trust #19 remain (Fork 2 continuation / Fork 3); deeper endnote tiers Fork 5; Convention 3 Fork S."
       }
     ],
     "_parse_provenance": {
       "method": "Part 1 transcribed from 200dpi pypdfium2 renders (renderer rule) of nominee 278 pp 3-6; Part 2/5 values from 200dpi render of p 7; pdftotext -layout used only as cross-check (Part 6 value columns collide badly in text extraction). Document obtained via OGE Form 201 email fulfillment, retained locally at .pdf_cache/kushner_nominee_278.pdf; Ethics Agreement and Certification likewise (.pdf_cache/kushner_ethics_agreement.pdf, kushner_ea_certification.pdf). Built by Claude Code Session 06 Fork 1, 2026-06-01.",
       "primary_source_authority": "OGE-certified electronic Form 278e via Integrity.gov: filer electronic signature Kushner, Charles 2025-01-25; agency ethics certifying official Kimball, Emily J 2025-04-15; OGE certifying official Jaffe, Seth 2025-04-15. Certification chain present on the document face. No stable public OGE URL (see primary_source_url).",
       "verification_status": "Part 1 entity names and the single Fork-1 value (Westminster Management $5M-$25M) verified at 200dpi. Part 6 structured-entity values are NOT transcribed in Fork 1 (deferred to Forks 2+)."
+    },
+    "_excluded_categories": {
+      "_methodology": "Grouped exclusion summary per the section 3.0 registry inclusion test (docs/methodology.md). Residential-rental and personal-use holdings are not given individual cp_entity records; recorded as grouped counts. Trust holdings grouped per-trust so the trust->holding structure isn't lost. Session 06 Fork 2+.",
+      "categories": [
+        {
+          "category": "residential_rental_holdings_trust_1",
+          "approx_entries": 56,
+          "rationale": "Trust 1 (Part 6 item 480) residential-rental leaf holdings among its 91 sub-items 480.1-480.91; default-exclude per section 3.0 (residential rental LLCs are not federal-procurement counterparties). Grouped, not individually registered. A few are already-registered Appendix A entities (e.g. Landings Apartments cp_entity_0080) whose Part 1 position edges stand; their Trust 1 residential ownership is in this grouped count, not individually edged."
+        },
+        {
+          "category": "trust_1_deferred_unreadable",
+          "entries": 1,
+          "rationale": "Trust 1 sub-item 480.27 ('Monmouth Mall', undeveloped) renders too sparsely to transcribe its value reliably even at 300dpi; deferred for re-inspection rather than guessed (methodology renderer/ambiguity rule). In-scope; to be registered when the value is locked."
+        }
+      ]
     }
   },
   "change_type": "original",

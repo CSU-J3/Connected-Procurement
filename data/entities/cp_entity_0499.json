@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0499",
+  "canonical_name": "KCOF E 47 LLC",
+  "aliases": [
+    {
+      "name": "KCOF E 47 LLC",
+      "source_url": "OGE Form 278e Nominee Report (Kushner, Charles), filer-signed 2025-01-25, OGE-certified 2025-04-15; OGE Form 201 fulfillment, retained locally .pdf_cache/kushner_nominee_278.pdf (no stable public URL). Part 6 item 480 (Trust 1) and its sub-item enumeration 480.x.",
+      "source_filing_date": "2025-01-25",
+      "notes": "Sub-item 480.41; lender vehicle holding a loan receivable from LEX 47th Property Owner LLC (residential property, New York, NY). Interest income $2,501-$5,000. debt_instrument_held in substance; obligor residential -> grouped per section 3.0."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0005",
+  "merged_into": null,
+  "notes": "Held by Trust 1 (cp_entity_0495) per Charles Kushner nominee 278 Part 6 (Sub-item 480.41; lender vehicle holding a loan receivable from LEX 47th Property Owner LLC (residential property, New York, NY). Interest income $2,501-$5,000. debt_instrument_held in substance; obligor residential -> grouped per section 3.0.). section 3.0-included (LOAN); soft-flagged via the trust->holding edge pending GSA nexus."
+}

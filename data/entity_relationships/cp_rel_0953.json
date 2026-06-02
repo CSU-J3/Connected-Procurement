@@ -3,7 +3,7 @@
   "source_id": "cp_person_0005",
   "target_id": "cp_entity_0095",
   "relation_kind": "family_to_entity",
-  "interest_type": "ownership",
+  "interest_type": "employment",
   "value": {
     "unit": "none",
     "shape": "binary"
@@ -13,5 +13,5 @@
   "excluded_from_total": true,
   "exclusion_reason": "Retained financial interest per Kushner Ethics Agreement Appendix A (2025-04-14); federal-procurement nexus not yet established; pending GSA-lease match. Captured (not gated) per the Session 06 capture-then-annotate scope decision.",
   "ingestion_timestamp": "2026-06-01T19:42:26Z",
-  "notes": "Charles Kushner retained financial interest in K 30 Journal Square, LLC. Disclosed on cp_filing_0005 Part 1 as Managing Member (resigned upon confirmation per Ethics Agreement Section 2 / Appendix A). Part 1 is a position-only disclosure with no value column; the Part 6 ownership value, where disclosed, is deferred to the Part 6 structured-entity forks (Forks 2+). value=binary captures interest-exists-value-not-stated-at-this-layer. observed_on = the filer-signature date (2025-01-25) per the Convention 2 nominee-report ruling (methodology, 2026-06-01): a nominee report has no reporting-period or appointment anchor, so the signature date is the as-of date. See cp_filing_0005 interest_disclosed._open_questions_surfaced."
+  "notes": "Charles Kushner retained financial interest in K 30 Journal Square, LLC. Disclosed on cp_filing_0005 Part 1 as Managing Member (resigned upon confirmation per Ethics Agreement Section 2 / Appendix A). Part 1 is a position-only disclosure with no value column; the Part 6 ownership value, where disclosed, is deferred to the Part 6 structured-entity forks (Forks 2+). value=binary captures interest-exists-value-not-stated-at-this-layer. observed_on = the filer-signature date (2025-01-25) per the Convention 2 nominee-report ruling (methodology, 2026-06-01): a nominee report has no reporting-period or appointment anchor, so the signature date is the as-of date. See cp_filing_0005 interest_disclosed._open_questions_surfaced. [Session 06 Fork 2 reconciliation: re-typed ownership->employment. This edge represents the resigned Part 1 management position (Appendix A); the entity's ownership routes through Trust 1 as a separate entity_to_entity_subsidiary edge with the Part 6 value. One entity = one position edge (direct, resigned) + one ownership edge (via trust).]"
 }

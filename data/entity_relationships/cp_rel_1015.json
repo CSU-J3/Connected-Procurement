@@ -1,0 +1,19 @@
+{
+  "relationship_id": "cp_rel_1015",
+  "source_id": "cp_entity_0495",
+  "target_id": "cp_entity_0514",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 1001,
+    "high": 15000
+  },
+  "filing_source": "cp_filing_0005",
+  "observed_on": "2025-01-25",
+  "excluded_from_total": true,
+  "exclusion_reason": "Retained interest via Trust 1 per Charles Kushner nominee 278 Part 6; federal-procurement nexus not yet established; pending GSA-lease match. Captured (not gated) per the Session 06 capture-then-annotate scope decision.",
+  "ingestion_timestamp": "2026-06-02T00:32:22Z",
+  "notes": "Trust 1 -> holding. Sub-item 480.51; Commercial Real Estate located in New York, NY. Rent/income $1,001-$15,000. observed_on = filer-signature date (2025-01-25) per the Convention 2 nominee-report ruling (methodology, 2026-06-01)."
+}
