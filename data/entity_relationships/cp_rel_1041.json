@@ -1,0 +1,19 @@
+{
+  "relationship_id": "cp_rel_1041",
+  "source_id": "cp_entity_0515",
+  "target_id": "cp_entity_0509",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 50001,
+    "high": 100000
+  },
+  "filing_source": "cp_filing_0005",
+  "observed_on": "2025-01-25",
+  "excluded_from_total": true,
+  "exclusion_reason": "Retained interest via Trust 2 per Charles Kushner nominee 278 Part 6; federal-procurement nexus not yet established; pending GSA-lease match. Captured (not gated) per the Session 06 capture-then-annotate scope decision.",
+  "ingestion_timestamp": "2026-06-04T15:00:00Z",
+  "notes": "Trust 2 -> holding. Sub-item 481.66; parent holding company of Defiance ETFs LLC (issuer of exchange traded funds). Fund/holdco. observed_on = filer-signature date (2025-01-25) per the Convention 2 nominee-report ruling (methodology, 2026-06-01)."
+}

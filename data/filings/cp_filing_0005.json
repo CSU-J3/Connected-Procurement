@@ -60,7 +60,7 @@
       {
         "id": "fork2_trust1",
         "status": "partial",
-        "question": "Fork 2 / Trust 1 ingested (trust-intermediate model): Trust 1 + 30 in-scope holdings + filer->trust trust_beneficial; 56 residential grouped; 480.27 deferred (illegible; tracked in _deferred_unreadable, not _excluded_categories). Pier Village III Hotel JV recurs (480.36/480.40); Cop Investors (480.44/480.86) and US Cop Realty (480.45/480.89) recur - one edge each, recurrence noted. Trusts 2-16 + Trust #19 remain (Fork 2 continuation / Fork 3); deeper endnote tiers Fork 5; Convention 3 Fork S."
+        "question": "Fork 2 / Trust 1 ingested (trust-intermediate model): Trust 1 + 30 in-scope holdings + filer->trust trust_beneficial; 56 residential grouped; 480.27 deferred (illegible; tracked in _deferred_unreadable, not _excluded_categories). Pier Village III Hotel JV recurs (480.36/480.40); Cop Investors (480.44/480.86) and US Cop Realty (480.45/480.89) recur - one edge each, recurrence noted. Trusts 2-16 + Trust #19 remain (Fork 2 continuation / Fork 3); deeper endnote tiers Fork 5; Convention 3 Fork S. [UPDATE 2026-06-04] Fork 2 / Trust 2 ingested (trust-intermediate model): Trust 2 (cp_entity_0515) + 32 in-scope holdings (all attaches; 0 new entities) + filer->Trust 2 trust_beneficial (cp_rel_1016); 32 Trust 2->holding subsidiary edges cp_rel_1017-1048; 54 residential grouped. 481.27 Monmouth Mall (cp_entity_0120) legible at 300dpi here and registered (Trust 1's 480.27 remains deferred-illegible). Cop Investors (481.44/481.88), US Cop Realty (481.45/481.89), Iroquois (481.68/481.91) recur within Trust 2 - one edge each, recurrence noted. No new Fork-1 re-types: the 4 shared Appendix A edges (cp_rel_0949/0953/0964/0965) were already re-typed ownership->employment in Trust 1; Trust 2 ownership routes via the new subsidiary edges. Trusts 3-16 + Trust #19 remain (Fork 2 continuation / Fork 3); deeper endnote tiers Fork 5; Convention 3 Fork S."
       }
     ],
     "_parse_provenance": {
@@ -75,6 +75,11 @@
           "category": "residential_rental_holdings_trust_1",
           "approx_entries": 56,
           "rationale": "Trust 1 (Part 6 item 480) residential-rental leaf holdings among its 91 sub-items 480.1-480.91; default-exclude per section 3.0 (residential rental LLCs are not federal-procurement counterparties). Grouped, not individually registered. A few are already-registered Appendix A entities (e.g. Landings Apartments cp_entity_0080) whose Part 1 position edges stand; their Trust 1 residential ownership is in this grouped count, not individually edged."
+        },
+        {
+          "category": "residential_rental_holdings_trust_2",
+          "approx_entries": 54,
+          "rationale": "Trust 2 (Part 6 item 481) residential-rental leaf holdings among its 91 sub-items 481.1-481.91; default-exclude per section 3.0 (residential rental LLCs are not federal-procurement counterparties). Grouped, not individually registered. Includes 481.43 (115 E 87, LLC) and 481.63 (State Tower of Syracuse Associates, LLC), both labeled Residential in the document despite commercial-sounding names (section 3.0 node-level: type taken from the document, not inferred). Residential proceeds-of-sale recurrences (481.80-481.85, 481.90) are within this grouped count. A few are already-registered Appendix A / earlier-filing entities whose own edges stand; their Trust 2 residential ownership is in this grouped count, not individually edged."
         }
       ]
     },
