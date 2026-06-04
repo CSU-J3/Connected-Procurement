@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0520",
+  "canonical_name": "KCOF W 57th Street",
+  "aliases": [
+    {
+      "name": "KCOF W 57th Street",
+      "source_url": "OGE Form 278e Nominee Report (Kushner, Charles), filer-signed 2025-01-25, OGE-certified 2025-04-15; OGE Form 201 fulfillment, retained locally .pdf_cache/kushner_nominee_278.pdf (no stable public URL). Part 6 item 483 (Trust 4) and its sub-item enumeration 483.x.",
+      "source_filing_date": "2025-01-25",
+      "notes": "Sub-item 483.3; KCOF-family lender vehicle holding a loan receivable from 57-58 Partners LLC for real estate in New York, NY. Rent/Royalties $100,001-$1,000,000. debt_instrument_held in substance; counterparty 57-58 Partners LLC is a named unregistered LLC -> debt holding with named-unregistered counterparty (ruling #4). Name printed without an 'LLC' suffix on the form (siblings KCOF E 47 LLC / KCOF Bay Harbor, LLC are LLCs); recorded as printed."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0005",
+  "merged_into": null,
+  "notes": "Held by Trust 4 (cp_entity_0519) per Charles Kushner nominee 278 Part 6 (Sub-item 483.3; KCOF-family lender vehicle holding a loan receivable from 57-58 Partners LLC for real estate in New York, NY. Rent/Royalties $100,001-$1,000,000. debt_instrument_held in substance; counterparty 57-58 Partners LLC is a named unregistered LLC -> debt holding with named-unregistered counterparty (ruling #4). Name printed without an 'LLC' suffix on the form (siblings KCOF E 47 LLC / KCOF Bay Harbor, LLC are LLCs); recorded as printed.). section 3.0-included (LOAN); soft-flagged via the trust->holding edge pending GSA nexus."
+}

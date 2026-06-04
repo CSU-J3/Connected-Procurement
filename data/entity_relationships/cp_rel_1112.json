@@ -1,0 +1,19 @@
+{
+  "relationship_id": "cp_rel_1112",
+  "source_id": "cp_entity_0519",
+  "target_id": "cp_entity_0469",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 0,
+    "high": 1001
+  },
+  "filing_source": "cp_filing_0005",
+  "observed_on": "2025-01-25",
+  "excluded_from_total": true,
+  "exclusion_reason": "Retained interest via Trust 4 per Charles Kushner nominee 278 Part 6; federal-procurement nexus not yet established; pending GSA-lease match. Captured (not gated) per the Session 06 capture-then-annotate scope decision.",
+  "ingestion_timestamp": "2026-06-04T20:30:00Z",
+  "notes": "Trust 4 -> holding. Sub-item 483.71 (recurs 483.93); Real Estate sold in 2024. Trust 4-held ownership; resigned Part 1 position is the cp_rel_0949 edge (re-typed ownership->employment in Trust 1). One edge; recurrence noted. observed_on = filer-signature date (2025-01-25) per the Convention 2 nominee-report ruling (methodology, 2026-06-01)."
+}
