@@ -15,5 +15,5 @@
   "excluded_from_total": true,
   "exclusion_reason": "Retained interest via Trust 1 per Charles Kushner nominee 278 Part 6; federal-procurement nexus not yet established; pending GSA-lease match. Captured (not gated) per the Session 06 capture-then-annotate scope decision.",
   "ingestion_timestamp": "2026-06-02T00:32:22Z",
-  "notes": "Trust 1 -> holding. Sub-item 480.41; lender vehicle holding a loan receivable from LEX 47th Property Owner LLC (residential property, New York, NY). Interest income $2,501-$5,000. debt_instrument_held in substance; obligor residential -> grouped per section 3.0. observed_on = filer-signature date (2025-01-25) per the Convention 2 nominee-report ruling (methodology, 2026-06-01)."
+  "notes": "Trust 1 -> holding. Part 6, Sub-item 480.41; lender vehicle holding a loan receivable from LEX 47th Property Owner LLC (residential property, New York, NY). Interest income $2,501-$5,000. debt_instrument_held in substance; obligor residential -> grouped per section 3.0. observed_on = filer-signature date (2025-01-25) per the Convention 2 nominee-report ruling (methodology, 2026-06-01)."
 }
