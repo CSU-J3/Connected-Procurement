@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0516",
+  "canonical_name": "Trust 3 (Charles Kushner nominee OGE 278 disclosure)",
+  "aliases": [
+    {
+      "name": "Trust 3",
+      "source_url": "OGE Form 278e Nominee Report (Kushner, Charles), filer-signed 2025-01-25, OGE-certified 2025-04-15; OGE Form 201 fulfillment, retained locally .pdf_cache/kushner_nominee_278.pdf (no stable public URL). Part 6 item 482 (Trust 3) and its sub-item enumeration 482.x.",
+      "source_filing_date": "2025-01-25",
+      "notes": "Anonymized trust label, Part 6 item 482 of the Charles Kushner nominee 278; holdings enumerated as sub-items 482.1-482.78."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0005",
+  "merged_into": null,
+  "notes": "Anonymized trust intermediate disclosed on Charles Kushner's nominee OGE 278 (cp_filing_0005) Part 6 item 482. Holds a block of real-estate interests (78 enumerated sub-items 482.1-482.78), structurally parallel to Trusts 1-2. Registered per the locked trust-intermediate convention: the filer's interest routes filer -> Trust 3 (trust_beneficial) -> holdings (entity_to_entity_subsidiary). Per Session 06 Fork 2, in-scope (commercial / undeveloped / operating / fund / loan-counterparty) holdings are individually registered as subsidiary nodes (34 distinct: 2 new entities + 32 attaches); 40 residential-rental sub-items are grouped per-trust in cp_filing_0005 _excluded_categories per the locked section 3.0 inclusion test. Deeper endnote org-chart tiers (6.482.x.x) are deferred to Fork 5."
+}

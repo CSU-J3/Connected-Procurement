@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0517",
+  "canonical_name": "KF - Centerview LLC",
+  "aliases": [
+    {
+      "name": "KF - Centerview LLC",
+      "source_url": "OGE Form 278e Nominee Report (Kushner, Charles), filer-signed 2025-01-25, OGE-certified 2025-04-15; OGE Form 201 fulfillment, retained locally .pdf_cache/kushner_nominee_278.pdf (no stable public URL). Part 6 item 482 (Trust 3) and its sub-item enumeration 482.x.",
+      "source_filing_date": "2025-01-25",
+      "notes": "Sub-item 482.42; Limited Partnership Investment. Named investment vehicle (fund); section 3.0 default-include."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0005",
+  "merged_into": null,
+  "notes": "Held by Trust 3 (cp_entity_0516) per Charles Kushner nominee 278 Part 6 (Sub-item 482.42; Limited Partnership Investment. Named investment vehicle (fund); section 3.0 default-include.). section 3.0-included (FUND); soft-flagged via the trust->holding edge pending GSA nexus."
+}
