@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0530",
+  "canonical_name": "Milford Realty Building Associates, LP",
+  "aliases": [
+    {
+      "name": "Milford Realty Building Associates, LP",
+      "source_url": "OGE Form 278e Nominee Report (Kushner, Charles), filer-signed 2025-01-25, OGE-certified 2025-04-15; OGE Form 201 fulfillment, retained locally .pdf_cache/kushner_nominee_278.pdf (no stable public URL). Part 6 item 489 and its sub-item enumeration 489.x.",
+      "source_filing_date": "2025-01-25",
+      "notes": "First held by Trust 10 (Part 6 item 489.13); Undeveloped Real Estate in Milford, PA."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0005",
+  "merged_into": null,
+  "notes": "Held by Trust 10 (cp_entity_0528) per Charles Kushner nominee 278 Part 6 (item 489.13; Undeveloped Real Estate in Milford, PA). section 3.0-included (U); soft-flagged via the trust->holding edge pending GSA nexus. Session 06 Fork 3. Also held by Trust 11 (cp_entity_0531) on Charles Kushner nominee 278 Part 6 (item 490.13). Also held by Trust 12 (cp_entity_0532) on Charles Kushner nominee 278 Part 6 (item 491.12). Also held by Trust 13 (cp_entity_0533) on Charles Kushner nominee 278 Part 6 (item 492.14)."
+}

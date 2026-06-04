@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0521",
+  "canonical_name": "Trust 5 (Charles Kushner nominee OGE 278 disclosure)",
+  "aliases": [
+    {
+      "name": "Trust 5",
+      "source_url": "OGE Form 278e Nominee Report (Kushner, Charles), filer-signed 2025-01-25, OGE-certified 2025-04-15; OGE Form 201 fulfillment, retained locally .pdf_cache/kushner_nominee_278.pdf (no stable public URL). Part 6 item 484 and its sub-item enumeration 484.x.",
+      "source_filing_date": "2025-01-25",
+      "notes": "Anonymized trust label, Part 6 item 484 of the Charles Kushner nominee 278."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0005",
+  "merged_into": null,
+  "notes": "Anonymized trust intermediate disclosed on Charles Kushner's nominee OGE 278 (cp_filing_0005) Part 6 item 484. Registered per the locked trust-intermediate convention: filer -> Trust 5 (trust_beneficial) -> holdings (entity_to_entity_subsidiary). In-scope holdings individually registered as subsidiary nodes (16 this trust); 32 residential-rental sub-items grouped per-trust in cp_filing_0005 _excluded_categories per the section 3.0 inclusion test. Session 06 Fork 3 (Trusts 5-16 + Trust #19). Deeper endnote tiers deferred to Fork 5."
+}

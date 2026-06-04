@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0543",
+  "canonical_name": "Trust #19 (Charles Kushner nominee OGE 278 disclosure)",
+  "aliases": [
+    {
+      "name": "Trust #19",
+      "source_url": "OGE Form 278e Nominee Report (Kushner, Charles), filer-signed 2025-01-25, OGE-certified 2025-04-15; OGE Form 201 fulfillment, retained locally .pdf_cache/kushner_nominee_278.pdf (no stable public URL). Part 6 item 499 and its sub-item enumeration 499.x.",
+      "source_filing_date": "2025-01-25",
+      "notes": "Anonymized trust label, Part 6 item 499 of the Charles Kushner nominee 278; 7 residential rental properties in New York, NY (sub-items 499.1-499.7)."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0005",
+  "merged_into": null,
+  "notes": "Anonymized trust intermediate disclosed on Charles Kushner's nominee OGE 278 (cp_filing_0005) Part 6 item 499. Holds 7 residential rental properties in New York, NY (sub-items 499.1-499.7), all default-excluded per section 3.0 (residential rental). Registered per ruling #3: the trust is an entity with the grouped residential count; the filer -> Trust #19 trust_beneficial edge is recorded, but no individual trust->holding subsidiary edges (all 7 holdings are grouped). Session 06 Fork 3."
+}

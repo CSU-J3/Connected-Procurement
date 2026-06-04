@@ -61,6 +61,11 @@
         "id": "fork2_trust1",
         "status": "partial",
         "question": "Fork 2 / Trust 1 ingested (trust-intermediate model): Trust 1 + 30 in-scope holdings + filer->trust trust_beneficial; 56 residential grouped; 480.27 deferred (illegible; tracked in _deferred_unreadable, not _excluded_categories). Pier Village III Hotel JV recurs (480.36/480.40); Cop Investors (480.44/480.86) and US Cop Realty (480.45/480.89) recur - one edge each, recurrence noted. Trusts 2-16 + Trust #19 remain (Fork 2 continuation / Fork 3); deeper endnote tiers Fork 5; Convention 3 Fork S. [UPDATE 2026-06-04] Fork 2 / Trust 2 ingested (trust-intermediate model): Trust 2 (cp_entity_0515) + 32 in-scope holdings (all attaches; 0 new entities) + filer->Trust 2 trust_beneficial (cp_rel_1016); 32 Trust 2->holding subsidiary edges cp_rel_1017-1048; 54 residential grouped. 481.27 Monmouth Mall (cp_entity_0120) legible at 300dpi here and registered (Trust 1's 480.27 remains deferred-illegible). Cop Investors (481.44/481.88), US Cop Realty (481.45/481.89), Iroquois (481.68/481.91) recur within Trust 2 - one edge each, recurrence noted. No new Fork-1 re-types: the 4 shared Appendix A edges (cp_rel_0949/0953/0964/0965) were already re-typed ownership->employment in Trust 1; Trust 2 ownership routes via the new subsidiary edges. Trusts 3-16 + Trust #19 remain (Fork 2 continuation / Fork 3); deeper endnote tiers Fork 5; Convention 3 Fork S. [UPDATE 2026-06-04 b] Fork 2 / Trust 3 ingested: Trust 3 (cp_entity_0516) + 34 in-scope holdings (2 new entities cp_entity_0517 KF-Centerview LLC, cp_entity_0518 9300 Collins LLC; 32 attaches) + filer->Trust 3 trust_beneficial (cp_rel_1049); 34 Trust 3->holding subsidiary edges cp_rel_1050-1083; 40 residential grouped. 482.16 Monmouth Mall legible and registered. Fork-1 re-type this pass: cp_rel_0938 (CK Livingston Esplanade, LLC) ownership->employment (first trust it recurs in-scope); the other 4 shared Appendix A edges already employment-typed in Trust 1. Cop Investors (482.33/482.76), US Cop Realty (482.34/482.77), Iroquois (482.59/482.78) recur within Trust 3 - one edge each. Trusts 4-16 + Trust #19 remain; deeper endnote tiers Fork 5; Convention 3 Fork S. [UPDATE 2026-06-04 c] Fork 2 / Trust 4 ingested (last of the four large trusts): Trust 4 (cp_entity_0519) + 33 in-scope holdings (1 new entity cp_entity_0520 KCOF W 57th Street; 32 attaches) + filer->Trust 4 trust_beneficial (cp_rel_1084); 33 Trust 4->holding subsidiary edges cp_rel_1085-1117; 55 residential grouped. 483.2 'Kushner Family Office, LLC' labeled Residential (Miami, FL) -> grouped, not registered. No new Fork-1 re-types (only the standard 4 shared Appendix A edges hit Trust 4, all already employment; CK Livingston Esplanade does not appear here). Cop Investors (483.46/483.91), US Cop Realty (483.47/483.92), Iroquois (483.71/483.93) recur within Trust 4 - one edge each. Trusts 1-4 (the large block) now complete; Trusts 5-16 + Trust #19 remain (Fork 3); deeper endnote tiers Fork 5; Convention 3 Fork S."
+      },
+      {
+        "id": "fork3_trusts_5_16_19",
+        "status": "resolved",
+        "question": "Fork 3 ingested (2026-06-04): Trusts 5-16 (Part 6 items 484-495) + Trust #19 (item 499). 13 trust entities + 10 new holding entities (Hotel Westminster Management, The Landings at Harborside, Puck Residential Associates, Milford Realty Building Associates, and 6 Trust-16 NJ commercial JVs: Schoolhouse / Westfield / Five Acre / LMP / Mt Pleasant / Taylor Edison); 111 trust->holding subsidiary edges + 13 filer->trust edges. Fork-1 reconciliation: re-typed 7 Appendix A ownership edges -> employment (cp_rel_0932/0936/0941/0945/0963/0969/0977 for Sixty-Six West, CK Bergen, Columbia Corp Center, Florham Park Realty, Pinecrest Lake, 30 Florham, Westminster Mad). Trust #19 = 7 residential grouped (ruling #3). OUT OF THIS PASS: item 496 (Art Work) and items 497/498 (Trust #17/#18, life insurance) are non-RE instruments, surfaced but not registered (section 3.0 exclude); items 500-504 inter-trust loans = Fork 4. Trusts 1-16 + Trust #19 now complete; Fork 4 (inter-trust loans + Fork-1 position-edge sweep) and Fork 5 (endnote tiers) remain; Convention 3 = Fork S."
       }
     ],
     "_parse_provenance": {
@@ -90,6 +95,71 @@
           "category": "residential_rental_holdings_trust_4",
           "approx_entries": 55,
           "rationale": "Trust 4 (Part 6 item 483) residential-rental leaf holdings among its 93 sub-items 483.1-483.93; default-exclude per section 3.0. Grouped, not individually registered. Includes 483.2 (Kushner Family Office, LLC, Residential Real Estate in Miami, FL), 483.65 (State Tower of Syracuse Associates, LLC, Residential in Leonia, NJ) and 483.80 (Journal Square OZF, LLC, Residential) - all labeled Residential in the document despite name (section 3.0 node-level: type from the document, not inferred). Residential proceeds-of-sale recurrences (483.83-483.88) are within this grouped count. A few are already-registered Appendix A / earlier-filing entities whose own edges stand; their Trust 4 residential ownership is in this grouped count, not individually edged."
+        },
+        {
+          "category": "residential_rental_holdings_trust_5",
+          "approx_entries": 32,
+          "rationale": "Trust 5 (Part 6 item 484) residential-rental leaf holdings; default-exclude per section 3.0. Grouped, not individually registered. Includes any residential proceeds-of-sale recurrences and already-registered Appendix A / earlier-filing residential entities whose own edges stand. Session 06 Fork 3."
+        },
+        {
+          "category": "residential_rental_holdings_trust_6",
+          "approx_entries": 3,
+          "rationale": "Trust 6 (Part 6 item 485) residential-rental leaf holdings; default-exclude per section 3.0. Grouped, not individually registered. Includes any residential proceeds-of-sale recurrences and already-registered Appendix A / earlier-filing residential entities whose own edges stand. Session 06 Fork 3."
+        },
+        {
+          "category": "residential_rental_holdings_trust_7",
+          "approx_entries": 3,
+          "rationale": "Trust 7 (Part 6 item 486) residential-rental leaf holdings; default-exclude per section 3.0. Grouped, not individually registered. Includes any residential proceeds-of-sale recurrences and already-registered Appendix A / earlier-filing residential entities whose own edges stand. Session 06 Fork 3."
+        },
+        {
+          "category": "residential_rental_holdings_trust_8",
+          "approx_entries": 3,
+          "rationale": "Trust 8 (Part 6 item 487) residential-rental leaf holdings; default-exclude per section 3.0. Grouped, not individually registered. Includes any residential proceeds-of-sale recurrences and already-registered Appendix A / earlier-filing residential entities whose own edges stand. Session 06 Fork 3."
+        },
+        {
+          "category": "residential_rental_holdings_trust_9",
+          "approx_entries": 3,
+          "rationale": "Trust 9 (Part 6 item 488) residential-rental leaf holdings; default-exclude per section 3.0. Grouped, not individually registered. Includes any residential proceeds-of-sale recurrences and already-registered Appendix A / earlier-filing residential entities whose own edges stand. Session 06 Fork 3."
+        },
+        {
+          "category": "residential_rental_holdings_trust_10",
+          "approx_entries": 12,
+          "rationale": "Trust 10 (Part 6 item 489) residential-rental leaf holdings; default-exclude per section 3.0. Grouped, not individually registered. Includes any residential proceeds-of-sale recurrences and already-registered Appendix A / earlier-filing residential entities whose own edges stand. Session 06 Fork 3."
+        },
+        {
+          "category": "residential_rental_holdings_trust_11",
+          "approx_entries": 12,
+          "rationale": "Trust 11 (Part 6 item 490) residential-rental leaf holdings; default-exclude per section 3.0. Grouped, not individually registered. Includes any residential proceeds-of-sale recurrences and already-registered Appendix A / earlier-filing residential entities whose own edges stand. Session 06 Fork 3."
+        },
+        {
+          "category": "residential_rental_holdings_trust_12",
+          "approx_entries": 12,
+          "rationale": "Trust 12 (Part 6 item 491) residential-rental leaf holdings; default-exclude per section 3.0. Grouped, not individually registered. Includes any residential proceeds-of-sale recurrences and already-registered Appendix A / earlier-filing residential entities whose own edges stand. Session 06 Fork 3."
+        },
+        {
+          "category": "residential_rental_holdings_trust_13",
+          "approx_entries": 12,
+          "rationale": "Trust 13 (Part 6 item 492) residential-rental leaf holdings; default-exclude per section 3.0. Grouped, not individually registered. Includes any residential proceeds-of-sale recurrences and already-registered Appendix A / earlier-filing residential entities whose own edges stand. Session 06 Fork 3."
+        },
+        {
+          "category": "residential_rental_holdings_trust_14",
+          "approx_entries": 5,
+          "rationale": "Trust 14 (Part 6 item 493) residential-rental leaf holdings; default-exclude per section 3.0. Grouped, not individually registered. Includes any residential proceeds-of-sale recurrences and already-registered Appendix A / earlier-filing residential entities whose own edges stand. Session 06 Fork 3."
+        },
+        {
+          "category": "residential_rental_holdings_trust_15",
+          "approx_entries": 2,
+          "rationale": "Trust 15 (Part 6 item 494) residential-rental leaf holdings; default-exclude per section 3.0. Grouped, not individually registered. Includes any residential proceeds-of-sale recurrences and already-registered Appendix A / earlier-filing residential entities whose own edges stand. Session 06 Fork 3."
+        },
+        {
+          "category": "residential_rental_holdings_trust_16",
+          "approx_entries": 21,
+          "rationale": "Trust 16 (Part 6 item 495) residential-rental leaf holdings; default-exclude per section 3.0. Grouped, not individually registered. Includes any residential proceeds-of-sale recurrences and already-registered Appendix A / earlier-filing residential entities whose own edges stand. Session 06 Fork 3."
+        },
+        {
+          "category": "residential_rental_holdings_trust_19",
+          "approx_entries": 7,
+          "rationale": "Trust #19 (Part 6 item 499) holds 7 residential rental properties in New York, NY (499.1-499.7), all default-excluded per section 3.0 (ruling #3). Trust #19 registered as an entity with this grouped count + a filer trust_beneficial edge; no individual trust->holding subsidiary edges."
         }
       ]
     },

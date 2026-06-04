@@ -1,0 +1,19 @@
+{
+  "relationship_id": "cp_rel_1192",
+  "source_id": "cp_entity_0527",
+  "target_id": "cp_entity_0111",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 1001,
+    "high": 15000
+  },
+  "filing_source": "cp_filing_0005",
+  "observed_on": "2025-01-25",
+  "excluded_from_total": true,
+  "exclusion_reason": "Retained interest via Trust 9 per Charles Kushner nominee 278 Part 6; federal-procurement nexus not yet established; pending GSA-lease match. Captured (not gated) per the Session 06 capture-then-annotate scope decision.",
+  "ingestion_timestamp": "2026-06-04T23:30:00Z",
+  "notes": "Trust 9 -> holding. Part 6, sub-item 488.15; Undeveloped Real Estate in Pemberton, NJ. observed_on = filer-signature date (2025-01-25) per the Convention 2 nominee-report ruling (methodology, 2026-06-01)."
+}
