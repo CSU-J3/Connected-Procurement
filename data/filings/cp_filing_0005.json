@@ -71,6 +71,11 @@
         "id": "fork4_loans_and_position_sweep",
         "status": "resolved",
         "question": "Fork 4 ingested (2026-06-04): (1) Inter-trust loans Part 6 items 500-504 registered as 5 debt_instrument_held edges from the filer to the named Trust parties (cp_rel_1242-1246: Trust 1/2/3/4 + Trust #19, each $5,000,001-$25,000,000). The 'family member' co-obligor at 500-503 is unnamed in the filing -> undetermined/named-unregistered counterparty recorded as a note, not a person edge (ruling #4). (2) Appendix A position-edge sweep: 0 re-types needed - every Appendix A entity recurring as an in-scope trust holding was already re-typed across Trusts 1-4 + Fork 3. The 7 grouped-residential shared Appendix A LLCs (Landings 0080, Oakwood 0081, Wallkill 0082, 65 Bay 0306, 715 Park 0459, Lindenlawn 0476, West End 0486) KEEP ownership (no individual trust ownership edge to route to; re-typing would erase the only ownership record) - documented via a reconciliation note on each (cp_rel_0934/0951/0957/0959/0961/0972/0974). The 32 management/GP Corps + Cranbury Building Associates (0301) are pure Part 1 positions (not Part 6 holdings), out of the sweep, unchanged. Remaining: Fork 5 (endnote org-chart tiers) + Fork S (Convention 3 Westminster spousal)."
+      },
+      {
+        "id": "fork5_endnote_tiers",
+        "status": "resolved",
+        "question": "Fork 5 ingested (2026-06-05, option 2): walked the deep endnote org-chart tiers below 23 in-scope registered Part 6 holdings (commercial/undeveloped/operating/fund). Registered 24 new structural intermediaries (cp_entity_0544-0567: Eatontown Monmouth Mall complex chain shared by Monmouth Mall/Mall 2/K Monmouth Village, CK Bergen holdcos, RFR/K Dumbo, + 9300 Collins / Village KF 12-13 / K30 Journal Partners / K2 26JS Member / Warren at Bay Holdings / 115 Spring Mezz / 80 Maid) + 33 entity_to_entity_subsidiary edges (cp_rel_1247-1279) recording the ownership chains; existing nodes (Bruckner Plaza 0039, manager Corps 0460/0461/0463/0468/0471/0488) linked, not re-created. 38 leaves captured as structure in _endnote_leaf_structure (NOT promoted), with parent linkage + re_type for GSA matching; borderline commercial/undeveloped leaves flagged (Monmouth V Urban Renewal cos, Pier Village III Retail/Hotel UR, RFR/K Dumbo TIC Holdings, Pollitt Drive, etc.). Residential-grouped holdings' charts NOT walked (scope inherits section-3.0 down the tree). re_type undetermined at every deep tier (no labels; not inferred). Deferred-illegible: 0. Remaining: Fork S (Convention 3 Westminster spousal) + the GSA annotation pass (which can promote flagged leaves on a lease match)."
       }
     ],
     "_parse_provenance": {
@@ -177,7 +182,271 @@
         "status": "deferred_illegible",
         "reason": "Part 6 Trust 1 sub-item 480.27 renders too sparsely to transcribe its value reliably even at 300dpi. This is an in-scope holding deferred ONLY for illegibility, not a deliberate scope-exclusion (distinct from the residential rental holdings grouped in _excluded_categories). To be registered as a Trust 1 -> holding subsidiary edge when a cleaner render or an alternate source supplies the value. Revisit item; do not treat as a permanent exclusion."
       }
-    ]
+    ],
+    "_endnote_leaf_structure": {
+      "_methodology": "Fork 5 option 2: terminal endnote nodes (leaves) below in-scope Part 6 holdings, captured as structure (NOT promoted to entities) per the section-3.0 leaf rule. Recorded with name + parent linkage + holding + re_type so the GSA annotation pass can match a federal lease and promote the leaf to a full entity at that point (promote-on-nexus). borderline_promote_candidate=true marks commercial/undeveloped/operating leaves where a GSA nexus could plausibly attach; false marks residential/loan/fund leaves that stay structure-only.",
+      "leaves": [
+        {
+          "leaf_name": "Monmouth V R1 Urban Renewal LLC",
+          "parent_entity": "cp_entity_0550",
+          "holding_entity": "cp_entity_0120",
+          "re_type": "commercial (Monmouth Mall redevelopment)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "Monmouth V R2 Urban Renewal LLC",
+          "parent_entity": "cp_entity_0551",
+          "holding_entity": "cp_entity_0120",
+          "re_type": "commercial (Monmouth Mall redevelopment)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "Monmouth V R3 Urban Renewal LLC",
+          "parent_entity": "cp_entity_0552",
+          "holding_entity": "cp_entity_0120",
+          "re_type": "commercial (Monmouth Mall redevelopment)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "Monmouth V Urban Renewal LLC",
+          "parent_entity": "cp_entity_0553",
+          "holding_entity": "cp_entity_0120",
+          "re_type": "commercial (Monmouth Mall redevelopment)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "Monmouth V MOB Urban Renewal LLC",
+          "parent_entity": "cp_entity_0554",
+          "holding_entity": "cp_entity_0120",
+          "re_type": "commercial (Monmouth Mall medical-office)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "Monmouth V WF Urban Renewal LLC",
+          "parent_entity": "cp_entity_0555",
+          "holding_entity": "cp_entity_0120",
+          "re_type": "commercial (Monmouth Mall)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "WP-Drift Pollitt Drive Associates LLC",
+          "parent_entity": "cp_entity_0556",
+          "holding_entity": "cp_entity_0092",
+          "re_type": "undeveloped (Fair Lawn, NJ)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "WP CKB Capital TIC LLC",
+          "parent_entity": "cp_entity_0557",
+          "holding_entity": "cp_entity_0092",
+          "re_type": "residential (Wake Forest, NC)",
+          "borderline_promote_candidate": false
+        },
+        {
+          "leaf_name": "WP CKB Skyland TIC LLC",
+          "parent_entity": "cp_entity_0557",
+          "holding_entity": "cp_entity_0092",
+          "re_type": "residential (Asheville, NC)",
+          "borderline_promote_candidate": false
+        },
+        {
+          "leaf_name": "WP CKB Estraya TIC LLC",
+          "parent_entity": "cp_entity_0557",
+          "holding_entity": "cp_entity_0092",
+          "re_type": "residential (San Antonio, TX)",
+          "borderline_promote_candidate": false
+        },
+        {
+          "leaf_name": "WP CKB Mansfield TIC LLC",
+          "parent_entity": "cp_entity_0557",
+          "holding_entity": "cp_entity_0092",
+          "re_type": "residential (Mansfield, TX)",
+          "borderline_promote_candidate": false
+        },
+        {
+          "leaf_name": "WP CKB Veranda TIC LLC",
+          "parent_entity": "cp_entity_0557",
+          "holding_entity": "cp_entity_0092",
+          "re_type": "residential (Lafayette, LA)",
+          "borderline_promote_candidate": false
+        },
+        {
+          "leaf_name": "WP CKB Waterstone TIC LLC",
+          "parent_entity": "cp_entity_0557",
+          "holding_entity": "cp_entity_0092",
+          "re_type": "residential (Lexington, KY)",
+          "borderline_promote_candidate": false
+        },
+        {
+          "leaf_name": "WP CKB FiftyO2 TIC LLC",
+          "parent_entity": "cp_entity_0557",
+          "holding_entity": "cp_entity_0092",
+          "re_type": "residential (San Antonio, TX)",
+          "borderline_promote_candidate": false
+        },
+        {
+          "leaf_name": "WP CKB Mason TIC LLC",
+          "parent_entity": "cp_entity_0557",
+          "holding_entity": "cp_entity_0092",
+          "re_type": "residential (Slidell, LA)",
+          "borderline_promote_candidate": false
+        },
+        {
+          "leaf_name": "WP CKB Heights TIC LLC",
+          "parent_entity": "cp_entity_0557",
+          "holding_entity": "cp_entity_0092",
+          "re_type": "residential (Montgomery, AL)",
+          "borderline_promote_candidate": false
+        },
+        {
+          "leaf_name": "Houston CKB Rosemary LLC",
+          "parent_entity": "cp_entity_0558",
+          "holding_entity": "cp_entity_0092",
+          "re_type": "residential (Humble, TX)",
+          "borderline_promote_candidate": false
+        },
+        {
+          "leaf_name": "Houston CKB Stone Loch LLC",
+          "parent_entity": "cp_entity_0558",
+          "holding_entity": "cp_entity_0092",
+          "re_type": "residential (Tomball, TX)",
+          "borderline_promote_candidate": false
+        },
+        {
+          "leaf_name": "Houston CKB Alys LLC",
+          "parent_entity": "cp_entity_0558",
+          "holding_entity": "cp_entity_0092",
+          "re_type": "residential (Cypress, TX)",
+          "borderline_promote_candidate": false
+        },
+        {
+          "leaf_name": "RFR/K Dumbo TIC Holdings LLC",
+          "parent_entity": "cp_entity_0560",
+          "holding_entity": "cp_entity_0508",
+          "re_type": "commercial (DUMBO, Brooklyn NY)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "Fifth Associates LLC",
+          "parent_entity": "cp_entity_0507",
+          "holding_entity": "cp_entity_0507",
+          "re_type": "undetermined (666 Bruckner)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "9300 Collins Owner LLC",
+          "parent_entity": "cp_entity_0561",
+          "holding_entity": "cp_entity_0518",
+          "re_type": "undeveloped (Surfside, FL)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "Pier Village III Retail Urban Renewal Company LLC",
+          "parent_entity": "cp_entity_0497",
+          "holding_entity": "cp_entity_0497",
+          "re_type": "commercial (Long Branch, NJ)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "Pier Village III Hotel Urban Renewal Company LLC",
+          "parent_entity": "cp_entity_0055",
+          "holding_entity": "cp_entity_0055",
+          "re_type": "commercial (Long Branch, NJ)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "Esplanade Livingston LLC",
+          "parent_entity": "cp_entity_0123",
+          "holding_entity": "cp_entity_0123",
+          "re_type": "commercial (Livingston, NJ)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "KCOF E 47 Partners LLC",
+          "parent_entity": "cp_entity_0499",
+          "holding_entity": "cp_entity_0499",
+          "re_type": "loan vehicle",
+          "borderline_promote_candidate": false
+        },
+        {
+          "leaf_name": "KCOF Bay Harbor Partners LLC",
+          "parent_entity": "cp_entity_0500",
+          "holding_entity": "cp_entity_0500",
+          "re_type": "loan vehicle",
+          "borderline_promote_candidate": false
+        },
+        {
+          "leaf_name": "Village KF 516 East 13th LLC",
+          "parent_entity": "cp_entity_0562",
+          "holding_entity": "cp_entity_0469",
+          "re_type": "residential (New York, NY; sold 2024)",
+          "borderline_promote_candidate": false
+        },
+        {
+          "leaf_name": "K2 26JS Partner, LLC",
+          "parent_entity": "cp_entity_0564",
+          "holding_entity": "cp_entity_0094",
+          "re_type": "commercial (Jersey City, NJ)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "Warren at Bay Urban Renewal Company LLC",
+          "parent_entity": "cp_entity_0565",
+          "holding_entity": "cp_entity_0098",
+          "re_type": "commercial (Jersey City, NJ)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "Indiantown QO Business LLC",
+          "parent_entity": "cp_entity_0512",
+          "holding_entity": "cp_entity_0512",
+          "re_type": "undeveloped (Indiantown, FL)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "Indiantown QO Business II LLC",
+          "parent_entity": "cp_entity_0512",
+          "holding_entity": "cp_entity_0512",
+          "re_type": "undeveloped (Indiantown, FL)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "115 Spring Purchaser LLC",
+          "parent_entity": "cp_entity_0566",
+          "holding_entity": "cp_entity_0514",
+          "re_type": "commercial (New York, NY)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "NK 80 Maiden Holdings LLC",
+          "parent_entity": "cp_entity_0567",
+          "holding_entity": "cp_entity_0096",
+          "re_type": "commercial (New York, NY)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "148 MAD LLC",
+          "parent_entity": "cp_entity_0104",
+          "holding_entity": "cp_entity_0104",
+          "re_type": "commercial (New York, NY)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "Walsam 61 LLC",
+          "parent_entity": "cp_entity_0105",
+          "holding_entity": "cp_entity_0105",
+          "re_type": "commercial (New York, NY)",
+          "borderline_promote_candidate": true
+        },
+        {
+          "leaf_name": "Centerview Capital, L.P.",
+          "parent_entity": "cp_entity_0517",
+          "holding_entity": "cp_entity_0517",
+          "re_type": "fund (underlying holdings below reporting threshold)",
+          "borderline_promote_candidate": false
+        }
+      ]
+    }
   },
   "change_type": "original",
   "replaces_filing_id": null,

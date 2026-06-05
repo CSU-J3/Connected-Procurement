@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0561",
+  "canonical_name": "9300 Collins Associates LLC",
+  "aliases": [
+    {
+      "name": "9300 Collins Associates LLC",
+      "source_url": "OGE Form 278e Nominee Report (Kushner, Charles), filer-signed 2025-01-25, OGE-certified 2025-04-15; OGE Form 201 fulfillment, retained locally .pdf_cache/kushner_nominee_278.pdf (no stable public URL). Part 6 endnote org-chart tiers (pp 106-115).",
+      "source_filing_date": "2025-01-25",
+      "notes": "Structural ownership-vehicle intermediary in a Part 6 endnote org-chart (re_type undetermined)."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0005",
+  "merged_into": null,
+  "notes": "Structural intermediary (ownership-vehicle layer) captured in the Charles Kushner nominee 278 endnote org-chart below an in-scope Part 6 holding. re_type: undetermined (no RE-type label at this tier; not inferred, per the locked section-3.0 node-level sub-rule). Registered per Session 06 Fork 5 option 2 (intermediaries only; leaves captured as structure, not promoted). Soft-flagged pending GSA."
+}

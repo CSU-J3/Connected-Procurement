@@ -1,0 +1,17 @@
+{
+  "relationship_id": "cp_rel_1256",
+  "source_id": "cp_entity_0549",
+  "target_id": "cp_entity_0551",
+  "relation_kind": "entity_to_entity_subsidiary",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "none",
+    "shape": "binary"
+  },
+  "filing_source": "cp_filing_0005",
+  "observed_on": "2025-01-25",
+  "excluded_from_total": true,
+  "exclusion_reason": "Structural ownership-vehicle intermediary in the endnote org-chart below an in-scope Part 6 holding; captured per Session 06 Fork 5 option 2. Soft-flagged pending GSA-lease nexus.",
+  "ingestion_timestamp": "2026-06-05T04:00:00Z",
+  "notes": "Endnote org-chart tier (Fork 5): cp_entity_0549 -> cp_entity_0551. Ownership-vehicle structure below an in-scope Part 6 holding; value binary (no per-tier value disclosed). re_type undetermined at this tier. observed_on = filer-signature date (2025-01-25) per the Convention 2 nominee-report ruling (methodology, 2026-06-01)."
+}
