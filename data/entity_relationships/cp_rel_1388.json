@@ -1,0 +1,19 @@
+{
+  "relationship_id": "cp_rel_1388",
+  "source_id": "cp_person_0006",
+  "target_id": "cp_entity_0570",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 5000001,
+    "high": 25000000
+  },
+  "filing_source": "cp_filing_0005",
+  "observed_on": "2025-01-25",
+  "excluded_from_total": true,
+  "exclusion_reason": "Spouse's retained interest per Charles Kushner nominee 278 Part 5 (Spouse's Employment Assets & Income); federal-procurement nexus not yet established; pending GSA-lease match. Captured (not gated) per the Session 06 capture-then-annotate scope decision.",
+  "ingestion_timestamp": "2026-06-05T20:00:00Z",
+  "notes": "Spouse of Charles Kushner (cp_person_0006) retained ownership interest in Westminster Pillar Management, LLC (Real Estate Management Company). Disclosed at cp_filing_0005 Part 5 (Spouse's Employment Assets & Income) item 107: value $5,000,001-$25,000,000; income Management Fees $100,001-$250,000 (income captured here per the locked income-disclosure encoding). interest_type=ownership (equity interest). The filer's 18 USC 208(a)(2) imputed edge is cp_rel_1389 (Convention 3). Genuinely-new spouse-side entity registered this fork. observed_on = filer-signature date (2025-01-25) per the Convention 2 nominee-report ruling (methodology, 2026-06-01)."
+}

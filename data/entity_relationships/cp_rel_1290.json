@@ -1,0 +1,19 @@
+{
+  "relationship_id": "cp_rel_1290",
+  "source_id": "cp_person_0006",
+  "target_id": "cp_entity_0085",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 100001,
+    "high": 250000
+  },
+  "filing_source": "cp_filing_0005",
+  "observed_on": "2025-01-25",
+  "excluded_from_total": true,
+  "exclusion_reason": "Spouse's retained interest per Charles Kushner nominee 278 Part 5 (Spouse's Employment Assets & Income); federal-procurement nexus not yet established; pending GSA-lease match. Captured (not gated) per the Session 06 capture-then-annotate scope decision.",
+  "ingestion_timestamp": "2026-06-05T20:00:00Z",
+  "notes": "Spouse of Charles Kushner (cp_person_0006) retained ownership interest in 30 Florham Associates, LLC (Commercial Real Estate in Florham Park, NJ). Disclosed at cp_filing_0005 Part 5 (Spouse's Employment Assets & Income) item 40: value $100,001-$250,000; income Rent or Royalties $15,001-$50,000 (income captured here per the locked income-disclosure encoding). interest_type=ownership (equity interest). The filer's 18 USC 208(a)(2) imputed edge is cp_rel_1291 (Convention 3). Attach: entity already registered (the filer also holds it via the Part 6 trust chain / Appendix A); the spouse interest + imputed edge are distinct disclosed facts, not a double-count (Convention 3 dedup-key handles totals). observed_on = filer-signature date (2025-01-25) per the Convention 2 nominee-report ruling (methodology, 2026-06-01)."
+}

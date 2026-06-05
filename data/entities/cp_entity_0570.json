@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0570",
+  "canonical_name": "Westminster Pillar Management, LLC",
+  "aliases": [
+    {
+      "name": "Westminster Pillar Management, LLC",
+      "source_url": "OGE Form 278e Nominee Report (Kushner, Charles), filer-signed 2025-01-25, OGE-certified 2025-04-15; OGE Form 201 fulfillment, retained locally .pdf_cache/kushner_nominee_278.pdf (no stable public URL). Part 5 (Spouse's Employment Assets & Income) item 107.",
+      "source_filing_date": "2025-01-25",
+      "notes": "Part 5 item 107; Real Estate Management Company."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0005",
+  "merged_into": null,
+  "notes": "Spouse-side holding disclosed at Charles Kushner nominee 278 Part 5 item 107 (Real Estate Management Company). OPERATING/management company; section 3.0 default-include. Not previously registered (no 'Pillar' entity existed); render-verified 200dpi Part 5 p16. The live 18 USC 208(a)(2) Westminster Pillar case surfaced in the cp_filing_0005 convention_3_spousal open question (which mislabeled it Part 6; it is Part 5 item 107). Soft-flagged via the spouse family_to_entity edge pending GSA nexus (Fork S, Convention 3 spousal imputation)."
+}

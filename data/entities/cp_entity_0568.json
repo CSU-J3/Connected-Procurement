@@ -1,0 +1,16 @@
+{
+  "entity_id": "cp_entity_0568",
+  "canonical_name": "Westminster Title Realty Corp",
+  "aliases": [
+    {
+      "name": "Westminster Title Realty Corp",
+      "source_url": "OGE Form 278e Nominee Report (Kushner, Charles), filer-signed 2025-01-25, OGE-certified 2025-04-15; OGE Form 201 fulfillment, retained locally .pdf_cache/kushner_nominee_278.pdf (no stable public URL). Part 5 (Spouse's Employment Assets & Income) item 3.",
+      "source_filing_date": "2025-01-25",
+      "notes": "Part 5 item 3; Real Estate Title Company."
+    }
+  ],
+  "external_ids": [],
+  "last_updated_from_filing": "cp_filing_0005",
+  "merged_into": null,
+  "notes": "Spouse-side holding disclosed at Charles Kushner nominee 278 Part 5 item 3 (Real Estate Title Company). OPERATING (real estate title company); section 3.0 default-include. Distinct from cp_entity_0034 Westminster Title Associates, LLC (different entity; render-verified 200dpi Part 5 p8). Soft-flagged via the spouse family_to_entity edge pending GSA nexus (Fork S, Convention 3 spousal imputation)."
+}

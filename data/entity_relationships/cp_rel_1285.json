@@ -1,0 +1,22 @@
+{
+  "relationship_id": "cp_rel_1285",
+  "source_id": "cp_person_0005",
+  "target_id": "cp_entity_0568",
+  "relation_kind": "family_to_entity",
+  "interest_type": "spousal_imputed",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "imputed",
+    "low": null,
+    "high": null,
+    "exact": null,
+    "floor": null,
+    "imputation_source": "cp_rel_1284"
+  },
+  "filing_source": "cp_filing_0005",
+  "observed_on": "2025-01-25",
+  "excluded_from_total": true,
+  "exclusion_reason": "Spousal-imputed interest under 18 USC 208(a)(2) (Convention 3); imputed edges are flagged for de-duplication in distinct-interest totals per the Convention 3 dedup-key; federal-procurement nexus pending GSA-lease match. Captured per the Session 06 capture-then-annotate scope decision.",
+  "ingestion_timestamp": "2026-06-05T20:00:00Z",
+  "notes": "Charles Kushner's interest in Westminster Title Realty Corp imputed under 18 USC 208(a)(2) via spousal imputation (Convention 3). value.shape=imputed; imputation_source=cp_rel_1284 (the spouse's underlying family_to_entity edge per cp_filing_0005 Part 5 item 3); value not restated per Convention 3 (recoverable by traversal). Non-filer spouse cp_person_0006 -> one-direction imputation only (no spouse filing to impute from in reverse). The imputed edge does not assert direct holding. observed_on = filer-signature date (2025-01-25) per the Convention 2 nominee-report ruling (methodology, 2026-06-01)."
+}

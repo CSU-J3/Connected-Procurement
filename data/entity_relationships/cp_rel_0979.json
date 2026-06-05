@@ -3,7 +3,7 @@
   "source_id": "cp_person_0005",
   "target_id": "cp_entity_0001",
   "relation_kind": "family_to_entity",
-  "interest_type": "ownership",
+  "interest_type": "employment",
   "value": {
     "unit": "dollar_holding",
     "shape": "range",
@@ -15,5 +15,5 @@
   "excluded_from_total": true,
   "exclusion_reason": "Retained financial interest per Kushner Ethics Agreement Appendix A (2025-04-14); federal-procurement nexus not yet established; pending GSA-lease match. Captured (not gated) per the Session 06 capture-then-annotate scope decision.",
   "ingestion_timestamp": "2026-06-01T19:42:26Z",
-  "notes": "Charles Kushner retained financial interest in Westminster Management, LLC (Real Estate Property Management and Development, Florham Park, NJ). Value per cp_filing_0005 Part 2 item 1 (filer): $5,000,001-$25,000,000; income Guaranteed Payment $50,000. Part 1 #49 position: Managing Member (Chairman/Managing Member per Part 4), resigned upon confirmation per Ethics Agreement Section 2. Spouse's parallel interest (Part 5, $5M-$25M) and 18 USC 208(a)(2) imputation are deferred to Fork S (Convention 3). observed_on = the filer-signature date (2025-01-25) per the Convention 2 nominee-report ruling (methodology, 2026-06-01): a nominee report has no reporting-period or appointment anchor, so the signature date is the as-of date. See cp_filing_0005 interest_disclosed._open_questions_surfaced."
+  "notes": "Charles Kushner's employment-asset interest in Westminster Management, LLC (Real Estate Property Management and Development, Florham Park, NJ). Value per cp_filing_0005 Part 2 item 1 (filer): $5,000,001-$25,000,000; income Guaranteed Payment $50,000. Part 4 lists him as Chairman/Managing Member; Part 1 #49 position resigned upon confirmation per Ethics Agreement Section 2. [Fork S re-type 2026-06-05, ruling #5] interest_type re-typed ownership->employment: this is the Part 2 employment-asset interest (managerial position). The filer's retained passive OWNERSHIP is the separate Part 6 item-462 edge ($25M-$50M); the spouse's separate Part 5 interest is cp_rel_1280 (+ imputed cp_rel_1281). Three distinct Westminster interests, four edges, no double-count. observed_on = filer-signature date (2025-01-25) per the Convention 2 nominee-report ruling (methodology, 2026-06-01). See cp_filing_0005 interest_disclosed._open_questions_surfaced (convention_3_spousal)."
 }

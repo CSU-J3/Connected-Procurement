@@ -1,0 +1,19 @@
+{
+  "relationship_id": "cp_rel_1378",
+  "source_id": "cp_person_0006",
+  "target_id": "cp_entity_0569",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 1001,
+    "high": 15000
+  },
+  "filing_source": "cp_filing_0005",
+  "observed_on": "2025-01-25",
+  "excluded_from_total": true,
+  "exclusion_reason": "Spouse's retained interest per Charles Kushner nominee 278 Part 5 (Spouse's Employment Assets & Income); federal-procurement nexus not yet established; pending GSA-lease match. Captured (not gated) per the Session 06 capture-then-annotate scope decision.",
+  "ingestion_timestamp": "2026-06-05T20:00:00Z",
+  "notes": "Spouse of Charles Kushner (cp_person_0006) retained ownership interest in Westminster Realty & Sales Assoc, LLC (commercial real estate brokerage company). Disclosed at cp_filing_0005 Part 5 (Spouse's Employment Assets & Income) item 99: value $1,001-$15,000; income None (or less than $201) (income captured here per the locked income-disclosure encoding). interest_type=ownership (equity interest). The filer's 18 USC 208(a)(2) imputed edge is cp_rel_1379 (Convention 3). Genuinely-new spouse-side entity registered this fork. observed_on = filer-signature date (2025-01-25) per the Convention 2 nominee-report ruling (methodology, 2026-06-01)."
+}

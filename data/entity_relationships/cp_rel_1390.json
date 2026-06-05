@@ -1,0 +1,19 @@
+{
+  "relationship_id": "cp_rel_1390",
+  "source_id": "cp_person_0005",
+  "target_id": "cp_entity_0001",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 25000001,
+    "high": 50000000
+  },
+  "filing_source": "cp_filing_0005",
+  "observed_on": "2025-01-25",
+  "excluded_from_total": true,
+  "exclusion_reason": "Retained financial interest per Charles Kushner nominee 278 Part 6 item 462; federal-procurement nexus not yet established; pending GSA-lease match. Captured (not gated) per the Session 06 capture-then-annotate scope decision.",
+  "ingestion_timestamp": "2026-06-05T20:00:00Z",
+  "notes": "Charles Kushner's retained passive-ownership interest in Westminster Management, LLC (Real Estate Management Company). Disclosed at cp_filing_0005 Part 6 item 462: value $25,000,001-$50,000,000; income Distributions $900,000. [Fork S 2026-06-05, ruling #5] This edge was MISSING before Fork S: Forks 2-5 ingested only the trust items (Part 6 480-504); item 462 is a non-trust Part 6 line that fell in the gap. Created here as the third of the three distinct Westminster interests (filer employment Part 2 = cp_rel_0979; filer ownership Part 6 462 = this edge; spouse Part 5 = cp_rel_1280 + imputed cp_rel_1281). A broader audit of non-trust Part 6 lines (items ~369-479) for other gap-drops is logged as a post-Fork-S follow-up. observed_on = filer-signature date (2025-01-25) per the Convention 2 nominee-report ruling (methodology, 2026-06-01)."
+}

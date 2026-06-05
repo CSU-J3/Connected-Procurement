@@ -1,0 +1,8 @@
+{
+  "person_id": "cp_person_0006",
+  "canonical_name": "Spouse of Charles Kushner (cp_person_0005)",
+  "aliases": [],
+  "last_updated_from_filing": "cp_filing_0005",
+  "merged_into": null,
+  "notes": "Unnamed non-filer spouse of Charles Kushner (cp_person_0005). The OGE Form 278e nominee report (cp_filing_0005) discloses the spouse's holdings under Part 5 ('Spouse's Employment Assets & Income') but prints NO spouse name anywhere on the form. Registered with a relationship-descriptor canonical_name and empty aliases per the locked unnamed-person convention (methodology, 2026-06-05): an unnamed-but-real person disclosed only by relationship is registered by descriptor; a name/alias is added only when a filing supplies it (per the locked Alias source_filing_date rule). Non-filer: no cp_filing_NNNN has this person as filer_id; provenance attaches via filing_source on her family_to_entity edges (all cp_filing_0005 Part 5) and via imputation_source pointers on Charles's spousal_imputed edges (Convention 3, one-direction). Registered in Fork S (2026-06-05). If a future filing names her, the alias is added then with that filing as source."
+}

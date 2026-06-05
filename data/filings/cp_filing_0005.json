@@ -34,6 +34,12 @@
         "item_number": "52-53",
         "description_on_form": "Carmel Trust + Nara Trust (Reno, NV); Trustee role 1/2017-12/2024; Trustee Fees $25,000 each",
         "registry_relationships": "cp_rel_0983, cp_rel_0984 (trust_trustee, ended pre-appointment, soft-flagged)"
+      },
+      {
+        "schedule": "Part 5 (Spouse's Employment Assets & Income)",
+        "items": "1-127 (55 in-scope; ~65 residential grouped; 2 EIF/cash + 2 blank excluded)",
+        "description_on_form": "Spouse's disclosed financial interests; Convention 3 spousal imputation (Fork S)",
+        "registry_relationships": "cp_person_0006 (unnamed spouse); cp_rel_1280-1389 (55 spouse ownership family_to_entity edges + 55 filer spousal_imputed edges); cp_rel_1390 (filer Part 6 item-462 ownership edge); cp_rel_0979 re-typed ownership->employment; cp_entity_0568/0569/0570 new"
       }
     ],
     "_open_questions_surfaced": [
@@ -44,8 +50,8 @@
       },
       {
         "id": "convention_3_spousal",
-        "status": "open",
-        "question": "Live 18 USC 208(a)(2) spousal-imputation cases: Westminster Management, LLC (spouse retains equity, Part 5, $5M-$25M) and Westminster Pillar Management, LLC (Part 6 item 107, $5M-$25M, Management Fees $100,001-$250,000; spouse equity + fees per Ethics Agreement Section 4). Westminster Pillar is in the filing (Part 6, not Part 1). Spousal/imputed-edge modeling is deferred to Fork S, not folded into the bulk ingest."
+        "status": "resolved",
+        "question": "RESOLVED (Fork S, 2026-06-05) by APPLYING the locked Convention 3 (spousal imputation, methodology 2026-05-25) to the Charles Kushner nominee 278 Part 5 spouse disclosure - the convention was NOT rewritten (ruling #1). Modeling: (1) unnamed non-filer spouse registered as cp_person_0006 with a relationship-descriptor canonical_name (ruling #3, new locked unnamed-person sub-rule); (2) NO person-to-person spousal edge (ruling #2: non-filer spouse -> follow the cp_filing_0003 Trump->Melania precedent; the relationship is carried by the imputation chain; the Jared/Ivanka p2p edge cp_rel_0002 is the both-filers case); (3) 55 spouse family_to_entity ownership edges (cp_rel_1280..1388 even) for the in-scope Part 5 holdings; (4) 55 filer spousal_imputed edges (cp_rel_1281..1389 odd), value.shape=imputed, imputation_source -> the matching spouse edge. Scope = option-3 full in-scope Part 5 subset = 55 items render-verified at 200/300dpi (ruling #4; ~65 residential grouped above; 2 EIF/cash + 2 blank excluded). 3 genuinely-new entities (cp_entity_0568 Westminster Title Realty Corp item 3, cp_entity_0569 Westminster Realty & Sales Assoc LLC item 99, cp_entity_0570 Westminster Pillar Management LLC item 107); the other 52 attach. S4 Westminster (ruling #5): cp_rel_0979 re-typed ownership->employment (Part 2 employment asset $5M-$25M, GP $50,000); new filer Part 6 item-462 ownership edge cp_rel_1390 ($25M-$50M, Distributions $900,000); spouse Part 5 item-1 ownership cp_rel_1280 ($5M-$25M, Distributions/Guaranteed Payment $1,500,000) + imputed cp_rel_1281 - three distinct interests, four edges, no double-count (corrected figures; the handoff S4 had scrambled them). Westminster Pillar Management is Part 5 item 107 (the open question mislabeled it Part 6). All edges soft-flagged excluded_from_total=true pending GSA. This closes the last open determination from the Session 06 filing. Remaining project work: the non-trust Part 6 gap audit (items ~369-479) + the GSA annotation pass."
       },
       {
         "id": "appendix_b_divested",
@@ -170,6 +176,11 @@
           "category": "residential_rental_holdings_trust_19",
           "approx_entries": 7,
           "rationale": "Trust #19 (Part 6 item 499) holds 7 residential rental properties in New York, NY (499.1-499.7), all default-excluded per section 3.0 (ruling #3). Trust #19 registered as an entity with this grouped count + a filer trust_beneficial edge; no individual trust->holding subsidiary edges."
+        },
+        {
+          "category": "residential_rental_holdings_part5_spouse",
+          "approx_entries": 65,
+          "rationale": "Charles Kushner nominee 278 Part 5 (Spouse's Employment Assets & Income) residential-rental leaf holdings; default-exclude per section 3.0 (residential rental LLCs are not federal-procurement counterparties). Grouped, not individually registered, exactly as the filer's Part 6 residential holdings were. ~58 distinct residential items + 7 residential proceeds-of-sale recurrences (items 114-119, 124). Includes item 4 Kushner Family Office LLC (Residential, Miami FL), item 23 Pillar K Associates (Residential, VA/MD, $25M-$50M - high value but residential per the document, section 3.0 node-level: type from the document), item 41 570 West Mt Pleasant Associates (Residential Development, Livingston NJ), and item 109 Elmwood V Associates LP (Residential, MS/LA - the Fork S handoff listed Elmwood V as in-scope; the document labels it Residential, so it is excluded; document wins). Part 5 also carries 2 EIF/cash items excluded as pooled/cash (item 126 Fidelity Government Cash Reserves EIF; item 127 U.S. brokerage money market cash) and 2 'Line intentionally left blank' placeholders (items 120-121). The 3 in-scope proceeds-of-sale recurrences (item 122 Cop Investors, 123 US Cop Realty, 125 Iroquois Properties) attach to their already-edged in-scope entities (one spouse edge each at items 60/61/96; recurrence noted), not counted here. Session 06 Fork S."
         }
       ]
     },
