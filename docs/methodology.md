@@ -558,6 +558,27 @@ Forward point: if a second counterparty pattern surfaces that's structurally dis
 
 Locked: 2026-05-25.
 
+## Federal-procurement nexus
+
+### Nexus standard and the temporal-overlap requirement
+
+A federal-procurement nexus is recorded in the `nexus_links` table (`cp_nexus_NNNN`) when a registry entity is matched to a specific federal instrument (a GSA lease or a federal contract award). Two gates govern whether a corroborated nexus **counts in the live total** (flips the holder's `excluded_from_total` to false):
+
+1. **Identity corroboration** — exact name plus a second signal: a UEI for awards, a property-address match for leases. Name-alone never promotes (lessor/recipient names collide; IOLP/award strings are noisy). The GSA IOLP leased-property dataset carries the *building* asset name, not the lessor LLC, and registry entities have no structured address — so the GSA name channel is structurally near-null and a no-match there is the expected default, never a negative finding.
+2. **Temporal overlap** — the instrument's active period (lease term / award period of performance) must overlap the **holder's disclosed holding period** from the filing. The project's claim is that a family member held the entity *while* it was connected to federal procurement, not that they own something that was *once* federally connected. Identity without temporal overlap is documented, not counted.
+
+A corroborated nexus that fails gate 2 is written as a `nexus_link` (it is a true historical fact) with the holder edge **left soft-flagged** — documented-but-not-counted. Counting it would assert a connection the sourced evidence does not establish.
+
+### OGE-278 temporal coverage boundary (known limitation)
+
+OGE Form 278 sourcing only covers a person's federal-official tenure: a person has no 278 filing obligation before taking office, so the evidence model **structurally cannot source a holding that predates their entry into government.** Where federal-procurement activity and a family member's holding overlapped *before* that person became an official, the OGE-only model cannot see the overlap. This is a coverage boundary, not an absence of nexus — it is not counted and it is not inferred.
+
+Flagship case: `cp_nexus_0001`, 666 Fifth Associates LLC (cp_entity_0048, 666 Fifth Avenue). Identity is airtight (exact recipient name + UEI HKPSSRAH39H9 + 666 Fifth Ave address); the GSA/PBS lease IDV GS02B22660 was active 2004→Jan 2013; the only sourced holding is Jared Kushner's, disclosed as-of 2017-12-31 (his 2018 Annual, cp_filing_0001). The likely 2007–2013 overlap (Kushner Companies' 2007 acquisition) is reachable only through outside knowledge, unsourceable within OGE data. Ruled (2026-06-13): documented as historical fact, not counted; `cp_rel_0041` stays `excluded_from_total: true`.
+
+Forward point: resolving a temporally-disjoint-but-likely-overlapping case would require a non-OGE evidence tier (corporate registration / property records) to source the pre-office holding period. That is a scope decision reserved for separate consideration; until it is taken, do not silently assume the overlap. Builds on the two-axis scope test (named member + instrument/agency); temporal overlap is a third, independent gate.
+
+Locked: 2026-06-13.
+
 ## Process
 
 ### Locked methodology authority over handoff text
