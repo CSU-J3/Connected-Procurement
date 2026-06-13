@@ -1,0 +1,19 @@
+{
+  "relationship_id": "cp_rel_1435",
+  "source_id": "cp_person_0005",
+  "target_id": "cp_entity_0115",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 250001,
+    "high": 500000
+  },
+  "filing_source": "cp_filing_0005",
+  "observed_on": "2025-01-25",
+  "excluded_from_total": true,
+  "exclusion_reason": "Retained financial interest per Charles Kushner nominee 278 Part 6 item 453 (filer's direct/non-trust flat-block holding); federal-procurement nexus not yet established; pending GSA-lease match. Captured (not gated) per the Session 06 capture-then-annotate scope decision.",
+  "ingestion_timestamp": "2026-06-13T13:30:00Z",
+  "notes": "Charles Kushner's direct (non-trust) retained ownership interest in The Landings at Caspian Pointe, LLC (Undeveloped Real Estate in Atlantic City, NJ). Disclosed at cp_filing_0005 Part 6 item 453 (flat/non-trust block, p 50): value $250,001 - $500,000; income None (or less than $201). DUAL-STRUCTURE: this flat-line direct holding is a separately-numbered Part 6 interest with its own OGE endnote org-chart (item 453 endnote), distinct from the parallel trust-routed ownership of the same entity recorded as 5 entity_to_entity_subsidiary trust->holding edge(s) [cp_rel_0538, cp_rel_1148, cp_rel_1164, cp_rel_1177, cp_rel_1193]. Per the 2026-06-13 \"two interests\" ruling (render-verified separate endnote trees + divergent value/property across channels), this is a distinct disclosed interest, NOT a double-count of the trust route; Convention-3-style dedup at totals so aggregate ownership is not inflated across same-name lines. Render-verified 200/300dpi (p 50). Soft-flagged pending GSA-lease nexus."
+}

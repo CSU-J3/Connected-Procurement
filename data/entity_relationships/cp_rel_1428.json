@@ -1,0 +1,19 @@
+{
+  "relationship_id": "cp_rel_1428",
+  "source_id": "cp_person_0005",
+  "target_id": "cp_entity_0114",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 1001,
+    "high": 15000
+  },
+  "filing_source": "cp_filing_0005",
+  "observed_on": "2025-01-25",
+  "excluded_from_total": true,
+  "exclusion_reason": "Retained financial interest per Charles Kushner nominee 278 Part 6 item 446 (filer's direct/non-trust flat-block holding); federal-procurement nexus not yet established; pending GSA-lease match. Captured (not gated) per the Session 06 capture-then-annotate scope decision.",
+  "ingestion_timestamp": "2026-06-13T13:30:00Z",
+  "notes": "Charles Kushner's direct (non-trust) retained ownership interest in Deer Tree Building Associates, LLC (Undeveloped Real Estate in Hardyston, NJ). Disclosed at cp_filing_0005 Part 6 item 446 (flat/non-trust block, p 49): value $1,001 - $15,000; income None (or less than $201). DUAL-STRUCTURE: this flat-line direct holding is a separately-numbered Part 6 interest with its own OGE endnote org-chart (item 446 endnote), distinct from the parallel trust-routed ownership of the same entity recorded as 5 entity_to_entity_subsidiary trust->holding edge(s) [cp_rel_0536, cp_rel_1146, cp_rel_1162, cp_rel_1175, cp_rel_1191]. Per the 2026-06-13 \"two interests\" ruling (render-verified separate endnote trees + divergent value/property across channels), this is a distinct disclosed interest, NOT a double-count of the trust route; Convention-3-style dedup at totals so aggregate ownership is not inflated across same-name lines. Render-verified 200/300dpi (p 49). Soft-flagged pending GSA-lease nexus."
+}

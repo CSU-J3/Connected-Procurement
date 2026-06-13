@@ -1,0 +1,19 @@
+{
+  "relationship_id": "cp_rel_1403",
+  "source_id": "cp_person_0005",
+  "target_id": "cp_entity_0055",
+  "relation_kind": "family_to_entity",
+  "interest_type": "ownership",
+  "value": {
+    "unit": "dollar_holding",
+    "shape": "range",
+    "low": 1000001,
+    "high": 5000000
+  },
+  "filing_source": "cp_filing_0005",
+  "observed_on": "2025-01-25",
+  "excluded_from_total": true,
+  "exclusion_reason": "Retained financial interest per Charles Kushner nominee 278 Part 6 item 404 (filer's direct/non-trust flat-block holding); federal-procurement nexus not yet established; pending GSA-lease match. Captured (not gated) per the Session 06 capture-then-annotate scope decision.",
+  "ingestion_timestamp": "2026-06-13T13:30:00Z",
+  "notes": "Charles Kushner's direct (non-trust) retained ownership interest in Pier Village III Hotel JV, LLC (Commercial Real Estate in Long Branch, NJ). Disclosed at cp_filing_0005 Part 6 item 404 (flat/non-trust block, p 46): value $1,000,001 - $5,000,000; income Rent or Royalties $1,000,001-$5,000,000. DUAL-STRUCTURE: this flat-line direct holding is a separately-numbered Part 6 interest with its own OGE endnote org-chart (item 404 endnote), distinct from the parallel trust-routed ownership of the same entity recorded as 5 entity_to_entity_subsidiary trust->holding edge(s) [cp_rel_0990, cp_rel_1025, cp_rel_1058, cp_rel_1093, cp_rel_1122]. Per the 2026-06-13 \"two interests\" ruling (render-verified separate endnote trees + divergent value/property across channels), this is a distinct disclosed interest, NOT a double-count of the trust route; Convention-3-style dedup at totals so aggregate ownership is not inflated across same-name lines. Render-verified 200/300dpi (p 46). Soft-flagged pending GSA-lease nexus."
+}
