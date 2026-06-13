@@ -1,0 +1,15 @@
+{
+  "match_id": "cp_match_0911",
+  "surfaced_at": "2026-06-13T22:40:50Z",
+  "entity_id": "cp_entity_0030",
+  "award_source": "usaspending",
+  "award_ref": {
+    "source_record_id": "N4523A18P1421",
+    "source_url": "https://www.usaspending.gov/award/CONT_AWD_N4523A18P1421_9700_-NONE-_-NONE-"
+  },
+  "name_score": 0.875,
+  "address_score": null,
+  "confidence_band": "review",
+  "triage_status": "pending",
+  "notes": "matched recipient 'GLOBAL FREIGHT EXPRESS LLC' against 'T Express LLC'; build-validation pass: matched outside live-counting scope; not a live-scope detection"
+}

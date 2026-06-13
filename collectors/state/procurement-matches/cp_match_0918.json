@@ -1,0 +1,15 @@
+{
+  "match_id": "cp_match_0918",
+  "surfaced_at": "2026-06-13T22:40:50Z",
+  "entity_id": "cp_entity_0030",
+  "award_source": "usaspending",
+  "award_ref": {
+    "source_record_id": "140FS125P0144",
+    "source_url": "https://www.usaspending.gov/award/CONT_AWD_140FS125P0144_1448_-NONE-_-NONE-"
+  },
+  "name_score": 1.0,
+  "address_score": null,
+  "confidence_band": "auto_surface",
+  "triage_status": "pending",
+  "notes": "matched recipient 'R&T EXPRESS LLC' against 'T Express LLC'; state-match condition unevaluable (no registry-side structured address); auto-surfaced on name score alone; build-validation pass: matched outside live-counting scope; not a live-scope detection"
+}

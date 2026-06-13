@@ -1,0 +1,15 @@
+{
+  "match_id": "cp_match_1003",
+  "surfaced_at": "2026-06-13T22:42:41Z",
+  "entity_id": "cp_entity_0244",
+  "award_source": "usaspending",
+  "award_ref": {
+    "source_record_id": "W911XK07P0154",
+    "source_url": "https://www.usaspending.gov/award/CONT_AWD_W911XK07P0154_9700_-NONE-_-NONE-"
+  },
+  "name_score": 0.9091,
+  "address_score": null,
+  "confidence_band": "review",
+  "triage_status": "pending",
+  "notes": "matched recipient 'IMPRINT PROMOTIONS LLC' against 'T Promotions LLC'; build-validation pass: matched outside live-counting scope; not a live-scope detection"
+}

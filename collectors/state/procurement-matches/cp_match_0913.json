@@ -1,0 +1,15 @@
+{
+  "match_id": "cp_match_0913",
+  "surfaced_at": "2026-06-13T22:40:50Z",
+  "entity_id": "cp_entity_0030",
+  "award_source": "usaspending",
+  "award_ref": {
+    "source_record_id": "12435H20P0025",
+    "source_url": "https://www.usaspending.gov/award/CONT_AWD_12435H20P0025_12C2_-NONE-_-NONE-"
+  },
+  "name_score": 0.875,
+  "address_score": null,
+  "confidence_band": "review",
+  "triage_status": "pending",
+  "notes": "matched recipient 'ROCKETT EXPRESS LLC' against 'T Express LLC'; build-validation pass: matched outside live-counting scope; not a live-scope detection"
+}

@@ -1,0 +1,16 @@
+{
+  "nexus_id": "cp_nexus_0001",
+  "entity_id": "cp_entity_0048",
+  "instrument_type": "gsa_lease",
+  "instrument_id": "GS02B22660",
+  "source_url": "https://www.usaspending.gov/award/CONT_IDV_GS02B22660_4740",
+  "match_basis": "exact recipient name '666 FIFTH ASSOCIATES LLC' + UEI HKPSSRAH39H9 (DUNS 808567528) + recipient/property address 666 Fifth Ave, New York, NY 10103. GSA/PBS lease IDV GS02B22660 (Region 2), one lease vehicle expressed as ~25 semi-annual delivery-order/modification child awards (NOT 35 distinct leases). IDV active 2004-09-30 to 2013-01-14.",
+  "confidence_tier": "high",
+  "award_source": "gsa_lease",
+  "observed_on": "2026-06-13",
+  "agency": "General Services Administration / Public Buildings Service",
+  "detection_match_id": "cp_match_0019",
+  "superseded_by": null,
+  "ingestion_timestamp": "2026-06-13T17:00:00Z",
+  "notes": "Documented but TEMPORALLY-DISJOINT federal-procurement nexus (GSA pass 2026-06-13, decision-tree branch 3). 666 Fifth Associates LLC (cp_entity_0048; 666 Fifth Avenue, NYC) was the lessor to the GSA Public Buildings Service under lease IDV GS02B22660 (Region 2), active 2004-09-30 to 2013-01-14 (~25 semi-annual delivery-order/mod records under the single IDV; characterized as ONE lease vehicle, not 35 leases, per the §4 distinct-lease rule). Identity match is HIGH confidence: exact recipient name + UEI HKPSSRAH39H9 (DUNS 808567528) + recipient/property address 666 Fifth Ave, New York NY 10103 (place of performance NY 10103) — the address corroboration that separates the same entity from a lessor-name collision. HOLDER ATTRIBUTION: the registry interest is Jared C. Kushner's, via 666 Fifth Equity LLC (cp_entity_0047) -> 666 Fifth Associates LLC subsidiary edge cp_rel_0041 on Jared's 2018 Annual 278e (cp_filing_0001), disclosed as-of 2017-12-31. NOT Charles, and not one of the 46 Charles dual-structure entities. TEMPORAL DISJUNCTION (the material point): the GSA lease ended 2013-01-14, ~5 years BEFORE the holder's only disclosed interest (2017-12-31); Jared had no federal-disclosure obligation during the 2004-2013 lease window, so no disclosed holding period overlaps the lease. This is the weaker 'held an entity that previously leased to the feds' case, materially distinct from 'held the entity while it was leasing to the feds.' Per §4 branch 3, this NexusLink is written as documented evidence but the holder edge cp_rel_0041 excluded_from_total is NOT flipped: whether a temporally-disjoint documented nexus counts in the live total is surfaced for ruling. Awarding agency confirmed GSA (toptier agency code 4740 = General Services Administration; subtier Public Buildings Service). Verified via USAspending award detail (CONT_IDV_GS02B22660_4740 and child delivery orders) 2026-06-13."
+}

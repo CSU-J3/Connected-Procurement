@@ -1,0 +1,15 @@
+{
+  "match_id": "cp_match_0951",
+  "surfaced_at": "2026-06-13T22:40:59Z",
+  "entity_id": "cp_entity_0048",
+  "award_source": "usaspending",
+  "award_ref": {
+    "source_record_id": "GS02B2266009243",
+    "source_url": "https://www.usaspending.gov/award/CONT_AWD_GS02B2266009243_4740_GS02B22660_4740"
+  },
+  "name_score": 1.0,
+  "address_score": null,
+  "confidence_band": "auto_surface",
+  "triage_status": "pending",
+  "notes": "matched recipient '666 FIFTH ASSOCIATES LLC' against '666 Fifth Associates LLC'; state-match condition unevaluable (no registry-side structured address); auto-surfaced on name score alone; build-validation pass: matched outside live-counting scope; not a live-scope detection"
+}

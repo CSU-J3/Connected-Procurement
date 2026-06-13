@@ -1,0 +1,15 @@
+{
+  "match_id": "cp_match_0985",
+  "surfaced_at": "2026-06-13T22:42:40Z",
+  "entity_id": "cp_entity_0243",
+  "award_source": "usaspending",
+  "award_ref": {
+    "source_record_id": "SPE4A625PD275",
+    "source_url": "https://www.usaspending.gov/award/CONT_AWD_SPE4A625PD275_9700_-NONE-_-NONE-"
+  },
+  "name_score": 0.8571,
+  "address_score": null,
+  "confidence_band": "review",
+  "triage_status": "pending",
+  "notes": "matched recipient 'CLEM DIRECT RETAIL LLC' against 'T Retail LLC'; build-validation pass: matched outside live-counting scope; not a live-scope detection"
+}
