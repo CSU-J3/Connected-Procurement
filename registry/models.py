@@ -23,6 +23,8 @@ CpMergeId = Annotated[str, StringConstraints(pattern=r"^cp_merge_\d{4,}$")]
 CpEntityOrPersonId = Annotated[str, StringConstraints(pattern=r"^cp_(entity|person)_\d{4,}$")]
 CpFilingOrRelId = Annotated[str, StringConstraints(pattern=r"^cp_(filing|rel)_\d{4,}$")]
 CpWatchlistId = Annotated[str, StringConstraints(pattern=r"^cp_watch_\d{4,}$")]
+CpNexusId = Annotated[str, StringConstraints(pattern=r"^cp_nexus_\d{4,}$")]
+CpMatchId = Annotated[str, StringConstraints(pattern=r"^cp_match_\d{4,}$")]
 
 
 class Unit(str, Enum):
@@ -67,6 +69,23 @@ class InterestType(str, Enum):
     TRUST_TRUSTEE = "trust_trustee"
     SPOUSAL_IMPUTED = "spousal_imputed"
     LICENSE_COUNTERPARTY = "license_counterparty"
+
+
+class InstrumentType(str, Enum):
+    GSA_LEASE = "gsa_lease"
+    FEDERAL_AWARD = "federal_award"
+
+
+class NexusAwardSource(str, Enum):
+    USASPENDING = "usaspending"
+    SAM = "sam"
+    GSA_LEASE = "gsa_lease"
+
+
+class ConfidenceTier(str, Enum):
+    HIGH = "high"
+    MEDIUM = "medium"
+    LOW = "low"
 
 
 class ExternalIdType(str, Enum):
@@ -507,5 +526,65 @@ class Watchlist(_Base):
             if self.removed_on is not None or self.removal_reason is not None:
                 raise ValueError(
                     "removed_on/removal_reason are only allowed when status=removed"
+                )
+        return self
+
+
+class NexusLink(_Base):
+    """A documented federal-procurement nexus between a registry entity and a specific
+    federal instrument (a GSA lease or a federal contract award).
+
+    This is the deliverable of the federal-nexus annotation pass: it gives a promoted
+    soft-flag a structured, auditable home instead of notes-field stuffing. Writing a
+    NexusLink and flipping the matched relationship's excluded_from_total=false together
+    move an entity from "nexus not established" to "nexus established, with evidence."
+
+    Capture-don't-infer applies: only a high-confidence match should produce a NexusLink
+    that clears a soft-flag (confidence_tier=high). Medium/low matches stay as detection
+    candidates in collectors/state/ for manual review; if a reviewed medium is later ruled
+    a promotion, the field records its real tier. detection_match_id traces the link back
+    to the collectors/state/ Match record that justified it (no registry FK; the collector
+    workspace is not a registry table)."""
+
+    nexus_id: CpNexusId
+    entity_id: CpEntityId
+    instrument_type: InstrumentType
+    instrument_id: str
+    source_url: str
+    match_basis: str
+    confidence_tier: ConfidenceTier
+    award_source: NexusAwardSource
+    observed_on: date
+    agency: str | None = None
+    detection_match_id: CpMatchId | None = None
+    superseded_by: CpNexusId | None = None
+    # ISO 8601 UTC datetime when this record entered the registry under live-collection.
+    ingestion_timestamp: datetime | None = None
+    notes: str | None = None
+
+    @field_validator("instrument_id", "source_url", "match_basis")
+    @classmethod
+    def _nonempty(cls, v: str) -> str:
+        if not v.strip():
+            raise ValueError("must be non-empty")
+        return v
+
+    @model_validator(mode="after")
+    def _check_self_ref(self) -> NexusLink:
+        if self.superseded_by == self.nexus_id:
+            raise ValueError("nexus link cannot supersede itself")
+        return self
+
+    @model_validator(mode="after")
+    def _check_source_instrument_coupling(self) -> NexusLink:
+        # A GSA-lease instrument must come from the GSA source; an award must come from
+        # a contract source (usaspending/sam), not the lease inventory.
+        if self.instrument_type == InstrumentType.GSA_LEASE:
+            if self.award_source != NexusAwardSource.GSA_LEASE:
+                raise ValueError("instrument_type=gsa_lease requires award_source=gsa_lease")
+        else:  # FEDERAL_AWARD
+            if self.award_source == NexusAwardSource.GSA_LEASE:
+                raise ValueError(
+                    "instrument_type=federal_award requires award_source usaspending or sam"
                 )
         return self

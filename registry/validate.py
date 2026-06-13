@@ -13,6 +13,7 @@ from registry.models import (
     Entity,
     Filing,
     Merge,
+    NexusLink,
     Person,
     Relationship,
     Watchlist,
@@ -29,6 +30,7 @@ TABLES: dict[str, tuple[str, str, type[BaseModel]]] = {
     "entity_relationships": ("rel", "relationship_id", Relationship),
     "merges": ("merge", "merge_id", Merge),
     "watchlist": ("watch", "watchlist_id", Watchlist),
+    "nexus_links": ("nexus", "nexus_id", NexusLink),
 }
 
 
@@ -151,6 +153,13 @@ def _check_references(records: dict[str, dict[str, BaseModel]], errors: _ErrorCo
         if w.person_id not in persons:
             errors.add(f"watchlist/{wid}: person_id={w.person_id} not in persons")
 
+    nexus_links = records["nexus_links"]
+    for nid, n in nexus_links.items():
+        if n.entity_id not in entities:
+            errors.add(f"nexus_links/{nid}: entity_id={n.entity_id} not in entities")
+        if n.superseded_by and n.superseded_by not in nexus_links:
+            errors.add(f"nexus_links/{nid}: superseded_by={n.superseded_by} not found")
+
 
 def _detect_cycles(
     node_ids: Iterable[str],
@@ -184,11 +193,19 @@ def _check_cycles(records: dict[str, dict[str, BaseModel]], errors: _ErrorCollec
     rels = records["entity_relationships"]
     entities = records["entities"]
     persons = records["persons"]
+    nexus_links = records["nexus_links"]
 
     _detect_cycles(
         rels.keys(),
         lambda x: rels[x].superseded_by if x in rels else None,
         "superseded_by[entity_relationships]",
+        errors,
+    )
+
+    _detect_cycles(
+        nexus_links.keys(),
+        lambda x: nexus_links[x].superseded_by if x in nexus_links else None,
+        "superseded_by[nexus_links]",
         errors,
     )
 
