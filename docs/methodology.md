@@ -22,6 +22,20 @@ The retrieval archeology — the URL used at record-creation time, the method us
 
 Locked: 2026-05-20.
 
+### `primary_source_url` when no public URL exists (Form-201 / nominee-report records)
+
+`primary_source_url` records the publisher's current canonical URL for the document. Some authoritative OGE records have no such URL: a nominee 278e obtained via an OGE Form 201 request is released to the requester but is not posted to a stable public OGE path, and the nominee copy is subject to retention-destruction one year after the related action under 5 CFR 2634, so no durable public URL ever exists to point at.
+
+For these records `primary_source_url` is null. The provenance that would otherwise live in the URL is carried by `interest_disclosed._parse_provenance`: the certification chain and the documented no-public-URL reason (retention-destruction window, absence from the OGE PAS Index) live in `primary_source_authority`; the retrieval archeology (Form 201 request, fulfillment date, local retention path) lives in `method`. The validator's required-`primary_source_url` rule is relaxed to permit a null URL only when `interest_disclosed._parse_provenance.primary_source_authority` is non-empty; a null URL without that documented authority remains a validation error. That the authority text actually documents the no-public-URL reason is maintainer discipline, not a machine check. The guarantee is unchanged (every record carries documented, auditable provenance); the provenance is simply no longer required to be a resolvable URL when no resolvable URL exists.
+
+Display consequence: the surface renders a `source ↗` link only when `primary_source_url` is a resolvable http(s) URL. For null-URL records it renders the provenance as plain text from `primary_source_authority`, not as a link. This removes the prior failure mode where explanatory prose was stored in `primary_source_url` and rendered by the display as a relative link that did not resolve.
+
+First applied 2026-06-15 to `cp_filing_0005` (Charles Kushner nominee 278e), whose Form 201 fulfillment copy has no stable public OGE URL.
+
+Forward point: the same no-public-URL prose is currently duplicated in 124 records sourced to this filing, 123 entity-alias `source_url` fields and `cp_merge_0002.source_urls[0]`. These are not rendered by the display, so they carry no dead-link exposure under the http(s) guard, but they are the same modeling compromise. Their migration to this convention is deferred to a separate pass that resolves no-public-URL handling for `Alias.source_url` and `Merge.source_urls`, neither of which carries a `_parse_provenance` to hold the migrated reason.
+
+Locked: 2026-06-15.
+
 ### source_url normalization
 
 Alias `source_url` and `primary_source_url` fields reference publisher-canonical hosting URLs (e.g., `assets.documentcloud.org` for DocumentCloud-hosted records, `www.citizensforethics.org/wp-content/uploads/legacy/...` for CREW-hosted records, OGE PAS Index URLs for OGE-hosted 278 filings). Internal or temporary URLs (`s3.amazonaws.com/...`, `s3.documentcloud.org/...`, OGE Notes-DB `oge.gov/Web/oge.nsf/...`) get normalized to publisher-canonical at the next applicable fork.

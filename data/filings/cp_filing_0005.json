@@ -1,6 +1,6 @@
 {
   "filing_id": "cp_filing_0005",
-  "primary_source_url": "OGE Form 278e Nominee Report (Kushner, Charles), filer-signed 2025-01-25, OGE-certified 2025-04-15; OGE Form 201 fulfillment received 2026-05-30, retained locally at .pdf_cache/kushner_nominee_278.pdf; no stable public OGE URL (nominee 278e copy past 1-year retention-destruction per 5 CFR 2634; not in OGE PAS Index /201/Presiden.nsf per session-03 navigation flag).",
+  "primary_source_url": null,
   "source_filing_date": "2025-01-25",
   "filer_id": "cp_person_0005",
   "filing_type": "OGE_Form_278e_Nominee",
@@ -96,8 +96,8 @@
       }
     ],
     "_parse_provenance": {
-      "method": "Part 1 transcribed from 200dpi pypdfium2 renders (renderer rule) of nominee 278 pp 3-6; Part 2/5 values from 200dpi render of p 7; pdftotext -layout used only as cross-check (Part 6 value columns collide badly in text extraction). Document obtained via OGE Form 201 email fulfillment, retained locally at .pdf_cache/kushner_nominee_278.pdf; Ethics Agreement and Certification likewise (.pdf_cache/kushner_ethics_agreement.pdf, kushner_ea_certification.pdf). Built by Claude Code Session 06 Fork 1, 2026-06-01.",
-      "primary_source_authority": "OGE-certified electronic Form 278e via Integrity.gov: filer electronic signature Kushner, Charles 2025-01-25; agency ethics certifying official Kimball, Emily J 2025-04-15; OGE certifying official Jaffe, Seth 2025-04-15. Certification chain present on the document face. No stable public OGE URL (see primary_source_url).",
+      "method": "Part 1 transcribed from 200dpi pypdfium2 renders (renderer rule) of nominee 278 pp 3-6; Part 2/5 values from 200dpi render of p 7; pdftotext -layout used only as cross-check (Part 6 value columns collide badly in text extraction). Document obtained via OGE Form 201 request, fulfillment received 2026-05-30, retained locally at .pdf_cache/kushner_nominee_278.pdf; Ethics Agreement and Certification likewise (.pdf_cache/kushner_ethics_agreement.pdf, kushner_ea_certification.pdf). Built by Claude Code Session 06 Fork 1, 2026-06-01.",
+      "primary_source_authority": "OGE-certified electronic Form 278e via Integrity.gov: filer electronic signature Kushner, Charles 2025-01-25; agency ethics certifying official Kimball, Emily J 2025-04-15; OGE certifying official Jaffe, Seth 2025-04-15. Certification chain present on the document face. No stable public OGE URL exists: the nominee 278e copy is past the 1-year retention-destruction window under 5 CFR 2634, and the document is not in the OGE PAS Index (/201/Presiden.nsf) per session-03 navigation.",
       "verification_status": "Part 1 entity names and the single Fork-1 value (Westminster Management $5M-$25M) verified at 200dpi. Part 6 structured-entity values are NOT transcribed in Fork 1 (deferred to Forks 2+)."
     },
     "_excluded_categories": {

@@ -250,7 +250,7 @@ class ExternalId(_Base):
 
 class Filing(_Base):
     filing_id: CpFilingId
-    primary_source_url: str
+    primary_source_url: str | None = None
     source_filing_date: date
     filer_id: CpEntityOrPersonId | None = None
     filing_type: str
@@ -265,12 +265,32 @@ class Filing(_Base):
     ingestion_timestamp: datetime | None = None
     notes: str | None = None
 
-    @field_validator("primary_source_url", "filing_type")
+    @field_validator("filing_type")
     @classmethod
     def _nonempty(cls, v: str) -> str:
         if not v.strip():
             raise ValueError("must be non-empty")
         return v
+
+    @model_validator(mode="after")
+    def _check_primary_source_url(self) -> Filing:
+        # primary_source_url normally points at the publisher's canonical URL and is
+        # required non-empty. It may be empty/null only when the record documents why
+        # no public URL exists: a non-empty primary_source_authority in _parse_provenance.
+        # (That the authority text actually documents the no-public-URL reason is
+        # maintainer discipline per methodology, not a machine check.) See the
+        # primary_source_url no-public-URL clause in docs/methodology.md.
+        url = self.primary_source_url
+        if url is not None and url.strip():
+            return self
+        prov = self.interest_disclosed.get("_parse_provenance")
+        authority = prov.get("primary_source_authority") if isinstance(prov, dict) else None
+        if not (isinstance(authority, str) and authority.strip()):
+            raise ValueError(
+                "primary_source_url may be empty/null only when "
+                "interest_disclosed._parse_provenance.primary_source_authority is non-empty"
+            )
+        return self
 
     @model_validator(mode="after")
     def _check_change_record(self) -> Filing:
