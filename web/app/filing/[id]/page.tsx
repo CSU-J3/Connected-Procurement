@@ -9,7 +9,8 @@ import {
   isFilingId,
 } from '@/lib/data';
 import { ChainRow } from '@/components/RelationshipRow';
-import { comparePartLabels } from '@/lib/format';
+import { SourceLink } from '@/components/SourceLink';
+import { comparePartLabels, filingSourceAuthority } from '@/lib/format';
 import type { FilingId, InterestType, Relationship } from '@/lib/types';
 import { InterestPill } from '@/components/InterestPill';
 
@@ -81,14 +82,10 @@ export default async function FilingPage({
           <span>{filing.filing_id}</span>
           <span>{filing.filing_type.replace(/_/g, ' ')}</span>
           <span>filed {filing.source_filing_date}</span>
-          <a
+          <SourceLink
             href={filing.primary_source_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-[color:var(--color-foreground)]"
-          >
-            source ↗
-          </a>
+            fallbackText={filingSourceAuthority(filing)}
+          />
         </div>
       </header>
 

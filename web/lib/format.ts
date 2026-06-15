@@ -1,4 +1,21 @@
-import type { InterestType, RegistryValue } from './types';
+import type { Filing, InterestType, RegistryValue } from './types';
+
+// A resolved source value is a live link only when it is an http(s) URL. Null/empty
+// values and the no-public-URL prose retained on Form-201 records are not links.
+export function isHttpUrl(s: string | null | undefined): boolean {
+  return typeof s === 'string' && /^https?:\/\//.test(s.trim());
+}
+
+// Plain-text provenance shown in place of a link for null-URL filings. Reads through
+// interest_disclosed (typed `[k: string]: unknown`) to _parse_provenance.primary_source_authority.
+export function filingSourceAuthority(filing: Filing | undefined): string | null {
+  const prov = filing?.interest_disclosed?.['_parse_provenance'];
+  if (prov && typeof prov === 'object') {
+    const a = (prov as { primary_source_authority?: unknown }).primary_source_authority;
+    if (typeof a === 'string' && a.trim()) return a;
+  }
+  return null;
+}
 
 const usd = new Intl.NumberFormat('en-US', {
   style: 'currency',

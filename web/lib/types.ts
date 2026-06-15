@@ -108,7 +108,7 @@ export type ChangeType = 'original' | 'amendment' | 'parse_correction' | 'annual
 
 export interface Filing {
   filing_id: FilingId;
-  primary_source_url: string;
+  primary_source_url: string | null;
   source_filing_date: string;
   filer_id: PersonId;
   filing_type: string;

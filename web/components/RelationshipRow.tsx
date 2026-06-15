@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { InterestPill } from './InterestPill';
 import { ValueCell } from './ValueCell';
 import { SourceLink } from './SourceLink';
-import { formatDate } from '@/lib/format';
+import { formatDate, filingSourceAuthority } from '@/lib/format';
 import { isEntityId, isPersonId } from '@/lib/data';
 import type {
   EntityIndex,
@@ -48,7 +48,8 @@ function NodeLink({
 
 export function ChainRow({ rel, entityIndex, personIndex, filingIndex }: BaseProps) {
   const filing = filingIndex.get(rel.filing_source);
-  const source = filing?.primary_source_url ?? '#';
+  const source = filing?.primary_source_url ?? null;
+  const sourceAuthority = filingSourceAuthority(filing);
   const supersededMark = rel.superseded_by ? (
     <span
       className="font-mono text-[10px] text-[color:var(--color-muted)]"
@@ -78,7 +79,7 @@ export function ChainRow({ rel, entityIndex, personIndex, filingIndex }: BasePro
         </div>
         <div className="col-span-2 md:col-span-2 flex items-center justify-end gap-2">
           {supersededMark}
-          <SourceLink href={source} />
+          <SourceLink href={source} fallbackText={sourceAuthority} />
         </div>
       </summary>
       {hasNotes ? (
@@ -96,7 +97,8 @@ export function ChainRow({ rel, entityIndex, personIndex, filingIndex }: BasePro
 
 export function EntityViewRow({ rel, personIndex, filingIndex }: Omit<BaseProps, 'entityIndex'>) {
   const filing = filingIndex.get(rel.filing_source);
-  const source = filing?.primary_source_url ?? '#';
+  const source = filing?.primary_source_url ?? null;
+  const sourceAuthority = filingSourceAuthority(filing);
   const filer = filing && personIndex.get(filing.filer_id);
 
   return (
@@ -126,7 +128,7 @@ export function EntityViewRow({ rel, personIndex, filingIndex }: Omit<BaseProps,
           {formatDate(rel.observed_on)}
         </div>
         <div className="col-span-3 md:col-span-2 flex justify-end">
-          <SourceLink href={source} />
+          <SourceLink href={source} fallbackText={sourceAuthority} />
         </div>
       </summary>
       {rel.notes ? (
