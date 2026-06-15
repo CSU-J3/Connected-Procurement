@@ -144,3 +144,32 @@ export interface Merge {
 export interface SyncedAt {
   synced_at: string;
 }
+
+export type NexusId = `cp_nexus_${string}`;
+export type InstrumentType = 'gsa_lease' | 'federal_award';
+export type NexusAwardSource = 'usaspending' | 'sam' | 'gsa_lease';
+export type ConfidenceTier = 'high' | 'medium' | 'low';
+// The nexus's own ruling under the locked procurement-nexus counting standard
+// (methodology 2026-06-13). Distinct from a holder edge's excluded_from_total.
+export type CountingStatus = 'counted' | 'documented_not_counted';
+
+export interface NexusLink {
+  nexus_id: NexusId;
+  entity_id: EntityId;
+  instrument_type: InstrumentType;
+  instrument_id: string;
+  source_url: string;
+  match_basis: string;
+  confidence_tier: ConfidenceTier;
+  counting_status: CountingStatus;
+  award_source: NexusAwardSource;
+  observed_on: string;
+  agency: string | null;
+  detection_match_id: `cp_match_${string}` | null;
+  superseded_by: NexusId | null;
+  ingestion_timestamp: string | null;
+  notes: string | null;
+}
+
+// entity_id -> nexus_id[]. Emitted by sync-data.mjs as nexus-by-entity.json.
+export type NexusByEntity = Record<string, NexusId[]>;

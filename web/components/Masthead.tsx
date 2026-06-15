@@ -5,10 +5,20 @@ interface MastheadProps {
   entities: number;
   persons: number;
   edges: number;
+  nexuses: number;
+  nexusCounted: number;
   phase: string;
 }
 
-export function Masthead({ filings, entities, persons, edges, phase }: MastheadProps) {
+export function Masthead({
+  filings,
+  entities,
+  persons,
+  edges,
+  nexuses,
+  nexusCounted,
+  phase,
+}: MastheadProps) {
   return (
     <header className="border-b border-[color:var(--color-rule)]">
       <div className="max-w-6xl w-full mx-auto px-4 sm:px-6 py-3 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
@@ -19,7 +29,11 @@ export function Masthead({ filings, entities, persons, edges, phase }: MastheadP
           CP // CONNECTED PROCUREMENT
         </Link>
         <div className="font-mono text-[11px] text-[color:var(--color-muted)]">
-          {filings} filings · {entities} entities · {persons} persons · {edges} edges · {phase}
+          {filings} filings · {entities} entities · {persons} persons · {edges} edges ·{' '}
+          <Link href="/nexus" className="no-underline hover:underline">
+            {nexuses} nexus ({nexusCounted} counted)
+          </Link>{' '}
+          · {phase}
         </div>
       </div>
     </header>

@@ -3,7 +3,14 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { Masthead } from '@/components/Masthead';
 import { Footer } from '@/components/Footer';
-import { getRelationships, getEntities, getPersons, getFilings, getSyncedAt } from '@/lib/data';
+import {
+  getRelationships,
+  getEntities,
+  getPersons,
+  getFilings,
+  getSyncedAt,
+  getNexusLinks,
+} from '@/lib/data';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -24,12 +31,13 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const [filings, entities, persons, relationships, synced] = await Promise.all([
+  const [filings, entities, persons, relationships, synced, nexusLinks] = await Promise.all([
     getFilings(),
     getEntities(),
     getPersons(),
     getRelationships(),
     getSyncedAt(),
+    getNexusLinks(),
   ]);
 
   return (
@@ -43,6 +51,8 @@ export default async function RootLayout({
           entities={entities.length}
           persons={persons.length}
           edges={relationships.length}
+          nexuses={nexusLinks.length}
+          nexusCounted={nexusLinks.filter((n) => n.counting_status === 'counted').length}
           phase={
             filings.some((f) => f.ingestion_timestamp)
               ? 'live collection'

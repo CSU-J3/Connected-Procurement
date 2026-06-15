@@ -43,13 +43,14 @@ function partSortKey(label) {
 async function main() {
   await mkdir(outDir, { recursive: true });
 
-  const [filings, entities, persons, merges, watchlist, rawRels] = await Promise.all([
+  const [filings, entities, persons, merges, watchlist, rawRels, nexusLinks] = await Promise.all([
     loadDir('data/filings'),
     loadDir('data/entities'),
     loadDir('data/persons'),
     loadDir('data/merges'),
     loadDir('data/watchlist'),
     loadDir('data/entity_relationships'),
+    loadDir('data/nexus_links'),
   ]);
 
   const partCounts = new Map();
@@ -70,6 +71,14 @@ async function main() {
     return { ...r, disclosure_part: part, disclosure_item: item };
   });
 
+  // Entity-to-nexus reverse map: entity_id -> [nexus_id, ...]. One nexus references
+  // exactly one entity (NexusLink.entity_id), so this is a straight inversion the UI
+  // reads to surface the nexus block on an entity page without scanning all nexuses.
+  const nexusByEntity = {};
+  for (const n of nexusLinks) {
+    (nexusByEntity[n.entity_id] ??= []).push(n.nexus_id);
+  }
+
   const syncedAt = new Date().toISOString();
 
   await Promise.all([
@@ -79,6 +88,8 @@ async function main() {
     writeFile(path.join(outDir, 'relationships.json'), JSON.stringify(relationships, null, 2)),
     writeFile(path.join(outDir, 'merges.json'), JSON.stringify(merges, null, 2)),
     writeFile(path.join(outDir, 'watchlist.json'), JSON.stringify(watchlist, null, 2)),
+    writeFile(path.join(outDir, 'nexus.json'), JSON.stringify(nexusLinks, null, 2)),
+    writeFile(path.join(outDir, 'nexus-by-entity.json'), JSON.stringify(nexusByEntity, null, 2)),
     copyFile(path.join(repoRoot, 'docs', 'methodology.md'), path.join(outDir, 'methodology.md')),
     writeFile(path.join(outDir, 'synced-at.json'), JSON.stringify({ synced_at: syncedAt }, null, 2)),
   ]);
@@ -93,6 +104,7 @@ async function main() {
   console.log(`  ${relationships.length} relationships -> web/data/relationships.json`);
   console.log(`  ${merges.length} merges         -> web/data/merges.json`);
   console.log(`  ${watchlist.length} watchlist      -> web/data/watchlist.json`);
+  console.log(`  ${nexusLinks.length} nexus links    -> web/data/nexus.json (+ nexus-by-entity.json)`);
   console.log(`  methodology.md copied`);
   console.log(`  synced-at: ${syncedAt}`);
 

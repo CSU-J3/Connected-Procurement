@@ -1,4 +1,10 @@
-import type { Filing, InterestType, RegistryValue } from './types';
+import type {
+  CountingStatus,
+  Filing,
+  InstrumentType,
+  InterestType,
+  RegistryValue,
+} from './types';
 
 // A resolved source value is a live link only when it is an http(s) URL. Null/empty
 // values and the no-public-URL prose retained on Form-201 records are not links.
@@ -106,6 +112,24 @@ export function comparePartLabels(a: string, b: string): number {
 
 export function formatDate(iso: string): string {
   return iso.slice(0, 10);
+}
+
+export function instrumentTypeLabel(t: InstrumentType): string {
+  return t === 'gsa_lease' ? 'GSA lease' : 'federal award';
+}
+
+export function nexusStatusLabel(status: CountingStatus): string {
+  return status === 'counted' ? 'counted' : 'documented, not counted';
+}
+
+// A counted nexus reads as confirmed (foreground rule); documented-not-counted reads
+// deliberately muted — the conservative-counting signal a reader should meet honestly.
+export function nexusStatusPillClasses(status: CountingStatus): string {
+  const base =
+    'inline-block px-1.5 py-0.5 text-[10px] uppercase tracking-wider font-mono border whitespace-nowrap';
+  return status === 'counted'
+    ? `${base} border-emerald-600 text-emerald-700 dark:text-emerald-400`
+    : `${base} border-[color:var(--color-rule-strong)] text-[color:var(--color-muted)]`;
 }
 
 export function headingId(text: string): string {

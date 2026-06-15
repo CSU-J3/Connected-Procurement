@@ -1,17 +1,26 @@
+import Link from 'next/link';
 import { SearchInput } from '@/components/SearchInput';
 import { FilingCard } from '@/components/FilingCard';
+import { NexusCard } from '@/components/NexusCard';
 import {
   getFilings,
   getRelationships,
   getPersonIndex,
+  getNexusLinks,
+  getEntityIndex,
 } from '@/lib/data';
 
 export default async function HomePage() {
-  const [filings, relationships, personIndex] = await Promise.all([
+  const [filings, relationships, personIndex, nexusLinks, entityIndex] = await Promise.all([
     getFilings(),
     getRelationships(),
     getPersonIndex(),
+    getNexusLinks(),
+    getEntityIndex(),
   ]);
+
+  const sortedNexus = [...nexusLinks].sort((a, b) => a.nexus_id.localeCompare(b.nexus_id));
+  const nexusCounted = sortedNexus.filter((n) => n.counting_status === 'counted').length;
 
   const byFiling = new Map<string, { entities: Set<string>; edges: number }>();
   for (const r of relationships) {
@@ -34,6 +43,36 @@ export default async function HomePage() {
       <section>
         <SearchInput autoFocus />
       </section>
+
+      {sortedNexus.length > 0 ? (
+        <section className="border border-[color:var(--color-rule-strong)] p-4 space-y-3">
+          <div className="flex items-baseline justify-between gap-3">
+            <h2 className="prose-sans text-base font-semibold">Procurement connections</h2>
+            <Link href="/nexus" className="font-mono text-[11px] underline">
+              all nexus →
+            </Link>
+          </div>
+          <p className="prose-sans text-sm text-[color:var(--color-muted)] leading-relaxed max-w-2xl">
+            {sortedNexus.length} federal procurement{' '}
+            {sortedNexus.length === 1 ? 'connection' : 'connections'} documented,{' '}
+            {nexusCounted} counted. Identity is corroborated by name, UEI, and address.
+            Connections are{' '}
+            <span className="text-[color:var(--color-foreground)]">
+              not counted toward the headline figures
+            </span>{' '}
+            unless the holder&apos;s disclosed holding period overlaps the instrument&apos;s
+            active period under OGE-278 sourcing.{' '}
+            <a href="/methodology#federal-procurement-nexus" className="underline">
+              See methodology.
+            </a>
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {sortedNexus.map((n) => (
+              <NexusCard key={n.nexus_id} nexus={n} entity={entityIndex.get(n.entity_id)} />
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">

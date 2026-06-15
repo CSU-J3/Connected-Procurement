@@ -8,6 +8,9 @@ import type {
   Filing,
   FilingId,
   Merge,
+  NexusByEntity,
+  NexusId,
+  NexusLink,
   Person,
   PersonId,
   Relationship,
@@ -28,6 +31,61 @@ export const getPersons = cache((): Promise<Person[]> => readJson<Person[]>('per
 export const getRelationships = cache((): Promise<Relationship[]> => readJson<Relationship[]>('relationships.json'));
 export const getMerges = cache((): Promise<Merge[]> => readJson<Merge[]>('merges.json'));
 export const getSyncedAt = cache((): Promise<SyncedAt> => readJson<SyncedAt>('synced-at.json'));
+
+export const getNexusLinks = cache((): Promise<NexusLink[]> => readJson<NexusLink[]>('nexus.json'));
+export const getNexusByEntity = cache((): Promise<NexusByEntity> => readJson<NexusByEntity>('nexus-by-entity.json'));
+
+export async function getNexus(id: NexusId): Promise<NexusLink | null> {
+  const links = await getNexusLinks();
+  return links.find((n) => n.nexus_id === id) ?? null;
+}
+
+export async function getNexusesForEntity(id: EntityId): Promise<NexusLink[]> {
+  const links = await getNexusLinks();
+  return links.filter((n) => n.entity_id === id);
+}
+
+export function isNexusId(id: string): id is NexusId {
+  return id.startsWith('cp_nexus_');
+}
+
+// The linkable holder chain behind a nexus, derived from the graph proportional to N=1:
+// the matched entity, the inbound subsidiary edge that holds it (parent entity), and the
+// filing that discloses that edge with its filer (the family member) and as-of date. The
+// nexus `notes` prose remains the authoritative holder attribution; this supplies the
+// linkable references the detail header and entity block resolve against.
+export interface NexusHolderChain {
+  entity: Entity | null;
+  parentEntity: Entity | null;
+  holderEdge: Relationship | null;
+  filing: Filing | null;
+  filer: Person | null;
+}
+
+export async function getNexusHolderChain(nexus: NexusLink): Promise<NexusHolderChain> {
+  const [entity, rels, entityIndex, filingIndex, personIndex] = await Promise.all([
+    getEntity(nexus.entity_id),
+    getRelationshipsForEntity(nexus.entity_id),
+    getEntityIndex(),
+    getFilingIndex(),
+    getPersonIndex(),
+  ]);
+
+  const holderEdge =
+    rels.find(
+      (r) =>
+        r.target_id === nexus.entity_id &&
+        r.relation_kind === 'entity_to_entity_subsidiary',
+    ) ?? null;
+
+  const parentEntity = holderEdge
+    ? entityIndex.get(holderEdge.source_id as EntityId) ?? null
+    : null;
+  const filing = holderEdge ? filingIndex.get(holderEdge.filing_source) ?? null : null;
+  const filer = filing ? personIndex.get(filing.filer_id) ?? null : null;
+
+  return { entity, parentEntity, holderEdge, filing, filer };
+}
 
 export const getMethodology = cache(async (): Promise<string> => {
   return fs.readFile(path.join(DATA_DIR, 'methodology.md'), 'utf8');

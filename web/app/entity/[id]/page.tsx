@@ -8,9 +8,12 @@ import {
   getPersonIndex,
   getFilingIndex,
   getMergesForEntity,
+  getNexusesForEntity,
   isEntityId,
 } from '@/lib/data';
 import { EntityViewRow } from '@/components/RelationshipRow';
+import { NexusStatusPill } from '@/components/NexusStatusPill';
+import { instrumentTypeLabel } from '@/lib/format';
 import type { EntityId } from '@/lib/types';
 
 export async function generateStaticParams() {
@@ -31,12 +34,13 @@ export default async function EntityPage({
   const entity = await getEntity(id as EntityId);
   if (!entity) notFound();
 
-  const [rels, entityIndex, personIndex, filingIndex, merges] = await Promise.all([
+  const [rels, entityIndex, personIndex, filingIndex, merges, nexuses] = await Promise.all([
     getRelationshipsForEntity(id as EntityId),
     getEntityIndex(),
     getPersonIndex(),
     getFilingIndex(),
     getMergesForEntity(id as EntityId),
+    getNexusesForEntity(id as EntityId),
   ]);
 
   const connectedPersonIds = new Set<string>();
@@ -99,6 +103,29 @@ export default async function EntityPage({
           </div>
         ) : null}
       </header>
+
+      {nexuses.length > 0 ? (
+        <section className="border border-[color:var(--color-rule-strong)] p-3">
+          <h2 className="font-mono text-[10px] uppercase tracking-wider text-[color:var(--color-muted)] mb-2">
+            Federal procurement nexus
+          </h2>
+          <div className="space-y-2">
+            {nexuses.map((n) => (
+              <Link
+                key={n.nexus_id}
+                href={`/nexus/${n.nexus_id}`}
+                className="flex flex-wrap items-center gap-x-2 gap-y-1 no-underline hover:underline"
+              >
+                <NexusStatusPill status={n.counting_status} />
+                <span className="font-mono text-[12px]">
+                  {instrumentTypeLabel(n.instrument_type)} {n.instrument_id}
+                  {n.agency ? ` · ${n.agency}` : ''}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section>
         <h2 className="prose-sans text-sm font-semibold mb-2">
