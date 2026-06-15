@@ -173,3 +173,12 @@ export interface NexusLink {
 
 // entity_id -> nexus_id[]. Emitted by sync-data.mjs as nexus-by-entity.json.
 export type NexusByEntity = Record<string, NexusId[]>;
+
+// Per-entity facets precomputed by sync-data.mjs (entities-index.json). connected_persons
+// is filing-filer attribution (the filer of each filing that sourced a touching edge).
+export interface EntityIndexFacet {
+  edge_count: number;
+  connected_persons: PersonId[];
+  nexus_ids: NexusId[];
+}
+export type EntitiesIndex = Record<string, EntityIndexFacet>;

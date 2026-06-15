@@ -79,6 +79,39 @@ async function main() {
     (nexusByEntity[n.entity_id] ??= []).push(n.nexus_id);
   }
 
+  // Per-entity index facets for /entities, and the shared connected-person facet the
+  // detail page reads (Path A — computed once, used in both views, agree by construction).
+  // connected_persons uses filing-filer attribution: the filer(s) of the filing(s) that
+  // source any edge touching the entity — the provenance-faithful "appeared on family
+  // member X's disclosure". This resolves deep sub-entities (e.g. 666 Fifth Associates ->
+  // Jared via cp_filing_0001) that no direct or transitive person edge reaches.
+  const filerByFiling = new Map(filings.map((f) => [f.filing_id, f.filer_id]));
+  const idxEdgeCount = new Map();
+  const idxPersons = new Map();
+  for (const e of entities) {
+    idxEdgeCount.set(e.entity_id, 0);
+    idxPersons.set(e.entity_id, new Set());
+  }
+  for (const r of rawRels) {
+    const ends = new Set();
+    if (r.source_id.startsWith('cp_entity_')) ends.add(r.source_id);
+    if (r.target_id.startsWith('cp_entity_')) ends.add(r.target_id);
+    const filer = filerByFiling.get(r.filing_source);
+    for (const eid of ends) {
+      if (!idxEdgeCount.has(eid)) continue;
+      idxEdgeCount.set(eid, idxEdgeCount.get(eid) + 1);
+      if (filer) idxPersons.get(eid).add(filer);
+    }
+  }
+  const entitiesIndex = {};
+  for (const e of entities) {
+    entitiesIndex[e.entity_id] = {
+      edge_count: idxEdgeCount.get(e.entity_id) ?? 0,
+      connected_persons: [...idxPersons.get(e.entity_id)].sort(),
+      nexus_ids: nexusByEntity[e.entity_id] ?? [],
+    };
+  }
+
   const syncedAt = new Date().toISOString();
 
   await Promise.all([
@@ -90,6 +123,7 @@ async function main() {
     writeFile(path.join(outDir, 'watchlist.json'), JSON.stringify(watchlist, null, 2)),
     writeFile(path.join(outDir, 'nexus.json'), JSON.stringify(nexusLinks, null, 2)),
     writeFile(path.join(outDir, 'nexus-by-entity.json'), JSON.stringify(nexusByEntity, null, 2)),
+    writeFile(path.join(outDir, 'entities-index.json'), JSON.stringify(entitiesIndex, null, 2)),
     copyFile(path.join(repoRoot, 'docs', 'methodology.md'), path.join(outDir, 'methodology.md')),
     writeFile(path.join(outDir, 'synced-at.json'), JSON.stringify({ synced_at: syncedAt }, null, 2)),
   ]);
@@ -105,6 +139,7 @@ async function main() {
   console.log(`  ${merges.length} merges         -> web/data/merges.json`);
   console.log(`  ${watchlist.length} watchlist      -> web/data/watchlist.json`);
   console.log(`  ${nexusLinks.length} nexus links    -> web/data/nexus.json (+ nexus-by-entity.json)`);
+  console.log(`  ${entities.length} entity facets -> web/data/entities-index.json`);
   console.log(`  methodology.md copied`);
   console.log(`  synced-at: ${syncedAt}`);
 

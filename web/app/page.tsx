@@ -40,8 +40,13 @@ export default async function HomePage() {
 
   return (
     <div className="space-y-10">
-      <section>
+      <section className="space-y-2">
         <SearchInput autoFocus />
+        <div className="font-mono text-[11px] text-[color:var(--color-muted)]">
+          <Link href="/entities" className="hover:underline">
+            browse all {entityIndex.size} entities →
+          </Link>
+        </div>
       </section>
 
       {sortedNexus.length > 0 ? (

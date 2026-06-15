@@ -3,6 +3,7 @@ import { cache } from 'react';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import type {
+  EntitiesIndex,
   Entity,
   EntityId,
   Filing,
@@ -34,6 +35,7 @@ export const getSyncedAt = cache((): Promise<SyncedAt> => readJson<SyncedAt>('sy
 
 export const getNexusLinks = cache((): Promise<NexusLink[]> => readJson<NexusLink[]>('nexus.json'));
 export const getNexusByEntity = cache((): Promise<NexusByEntity> => readJson<NexusByEntity>('nexus-by-entity.json'));
+export const getEntitiesIndex = cache((): Promise<EntitiesIndex> => readJson<EntitiesIndex>('entities-index.json'));
 
 export async function getNexus(id: NexusId): Promise<NexusLink | null> {
   const links = await getNexusLinks();

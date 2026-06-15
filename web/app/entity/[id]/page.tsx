@@ -9,6 +9,7 @@ import {
   getFilingIndex,
   getMergesForEntity,
   getNexusesForEntity,
+  getEntitiesIndex,
   isEntityId,
 } from '@/lib/data';
 import { EntityViewRow } from '@/components/RelationshipRow';
@@ -34,20 +35,22 @@ export default async function EntityPage({
   const entity = await getEntity(id as EntityId);
   if (!entity) notFound();
 
-  const [rels, entityIndex, personIndex, filingIndex, merges, nexuses] = await Promise.all([
-    getRelationshipsForEntity(id as EntityId),
-    getEntityIndex(),
-    getPersonIndex(),
-    getFilingIndex(),
-    getMergesForEntity(id as EntityId),
-    getNexusesForEntity(id as EntityId),
-  ]);
+  const [rels, entityIndex, personIndex, filingIndex, merges, nexuses, entitiesIndex] =
+    await Promise.all([
+      getRelationshipsForEntity(id as EntityId),
+      getEntityIndex(),
+      getPersonIndex(),
+      getFilingIndex(),
+      getMergesForEntity(id as EntityId),
+      getNexusesForEntity(id as EntityId),
+      getEntitiesIndex(),
+    ]);
 
-  const connectedPersonIds = new Set<string>();
-  for (const r of rels) {
-    if (r.source_id.startsWith('cp_person_')) connectedPersonIds.add(r.source_id);
-    if (r.target_id.startsWith('cp_person_')) connectedPersonIds.add(r.target_id);
-  }
+  // Shared filing-filer connected-person facet (Path A): same source the /entities index
+  // reads, so the two views agree. Filing-filer is a superset of the old direct-only set,
+  // and it surfaces the disclosing family member for deep sub-entities (e.g. 666 Fifth
+  // Associates -> Jared) whose detail page previously showed no connection.
+  const connectedPersonIds = entitiesIndex[id]?.connected_persons ?? [];
 
   const formerNames: string[] = [];
   for (const m of merges.asWinner) {
@@ -73,12 +76,12 @@ export default async function EntityPage({
         <div className="font-mono text-[11px] text-[color:var(--color-muted)] mt-1">
           {entity.entity_id}
         </div>
-        {connectedPersonIds.size > 0 ? (
+        {connectedPersonIds.length > 0 ? (
           <div className="mt-3 flex flex-wrap items-center gap-2">
             <span className="font-mono text-[10px] uppercase tracking-wider text-[color:var(--color-muted)]">
               Connected via
             </span>
-            {[...connectedPersonIds].map((pid) => {
+            {connectedPersonIds.map((pid) => {
               const p = personIndex.get(pid as `cp_person_${string}`);
               return (
                 <Link
