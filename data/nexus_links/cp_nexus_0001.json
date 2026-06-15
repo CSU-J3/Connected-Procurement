@@ -6,6 +6,7 @@
   "source_url": "https://www.usaspending.gov/award/CONT_IDV_GS02B22660_4740",
   "match_basis": "exact recipient name '666 FIFTH ASSOCIATES LLC' + UEI HKPSSRAH39H9 (DUNS 808567528) + recipient/property address 666 Fifth Ave, New York, NY 10103. GSA/PBS lease IDV GS02B22660 (Region 2), one lease vehicle expressed as ~25 semi-annual delivery-order/modification child awards (NOT 35 distinct leases). IDV active 2004-09-30 to 2013-01-14.",
   "confidence_tier": "high",
+  "counting_status": "documented_not_counted",
   "award_source": "gsa_lease",
   "observed_on": "2026-06-13",
   "agency": "General Services Administration / Public Buildings Service",

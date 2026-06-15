@@ -88,6 +88,14 @@ class ConfidenceTier(str, Enum):
     LOW = "low"
 
 
+class CountingStatus(str, Enum):
+    # A nexus's own ruling under the locked procurement-nexus counting standard
+    # (methodology 2026-06-13). Distinct from the holder edge's excluded_from_total,
+    # which is set for its own headline-total reasons (e.g. comparative-set scope).
+    COUNTED = "counted"
+    DOCUMENTED_NOT_COUNTED = "documented_not_counted"
+
+
 class ExternalIdType(str, Enum):
     UEI = "uei"
     CIK = "cik"
@@ -573,6 +581,7 @@ class NexusLink(_Base):
     source_url: str
     match_basis: str
     confidence_tier: ConfidenceTier
+    counting_status: CountingStatus
     award_source: NexusAwardSource
     observed_on: date
     agency: str | None = None

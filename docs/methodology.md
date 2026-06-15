@@ -583,6 +583,8 @@ A federal-procurement nexus is recorded in the `nexus_links` table (`cp_nexus_NN
 
 A corroborated nexus that fails gate 2 is written as a `nexus_link` (it is a true historical fact) with the holder edge **left soft-flagged** — documented-but-not-counted. Counting it would assert a connection the sourced evidence does not establish.
 
+The per-nexus ruling under this standard is recorded structurally in `NexusLink.counting_status` (`counted` | `documented_not_counted`). This is the nexus's own ruling and is distinct from the holder edge's `excluded_from_total`, which is set for its own headline-total reasons (e.g. comparative-set scope) and can diverge from the nexus ruling. (Recorded 2026-06-15.)
+
 ### OGE-278 temporal coverage boundary (known limitation)
 
 OGE Form 278 sourcing only covers a person's federal-official tenure: a person has no 278 filing obligation before taking office, so the evidence model **structurally cannot source a holding that predates their entry into government.** Where federal-procurement activity and a family member's holding overlapped *before* that person became an official, the OGE-only model cannot see the overlap. This is a coverage boundary, not an absence of nexus — it is not counted and it is not inferred.
