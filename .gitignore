@@ -31,5 +31,12 @@ collectors/state/gsa-cache/*
 /connected-procurement-project-instructions*.md
 /connected-procurement-registry-schema-spec.md
 /fork-b-section-2-replacement.md
+
+# Working-note dirs under docs/ — session logs, fork decisions, handoffs, and
+# superseded internal instructions. The root-anchored rules above never matched
+# these subpaths, which is how they leaked into public history. Anchor them here.
+docs/handoffs/
+docs/archive/project-instructions*.md
+
 !web/scripts/
 !web/scripts/**
