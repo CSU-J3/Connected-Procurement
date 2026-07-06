@@ -32,11 +32,17 @@ collectors/state/gsa-cache/*
 /connected-procurement-registry-schema-spec.md
 /fork-b-section-2-replacement.md
 
-# Working-note dirs under docs/ — session logs, fork decisions, handoffs, and
-# superseded internal instructions. The root-anchored rules above never matched
-# these subpaths, which is how they leaked into public history. Anchor them here.
+# Working notes — never repo artifacts. Un-anchored so docs/<dir>/ is caught too.
 docs/handoffs/
-docs/archive/project-instructions*.md
+docs/backlog/
+docs/triage/
+docs/reviews/
+docs/archive/*-instructions*.md
+docs/references/*-watchlist.md
+docs/references/*-research-target.md
+docs/references/*-evidence-worksheet.md
+docs/drafts/schema-proposal-*
+**/*-project-instructions*.md
 
 !web/scripts/
 !web/scripts/**
